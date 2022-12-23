@@ -16,7 +16,12 @@ function App() {
             <Route path="/signup">
               <SignupFormPage />
             </Route>
-         
+            <Route path="/" exact>
+            </Route>
+            <Route path="/benches/new">
+            </Route>
+            <Route path="/benches/:benchId">
+            </Route>
           </Switch>
     </>
   );

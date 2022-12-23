@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: suber_eats_development
+  database: suber_eats
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: suber_eats
+  #username: authenticate_me
 
   # The password associated with the postgres role (username).
   #password:
@@ -79,8 +79,7 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   <<: *default
-  database: suber_eats_production
-  username: suber_eats
-  password: <%= ENV["SUBER_EATS_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
