@@ -4,8 +4,7 @@ import sessionReducer from './session';
 
 let enhancer;
 export const rootReducer = combineReducers({
-    session: sessionReducer,
-   
+    session: sessionReducer
 })
 
 if (process.env.NODE_ENV === 'production') {

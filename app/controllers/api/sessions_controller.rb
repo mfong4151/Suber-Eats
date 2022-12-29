@@ -1,9 +1,11 @@
 class Api::SessionsController < ApplicationController
   before_action :require_logged_in, only: [:destory]
+
   def create
     credential = params[:credential]
     password = params[:password]
     @user = User.find_by_credentials(credential, password)
+    
     if @user 
       login!(@user)
       render 'api/users/show'
@@ -16,8 +18,8 @@ class Api::SessionsController < ApplicationController
     if current_user 
       @user = current_user
       render 'api/users/show'
-      return  
     end 
+
     render json: { user: nil }
   end
 

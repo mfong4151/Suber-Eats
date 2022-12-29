@@ -1,0 +1,23 @@
+
+#splash-header{
+    background-color: #FFFFFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+.ux-buttons{
+    background-color: var(--color-greyButtonBG);
+    padding-bottom:1rem;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#cart-button{
+    background-color: var(--color-black);
+    color: var(--color-white)
+}

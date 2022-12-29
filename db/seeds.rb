@@ -20,16 +20,20 @@ ApplicationRecord.transaction do
   User.create!(
     username: 'Demo-lition', 
     email: 'demo@user.io', 
-    password: 'password'
+    password: 'password',
+    name: 'Demo lition',
+    phone_number: '123-456-7890'
   )
 
-  # More users
-  10.times do 
-    User.create!({
-      username: Faker::Internet.unique.username(specifier: 3),
-      email: Faker::Internet.unique.email,
-      password: 'password'
-    }) 
-  end
+  # # More users
+  # 10.times do 
+  #   User.create!({
+  #     username: Faker::Internet.unique.username(specifier: 3),
+  #     email: Faker::Internet.unique.email,
+  #     password: 'password'
+  #   }) 
+  # end
+
+  p 'DONE, SUCCESSFUL'
   
-  
+end 

@@ -1,0 +1,48 @@
+
+.listings-grid{
+
+    display: flex;
+    
+}
+
+
+.listings-grid-ele{
+    width: 33%;
+    margin-top:2rem;
+    padding-right:20px;
+}
+
+.listing{
+    height:240px;
+    overflow: hidden;
+}
+
+.listings-image{
+    
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+
+.listings-cont{
+    margin-top: 1rem;
+    margin-left: auto;
+    align-items: center;
+    font-family: var(--font-family);
+
+}
+
+.listings-header{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: .5rem;
+}
+
+.listings-text{
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--color-greyDarker);
+    height: 40px;
+    text-decoration: underline;
+
+}

@@ -1,0 +1,58 @@
+.sign-in-main{
+    
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    margin:auto;
+    padding-top: 12rem;
+    width:338px;
+
+}
+
+.head-text{
+    font-size: 25px;
+}
+
+.username-email{
+    padding-top: .4rem;
+    padding-bottom: .8rem;
+}
+
+
+.login-button{
+    text-align: center;
+    height: 50px;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    background-color: var(--color-grey)
+}
+
+.form-contents{
+    height: 1.5rem;
+}
+
+#button-continue{
+
+    background-color: var(--color-black);
+    color: var(--color-white)
+}
+
+hr.divider-thin{
+    border: none;
+    height: 2px;
+    background: var(--color-grey);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem
+ }
+ 
+ 
+ .terms-cond{
+    font-size: 13px;
+    color:#6B6B6B;
+    line-height: 1.4;
+ }
+
+ .text-spacing{
+
+    margin-bottom: 5.5rem;
+ }

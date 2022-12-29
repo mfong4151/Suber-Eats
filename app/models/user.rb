@@ -6,6 +6,8 @@
 #  email           :string           not null
 #  username        :string           not null
 #  password_digest :string           not null
+#  name            :string           not null
+#  phone_number    :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
@@ -17,11 +19,13 @@ class User < ApplicationRecord
   validates :username, length: {minimum:3, maximum:30}, format: { without: URI::MailTo::EMAIL_REGEXP, message: "Can't be an email" }, uniqueness: true 
   validates :email, length: {minimum:3, maximum:255}, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
   validates :password, length: { in: 6..225}, allow_nil: true 
-  
-
-  #S.P.I.R.E, has_secure_password gives us a password=
-
+  validates :name , presence:true
+  validates :phone_number, presence:true, uniqueness: true
   before_validation :ensure_session_token 
+
+
+
+  
 
   def self.find_by_credentials(credential, password)
     if credential.include?('@') 

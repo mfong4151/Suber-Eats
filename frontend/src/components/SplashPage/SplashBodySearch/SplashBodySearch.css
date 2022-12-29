@@ -1,0 +1,45 @@
+
+
+#search-component{
+
+    position: relative;
+  text-align: left;
+  color: var=(--color-black);
+  font-family: var(--font-family)
+}
+#order-food-banner{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#splash-main{
+        position: absolute;
+        top: 40%;
+
+}
+#search-options{
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+#search-form{
+    background-color: var=(--color-black);
+    display:flex;
+    flex-direction: left;
+}
+
+#find-food{
+    background-color: black;
+    color: var(--color-white);
+    font: 16px;
+}
+
+p{
+    margin-top: 1rem;
+}
+
+.apply-underline{
+    text-decoration: underline;
+}

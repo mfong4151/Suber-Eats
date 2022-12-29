@@ -1,1 +1,119 @@
 /* TODO Add site wide styles */
+:root{
+    --color-green: #06c167;
+    --color-grey: rgb(238, 238, 238);
+    --color-greyDarker: rgb(84, 84, 84);
+    --color-greyButtonBG: #EEEEEE;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    font-size: 16px;
+    --font-family: sans-serif;
+}
+
+*{
+    box-sizing: boarder-box;
+    font-family: var(--font-family);
+}
+
+
+.univ-font{
+    font-family: var(--font-family);
+
+}
+
+.univ-padding{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.btn-round{
+    text-align: center; margin: auto;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    border: 0;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+}
+
+/* header for suber eats */
+
+
+/* for the logo "suberEats" */
+
+.logo{
+    font-size: 30px;
+}
+
+.subheader{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.suber{
+    
+    font-weight: 300;
+}
+
+
+
+
+.eats{
+    font-weight: 600;
+}
+
+.eats-green{
+    color:var(--color-green)
+
+}
+
+.button-sq{
+    border-radius: 7px;
+    padding: 0.8rem 1rem;
+    border: 0;
+    font-family: var(--font-family);
+   
+    letter-spacing: 0.6px;
+}
+
+.splash-comps{
+    margin-top: 5rem;
+}
+
+.splash-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.splash-title{
+    font-size: 34px;  
+    font-weight: 600
+}
+
+.splash-links{
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.geo-location{
+    margin-top: 1rem;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px 20px;
+}
+
+
+.apply-underline{
+    text-decoration: underline;
+}
+
+.form-bg{
+    background-color: var(--color-greyButtonBG);
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    border: 0;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+}

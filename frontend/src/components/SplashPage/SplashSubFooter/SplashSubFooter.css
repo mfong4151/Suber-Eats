@@ -1,0 +1,22 @@
+hr.divider-thick{
+   border: none;
+   height: 2px;
+   background: var(--color-grey);
+   margin-top: 5rem;
+   margin-bottom: 4rem
+}
+
+
+.options{
+   margin-top: 1rem;
+   display:grid;
+   grid-template-columns: auto auto;
+   gap: 30px 300px;
+}
+
+#sub-footer{
+   display:flex;    
+   justify-content: space-between;
+
+
+}
