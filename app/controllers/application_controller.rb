@@ -12,11 +12,15 @@ class ApplicationController < ActionController::API
     #CRRLLL 
 
     def current_user
+        
         @current_user ||= User.find_by(session_token: session[:session_token])
+        p @current_user
     end 
 
     def require_logged_in 
-        render json: {message: 'Unauthorized '}, status: :unauthorized
+        if !current_user
+            render json: {message: 'Unauthorized '}, status: :unauthorized
+        end
     end 
 
     def login!(user) 

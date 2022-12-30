@@ -3,15 +3,11 @@ import React from 'react'
 const OptionsDropdowns = () => {
   return (
     <div>
-      <select name="" id="">
+      <button className="btn-round ux-buttons">Sort<span></span></button>
+      <button className="btn-round ux-buttons">From Suber Eats<span></span></button>
+      <button className="btn-round ux-buttons">Price Range<span></span></button>
+      <button className="btn-round ux-buttons">Dietary<span></span></button>
 
-</select>
-<select name="" id=""></select>
-<select name="" id=""></select>
-
-<select name="" id="">
-
-</select>
     </div>
   )
 }

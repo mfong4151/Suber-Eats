@@ -15,7 +15,9 @@ async function csrfFetch(url, options = {}) {
 
   ///heres where we have issues, its getting hung up on the fetch
   // call fetch with the url and the updated options hash
+
   const res = await fetch(url, options);
+  
 
   // if the response status code is 400 or above, then throw an error with the
   // error being the response

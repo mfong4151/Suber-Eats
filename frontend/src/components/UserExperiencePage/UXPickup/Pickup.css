@@ -1,0 +1,37 @@
+
+.carousel-body{
+    padding-top: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.carousel-buttons{
+    height:60px;
+    width:60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 3rem;
+    
+}
+
+.carousel-image{
+    height:56px;
+    width:56px;
+}
+
+.carousel-cont{
+    text-align: center;
+    width:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.carousel-button-title{
+    word-break: normal;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+}

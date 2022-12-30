@@ -1,5 +1,5 @@
 import React from 'react';
-import './UXHeader.css'
+import './UXHeader.css';
 
 
 

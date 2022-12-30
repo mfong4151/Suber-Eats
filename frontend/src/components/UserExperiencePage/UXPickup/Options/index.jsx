@@ -8,6 +8,7 @@ const Options = () => {
     <div className='univ-padding'>
       <h1 className="subheader">Pickup Nearby</h1>
       <OptionsDropdowns/>
+      <OptionsCarousel/>
     </div>
   )
 }

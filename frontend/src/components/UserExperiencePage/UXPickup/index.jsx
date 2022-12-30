@@ -1,7 +1,6 @@
 import React from 'react';
 import Options from './Options';
 import GoogleMap from './GoogleMap';
-
 const Pickup = () => {
 
 

@@ -1,39 +1,44 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+#1. table: accepts an array version of your table that corresponds to the name. 
+    #Your table MUST be formated as an array containing multiple hashes, see the example from my menu_items class
+    ##Because of how this is set up, the variable name MUST be equivalent to the name of the table in migrations
 
-ApplicationRecord.transaction do 
-  puts "Destroying tables..."
-  # Unnecessary if using `rails db:seed:replant`
-  User.destroy_all
+#2. class_name, accepts the actual class name of your migration table. That's right, pass a class in as an argument.
+    ##Named not according to convention in order to enhance readability
 
-  puts "Resetting primary keys..."
-  # For easy testing, so that after seeding, the first `User` has `id` of 1
-  ApplicationRecord.connection.reset_pk_sequence!('users')
+#3. table_string table name as a as string. refers to the table you want to destroy on   ApplicationRecord.connection.reset_pk_sequence!('') 
+    ##Someone else can do the hard work of finding a way to get rid of this variable
 
-  puts "Creating users..."
-  # Create one user with an easy to remember username, email, and password:
-  User.create!(
-    username: 'Demo-lition', 
-    email: 'demo@user.io', 
-    password: 'password',
-    name: 'Demo lition',
-    phone_number: '123-456-7890'
-  )
 
-  # # More users
-  # 10.times do 
-  #   User.create!({
-  #     username: Faker::Internet.unique.username(specifier: 3),
-  #     email: Faker::Internet.unique.email,
-  #     password: 'password'
-  #   }) 
-  # end
 
-  p 'DONE, SUCCESSFUL'
+  def seeder(table, class_name, table_string)
   
-end 
+    ApplicationRecord.transaction do 
+        class_name.destroy_all
+        ApplicationRecord.connection.reset_pk_sequence!(table_string)
+        puts "Creating #{table_string}..."
+  
+        table.each {|table_row| class_name.create!(**table_row)}
+        
+    end
+    
+    puts "DONE WITH #{table_string.upcase}, #{table_string.upcase} SEEDING SUCCESSFUL"
+    
+  end 
+  
+  
+
+  #example from my own seed data
+  
+  menu_items =  [{item_name: 'Ha Tien Special Extra Large Combo Noodle Soup', menu_id: 1, price: 19.25, image: ''}, 
+                 {item_name: 'Combo Beef Noodle Soup', menu_id: 1, price: 16.75, image: ''}, 
+                 {item_name: 'Rare Beef', menu_id: 1, price: 16.75, image: ''}, 
+                 {item_name: 'Beef Meatball', menu_id: 1, price: 16.75, image: ''}, 
+                 {item_name: 'Rare Beef with Chicken', menu_id: 1, price: 16.75, image: ''}
+                ]
+
+
+
+  table = menu_items
+  class_name = MenuItem
+  table_string = 'menu_items'
+  seeder(table, class_name, table_string)
