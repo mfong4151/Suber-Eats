@@ -1,0 +1,185 @@
+
+
+#search-component{
+
+    position: relative;
+  text-align: left;
+  color: var=(--color-black);
+  font-family: var(--font-family)
+}
+#order-food-banner{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#splash-main{
+        position: absolute;
+        top: 40%;
+
+}
+#search-options{
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+#search-form{
+    background-color: var=(--color-black);
+    display:flex;
+    flex-direction: left;
+}
+
+#find-food{
+    background-color: black;
+    color: var(--color-white);
+    font: 16px;
+}
+
+p{
+    margin-top: 1rem;
+}
+
+.apply-underline{
+    text-decoration: underline;
+}
+
+
+#splash-header{
+    background-color: #FFFFFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+form{
+    background-color: #EEEEEE;
+}
+
+input{
+    padding-left: 1.5rem;
+    font-size: 16px;
+    font-weight: 300;
+    height: 44px;
+    width:700px;
+    color:#6B6B6B;
+}
+
+
+
+
+#user-auth-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width:250px;
+    padding-bottom: 1rem;
+}
+
+
+#log-in{
+    /*we should try to pick a better color for bg color at some point */
+    background-color: var(--color-grey);
+    color: var(--color-black);
+}
+#sign-up{
+    background-color: var(--color-black);
+    color: var(--color-white)
+}
+
+
+select{
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+}
+
+/* color for login on hover #CCCCCC */
+/* color for sign up hover #333333 */
+
+
+hr.divider-thick{
+    border: none;
+    height: 2px;
+    background: var(--color-grey);
+    margin-top: 5rem;
+    margin-bottom: 4rem
+ }
+ 
+ 
+ .options{
+    margin-top: 1rem;
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 30px 300px;
+ }
+ 
+ #sub-footer{
+    display:flex;    
+    justify-content: space-between;
+ 
+ 
+ }
+
+
+ 
+.listings-grid{
+
+    display: flex;
+    
+}
+
+
+.listings-grid-ele{
+    width: 33%;
+    margin-top:2rem;
+    padding-right:20px;
+}
+
+.listing{
+    height:240px;
+    overflow: hidden;
+}
+
+.listings-image{
+    
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+
+.listings-cont{
+    margin-top: 1rem;
+    margin-left: auto;
+    align-items: center;
+    font-family: var(--font-family);
+
+}
+
+.listings-header{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: .5rem;
+}
+
+.listings-text{
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--color-greyDarker);
+    height: 40px;
+    text-decoration: underline;
+
+}
+
+.header-left{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.button-icon{
+
+    height: 20px;
+    padding-right: .5rem;
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import './SplashFooter.css'
 
 
 const SplashFooter = () => {

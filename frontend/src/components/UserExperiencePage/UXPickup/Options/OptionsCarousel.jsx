@@ -1,19 +1,21 @@
 import React from 'react'
-import {carouselLoader}from '../../utils/imageLoader'
+import {carouselLoader} from '../../utils/imageLoader'
 import "../Pickup.css"
 
 const OptionsCarousel = () => {
-  const icons = carouselLoader()
+  const icons = carouselLoader().slice(0, 10)
   
   return (
     <div className='carousel-body'> 
+
         {icons.map((icon, idx) => 
-        <div className='carousel-cont'>
-          <button key={idx} className="carousel-buttons">
-            <img className='carousel-image' src={icon.photo} />
-            </button> 
-          <p className='carousel-button-title'>{icon.title}</p>
-        </div> 
+
+          <div key={idx} className='carousel-cont'>
+            <button  className="carousel-buttons">
+              <img className='carousel-image' src={icon.photo} />
+              </button> 
+            <p className='carousel-button-title'>{icon.title}</p>
+          </div> 
         )}
 
     </div>

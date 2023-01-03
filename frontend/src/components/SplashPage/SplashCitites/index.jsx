@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './SplashCities.css'
+import '../SplashPage.css'
+
 import { operatingCities } from '../utils/operating_cities';
 
 const SplashCities = () => {

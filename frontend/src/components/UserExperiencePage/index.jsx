@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import UXHeader from './UXHeader';
+import UXHeader from './UXHeader.jsx';
 import UXPickup from './UXPickup';
 import { createContext, useState } from 'react';
 
@@ -32,10 +32,14 @@ const filters = {
 const UserExperiencePage = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user)
+    const [userLocation, setUserLocation] = useState('')
     const [numCarts, setNumCarts] = useState(0)
     const [sortOptions, setSortOptions] = useState(filters)
+
+    
     if(!sessionUser) return <Redirect to='/login'/>
-    console.log(sortOptions)
+
+
     return (
     <>  
       <OrderContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions}}>

@@ -5,6 +5,12 @@ class Api::SessionsController < ApplicationController
   def create
     credential = params[:credential]
     password = params[:password]
+
+    if credential == ''
+      render json:{ errors: ['Please provide a valid username']}, status: :unauthorized
+      return
+    end
+  
     @user = User.find_by_credentials(credential, password)
     
     if @user 

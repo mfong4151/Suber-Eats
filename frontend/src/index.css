@@ -4,7 +4,9 @@
     --color-grey: rgb(238, 238, 238);
     --color-greyDarker: rgb(84, 84, 84);
     --color-greyButtonBG: #EEEEEE;
+    --color-hover-grey: #E2E2E2;
     --color-black: #000000;
+    --color-hover-black: #333333;
     --color-white: #FFFFFF;
     font-size: 16px;
     --font-family: sans-serif;
@@ -26,8 +28,13 @@
     padding-right: 3rem;
 }
 
+.embedded-icon-padding{
+    padding-right:.5rem;
+}
+
 .btn-round{
-    text-align: center; margin: auto;
+    margin: auto;
+
     padding: 0.8rem 1rem;
     border-radius: 30px;
     border: 0;
@@ -35,6 +42,38 @@
     font-size: 1.2rem;
     letter-spacing: 0.6px;
 }
+
+
+.ux-buttons{
+    display:flex;
+    align-items: center;
+    background-color: var(--color-greyButtonBG);
+    padding-bottom:1rem;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 400;
+    height: 3rem;
+}
+
+.ux-buttons:hover{
+    background-color: var(--color-hover-grey);
+}
+
+
+.ux-sort-buttons{
+    margin-left:0rem;
+    margin-right: .5rem;
+    display:flex;
+    align-items: center;
+    height: 40px;
+}
+
+
+.header-btn-round{
+    display: flex;
+    text-align: center; 
+}
+
 
 /* header for suber eats */
 
@@ -109,6 +148,8 @@
 }
 
 .form-bg{
+    display:flex;
+    align-items: center;
     background-color: var(--color-greyButtonBG);
     padding: 0.8rem 1rem;
     border-radius: 30px;
@@ -116,13 +157,13 @@
     font-family: var(--font-family);
     font-size: 1.2rem;
     letter-spacing: 0.6px;
+    height: 3rem;
 }
 
 
-.ux-buttons{
-    background-color: var(--color-greyButtonBG);
-    padding-bottom:1rem;
-    font-family: var(--font-family);
-    font-size: 15px;
-    font-weight: 400;
+
+
+h2{
+
+    font-size: 180px;
 }

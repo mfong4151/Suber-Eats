@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import splashRamen from './assets/splash-ramen.png'
-import './SplashBodySearch.css';
-
+import '../SplashPage.css'
 
 const SplashBodySearch = () => {
 

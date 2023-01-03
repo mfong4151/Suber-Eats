@@ -1,17 +1,17 @@
-import frozendesert from"../assets/frozendesert.png";
-import comfortfood from"../assets/comfortfood.png";
-import coffeeandtea from"../assets/coffeeandtea.png";
-import bakery from"../assets/bakery.png";
-import asian from"../assets/asian.png";
-import bubbletea from"../assets/bubbletea.png";
-import indian from"../assets/indian.png";
-import american from"../assets/american.png";
-import thai from"../assets/thai.png";
-import pizza from"../assets/pizza.png";
-import italian from"../assets/italian.png";
-import wings from"../assets/wings.png";
-import vietnamese from"../assets/vietnamese.png";
-import healthy from"../assets/healthy.png";
+import frozendesert from"../assets/carousel_icons/frozendesert.png";
+import comfortfood from"../assets/carousel_icons/comfortfood.png";
+import coffeeandtea from"../assets/carousel_icons/coffeeandtea.png";
+import bakery from"../assets/carousel_icons/bakery.png";
+import asian from"../assets/carousel_icons/asian.png";
+import bubbletea from"../assets/carousel_icons/bubbletea.png";
+import indian from"../assets/carousel_icons/indian.png";
+import american from"../assets/carousel_icons/american.png";
+import thai from"../assets/carousel_icons/thai.png";
+import pizza from"../assets/carousel_icons/pizza.png";
+import italian from"../assets/carousel_icons/italian.png";
+import wings from"../assets/carousel_icons/wings.png";
+import vietnamese from"../assets/carousel_icons/vietnamese.png";
+import healthy from"../assets/carousel_icons/healthy.png";
 
 export const photoLoader = ()=>{
 

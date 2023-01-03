@@ -1,4 +1,4 @@
-import './SplashOptions.css';
+import '../SplashPage.css'
 import biking from './assets/splash-biking.png'
 import cooking from './assets/splash-cooking.png'
 import typing from './assets/splash-typing.png'

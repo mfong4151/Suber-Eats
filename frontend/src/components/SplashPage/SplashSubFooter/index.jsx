@@ -1,5 +1,4 @@
 import React from 'react';
-import './SplashSubFooter.css'
 import { Link } from 'react-router-dom'
 
 

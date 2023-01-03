@@ -1,12 +1,13 @@
 import React from 'react'
-
+import ChevronDown from '../SVGs/ChevronDown'
+import '../Pickup.css'
 const OptionsDropdowns = () => {
   return (
-    <div>
-      <button className="btn-round ux-buttons">Sort<span></span></button>
-      <button className="btn-round ux-buttons">From Suber Eats<span></span></button>
-      <button className="btn-round ux-buttons">Price Range<span></span></button>
-      <button className="btn-round ux-buttons">Dietary<span></span></button>
+    <div className='pickup-btns'>
+      <button className="btn-round ux-buttons ux-sort-buttons"><span>Sort</span><ChevronDown/></button>
+      <button className="btn-round ux-buttons ux-sort-buttons"><span>From Suber Eats</span><ChevronDown/></button>
+      <button className="btn-round ux-buttons ux-sort-buttons"><span>Price Range</span><ChevronDown/></button>
+      <button className="btn-round ux-buttons ux-sort-buttons"><span>Dietary</span><ChevronDown/></button>
 
     </div>
   )

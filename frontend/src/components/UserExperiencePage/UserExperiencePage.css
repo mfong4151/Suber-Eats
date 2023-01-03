@@ -1,0 +1,29 @@
+
+#splash-header{
+    background-color: #FFFFFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+#cart-button{
+    background-color: var(--color-black);
+    color: var(--color-white)
+}
+
+#cart-button:hover{
+    background-color: var(--color-hover-black);
+}
+
+
+.pickup-cols{
+    display:flex;
+    justify-content: flex-start;
+}
+
+.map-location-text{
+    padding-left: .5rem;
+}
