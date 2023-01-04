@@ -14,6 +14,8 @@ class EasySeeds
         ##Someone else can do the hard work of finding a way to get rid of this variable
 
 
+    #Whenever we want attach a resource we ne
+
     def self.single_seeder(table, class_name, table_string)
 
         ApplicationRecord.transaction do 
