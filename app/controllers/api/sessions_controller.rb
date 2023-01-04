@@ -1,16 +1,10 @@
-class Api::SessionsController < ApplicationController
-  
+class Api::SessionsController < ApplicationController  
   # before_action :require_logged_in, only: [:destroy] #thought this was the problem turns out its not
+
 
   def create
     credential = params[:credential]
     password = params[:password]
-
-    if credential == ''
-      render json:{ errors: ['Please provide a valid username']}, status: :unauthorized
-      return
-    end
-  
     @user = User.find_by_credentials(credential, password)
     
     if @user 
@@ -20,6 +14,7 @@ class Api::SessionsController < ApplicationController
     end 
     render json: { errors: ['The provided credentials were invalid.']}, status: :unauthorized
   end
+
 
   def show
 

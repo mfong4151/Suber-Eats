@@ -20,12 +20,14 @@ header{
     
     display: flex;
     flex-direction: column;
+    
     font-family: var(--font-family);
     margin:auto;
     padding-top: 12rem;
     width:338px;
-
 }
+
+
 
 .head-text{
     font-size: 25px;
@@ -49,6 +51,7 @@ header{
 
 .login-text{
     padding-left: .5rem;
+    background-color: var(--color-grey);
 }
 
 .login-button:hover{
@@ -58,11 +61,23 @@ header{
 
 .form-contents{
     height: 1.5rem;
+    background-color: var(--color-grey);
 }
 
 .login-form{
     border-style: solid;
     border-color: var(--color-black);
+    overflow: hidden;
+}
+
+
+
+.sign-up-form-spacing{
+    display: block;
+    height: 10px;
+    margin: 10px auto;
+    padding: 10px;
+ 
 }
 
 #button-continue{
@@ -96,3 +111,62 @@ hr.divider-thin{
 
     margin-bottom: 5.5rem;
  }
+
+.user-auth-h{
+
+    padding-bottom: 1rem;
+
+}
+.login-options{
+    display:flex;
+    justify-content: space-between;
+    
+ }
+
+ 
+ #btn-next{
+    background-color: #F6F6F6;
+    color: #AFAFAF;
+ }
+
+#btn-next-clickable{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+
+
+.next-text{
+    font-size: 16px;
+    margin-bottom: 1rem;
+    padding-right: .5rem;
+}
+.auth-buttons{
+    display: flex;
+    align-items: center;
+    height:40px;
+    margin: auto;
+}
+
+.arrow-size{
+    width:16px;
+
+}
+
+.auth-circle{
+    color: #AFAFAF;
+    border:20px;
+}
+
+.errors-segment{
+    display: flex;
+    align-items: center;
+    margin:auto;
+    padding-bottom: .5rem;
+}
+
+.errors-text{
+    color: red;
+    font-size:14px;
+    
+}

@@ -7,6 +7,8 @@ import UserExperiencePage from "./components/UserExperiencePage"
 import RestaurantListing from './components/RestaurantListingPage';
 
 function App() {
+
+
   return (
     <>
           <Switch>
@@ -14,6 +16,7 @@ function App() {
             <Route path="/login" component={LoginFormPage}/>
             <Route path="/deliverypickup" component={UserExperiencePage}/>
             <Route path="/restaurantListing" component={RestaurantListing}/>
+            <Route path ="/" component={SplashPage}/>
           </Switch>
     </>
   );

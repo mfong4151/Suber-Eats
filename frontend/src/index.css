@@ -42,6 +42,10 @@
     font-size: 1.2rem;
     letter-spacing: 0.6px;
 }
+.btn-multi-eles{
+    display: flex;
+    align-items: center;
+}
 
 
 .ux-buttons{
@@ -166,4 +170,17 @@
 h2{
 
     font-size: 180px;
+}
+
+
+
+/* used for arrow buttons */
+ 
+.face-right{
+
+    transform: rotate(180deg);
+}
+
+.arrow-clickable-color{
+    color: var(--color-white);
 }

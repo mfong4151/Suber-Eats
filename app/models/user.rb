@@ -28,14 +28,19 @@ class User < ApplicationRecord
   
 
   def self.find_by_credentials(credential, password)
-    if credential.include?('@') 
-      user = User.find_by(email: credential )
+    if credential
+      if credential.include?('@') 
+        user = User.find_by(email: credential )
+    
+      elsif credential.count('-') == 2
+        user = User.find_by(phone_number: credential )
+      else 
+        user = User.find_by(username: credential )
+      end
+
       return user if user && user.authenticate(password)
 
-    else 
-      user = User.find_by(username: credential )
-      return user if user && user.authenticate(password)
-    end 
+    end
     nil 
   end 
 
