@@ -35,14 +35,14 @@ const UserExperiencePage = () => {
     const [userLocation, setUserLocation] = useState('')
     const [numCarts, setNumCarts] = useState(0)
     const [sortOptions, setSortOptions] = useState(filters)
-
+    const [userModal, toggleUserModal] = useState(false);
     
     if(!sessionUser) return <Redirect to='/login'/>
 
 
     return (
     <>  
-      <OrderContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions}}>
+      <OrderContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, userModal, toggleUserModal}}>
         <UXHeader/>
         <UXPickup/>
       </OrderContext.Provider>

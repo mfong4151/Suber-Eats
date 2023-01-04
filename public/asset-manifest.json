@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d4d61b8d.css",
+    "main.js": "/static/js/main.562fa56e.js",
+    "static/media/splash-ramen.png": "/static/media/splash-ramen.5f9859925070b44fe0f3.png",
+    "static/media/genji_sushi.jpeg": "/static/media/genji_sushi.a6be7cd94a3e6f1322e1.jpeg",
+    "static/media/splash-cooking.png": "/static/media/splash-cooking.141495e0c85f3c454050.png",
+    "static/media/splash-typing.png": "/static/media/splash-typing.6539e56de1794446d2dc.png",
+    "static/media/splash-biking.png": "/static/media/splash-biking.45270b3b31f1e48aac01.png",
+    "static/media/golden_coast.jpg": "/static/media/golden_coast.3092ea963ac4506bd5dd.jpg",
+    "static/media/champa_garden.jpeg": "/static/media/champa_garden.268a94d44e02eaf36faf.jpeg",
+    "static/media/just_prep_it.jpeg": "/static/media/just_prep_it.3a791c94bc6b99a6d3d8.jpeg",
+    "static/media/shanghai_dumpling_king.jpg": "/static/media/shanghai_dumpling_king.e340919050347915f5dd.jpg",
+    "static/media/virgin_salad.jpeg": "/static/media/virgin_salad.ad193aa7bc4be9b4f59a.jpeg",
+    "static/media/thats_amore_sf.jpeg": "/static/media/thats_amore_sf.e48557657b08fc3f7522.jpeg",
+    "static/media/pho_ha_tien.jpeg": "/static/media/pho_ha_tien.c47f9297b8cb6b27fef0.jpeg",
+    "static/media/fits_subs.jpeg": "/static/media/fits_subs.b04dc2fc1c3a84eef8db.jpeg",
+    "static/media/emmys_chinese_restaurant.jpg": "/static/media/emmys_chinese_restaurant.f4abfe3af4ba7ab792ea.jpg",
+    "static/media/cherry_blossom_bakery.jpg": "/static/media/cherry_blossom_bakery.a3c81ff4fd94f3853173.jpg",
+    "static/media/711.jpeg": "/static/media/711.1353111d8143bd256470.jpeg",
+    "static/media/joyful_kitchen.jpeg": "/static/media/joyful_kitchen.0d7b7e4741ec16731451.jpeg",
+    "static/media/boba_life.jpg": "/static/media/boba_life.8f02a86bcb4b61209397.jpg",
+    "index.html": "/index.html",
+    "main.d4d61b8d.css.map": "/static/css/main.d4d61b8d.css.map",
+    "main.562fa56e.js.map": "/static/js/main.562fa56e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4d61b8d.css",
+    "static/js/main.562fa56e.js"
+  ]
+}

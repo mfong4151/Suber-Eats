@@ -59,24 +59,28 @@ header{
     transition: 0.3s
 }
 
-.form-contents{
-    height: 1.5rem;
-    background-color: var(--color-grey);
-}
 
 .login-form{
-    border-style: solid;
-    border-color: var(--color-black);
+    background-color: var(--color-white);
     overflow: hidden;
 }
 
+.form-contents{
+    background-color: var(--color-grey);
+    margin-top: auto;
+    margin-right:auto; 
+    border-radius: 7px;
+    border: 0;
+    font-family: var(--font-family);
+    font-size: 18px;
+    height: 44px;
+    width: 100%;
+    letter-spacing: 0.6px;
+}
 
 
 .sign-up-form-spacing{
-    display: block;
-    height: 10px;
-    margin: 10px auto;
-    padding: 10px;
+    margin-bottom: 4px;
  
 }
 
@@ -120,18 +124,51 @@ hr.divider-thin{
 .login-options{
     display:flex;
     justify-content: space-between;
-    
  }
 
- 
+ .button-hold-l{
+    display: flex;
+    justify-content: flex-start;
+    
+
+ }
+
+ .button-hold-r{
+    display: flex;
+    justify-content: flex-end;
+ }
+
+.auth-buttons{
+    display: flex;
+    align-items: center;
+    height:50px;
+    width: 90px;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    border: 0;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+}
+
+.auth-circle{
+    color: #AFAFAF;
+    border:20px;
+    background-color: #F6F6F6;
+    width:50px;
+
+}
+
  #btn-next{
     background-color: #F6F6F6;
     color: #AFAFAF;
+    cursor:not-allowed;
  }
 
 #btn-next-clickable{
     background-color: var(--color-black);
     color: var(--color-white);
+    cursor:pointer;
 }
 
 
@@ -141,28 +178,26 @@ hr.divider-thin{
     margin-bottom: 1rem;
     padding-right: .5rem;
 }
-.auth-buttons{
-    display: flex;
-    align-items: center;
-    height:40px;
-    margin: auto;
-}
+
 
 .arrow-size{
     width:16px;
 
 }
 
-.auth-circle{
-    color: #AFAFAF;
-    border:20px;
-}
+
 
 .errors-segment{
     display: flex;
     align-items: center;
     margin:auto;
     padding-bottom: .5rem;
+}
+
+.errors-sign-in{
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom:50px;
 }
 
 .errors-text{

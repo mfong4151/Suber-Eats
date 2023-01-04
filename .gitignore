@@ -18,7 +18,9 @@
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
-
+/pubilc
 
 # Ignore master key for decrypting credentials and more.
+/config/master.key
+
 /config/master.key

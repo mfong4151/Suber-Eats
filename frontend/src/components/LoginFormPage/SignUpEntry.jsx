@@ -33,7 +33,7 @@ const SignUpEntry = () => {
         e.preventDefault();
         if (password === confirmPassword){
             setErrors([]);
-            return dispatch(signUp({email, username, password, name, phone_number:phoneNumber}))
+            dispatch(signUp({email, username, password, name, phone_number:phoneNumber}))
                 .catch(async (res) =>{
                     let data; 
                     try {
@@ -46,7 +46,8 @@ const SignUpEntry = () => {
                     else setErrors([res.statusText]);
                 }) 
         }
-        return setErrors(['Confirm Password field must be the same as the Password field']);
+        console.log(errors)
+        setErrors(['Make sure your password fields match!']);
     }
 
     return (
@@ -54,7 +55,8 @@ const SignUpEntry = () => {
 
             <h1 className="head-text user-auth-h">Ready to experience Suber Eats?</h1>
             <div className="username-email">
-                <form className='button-sq login-form'> 
+
+                <form className='login-form'> 
                     
                     <input className='form-contents sign-up-form-spacing' type='text' name='location' placeholder='Enter your username' onChange={e => setUsername(e.target.value)} required/>
                     <input className='form-contents sign-up-form-spacing' type='text' name='location' placeholder='Enter your email' onChange={e => setEmail(e.target.value)} required/> 
@@ -64,15 +66,25 @@ const SignUpEntry = () => {
                     <input className='form-contents sign-up-form-spacing' type='password' name='location' placeholder='Please confirm your password' onChange={e => setConfirmPassword(e.target.value)} required/> 
 
                 </form>
+
             </div>
             <div className="errors-segment">
                 <span className="errors-text">{errors.length ? errors[0] : ''}</span>
             </div>
             
             <div className='login-options'> 
-                <button className='btn-round auth-buttons auth-circle' onClick={handleGoBack}><ArrowLeft/></button>
+                <div className="button-hold-l">
+                    <button className='auth-buttons auth-circle' onClick={handleGoBack}>
+                        <ArrowLeft/>
+                    </button>
+                </div>
 
-                <button htmlFor='sign-up-form' className='btn-round auth-buttons' id={nextId} onClick={handleSubmit}><p className="next-text">Next</p><ArrowRight/></button>
+                <div className='button-hold-r'>
+                    <button htmlFor='sign-up-form' className='auth-buttons' id={nextId} onClick={handleSubmit}>
+                        <p className="next-text">Next</p>
+                        <ArrowRight/>
+                    </button>
+                </div>
 
             </div>
 

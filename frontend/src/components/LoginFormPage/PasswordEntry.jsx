@@ -13,7 +13,7 @@ const PasswordEntry = () => {
     const dispatch = useDispatch();
     const history = useHistory()
     const sessionUser = useSelector(state => state.session.user)
-    const {credential, setCredential, validCredential,setValidCredential } = useContext(UsernameContext)
+    const {credential} = useContext(UsernameContext)
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
     const [passwordView, setPasswordView] = useState('password')
@@ -59,21 +59,21 @@ const PasswordEntry = () => {
         <div className='password-upper'> 
             <h1 className="head-text user-auth-h">Welcome back</h1>
             <div className="username-email">
-                <form className='button-sq login-form'> 
+                <form className='login-form'> 
                     <input id='submit-username' className='form-contents' type={passwordView} name='location' placeholder='Enter your password' onChange={e => setPassword(e.target.value)}/> 
 
                 </form>
             </div>
-            <div className="errors-segment">
+            <div className="errors-sign-in">
                 <span className="errors-text">{errors.length ? errors[0] : ''}</span>
             </div>
         </div>
 
 
         <div className='login-options'> 
-            <button htmlFor='submit-username' className='btn-round auth-buttons auth-circle' onClick={handleGoBack}><ArrowLeft/></button>
+            <button htmlFor='submit-username' className='auth-buttons auth-circle' onClick={handleGoBack}><ArrowLeft/></button>
 
-            <button htmlFor='submit-username' className='btn-round auth-buttons' id={nextId} onClick={handleSubmit}><p className="next-text">Next</p><ArrowRight/></button>
+            <button htmlFor='submit-username' className='auth-buttons' id={nextId} onClick={handleSubmit}><p className="next-text">Next</p><ArrowRight/></button>
 
         </div>
 

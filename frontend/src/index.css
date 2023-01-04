@@ -42,6 +42,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.6px;
 }
+
 .btn-multi-eles{
     display: flex;
     align-items: center;
@@ -97,9 +98,6 @@
     
     font-weight: 300;
 }
-
-
-
 
 .eats{
     font-weight: 600;

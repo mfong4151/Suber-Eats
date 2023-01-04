@@ -102,8 +102,8 @@ const LoginForm = () => {
 
             <h1 className="head-text">What's your phone number or email?</h1>
             <div className="username-email">
-                <form className='button-sq login-form'> 
-                    <input id='submit-username' className='form-contents' type='text' name='location' placeholder='Enter your username' onChange={e => setCredential(e.target.value)}/> 
+                <form className='login-form'> 
+                    <input className='form-contents' type='text' name='location' placeholder='Enter your username' onChange={e => setCredential(e.target.value)}/> 
                
                 </form>
             </div>
