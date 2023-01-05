@@ -3,18 +3,27 @@ import React from 'react'
 import OptionsGridItem from './OptionsGridItem'
 import mockListingsLoader from '../../utils/mockItems'
 
-const OptionsGrid = () => {
+const OptionsGrid = ({restaurants}) => {
 
   // const gridItems = useSelector(state => getRestaurants)
 
   //Delete this once we get redux images running
   const gridItems = mockListingsLoader()
 
+  // return (
+
+  //   <div id='options-array'>
+  //       {gridItems.map((listing, idx) =>
+  //         <OptionsGridItem listing={listing} key={idx}/>
+  //       )}      
+  //   </div>
+  // )
+
   return (
 
     <div id='options-array'>
-        {gridItems.map((listing, idx) =>
-          <OptionsGridItem listing={listing} key={idx}/>
+        {restaurants.map((restaurant, idx) =>
+          <OptionsGridItem restaurant={restaurant} key={idx}/>
         )}
 
       

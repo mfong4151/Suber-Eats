@@ -1,12 +1,14 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
+import restaurantsReducer from './restaurant';
 import sessionReducer from './session';
 import usersReducer from './user';
 
 let enhancer;
 export const rootReducer = combineReducers({
     session: sessionReducer,
-    users: usersReducer
+    users: usersReducer,
+    restaurants: restaurantsReducer
 })
 
 if (process.env.NODE_ENV === 'production') {
