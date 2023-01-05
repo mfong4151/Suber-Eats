@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import UXHeader from './UXHeader.jsx';
 import UXPickup from './UXPickup';
-import { createContext, useState } from 'react';
-
+import { useState } from 'react';
+import { UXContext } from './UXContext.jsx';
+import UserMenuModal from './universalModals/UserMenuModal.jsx'
 //Not sure if cart management needs to be done in state, context, or store yet
 //I need some sort of state to manage the user's cart. 
 // I should finish seeding, databases, and tables before proceeding
@@ -15,7 +16,7 @@ import { createContext, useState } from 'react';
 //1) Scrollable side with 3 divs
 //2 ) Google maps
 //Scale to have either pickup or delivery based on the modal button you press
-const OrderContext = createContext(null)
+
 const filters = {
         sort: 'picked for you',
         topEats: [false, false, false, false],
@@ -35,17 +36,24 @@ const UserExperiencePage = () => {
     const [userLocation, setUserLocation] = useState('')
     const [numCarts, setNumCarts] = useState(0)
     const [sortOptions, setSortOptions] = useState(filters)
-    const [userModal, toggleUserModal] = useState(false);
-    
+    const [menuModal, setMenuModal] = useState(false)
+   
+    const toggleMenuModal = () =>{ 
+
+      setMenuModal(!menuModal);
+    }    
+
+
     if(!sessionUser) return <Redirect to='/login'/>
 
 
     return (
     <>  
-      <OrderContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, userModal, toggleUserModal}}>
+      <UXContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, menuModal, setMenuModal, toggleMenuModal}}>
         <UXHeader/>
         <UXPickup/>
-      </OrderContext.Provider>
+        {menuModal && <UserMenuModal/>}
+      </UXContext.Provider>
     </>
   )
 }

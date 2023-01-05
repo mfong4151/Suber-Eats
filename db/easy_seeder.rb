@@ -67,6 +67,7 @@ class EasySeeds
       elsif ['float', 'f'].include?(data_type)
       
         return datum.to_f
+        
       else
         return datum
       end
@@ -81,7 +82,6 @@ class EasySeeds
 
         
         Dir.chdir(seed_folder)
-        
 
         Dir.glob("*").each do |seed_file|
         

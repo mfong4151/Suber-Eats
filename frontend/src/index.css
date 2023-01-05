@@ -182,3 +182,7 @@ h2{
 .arrow-clickable-color{
     color: var(--color-white);
 }
+
+.menu-modal{
+    cursor: pointer;
+}

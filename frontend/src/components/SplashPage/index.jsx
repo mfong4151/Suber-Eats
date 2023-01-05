@@ -6,8 +6,14 @@ import SplashCities from './SplashCitites';
 import SplashCountries from './SplashCountries'
 import SplashSubFooter from './SplashSubFooter'
 import SplashFooter from './SplashFooter';
+import { useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 const SplashPage= () => {
+
+  const sessionUser = useSelector(state => state.session.user);
+  if (sessionUser) return <Redirect to='/deliverypickup' />
+  
   return (
     <>
         <SplashHeader />

@@ -1,6 +1,5 @@
 require_relative 'easy_seeder'
-
-
+require "open-uri"
 
   
 

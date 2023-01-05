@@ -35,4 +35,5 @@ class Restaurant < ApplicationRecord
     through: :menu,
     source: :menu_items
 
+    # has_one_attached :photo
 end

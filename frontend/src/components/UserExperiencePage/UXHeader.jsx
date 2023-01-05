@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import LocationIcon from './UXPickup/SVGs/LocationIcon';
 import SearchIcon from './UXPickup/SVGs/SearchIcon';
-import CartIcon from './UXPickup/SVGs/CartIcon';
 import './UserExperiencePage.css';
-
+import MenuIcon from '../SVGs/MenuIcon';
+import { UXContext } from './UXContext';
 
 
 const UXHeader = () => {
   //temporary place holder until we iron out cart dynamics
-  const temp = 0
+  const {setMenuModal, toggleMenuModal} = useContext(UXContext);
+
+  const temp = 0;
+
 
   return (
     <header id="splash-header" className="univ-padding">
 
         <div className="logo header-left">
-              <div>
-                  <svg width="22" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-                  </svg>
-              </div>
+              <button className='menu-modal' onClick={toggleMenuModal}>
+                <MenuIcon/>
+              </button>
+                  
+              
               <div>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
