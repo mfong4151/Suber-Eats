@@ -1,10 +1,10 @@
 import React from 'react';
 import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api";
 import "./GoogleMap.css"
-
+import { SharedContext } from '../../../../App';
+import { useContext } from 'react';
 //map id for the styled map we made c9833b310ffc337b
 const Map = ({restaurants}) => {
-
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
   })
 

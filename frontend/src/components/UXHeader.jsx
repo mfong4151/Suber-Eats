@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import LocationIcon from './UXPickup/SVGs/LocationIcon';
-import SearchIcon from './UXPickup/SVGs/SearchIcon';
-import './UserExperiencePage.css';
-import MenuIcon from '../SVGs/MenuIcon';
-import { UXContext } from './UXContext';
+import LocationIcon from './UserExperiencePage/UXPickup/SVGs/LocationIcon';
+import SearchIcon from './UserExperiencePage/UXPickup/SVGs/SearchIcon';
+import './Header.css';
+import MenuIcon from './SVGs/MenuIcon';
+import { UXContext } from './UXContext.jsx';
 
 
 const UXHeader = () => {

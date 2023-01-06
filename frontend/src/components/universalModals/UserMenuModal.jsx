@@ -1,9 +1,9 @@
 import React from 'react'
 import { useContext } from 'react';
-import { UXContext } from '../UXContext';
+import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { logout } from '../../../store/session';
+import { logout } from './../../store/session';
 import FavoritesIcon from './SVGs/FavoritesIcon';
 import OrdersIcon from './SVGs/OrdersIcon';
 import WalletIcon from './SVGs/WalletIcon';

@@ -14,6 +14,18 @@ export const getRestaurants = state => {
     return Object.values(state.restaurants)
 }
 
+// export const getPost = postId => store =>{
+//     if(!store.posts || !store.posts[postId]) return null
+//     return store.posts[postId]
+// } 
+export const getRestaurant = restaurantId => state => {
+    console.log(state)
+    if (!state.restaurants[restaurantId]) return null;
+    
+     return state.restaurants[restaurantId]
+}
+
+
 export const fetchRestaurants = () => async dispatch =>{
     const res = await csrfFetch("/api/restaurants")
     if (res.ok){
