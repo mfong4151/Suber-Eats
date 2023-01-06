@@ -17,7 +17,6 @@
 #
 class Restaurant < ApplicationRecord
     validates :name, presence:true
-    validates :description, presence:true
     validates :rating, presence:true
     validates :address, presence:true, uniqueness: true
     validates :state_code, presence:true
@@ -35,5 +34,5 @@ class Restaurant < ApplicationRecord
     through: :menu,
     source: :menu_items
 
-    # has_one_attached :photo
+    has_one_attached :image
 end
