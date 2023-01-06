@@ -28,7 +28,7 @@ function App() {
             <Route path="/login" component={LoginFormPage}/>
             <UXContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, 
                                 menuModal, setMenuModal, toggleMenuModal}}>
-              <Route path="/restaurantListing/:id" component={RestaurantListing}/>
+              <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
               <Route path="/deliverypickup" component={UserExperiencePage}/>
             </UXContext.Provider>
 

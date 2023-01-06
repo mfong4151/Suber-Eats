@@ -4,4 +4,13 @@ class Api::RestaurantsController < ApplicationController
         @restaurants = Restaurant.all
         render :index
     end
+
+    def show
+        @restaurant =  Restaurant.find_by(id: params[:id])
+        render :show
+    end
+
+    private
+    
+ 
 end
