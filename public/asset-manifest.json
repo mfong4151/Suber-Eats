@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d4d61b8d.css",
-    "main.js": "/static/js/main.562fa56e.js",
+    "main.css": "/static/css/main.c0eff059.css",
+    "main.js": "/static/js/main.3bc9af55.js",
     "static/media/splash-ramen.png": "/static/media/splash-ramen.5f9859925070b44fe0f3.png",
     "static/media/genji_sushi.jpeg": "/static/media/genji_sushi.a6be7cd94a3e6f1322e1.jpeg",
     "static/media/splash-cooking.png": "/static/media/splash-cooking.141495e0c85f3c454050.png",
@@ -21,11 +21,11 @@
     "static/media/joyful_kitchen.jpeg": "/static/media/joyful_kitchen.0d7b7e4741ec16731451.jpeg",
     "static/media/boba_life.jpg": "/static/media/boba_life.8f02a86bcb4b61209397.jpg",
     "index.html": "/index.html",
-    "main.d4d61b8d.css.map": "/static/css/main.d4d61b8d.css.map",
-    "main.562fa56e.js.map": "/static/js/main.562fa56e.js.map"
+    "main.c0eff059.css.map": "/static/css/main.c0eff059.css.map",
+    "main.3bc9af55.js.map": "/static/js/main.3bc9af55.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4d61b8d.css",
-    "static/js/main.562fa56e.js"
+    "static/css/main.c0eff059.css",
+    "static/js/main.3bc9af55.js"
   ]
 }
