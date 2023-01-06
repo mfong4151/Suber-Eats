@@ -44,9 +44,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_193341) do
 
   create_table "menu_items", force: :cascade do |t|
     t.string "item_name", null: false
+    t.text "description"
     t.float "price", null: false
+    t.string "header"
     t.bigint "menu_id", null: false
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["menu_id"], name: "index_menu_items_on_menu_id"
@@ -54,7 +55,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_193341) do
 
   create_table "menus", force: :cascade do |t|
     t.bigint "restaurant_id", null: false
-    t.string "header"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_menus_on_restaurant_id"

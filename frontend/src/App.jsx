@@ -5,6 +5,7 @@ import SplashPage from "./components/SplashPage"
 import LoginFormPage from "./components/LoginFormPage";
 import UserExperiencePage from "./components/UserExperiencePage"
 import RestaurantListing from './components/RestaurantListingPage';
+import PastOrders from './components/PastOrders';
 import { useState } from 'react';
 import { UXContext } from './components/UXContext';
 import { filters } from './components/utils/defaultFilters';
@@ -30,6 +31,7 @@ function App() {
                                 menuModal, setMenuModal, toggleMenuModal}}>
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
               <Route path="/deliverypickup" component={UserExperiencePage}/>
+              <Route path="/yourorders" component={PastOrders}/>
             </UXContext.Provider>
 
             <Route path ="/" component={SplashPage}/>

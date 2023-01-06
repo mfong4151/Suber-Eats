@@ -5,10 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # post 'api/test', to: 'application#test'
-  get '/api/restaurants/menu', to: 'menu#index'
-  post '/api/restaurants/menu', to: 'menu#create'
-  put '/api/restaurants/menu/:id', to: 'menu#update'
-  delete '/api/restaurants/menu/:id', to: 'menu#destroy'
+
+  get '/api/restaurants/menu/:id', to: 'menu#show'
 
   namespace :api, defaults: { format: :json} do 
     resources :users, only: [:create, :index]

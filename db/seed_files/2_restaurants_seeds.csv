@@ -1,19 +1,10 @@
 name:string,address:string,rating:float,city:string,state_code:string,longitude:float,latitude:float,cuisine_type:string
-1011 Sip TEA SF,"2127 Irving St, San Francisco, CA 94122, United States",4.4,San Francisco,CA,-122.4808785,37.7632824,boba
 21 Taste House,"1109 Ocean Ave, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4544376,37.7233872,japanese
 4505 Burgers & BBQ,"705 Divisadero St, San Francisco, CA 94117, United States",4.3,San Francisco,CA,-122.4382157,37.7761885,comfort food
-54 Mint Ristorante Italiano,"16 Mint Plaza, San Francisco, CA 94103, United States",4.4,San Francisco,CA,-122.4079406,37.7825956,italian
-620 Jones,"620 Jones St, San Francisco, CA 94102, United States",4.3,San Francisco,CA,-122.412987,37.787177,bar
-a Mano,"450 Hayes St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4239917,37.7768654,italian
-A-1 Bakery,"1727 Ocean Ave, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4607446,37.724727,bakery
 Absinthe Brasserie & Bar,"398 Hayes St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4228126,37.7771426,bar
-ABV,"3174 16th St, San Francisco, CA 94103, United States",4.5,San Francisco,CA,-122.4235562,37.7649464,bar
-Akiko's Sushi Bar and Restaurant,"542A Mason St, San Francisco, CA 94102, United States",4.3,San Francisco,CA,-122.410018,37.7887173,japanese
-Akira Japanese Restaurant,"1634 Bush St, San Francisco, CA 94109, United States",4.5,San Francisco,CA,-122.4241903,37.7883383,japanese
 Alice's,"1599 Sanchez St, San Francisco, CA 94131, United States",4.4,San Francisco,CA,-122.4287683,37.7436934,chinese
 Al's Super Cafe,"3286 Mission St, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4209255,37.744299,diner
 Amami Sushi Bistro SF,"4435 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4326684,37.727131,japanese
-Amorino Gelato,"338 Grant Ave, San Francisco, CA 94108, United States",4.6,San Francisco,CA,-122.4054354,37.7902809,ice cream and frozen
 An Chi Vietnamese Cuisine,"4683 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.435653,37.7233636,vietnamese
 Ananda Fuara,"1298 Market St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4163209,37.7778387,healthy
 Andersen Bakery,"1390 Market St suite b, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.417537,37.7770317,bakery
@@ -21,82 +12,34 @@ Art's Cafe,"747 Irving St, San Francisco, CA 94122, United States",4.7,San Franc
 Atlas Cafe,"3049 20th St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4114619,37.7589457,american
 B,"720 Howard St, San Francisco, CA 94103, United States",4.2,San Francisco,CA,-122.4016667,37.7847222,bar
 Bac Lieu Restaurant,"3216 Mission St, San Francisco, CA 94110, United States",4.6,San Francisco,CA,-122.4203283,37.7452242,vietnamese
-Bacco,"3913 24th St, San Francisco, CA 94114, United States",4.5,San Francisco,CA,-122.4300389,37.7514526,italian
-Baiano Pizzeria,"1330 9th Ave, San Francisco, CA 94122, United States",3.9,San Francisco,CA,-122.4660262,37.7634247,pizza
 Balboa Cafe,"3199 Fillmore St, San Francisco, CA 94123, United States",4.3,San Francisco,CA,-122.4361023,37.7988162,bar
 Balboa Ice Cream,"1844 San Jose Avenue, San Francisco, CA 94112, United States",4.7,San Francisco,CA,-122.4408517,37.728191,ice cream and frozen
-Banh Mi & Boba,"1634 Irving St, San Francisco, CA 94122, United States",4.3,San Francisco,CA,-122.4756595,37.7637572,boba
-Bar 888,"888 Howard St, San Francisco, CA 94103, United States",4.3,San Francisco,CA,-122.4046644,37.7819047,bar
 Barbacco,"220 California St, San Francisco, CA 94111, United States",4.3,San Francisco,CA,-122.3992691,37.7934314,italian
-Barneys Gourmet Hamburgers,"4138 24th St, San Francisco, CA 94114, United States",4.2,San Francisco,CA,-122.4350445,37.751372,comfort food
 BB Tea,"1314 Noriega St, San Francisco, CA 94122, United States",4.3,San Francisco,CA,-122.4778976,37.7543075,boba
-Beach'N SF,"4300 Judah St, San Francisco, CA 94122, United States",4.8,San Francisco,CA,-122.5082533,37.7604449,healthy
-Beep's Burgers,"1051 Ocean Ave, San Francisco, CA 94112, United States",4.6,San Francisco,CA,-122.453917,37.7232234,comfort food
-Bella Trattoria,"3854 Geary Blvd, San Francisco, CA 94118, United States",4.6,San Francisco,CA,-122.4609231,37.7813576,italian
-Ben Thai Cafe,"1331 Polk St, San Francisco, CA 94109, United States",4.4,San Francisco,CA,-122.4205662,37.7892247,thai
-Ben's Fast Food,"60 Morris St, San Francisco, CA 94107, United States",4.3,San Francisco,CA,-122.4024696,37.7767348,american
 Big Joe's,"717 Monterey Blvd, San Francisco, CA 94127, United States",4.6,San Francisco,CA,-122.4515895,37.731384,diner
-Bi-Rite Creamery,"3692 18th St, San Francisco, CA 94110, United States",4.6,San Francisco,CA,-122.425717,37.76159,ice cream and frozen
 Bite,"912 Sutter St, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4155197,37.7884662,american
-Bite Me Sandwiches,"701 Cole St, San Francisco, CA 94117, United States",4.3,San Francisco,CA,-122.4507268,37.7684425,american
 Boba Gen,"260 5th St, San Francisco, CA 94103, United States",4.1,San Francisco,CA,-122.4041914,37.7806685,boba
 Boba Guys,"429 Stockton St, San Francisco, CA 94108, United States",4.4,San Francisco,CA,-122.4072284,37.7899788,boba
-Bobaville,"3811 Noriega St, San Francisco, CA 94122, United States",4.6,San Francisco,CA,-122.5046172,37.7527691,boba
-Bodega SF,"138 Mason St, San Francisco, CA 94102, United States",4.7,San Francisco,CA,-122.4093022,37.7848262,vietnamese
 BOTTEGA,"1132 Valencia St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4211945,37.7547152,italian
 Boudin Bakery Cafe,"3251 20th Ave, San Francisco, CA 94132, United States",4.2,San Francisco,CA,-122.476886,37.728669,bakery
 Boudin Bakery Cafe,"Bayshore Fwy, San Francisco, CA 94128, United States",3.3,San Francisco,CA,-122.3876191,37.6198717,bakery
-Bourbon Pub,"296 Domestic Terminals Arrivals Level, San Francisco, CA 94128, United States",4.1,San Francisco,CA,-122.3848939,37.6135183,bar
 Brew Cha,"3420 18th St #001, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4200267,37.762001,boba
-Brioche Bakery & Cafe,"1640 Haight St, San Francisco, CA 94117, United States",4.3,San Francisco,CA,-122.4492825,37.7698396,bakery
-Brioche Bakery & Cafe,"210 Columbus Ave, San Francisco, CA 94133, United States",4.5,San Francisco,CA,-122.4056692,37.7973243,bakery
-Buffalo Burger,"5317 Geary Blvd, San Francisco, CA 94121, United States",4.4,San Francisco,CA,-122.4765358,37.7802971,comfort food
 Bullshead Restaurant,"840 Ulloa St, San Francisco, CA 94127, United States",4.4,San Francisco,CA,-122.4654386,37.7409311,comfort food
 Burger Joint,"806 S Airport Blvd, San Francisco, CA 94128, United States",3.8,San Francisco,CA,-122.3816145,37.6177257,comfort food
 Burrito Loco,"850 Ulloa St, San Francisco, CA 94127, United States",4.5,San Francisco,CA,-122.4655902,37.7409158,mexican
 Cafe Bakery & Restaurant,"1365 Noriega St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4782629,37.754049,bakery
 Cafe de Casa,"2701 Leavenworth St, San Francisco, CA 94133, United States",4.7,San Francisco,CA,-122.4189176,37.8061425,american
 Cafe de Casa,"3985 17th St, San Francisco, CA 94114, United States",4.7,San Francisco,CA,-122.4348101,37.7623385,american
-Cafe de la Presse,"352 Grant Ave, San Francisco, CA 94108, United States",4.1,San Francisco,CA,-122.4053971,37.7904669,american
-Cafe Reverie,"848 Cole St, San Francisco, CA 94117, United States",4.4,San Francisco,CA,-122.4498888,37.7661174,american
 Cafe Tiramisu,"28 Belden Pl, San Francisco, CA 94104, United States",4.3,San Francisco,CA,-122.403641,37.791213,american
-Cafe Valencia San Francisco,"1252 Valencia St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4209089,37.7528245,american
-Calabria Brothers,"4763 Mission St, San Francisco, CA 94112, United States",4.7,San Francisco,CA,-122.4366043,37.7220998,comfort food
-Calibur Inc,"68 W Portal Ave, San Francisco, CA 94127, United States",4.4,San Francisco,CA,-122.4667882,37.7401548,comfort food
-Carl's Jr.,"1 Hallidie Plaza, San Francisco, CA 94102, United States",3.5,San Francisco,CA,-122.408845,37.784253,american
 Casa Mexicana,"3917 24th St, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.4301562,37.7513321,mexican
 Cesario's,"601 Sutter St, San Francisco, CA 94102, United States",4.2,San Francisco,CA,-122.4105083,37.7888853,italian
 Chaiya Thai Restaurant,"272 Claremont Blvd, San Francisco, CA 94127, United States",4.3,San Francisco,CA,-122.4651024,37.7410867,thai
-Champa Garden Restaurant,"613 Faxon Ave, San Francisco, CA 94112, United States",4.2,San Francisco,CA,-122.4600441,37.7250489,thai
-Cha-Ya,"762 Valencia St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.421698,37.760768,healthy
-Chestnut Diner,"1312 Chestnut St, San Francisco, CA 94123, United States",4.3,San Francisco,CA,-122.4251944,37.8023389,diner
-Chloe's Cafe,"1399 Church St, San Francisco, CA 94114, United States",4.6,San Francisco,CA,-122.4270264,37.7486058,american
-CHOPSTICKS CHINESE FAST FOOD,"4615 Mission St, San Francisco, CA 94112, United States",4,San Francisco,CA,-122.4348606,37.7244066,american
 Cinderella Bakery & Cafe,"436 Balboa St, San Francisco, CA 94118, United States",4.7,San Francisco,CA,-122.4636784,37.7773724,bakery
 Coco's Ramen,"3319 Mission St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.420913,37.7437713,japanese
-Cotogna,"490 Pacific Ave, San Francisco, CA 94133, United States",4.6,San Francisco,CA,-122.4035761,37.7974041,italian
-CREAM,"3106 16th St, San Francisco, CA 94103, United States",4.1,San Francisco,CA,-122.4222454,37.7651228,ice cream and frozen
-Creighton's American Bakery,"673 Portola Dr, San Francisco, CA 94127, United States",4.3,San Francisco,CA,-122.4526506,37.7446883,bakery
-Creighton's Bakery Cafe,"5214D Diamond Heights Blvd, San Francisco, CA 94131, United States",4.1,San Francisco,CA,-122.4398413,37.7437795,bakery
 Crossroad Pizzeria,"1596 Market St, San Francisco, CA 94102, United States",4.6,San Francisco,CA,-122.4206809,37.7744592,pizza
-Curbside Cafe,"2417 California St, San Francisco, CA 94115, United States",4.4,San Francisco,CA,-122.4341351,37.7887518,american
-DAMNFiNE pizza,"3410 Judah St, San Francisco, CA 94122, United States",4.7,San Francisco,CA,-122.4987262,37.7608687,pizza
-Dandelion Chocolate,"740 Valencia St, San Francisco, CA 94110, United States",4.7,San Francisco,CA,-122.4216972,37.761013,ice cream and frozen
-David's Deli and Bistro,"524 Geary St, San Francisco, CA 94102, United States",3.7,San Francisco,CA,-122.4120951,37.78698,comfort food
-David's Delicatessen,"474 Geary St, San Francisco, CA 94102, United States",3.8,San Francisco,CA,-122.4111035,37.7871134,comfort food
 Deli 23,"2449 23rd St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4043412,37.7543198,comfort food
-Deli Board,"1058 Folsom St, San Francisco, CA 94103, United States",4.6,San Francisco,CA,-122.4070261,37.7775567,comfort food
-Deli Man,"200 Ocean Ave, San Francisco, CA 94112, United States",4.9,San Francisco,CA,-122.4413192,37.72345,comfort food
-Deli World,"18 Ocean Ave, San Francisco, CA 94112, United States",4.7,San Francisco,CA,-122.4358539,37.7239697,comfort food
-Dogpatch Bakehouse & Caffe,"712 Domestic Terminals Departures Level, San Francisco, CA 94128, United States",2.8,San Francisco,CA,-122.384413,37.6192085,bakery
 Domo,"511 Laguna St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4262943,37.7758879,japanese
 Doppio Zero San Francisco,"395 Hayes St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4227688,37.7767846,italian
-Double Decker,"465 Grove St, San Francisco, CA 94102, United States",4.3,San Francisco,CA,-122.4240125,37.777344,comfort food
 Double Rainbow Ice Cream,"415 Castro St, San Francisco, CA 94114, United States",4.8,San Francisco,CA,-122.4350062,37.762276,ice cream and frozen
-DragonEats,"1671 Haight St, San Francisco, CA 94117, United States",4.6,San Francisco,CA,-122.450115,37.769511,vietnamese
-Dreyers - The Waffle Cone Shop,"Beach St, San Francisco, CA 94133, United States",4.1,San Francisco,CA,-122.4101663,37.809362,ice cream and frozen
 Dumpling Home,"298 Gough St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4226361,37.7758205,chinese
-Ebisu Restaurant,"1283 9th Ave, San Francisco, CA 94122, United States",4.6,San Francisco,CA,-122.4665028,37.7644577,japanese
-Eddie's Cafe,"800 Divisadero St, San Francisco, CA 94117, United States",4.5,San Francisco,CA,-122.4380721,37.7769831,diner
-El Buen Comer,"3435 Mission St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4221326,37.7417604,mexican
-El Castillito,"136 Church St #1111, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.429276,37.7687667,mexican
+Pho Ha Tien,"1900 Ocean Ave, San Francisco, CA 94127, United States",4.1,San Francisco,CA,-122.4622038,37.725428,vietnamese

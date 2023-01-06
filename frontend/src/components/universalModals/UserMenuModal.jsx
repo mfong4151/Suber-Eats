@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
@@ -29,7 +30,7 @@ const UserMenuModal = () => {
     <div className="modal">
         <div className='modal-overlay' onClick={toggleMenuModal}>
           <div className="modal-content">
-              <div className="modal-item-univ modal-button"><OrdersIcon/>Orders</div>
+              <div className="modal-item-univ modal-button"><NavLink to={'/yourorders'}><OrdersIcon/>Orders</NavLink></div>
               <div className="modal-item-univ modal-button"><FavoritesIcon/>Favorites</div>
               <div className="modal-item-univ modal-button"><WalletIcon/>Wallet</div>
               <div className="modal-item-univ modal-button"><HelpIcon/>Help</div>

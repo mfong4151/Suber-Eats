@@ -45,6 +45,7 @@ class EasySeeds
     end
 
     def self.unpack_csvs(seed_file)
+
       data = []
       CSV.foreach(seed_file) do |row|
         data << row
