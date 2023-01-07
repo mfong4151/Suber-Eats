@@ -1,6 +1,8 @@
+/* Key: menu listings */
+
 /* .listing-info{} */
 .restaurant-name{
-    font-family: var(--font-family);
+    font-family: var(--font-family-UMB);
     font-size:38px;
     font-weight:600;
 }
@@ -9,7 +11,98 @@
 } */
 /* 'restaurant-ratings{} */
 /* restaurant-buttons' */
-/* .listings-main{}
-.table-of-contents{}
+.listings-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.table-of-contents{
+    display: flex;
+    justify-content: start;
+    align-items: left;
+    flex-direction: column;
+    width:360px;
+    padding-left: 3rem;
+}
+
+
+.toc-index{
+    height:40px;
+}
+
 .listings-view{}
-.reviews{} */
+.reviews{}
+
+
+
+
+/* 2. ListingsBlock */
+.header-holder{
+    display: flex;
+    align-items: center;
+    height:60px
+}
+
+.listing-header{
+    
+    font-family: var(--font-familyUMB), var(--font-family);
+    font-size: 28px;
+    font-weight:800;
+}
+
+.menu-options{
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:20px 20px
+}
+
+/* 3. MenuListing */
+
+.item-listing{
+    position: relative;
+    width:80%;
+}
+
+.item-name{
+    font-family: var(--font-familyUMM), var(--font-family);
+    font-size:16px;
+}
+
+.item-price{
+    font-family: var(--font-family);
+    font-size:15px;
+    font-weight:100px;
+}
+
+.item-description{
+    font-family: var(--font-family);
+    font-size:14px;
+    color: var(--color-grey-text);
+
+}
+
+.add-to-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: var(--color-black);
+    border-radius: 1px;
+    border-color: var(--color-white);
+    height: 34px;
+    width:34px;
+    font-size: 26px;
+    border-radius: 3rem;
+    cursor:pointer;
+    position: absolute;
+    top:8px;
+    right:16px;
+
+}
+
+.add-to-cart:hover{
+    background-color: var(--color-hover-black);
+
+}

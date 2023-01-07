@@ -1,8 +1,23 @@
+
+
 /* TODO Add site wide styles */
+
+@font-face {
+    font-family: 'UberMoveBold';
+    src: url("./assets/UberMoveBold.otf");
+  }
+
+  
+@font-face {
+    font-family: 'UberMoveMedium';
+    src: url("./assets/UberMoveMedium.otf");
+  }
+  
 :root{
     --color-green: #06c167;
     --color-grey: rgb(238, 238, 238);
     --color-greyDarker: rgb(84, 84, 84);
+    --color-grey-text: #8D8D8D;
     --color-greyButtonBG: #EEEEEE;
     --color-hover-grey: #E2E2E2;
     --color-black: #000000;
@@ -10,11 +25,13 @@
     --color-white: #FFFFFF;
     font-size: 16px;
     --font-family: sans-serif;
+    --font-family-UMB: 'UberMoveBold';
+    --font-family-UMM: 'UberMoveMedium';
 }
 
 *{
-    box-sizing: boarder-box;
-    font-family: var(--font-family);
+    /* box-sizing: border-box; */
+    font-family: var(--font-family-UMM), var(--font-family);
 }
 
 

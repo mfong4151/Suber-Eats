@@ -1,8 +1,12 @@
 import React from 'react'
+import UXHeader from '../UXHeader'
 
 const PastOrders = () => {
   return (
-    <div>HERE ARE ALL YOUR PAST ORDERS</div>
+    <>
+      <UXHeader/>
+      <div>HERE ARE ALL YOUR PAST ORDERS</div>
+    </>
   )
 }
 

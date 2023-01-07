@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 import restaurantsReducer from './restaurant';
 import sessionReducer from './session';
 import usersReducer from './user';
+import menusReducer from './menu'
 
 let enhancer;
 export const rootReducer = combineReducers({
     session: sessionReducer,
     users: usersReducer,
-    restaurants: restaurantsReducer
+    restaurants: restaurantsReducer,
+    menu: menusReducer
 })
 
 if (process.env.NODE_ENV === 'production') {

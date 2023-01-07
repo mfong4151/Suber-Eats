@@ -9,8 +9,6 @@ class Api::RestaurantsController < ApplicationController
         @restaurant =  Restaurant.find_by(id: params[:id])
         render :show
     end
-
-    private
     
  
 end
