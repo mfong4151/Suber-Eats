@@ -1,0 +1,4 @@
+user_id:int,restaurant_id:int,transaction_sum
+1,44,42.69
+1,21,2123.23
+1,23,299.95

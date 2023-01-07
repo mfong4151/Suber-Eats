@@ -30,13 +30,18 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Cart
 
+  
+
   has_many :cart_items,
   through: :cart,
   source: :carted_item
 
+
+
+
   has_many :reviewed_restaurants,
   through: :reviews,
-  source: :reviewed_restaurants,
+  source: :reviewed_restaurant,
   dependent: :destroy
 
   has_many :transactions, 
