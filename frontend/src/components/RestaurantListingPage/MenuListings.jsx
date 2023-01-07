@@ -17,7 +17,7 @@ const MenuListings = ({menuItems}) => {
             ))}
         </div>
 
-        <div className='listings-view'>
+        <div className='univ-padding'>
             {Object.keys(menuItems).map((header, idx)=>(
                 <ListingsBlock header={header} listings={menuItems[header]} key={idx}/> 
             ))}

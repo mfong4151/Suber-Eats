@@ -4,17 +4,16 @@ import SearchIcon from './UserExperiencePage/UXPickup/SVGs/SearchIcon';
 import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { UXContext } from './UXContext.jsx';
-
+import { useHistory } from 'react-router-dom';
 
 const UXHeader = () => {
   //temporary place holder until we iron out cart dynamics
   const {setMenuModal, toggleMenuModal} = useContext(UXContext);
-
   const temp = 0;
-
+  const history = useHistory()
 
   return (
-    <header id="splash-header" className="univ-padding">
+    <header className="splash-header univ-padding">
 
         <div className="logo header-left">
               <button className='menu-modal' onClick={toggleMenuModal}>
@@ -22,7 +21,7 @@ const UXHeader = () => {
               </button>
                   
               
-              <div>
+              <div onClick={()=> history.push('/')}>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
         </div>

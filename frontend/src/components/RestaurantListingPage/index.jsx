@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react'
-import UserMenuModal from '../universalModals/UserMenuModal'
-import { UXContext } from '../UXContext'
-import UXHeader from '../UXHeader'
+import React, { useContext, useEffect } from 'react';
+import UserMenuModal from '../universalModals/UserMenuModal';
+import { UXContext } from '../UXContext';
+import UXHeader from '../UXHeader';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurant, getRestaurant } from '../../store/restaurant';
@@ -9,7 +9,10 @@ import { fetchMenu, getMenuItems } from '../../store/menu';
 import { sortMenus } from './utils/menuUtils';
 import MenuListings from './MenuListings';
 import MapHeader from './MapHeader';
-import './RestaurantListingPage.css'
+import Reviews from './Reviews';
+import star from './assets/star_rating_dark.png'
+
+import './RestaurantListingPage.css';
 //https://stackoverflow.com/questions/52064303/reactjs-pass-props-with-redirect-component
 //for handling redirection to this page
 
@@ -29,7 +32,7 @@ const RestaurantListing = () => {
     // dispatch(fetchMenuItems(menuId))
     
   },[dispatch])
-
+  
 
 
 
@@ -38,25 +41,43 @@ const RestaurantListing = () => {
       <UXHeader/>
       <MapHeader/>
       <div className="listing-info">
-        <h1 className='restaurant-name'>{restaurant?.name}</h1>
-        <div className='restaurant-info'>
-          <img src="" alt="" />
-          <div>
+        <div className='univ-padding'>
+          <h1 className='restaurant-name '>{restaurant?.name}</h1>
+        </div>
+        <div className='restaurant-info univ-padding'>
+          <div className='menu-row-1'>
+              <img src={star} alt='star' className="star"/>
+              {restaurant?.rating}
+              <span>(69420 ratings)</span>
+              <span>•</span>
+              <span>{restaurant?.cuisineType.toUpperCase().slice(0,1).concat(restaurant?.cuisineType.slice(1))}</span>
+              <span>•</span>
+              {/* <img src={univPhotos.uberOne} className="uber-one-logo"/> */}
+              <div>Read 5-Star Reviews</div>
+              <span>•</span>
+              <div>
+                More Info
+              </div>
           </div>
-          <div></div>
-          <div></div>
-          <div className='restaurant-buttons'></div>
+          <div className="menu-row-1 menu-row-2">
+            Open at Some Point
+          </div>
+          <div className="menu-row-1 menu-row-2">
+            Tap for hours, info, and more
+          </div>
         </div>
 
       </div>
-      
-      <MenuListings menuItems={sortedMenu}/>
-     
-      
-      <div className='reviews'>
+      <div className='restaurant-buttons'>
           <div></div>
           <div></div>
       </div>
+      <MenuListings menuItems={sortedMenu}/>
+     
+      
+      <Reviews/>
+
+
 
       {menuModal && <UserMenuModal/>}
     </>

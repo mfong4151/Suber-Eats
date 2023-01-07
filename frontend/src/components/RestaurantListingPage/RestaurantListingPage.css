@@ -6,14 +6,27 @@
     font-size:38px;
     font-weight:600;
 }
-/* .restaurant-info{
-    
-} */
+.restaurant-info{
+    padding-top: .5rem;
+    padding-bottom:.5rem;   
+}
+.menu-row-1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-row-2{
+    font:var(--font-family-UMM);
+    font-size: 14px;
+    color: var(--color-grey-text);
+    font-weight:100;
+}
+
 /* 'restaurant-ratings{} */
 /* restaurant-buttons' */
 .listings-main{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;;
 }
 
 
@@ -23,18 +36,15 @@
     align-items: left;
     flex-direction: column;
     width:360px;
+    padding-right: 10rem;
     padding-left: 3rem;
 }
 
 
 .toc-index{
+    padding-top: 1rem;
     height:40px;
 }
-
-.listings-view{}
-.reviews{}
-
-
 
 
 /* 2. ListingsBlock */
@@ -62,7 +72,6 @@
 
 .item-listing{
     position: relative;
-    width:80%;
 }
 
 .item-name{
@@ -105,4 +114,29 @@
 .add-to-cart:hover{
     background-color: var(--color-hover-black);
 
+}
+
+/* 4. reviews */
+
+.reviews-header{
+    display:flex;
+    justify-content: start;
+    width:360px;
+
+}
+
+.reviews-header-text{
+    font-size:50px;
+    inline-size: 286px;
+    overflow-wrap:break-word;
+}
+
+.reviews-subtext{
+    font-family: var(--font-family);
+    
+}
+
+.reviews{
+    display: flex;
+    justify-content: flex-start;
 }
