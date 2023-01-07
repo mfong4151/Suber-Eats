@@ -35,8 +35,12 @@ class User < ApplicationRecord
   source: :carted_item
 
   has_many :reviewed_restaurants,
-  through :reviews,
+  through: :reviews,
   source: :reviewed_restaurants
+
+  has_many :transactions, 
+  foreign_key: :user_id,
+  class_name: :Transaction
 
 
   def self.find_by_credentials(credential, password)
