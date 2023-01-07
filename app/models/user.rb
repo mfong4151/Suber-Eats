@@ -36,11 +36,14 @@ class User < ApplicationRecord
 
   has_many :reviewed_restaurants,
   through: :reviews,
-  source: :reviewed_restaurants
+  source: :reviewed_restaurants,
+  dependent: :destroy
 
   has_many :transactions, 
   foreign_key: :user_id,
-  class_name: :Transaction
+  class_name: :Transaction,
+  dependent: :destroy
+
 
 
   def self.find_by_credentials(credential, password)

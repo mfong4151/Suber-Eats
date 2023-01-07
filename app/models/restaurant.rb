@@ -39,9 +39,11 @@ class Restaurant < ApplicationRecord
     dependent: :destroy
 
     
-  has_many :transactions, 
-  foreign_key: :restaurant_id,
-  class_name: :Transaction
+    has_many :transactions, 
+    foreign_key: :restaurant_id,
+    class_name: :Transaction,
+    dependent: :destroy
+
 
     has_one_attached :image
 end

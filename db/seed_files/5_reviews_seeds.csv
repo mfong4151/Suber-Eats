@@ -1,10 +1,10 @@
 restaurant_id:int,user_id:int,body:text
 1,1,Great food and service! Highly recommend.
-2,2,"Delicious pizza, will definitely be back."
+3,1,Not enough chicken in my ramen.
 3,3,"Nice atmosphere, friendly staff."
 4,4,Best sushi I've had in a long time.
 5,5,Good value for the price.
-6,1,"Tasty burgers, nice patio."
+3,1,"Like I said, not enough chicken."
 7,2,"Good Thai food, reasonable prices."
 8,3,Nice selection of craft beers.
 9,4,Wonderful French cuisine.
