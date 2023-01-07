@@ -14,7 +14,6 @@
 #
 class User < ApplicationRecord
   has_secure_password
-
   validates :session_token, presence: true, uniqueness: true 
   validates :username, length: {minimum:3, maximum:30}, format: { without: URI::MailTo::EMAIL_REGEXP, message: "Can't be an email" }, uniqueness: true 
   validates :email, length: {minimum:3, maximum:255}, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
@@ -23,9 +22,22 @@ class User < ApplicationRecord
   validates :phone_number, presence:true, uniqueness: true
   before_validation :ensure_session_token 
 
+  has_many :reviews,
+  foreign_key: :user_id,
+  class_name: :Review
 
+  has_one :cart,
+  foreign_key: :user_id,
+  class_name: :Cart
 
-  
+  has_many :cart_items,
+  through: :cart,
+  source: :carted_item
+
+  has_many :reviewed_restaurants,
+  through :reviews,
+  source: :reviewed_restaurants
+
 
   def self.find_by_credentials(credential, password)
     if credential

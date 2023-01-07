@@ -4,7 +4,6 @@
 #
 #  id            :bigint           not null, primary key
 #  restaurant_id :bigint           not null
-#  menu_item_id  :bigint           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
