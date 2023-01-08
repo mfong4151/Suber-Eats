@@ -26,17 +26,13 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Review
 
-  has_one :cart,
+  has_many :carts,
   foreign_key: :user_id,
   class_name: :Cart
 
-  
-
   has_many :cart_items,
-  through: :cart,
+  through: :carts,
   source: :carted_item
-
-
 
 
   has_many :reviewed_restaurants,

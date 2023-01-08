@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 
 const UXHeader = () => {
   //temporary place holder until we iron out cart dynamics
-  const {toggleMenuModal, toggleLocationModal } = useContext(UXContext);
+  const {toggleMenuModal, toggleLocationModal, toggleCartModal} = useContext(UXContext);
   const temp = 0;
   const history = useHistory()
 
@@ -33,7 +33,13 @@ const UXHeader = () => {
           <input  type='text' name='location' placeholder='What are you craving?'/> 
 
         </form>
-        <button id='cart-button' className='btn-round ux-buttons'><span className='embedded-icon-padding'><SearchIcon/></span>{temp} carts</button>
+        <button id='cart-button' className='btn-round ux-buttons' onClick={toggleCartModal}>
+            <span className='embedded-icon-padding'>
+                <SearchIcon/>
+            </span>
+            {temp} 
+            carts
+        </button>
 
 
     </header>

@@ -41,6 +41,7 @@ function App() {
                                 locationModal, setLocationModal, toggleLocationModal,
                                 userLocation, setUserLocation
                                 }}>
+              
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
               <Route path="/deliverypickup" component={UserExperiencePage}/>
               <Route path="/yourorders" component={PastOrders}/>

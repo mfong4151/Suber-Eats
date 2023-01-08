@@ -69,4 +69,68 @@ body.active-modal {
 
 }
 
+/* For location modal */
 
+.modal-loc-content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--color-white);
+    top:6%;
+    left:35%;
+    width:460px;
+    height:370px;
+}
+.loc-pickup-details{
+    font-family: var(--font-family-UMB), var(--font-family);
+    font-size: 30px;
+
+}
+
+.loc-options{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.menu-loc-option-text{
+    font-family: var(--font-family-UMM), var(--font-family);
+    font-size: 16px;
+}
+
+.loc-done{
+    width:80%;
+    height:60px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.loc-buttons{
+    background-color: var(--color-greyButtonBG);
+    font-family: var(--font-family-UMM), var(--font-family);
+    font-size: 15px;
+}
+
+
+/* cart modal */
+.cart-modal-content{
+    position: absolute;
+    top:6%;
+    right:3%;
+    width:420px;
+
+    /* change this to height auto after we get our thunk working */
+    /* height:auto; */
+    height:400px;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+
+}
+
+.cart-overlay{
+    background-color: transparent;
+}

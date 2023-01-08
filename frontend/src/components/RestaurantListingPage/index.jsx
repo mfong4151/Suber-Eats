@@ -23,10 +23,11 @@ const RestaurantListing = () => {
   const dispatch = useDispatch()
   const {restaurantId} = useParams()
   const restaurant = useSelector(getRestaurant(restaurantId))
-  const menuItems = useSelector(state => (Object.values(state.menu)))
-
+  const menuItems = useSelector(state => (Object.values(state.menu.menuItems)))
+  const reviews = useSelector(state => Object.values(state.menu.reviews))
   const sortedMenu = sortMenus(menuItems)
   
+  console.log(reviews)
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
     dispatch(fetchMenu(restaurantId))

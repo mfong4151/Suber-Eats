@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import UserMenuModal from './UserMenuModal';
 import LocationModal from './LocationModal';
 import { UXContext } from '../UXContext';
+import CartModal from './CartModal';
 
 const BundleModals = () => {
     const {menuModal, cartModal, locationModal} = useContext(UXContext)
@@ -10,7 +11,7 @@ const BundleModals = () => {
         <>
             {menuModal && <UserMenuModal/>}
             {locationModal && <LocationModal/>}
-            {/* {cartModal && <CartModal/>} */}
+            {cartModal && <CartModal/>}
         </>
         )
 }

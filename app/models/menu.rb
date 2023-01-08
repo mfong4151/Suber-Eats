@@ -13,6 +13,9 @@ class Menu < ApplicationRecord
     foreign_key: :restaurant_id,
     class_name: :Restaurant
 
+    has_many :reviews,
+    through: :restaurant,
+    source: :reviews
     
     has_many  :menu_items,
     foreign_key: :menu_id,

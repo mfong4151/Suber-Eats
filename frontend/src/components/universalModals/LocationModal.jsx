@@ -8,7 +8,8 @@ import PickUpNow from './SVGs/PickUpNow';
 const LocationModal = () => {
 
   //grab the context variable that makes sense from here
-  const { locationModal, setLocationModal, toggleLocationModal } = useContext(UXContext)
+  const { locationModal, setLocationModal, toggleLocationModal, userLocation, setUserLocation } = useContext(UXContext)
+
   //use dispatch if necessary
   const dispatch = useDispatch()
 
@@ -27,7 +28,23 @@ const LocationModal = () => {
     <div className="modal">
         <div className='modal-overlay' onClick={toggleLocationModal}>
           <div className="modal-loc-content">
-              
+    
+              <div>
+                <h1 className='loc-pickup-details'>Pickup Details</h1>
+              </div>
+
+              <div className="loc-options">
+                  <h2 className='menu-loc-option-text'>Pick Up Now</h2>
+                  <button className='btn-round loc-buttons'>Schedule</button>
+              </div>
+              <div className="loc-options">
+                  <div>
+                    <PickUpNow/> 
+                    <h2 className='menu-loc-option-text'>Pick Up Now</h2>
+                    <button className='btn-round loc-buttons'>Schedule</button>
+                  </div>
+              </div>
+              <button className='loc-done button-sq univ-padding'><span>Done</span></button>
           </div>
 
         </div>

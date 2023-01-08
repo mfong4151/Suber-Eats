@@ -9,6 +9,14 @@ class Api::SessionsController < ApplicationController
     
     if @user 
       login!(@user)
+      @users_cart_items = @user.cart_items
+      @users_transactions = @user.transactions
+
+      # @user.carts.each do |cart|
+      #   puts cart.menu_item_id
+      #   puts cart.quantity
+      # end
+      
       render 'api/users/show'
       return 
     end 
