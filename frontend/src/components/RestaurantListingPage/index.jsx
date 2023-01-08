@@ -27,7 +27,6 @@ const RestaurantListing = () => {
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
     dispatch(fetchMenu(restaurantId))
-    
   },[dispatch, restaurantId])
   
 

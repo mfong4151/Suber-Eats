@@ -1,0 +1,13 @@
+.menu-item-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-modal-content{
+    background-color: var(--color-white);
+    width: 1050px;
+    height:300px;
+    margin:auto;
+    z-index: 4;
+}

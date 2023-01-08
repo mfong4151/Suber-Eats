@@ -18,6 +18,7 @@ function App() {
   const [menuModal, setMenuModal] = useState(false);
   const [cartModal, setCartModal] = useState(false)
   const [locationModal, setLocationModal] = useState(false)
+  
   const toggleMenuModal = () =>{ 
     setMenuModal(!menuModal)
   }    

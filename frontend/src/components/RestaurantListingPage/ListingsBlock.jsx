@@ -1,11 +1,10 @@
 import React from 'react'
-import MenuListing from './MenuListing'
+import MenuListingItem from './MenuListingItem'
 import './RestaurantListingPage.css'
 
+const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal}) => {
 
-const ListingsBlock = ({header, listings}) => {
-
-
+   
     return (
         <div>
             <div className='header-holder'>
@@ -14,12 +13,14 @@ const ListingsBlock = ({header, listings}) => {
             
             <ul className='menu-options'>
                 {listings.map((listing, idx)=>
-                    <MenuListing listing={listing} key={idx}/>
+                    <MenuListingItem listing={listing} 
+                    toggleItemModal={toggleItemModal} 
+                    setMenuItem = {setMenuItem}
+                    key={idx}/>
                 )}
             </ul>
-
         </div>
     )
 }
 
-export default ListingsBlock
+export default ListingsBlock;
