@@ -2,14 +2,9 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Review from './Review';
 
-const Reviews = () => {
-    // const reviews = useSelector(getReviews)
-    const dispatch = useDispatch();
+const Reviews = ({reviews}) => {
 
-    // useEffect(()=>{
-    //     dispatch(fetchReviews())
-    // }, [dispatch]       
-    // )
+  const dispatch = useDispatch();
 
 
     return (
@@ -19,7 +14,9 @@ const Reviews = () => {
             <p className='reviews-subtext'>Hear from people who love this spot</p>
           </div>
           <ul className='reviews'>
-              <Review/>
+            {reviews.map((review, idx)=>
+              (<Review review={review} key={idx}/> )
+            )}
           </ul>   
 
       </div>  

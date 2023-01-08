@@ -11,6 +11,15 @@ const receiveMenu = menu =>(
     }   
 )
 
+export const getMenuItems = state =>{
+    if(!state.menu.menuItems) return [];
+    return Object.values(state.menu.menuItems);
+}
+
+export const getMenuReviews = state =>{
+    if(!state.menu.menuItems) return [];
+    return Object.values(state.menu.reviews);
+}
 
 export const fetchMenu = menuId => async dispatch =>{
 
@@ -24,7 +33,8 @@ export const fetchMenu = menuId => async dispatch =>{
 
 const menusReducer = (state = {}, action) =>{
     switch(action.type){
-      
+        
+        
         case RECEIVE_MENU:
             return {...state, ...action.payload.menu}
             
