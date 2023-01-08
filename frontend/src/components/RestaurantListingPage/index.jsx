@@ -11,8 +11,10 @@ import MenuListings from './MenuListings';
 import MapHeader from './MapHeader';
 import Reviews from './Reviews';
 import star from './assets/star_rating_dark.png'
-
 import './RestaurantListingPage.css';
+import BundleModals from '../universalModals/BundleModals';
+
+
 //https://stackoverflow.com/questions/52064303/reactjs-pass-props-with-redirect-component
 //for handling redirection to this page
 
@@ -22,7 +24,6 @@ const RestaurantListing = () => {
   const {restaurantId} = useParams()
   const restaurant = useSelector(getRestaurant(restaurantId))
   const menuItems = useSelector(state => (Object.values(state.menu)))
-  const {menuModal} = useContext(UXContext)
 
   const sortedMenu = sortMenus(menuItems)
   
@@ -73,13 +74,8 @@ const RestaurantListing = () => {
           <div></div>
       </div>
       <MenuListings menuItems={sortedMenu}/>
-     
-      
       <Reviews/>
-
-
-
-      {menuModal && <UserMenuModal/>}
+      <BundleModals/>      
     </>
   )
 }

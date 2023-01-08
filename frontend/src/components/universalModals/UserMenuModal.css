@@ -17,29 +17,7 @@ body.active-modal {
     transition: opacity 0.4s ease-in-out 0s;
 }
 
-.modal-content{
-    
-    position: absolute;
-    background-color: var(--color-white);
-    width:300px;
-    height:100%;
-   
-}
 
-.modal-item-univ{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-}
-
-.modal-button{
-    
-    height: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    padding-left: 2rem;
-}
 
 #sign-out{
     width:100%
@@ -53,14 +31,42 @@ body.active-modal {
     margin-bottom: 1rem
 }
 
-.modal-text-options{
+
+.phone-buttons{
+    display: flex;
+    justify-content:flex-start;
+}
+
+/* used for left facing menu modal, UserMenuModal.jsx */
+
+.modal-menu-content{
+    
+    position: absolute;
+    background-color: var(--color-white);
+    width:300px;
+    height:100%;
+   
+}
+.modal-item-univ{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-menu-button{
+    
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 2rem;
+}
+
+.modal-menu-text-options{
     height:40px;
     font-size:14px;
     padding-left: 2rem;
 
 }
 
-.phone-buttons{
-    display: flex;
-    justify-content:flex-start;
-}
+

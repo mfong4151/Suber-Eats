@@ -1,4 +1,5 @@
 import React from 'react'
+import BundleModals from '../universalModals/BundleModals'
 import UXHeader from '../UXHeader'
 
 const PastOrders = () => {
@@ -6,6 +7,7 @@ const PastOrders = () => {
     <>
       <UXHeader/>
       <div>HERE ARE ALL YOUR PAST ORDERS</div>
+      <BundleModals/>
     </>
   )
 }

@@ -4,17 +4,17 @@ import { useContext } from 'react';
 import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
-import PickUpNow from './SVGs/PickUpNow';
-const LocationModal = () => {
+
+const MODALNAME = () => {
 
   //grab the context variable that makes sense from here
-  const { locationModal, setLocationModal, toggleLocationModal } = useContext(UXContext)
+  const {} = useContext(UXContext)
   //use dispatch if necessary
   const dispatch = useDispatch()
 
   
   //controlling overflow
-  if (locationModal) document.body.classList.add('active-modal')
+  if () document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
 
 
@@ -25,9 +25,9 @@ const LocationModal = () => {
 
   return (
     <div className="modal">
-        <div className='modal-overlay' onClick={toggleLocationModal}>
-          <div className="modal-loc-content">
-              
+        <div className='modal-overlay' onClick={}>
+          <div className="modal-content">
+           
           </div>
 
         </div>
@@ -35,4 +35,4 @@ const LocationModal = () => {
   )
 }
 
-export default LocationModal
+export default MODALNAME

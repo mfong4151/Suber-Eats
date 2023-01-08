@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import { UXContext } from '../UXContext.jsx';
 import UserMenuModal from '../universalModals/UserMenuModal.jsx'
 import { fetchRestaurants, getRestaurants } from '../../store/restaurant';
+import BundleModals from '../universalModals/BundleModals.jsx';
 
 //Not sure if cart management needs to be done in state, context, or store yet
 //I need some sort of state to manage the user's cart. 
@@ -19,15 +20,11 @@ const UserExperiencePage = () => {
     const allRestaurants = useSelector(getRestaurants);
     const restaurants = allRestaurants;
     const dispatch = useDispatch();
-    const {menuModal} = useContext(UXContext)
   
     useEffect(()=>{
       dispatch(fetchRestaurants())
 
     },[])   
-
-
-    
 
     if(!sessionUser) return <Redirect to='/login'/>
 
@@ -36,7 +33,7 @@ const UserExperiencePage = () => {
     <>  
         <UXHeader/>
         <UXPickup restaurants={restaurants}/>
-        {menuModal && <UserMenuModal/>}
+        <BundleModals/>
     </>
   )
 }

@@ -16,11 +16,19 @@ function App() {
   const [numCarts, setNumCarts] = useState(0);
   const [sortOptions, setSortOptions] = useState(filters());
   const [menuModal, setMenuModal] = useState(false);
+  const [cartModal, setCartModal] = useState(false)
+  const [locationModal, setLocationModal] = useState(false)
   const toggleMenuModal = () =>{ 
     setMenuModal(!menuModal)
   }    
+  
+  const toggleCartModal = ()=>{
+    setCartModal(!cartModal)
+  }
 
- 
+  const toggleLocationModal = ()=>{
+    setLocationModal(!locationModal)
+  }
 
   return (
     <>
@@ -28,7 +36,11 @@ function App() {
             <Route path="/" component={SplashPage} exact/>
             <Route path="/login" component={LoginFormPage}/>
             <UXContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, 
-                                menuModal, setMenuModal, toggleMenuModal}}>
+                                menuModal, setMenuModal, toggleMenuModal,
+                                cartModal, setCartModal, toggleCartModal,
+                                locationModal, setLocationModal, toggleLocationModal,
+                                userLocation, setUserLocation
+                                }}>
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
               <Route path="/deliverypickup" component={UserExperiencePage}/>
               <Route path="/yourorders" component={PastOrders}/>
