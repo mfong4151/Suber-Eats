@@ -53,7 +53,7 @@ class EasySeeds
     ApplicationRecord.connection.reset_pk_sequence!(table_string)
   end
 
-  def self.destory_tables(class_names, table_strings)
+  def self.destroy_tables(class_names, table_strings)
     (class_names.length - 1).downto(0) do |i|
       EasySeeds.destroy_table(class_names[i], table_strings[i])
     end

@@ -16,8 +16,10 @@ function App() {
   const [numCarts, setNumCarts] = useState(0);
   const [sortOptions, setSortOptions] = useState(filters());
   const [menuModal, setMenuModal] = useState(false);
-  const [cartModal, setCartModal] = useState(false)
-  const [locationModal, setLocationModal] = useState(false)
+  const [cartModal, setCartModal] = useState(false);
+  const [restCartModal, setRestCartModal] = useState(false);
+  const [locationModal, setLocationModal] = useState(false);
+
   
   const toggleMenuModal = () =>{ 
     setMenuModal(!menuModal)
@@ -31,6 +33,15 @@ function App() {
     setLocationModal(!locationModal)
   }
 
+  const toggleCartModals= () =>{
+    setCartModal(restCartModal)
+    setRestCartModal(!restCartModal)
+  }
+
+  const toggleRestCartModal = ()=>{
+    setRestCartModal(!restCartModal)
+  }
+
   return (
     <>
           <Switch>
@@ -40,7 +51,9 @@ function App() {
                                 menuModal, setMenuModal, toggleMenuModal,
                                 cartModal, setCartModal, toggleCartModal,
                                 locationModal, setLocationModal, toggleLocationModal,
-                                userLocation, setUserLocation
+                                userLocation, setUserLocation, toggleRestCartModal,
+                                restCartModal, setRestCartModal, toggleCartModals
+          
                                 }}>
               
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>

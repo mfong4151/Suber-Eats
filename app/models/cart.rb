@@ -15,10 +15,17 @@ class Cart < ApplicationRecord
     belongs_to :carted_item,
     foreign_key: :menu_item_id,
     class_name: :MenuItem
-
+    
 
     belongs_to :cart_owner,
     foreign_key: :user_id,
     class_name: :User
-    
+
+    belongs_to :restaurant,
+    foreign_key: :restaurant_id,
+    class_name: :Restaurant
+
+    has_many :cart_item_restaurants,
+    through: :carted_item,
+    source: :parent_restaurant
 end

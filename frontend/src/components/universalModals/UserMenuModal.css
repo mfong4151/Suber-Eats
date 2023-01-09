@@ -107,6 +107,27 @@
     justify-content: space-evenly;
     align-items: center  ;
     height:100px;
+    cursor: pointer;  
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: var(--color-grey-darker);
+}
+.cart-tab:hover{
+    background-color:var(--color-grey);
+}
+
+
+.cart-tab:first-child{
+    border-top-left-radius:30px;
+    border-top-right-radius: 30px;
+    border-top:transparent
+}
+
+
+.cart-tab:last-child{
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius:30px;
+    border-bottom:transparent;
 }
 
 .cart-modal-content{
@@ -116,16 +137,11 @@
     width:420px;
 
     /* change this to height auto after we get our thunk working */
-    /* height:auto; */
-    height:400px;
+    height:auto;
     background-color: var(--color-white);
-    border-radius: 2rem;
-    border-style:solid;
-    border-width: 8px;
-    border-color: var(--color-black);
-
+    border-radius: 30px;
+    border:1px solid var(--color-grey-shadow);
 }
-
 
 
 .cart-modal-text-holder{
@@ -142,11 +158,62 @@
 .cart-modal-text{
     font-family: var(--font-family);
     font-size:14px;
-    color: var(--color-grey-text)
+    color: var(--color-grey-text);
+}
+
+.num-items-num{
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-radius: 3rem;
+    height: 30px;
+    width:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .chevron-right-svg{
     height:10px;
     color:var(--color-grey)
+}
+
+.num-items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:20%
+}
+
+.cart-divider{
+    border: none;
+    height: 40px;
+    background: var(--color-grey-darker);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+/* secondary menu modal for specific restaurant */
+
+.sub-menu{
+    position: absolute;
+    background-color: var(--color-white);
+    width:450px;
+    height:100%;
+    left:70%;
+    border: left 2px;
+}
+
+.sub-menu-header{
+
+}
+
+.sub-menu-text{
+    
+}
+
+
+.clear-cart{
+    color: var(--color-red-text);
+    
 }

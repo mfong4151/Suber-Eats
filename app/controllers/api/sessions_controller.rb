@@ -9,10 +9,7 @@ class Api::SessionsController < ApplicationController
     
     if @user 
       login!(@user)
-      @users_cart_items = @user.cart_items
-      @users_transactions = @user.transactions
 
-      
       render 'api/users/show'
       return 
     end 

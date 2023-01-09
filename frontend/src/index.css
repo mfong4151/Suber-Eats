@@ -19,10 +19,12 @@
     --color-greyDarker: rgb(84, 84, 84);
     --color-grey-text: #8D8D8D;
     --color-greyButtonBG: #EEEEEE;
+    --color-grey-shadow: #E2E2E2;
     --color-hover-grey: #E2E2E2;
     --color-black: #000000;
     --color-hover-black: #333333;
     --color-white: #FFFFFF;
+    --color-red-text:#E11900;
     font-size: 16px;
     --font-family: sans-serif;
     --font-family-UMB: 'UberMoveBold';
@@ -237,3 +239,7 @@ h2{
     transition: opacity 0.4s ease-in-out 0s;
 }
 
+
+.grey-border-for-white{
+    border:1px solid var(--color-grey-shadow);
+}

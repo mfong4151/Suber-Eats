@@ -3,6 +3,7 @@ class CreateCarts < ActiveRecord::Migration[7.0]
     create_table :carts do |t|
       t.references :menu_item, null:false, foreign_key:{to_table: :menu_items}
       t.references :user, null:false, foreign_key:{to_table: :users}
+      t.references :restaurant, null:false, foreign_key:{to_table: :restaurants}
       t.integer :quantity, null:false
       t.timestamps
     end

@@ -7,10 +7,9 @@ import { useSelector } from 'react-redux';
 import { aggregateCart } from './utils/cartUtils';
 import CartBody from './CartBody/CartBody';
 
-const CartModal = () => {
+const CartModal = ({restCart, setRestCart}) => {
     //grab the context variable that makes sense from here
-    const {cartModal, toggleCartModal} = useContext(UXContext)
-    const dispatch = useDispatch()
+    const {cartModal, toggleCartModal} = useContext(UXContext);
     const sessionUser = useSelector(state => state.session.user);
 
     let userCartItems = sessionUser.cart.currentCart;
@@ -27,7 +26,8 @@ const CartModal = () => {
                     <CartBody 
                         restName={restName} 
                         userCartItems={userCartItems}
-                        key={idx}    
+                        setRestCart ={setRestCart}
+                        key={idx}
                     />
                     )}
 
