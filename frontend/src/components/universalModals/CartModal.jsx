@@ -4,13 +4,17 @@ import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import { aggregateCart } from './utils/cartUtils';
+import CartBody from './CartBody/CartBody';
 
 const CartModal = () => {
     //grab the context variable that makes sense from here
     const {cartModal, toggleCartModal} = useContext(UXContext)
     const dispatch = useDispatch()
     const sessionUser = useSelector(state => state.session.user);
-    console.log(sessionUser)
+
+    let userCartItems = sessionUser.cart.currentCart;
+    userCartItems = aggregateCart(userCartItems);
 
     if (cartModal) document.body.classList.add('active-modal')
     else document.body.classList.remove('active-modal')
@@ -19,8 +23,13 @@ const CartModal = () => {
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={toggleCartModal}>
               <div className="cart-modal-content">
-
-
+                {Object.keys(userCartItems).map((restName, idx)=>
+                    <CartBody 
+                        restName={restName} 
+                        userCartItems={userCartItems}
+                        key={idx}    
+                    />
+                    )}
 
               </div>
 
@@ -30,4 +39,4 @@ const CartModal = () => {
 
 }
 
-export default CartModal
+export default CartModal;

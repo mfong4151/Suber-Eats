@@ -11,9 +11,10 @@ import WalletIcon from './SVGs/WalletIcon';
 import HelpIcon from './SVGs/HelpIcon';
 import Promotions from './SVGs/Promotions';
 import InviteFriendsIcon from './SVGs/InviteFriendsIcon';
+
+
 const UserMenuModal = () => {
 
-  //
   const {menuModal, toggleMenuModal} = useContext(UXContext)
   const dispatch = useDispatch()
 
