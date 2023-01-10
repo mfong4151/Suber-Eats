@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
 import GroupOrderIcon from './SVGs/GroupOrderIcon';
 import RestCartItem from './RestCartItem';
 import {useHistory} from 'react-router-dom';
-import { destroyCart } from './utils/cartUtils';
+import { deleteCart } from '../../store/cart';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './UserMenuModal.css'
+import { fetchCart } from '../../store/cart';
 //cart modal for a specific restaurant
 
 const RestCartModal = ({restCart}) => {
-
+  const dispatch = useDispatch()
+  const sessionUser = useSelector(state => state.session.user)
   const {restCartModal, toggleRestCartModal} = useContext(UXContext);
   const history = useHistory()
   const firstCart = restCart[0];
@@ -19,10 +23,13 @@ const RestCartModal = ({restCart}) => {
 
 
 
-  const destroyCart = e =>{
+  const clearCart = e =>{
     e.preventDefault();
-    e.stopPropagation()
-    console.log(restCart)
+    e.stopPropagation();
+    for(const cart of restCart){
+      dispatch(deleteCart(cart.id))
+
+    }
   }
 
   const handleAddClick = e =>{
@@ -31,6 +38,9 @@ const RestCartModal = ({restCart}) => {
   }
 
 
+  useEffect(()=>{
+    dispatch(fetchCart(sessionUser.id))
+}, [])
   
   return (
     <div className="modal">
@@ -57,7 +67,7 @@ const RestCartModal = ({restCart}) => {
                 </ul>
                 <div className="sub-menu-note"></div>
                 <div className='udc clear-cart-holder'>
-                    <button className="udc clear-cart" onClick={destroyCart}>Clear Cart</button>
+                    <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>
                 </div>
               </div>
 

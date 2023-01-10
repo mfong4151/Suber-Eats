@@ -12,3 +12,12 @@ export const sortMenus = menuItems => {
     
     return headers
 }
+
+export const checkCartMembership = (menuItem, cart) =>{
+    const res = false;
+
+    // cart.forEach(cartItem =>{
+    //     if(menuItem.id === cart.id)  
+    // })
+    
+}

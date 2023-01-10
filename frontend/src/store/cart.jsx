@@ -51,8 +51,8 @@ export const createCart = cart => async dispatch => {
 
 
 
-export const updateCart = cart => async dispatch =>{
-    const res = await csrfFetch(`/api/carts/${cart.id}`,{
+export const updateCart = (cart, cartId) => async dispatch =>{
+    const res = await csrfFetch(`/api/carts/${cartId}`,{
         method: "PATCH",
         body: JSON.stringify(cart),
         headers:{ 
@@ -69,7 +69,7 @@ export const updateCart = cart => async dispatch =>{
 
 
 export const deleteCart = cartId => async dispatch =>{
-    const res = await fetch(`/api/carts/${cartId}`,{
+    const res = await csrfFetch(`/api/carts/${cartId}`,{
         method: "DELETE",
         
     })
@@ -88,8 +88,8 @@ const cartsReducer = (state = {}, action) =>{
             return  {...state,...action.payload.cart}
         case REMOVE_CART:
             const newState = {...state}
-            delete state[action.payload.cartId]
-            return 
+            delete newState[action.payload.cart.cartId]
+            return newState
         default:
             return state
     }

@@ -3,7 +3,6 @@ import MenuListingItem from './MenuListingItem'
 import './RestaurantListingPage.css'
 
 const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal}) => {
-
    
     return (
         <div className='listings-block'>

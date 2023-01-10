@@ -9,36 +9,40 @@ class Api::CartsController < ApplicationController
     end
 
     def create
-        @carts = Cart.new(cart_params)
-        if @post.save
-            render 'api/users/show'
+        puts(cart_params)
+        @cart = Cart.new(cart_params)
+        if @cart.save!
+            render :show
             return
         else
-            render json: @carts.errors.full_messages, status: 422
+            render json: @cart.errors.full_messages, status: 422
             return
         end
     end
    
     def update
-        puts(cart_params)
+        puts 'PARAMS HERE PARAMS HERE PARAMS HERE'
+        puts(params)
         @cart = Cart.find_by(cart_params)
-        
+        puts 'YOUR CART HERE'
         if @cart.update(cart_params)
-            render 'api/users/show'
+            render :show
         else
             render json: @cart.errors.full_messages, status: 422
         end
 
     end
     
-    
 
-    def delete
+    def destroy
 
-        @carts = Cart.where(user_id: params[:user_id], restauraunt_id: params[:restaurant_id])
-        if @carts
-            @carts.delete_all
-            render 'api/users/show'
+        @cart = Cart.find_by(id: params[:id])
+        if @cart.delete
+            render :show
+            return
+        else
+            render json: @cart.errors.full_messages, status: 422
+
         end
         return
 

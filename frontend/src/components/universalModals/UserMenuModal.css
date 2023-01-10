@@ -200,6 +200,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
+    overflow-y: auto;
     margin:atuo;
     background-color: var(--color-white);
     width:450px;

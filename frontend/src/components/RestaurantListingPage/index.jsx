@@ -18,6 +18,7 @@ import { fetchCart } from '../../store/cart';
 
 const RestaurantListing = () => {
 
+  const sessionUserId = useSelector(state => state.session.user.id)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
@@ -27,11 +28,11 @@ const RestaurantListing = () => {
   //not sure if this should go here but oh well
   
 
-  
 
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
     dispatch(fetchMenu(restaurantId))
+    dispatch(fetchCart(sessionUserId))
   },[dispatch, restaurantId])
   
 
