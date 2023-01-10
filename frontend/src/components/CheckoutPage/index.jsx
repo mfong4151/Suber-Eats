@@ -5,18 +5,17 @@ import CheckoutLeft from './CheckoutLeft'
 import CheckoutRight from './CheckoutRight'
 import UserMenuModal from '../universalModals/UserMenuModal'
 
-const CheckoutPage = ({order}) => {
-
-        const {menuModal, toggleMenuModal} = useContext(UXContext)
-        // if(!orderInfo) return (<Redirect to={/>})
+const CheckoutPage = () => {
+        const {menuModal, toggleMenuModal, checkoutOrder} = useContext(UXContext)
+        if(!checkoutOrder) return (<Redirect to={'/'}/>)
 
         return (
-          <div className='checkout-page'>
-            <div>
-                <CheckoutLeft/>
+          <div className='checkout-page' >
+            <div id='left'>
+                <CheckoutLeft checkoutOrder={checkoutOrder}/>
             </div>
-            <div>
-              {/* <CheckoutRight/> */}
+            <div id='right'>
+              <CheckoutRight checkoutOrder={checkoutOrder}/>
 
             </div>
             {menuModal && <UserMenuModal/>}

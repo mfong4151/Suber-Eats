@@ -2,7 +2,7 @@ import React from 'react'
 import MenuListingItem from './MenuListingItem'
 import './RestaurantListingPage.css'
 
-const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal}) => {
+const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal, usersCart}) => {
    
     return (
         <div className='listings-block'>
@@ -15,7 +15,9 @@ const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal}) => {
                     <MenuListingItem listing={listing} 
                     toggleItemModal={toggleItemModal} 
                     setMenuItem = {setMenuItem}
-                    key={idx}/>
+                    key={idx}
+                    usersCart={usersCart}
+                    />
                 )}
             </ul>
         </div>

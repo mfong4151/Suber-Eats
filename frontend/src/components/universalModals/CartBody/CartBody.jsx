@@ -13,7 +13,7 @@ const CartBody = ({restName, userCartItems, setRestCart}) => {
     const handleOnClick = e =>{
         e.preventDefault()
         toggleCartModals()
-        setRestCart(userCartItems[restName])
+        setRestCart(restName)
     }
 
     return (

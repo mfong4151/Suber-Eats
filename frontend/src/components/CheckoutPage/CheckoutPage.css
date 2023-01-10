@@ -1,5 +1,9 @@
 
 
+#left{
+    width:50%
+}
+
 
 .checkout-page{
     display:flex;
@@ -80,4 +84,31 @@
     font-family: var(--font-family-UMB), var(--font-family);
     font-size: 20px;
 
+}
+
+
+.checkout-right{
+    width:50vw;
+    height:100vh;
+    background-color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+}
+
+
+
+.place-order{
+    width:80%;
+    height: 80px;
+    font-size: 30px;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border-radius: 1rem;
+    margin-top:10rem;
+}
+
+.place-order:hover{
+    cursor:pointer;
+    
 }

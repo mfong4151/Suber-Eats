@@ -7,12 +7,18 @@ import DeliveryEstimate from './DeliveryEstimate'
 import YourItems from './YourItems'
 import Payment from './Payment'
 import AddOnWidgets from './AddOnWidgets.jsx'
-const CheckoutLeft = (orderInfo) => {
+const CheckoutLeft = ({checkoutOrder}) => {
+
+
+  const firstOrder = checkoutOrder[0]
+  let address = firstOrder.address.split(',')
+  let street = address[0], city = address[1]
+  
   return (
     <>
       <CheckoutHeader/>
       <div className="univ-padding checkout-lr">
-          <h1 className='rest-title'>Rest Name</h1>
+          <h1 className='rest-title'>{firstOrder.restName}</h1>
           <button className="checkout-deliv-pickup grey-button">
               <span>Delivery</span>
               <span>Pickup</span>
@@ -23,8 +29,8 @@ const CheckoutLeft = (orderInfo) => {
                 <div className='loc-left'>
                 <LocationIcon/>
                 <div className="delivery-options-text">
-                   <h4 className="delivery-text-top">ADDRESS</h4>
-                   <p className="delivery-text-bottom">CITY</p>
+                   <h4 className="delivery-text-top">{street}</h4>
+                   <p className="delivery-text-bottom">{city}</p>
                 </div>
                 </div>
                 <button className="delivery-edit grey-button udc">Edit</button>

@@ -1,5 +1,5 @@
 // import SignupFormPage from "./components/SignupFormPage";
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Route, Switch} from 'react-router-dom'
 import SplashPage from "./components/SplashPage"
 import LoginFormPage from "./components/LoginFormPage";
@@ -10,10 +10,13 @@ import { useState } from 'react';
 import { UXContext } from './components/UXContext';
 import { filters } from './components/utils/defaultFilters';
 import CheckoutPage from './components/CheckoutPage';
-
+import { useSelector } from 'react-redux';
+import { fetchCart, getCart } from './store/cart';
+import { checkCartMembership } from './components/RestaurantListingPage/utils/menuUtils';
 
 function App() {
-
+  
+  
   const [userLocation, setUserLocation] = useState('');
   const [numCarts, setNumCarts] = useState(0);
   const [sortOptions, setSortOptions] = useState(filters());
@@ -21,8 +24,8 @@ function App() {
   const [cartModal, setCartModal] = useState(false);
   const [restCartModal, setRestCartModal] = useState(false);
   const [locationModal, setLocationModal] = useState(false);
+  const [checkoutOrder, setCheckoutOrder] = useState({})
 
-  
   const toggleMenuModal = () =>{ 
     setMenuModal(!menuModal)
   }    
@@ -44,6 +47,8 @@ function App() {
     setRestCartModal(prev => !prev)
   }
 
+
+
   return (
     <>
           <Switch>
@@ -54,7 +59,8 @@ function App() {
                                         cartModal, setCartModal, toggleCartModal,
                                         locationModal, setLocationModal, toggleLocationModal,
                                         userLocation, setUserLocation, toggleRestCartModal,
-                                        restCartModal, setRestCartModal, toggleCartModals
+                                        restCartModal, setRestCartModal, toggleCartModals,
+                                        checkoutOrder, setCheckoutOrder
                                       }}>
               
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>

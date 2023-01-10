@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import './RestaurantListingPage.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { createCart, updateCart, fetchCart, deleteCart} from '../../store/cart'
+import { createCart, updateCart, fetchCart, deleteCart, getCart} from '../../store/cart'
 
-const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
+const MenuListingItem = ({setMenuItem, listing, toggleItemModal, usersCart}) => {
     //We need to refactor this to format a certain way based on whats avalible, 
     const dispatch = useDispatch()
     const sessionUserId = useSelector(state => state.session.user.id)
-    const [cartQuantity, setCartQuantity] = useState(0)
-    const [prevQuantity, setPrevQuantity] = useState(0)
-
-    const currentCart = () =>(
-        {   menuItemId: listing.id,
+    let globalQuantity = 0
+    if (usersCart[listing.menuId]) globalQuantity = usersCart[listing.menuId].quantity;
+    const [cartQuantity, setCartQuantity] = useState(globalQuantity)
+    
+    const currentCart = (cartQuant) =>{
+        return {  menuItemId: listing.id,
             restaurantId: listing.menuId,
             userId: sessionUserId,
-            quantity: cartQuantity}
-    )
+            quantity: cartQuant + 1}
+        }
     
     const menuModalMethods = e => {
         e.preventDefault();
@@ -26,17 +27,14 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
     const createCartedItem = e =>{
         e.preventDefault()
         e.stopPropagation()
-        setPrevQuantity(cartQuantity)
-        setCartQuantity(cartQuantity + 1)
-        if (prevQuantity === 0) dispatch(createCart({cart:currentCart()}));
-        else if(prevQuantity) dispatch(updateCart({cart:currentCart()}));
-        dispatch(fetchCart())
+        setCartQuantity(prev => prev + 1)
+        if (!usersCart[listing.menuId]) dispatch(createCart({cart:currentCart(cartQuantity)}));
+        else dispatch(updateCart({cart:currentCart(cartQuantity)}, ));
+        dispatch(fetchCart(sessionUserId))
     }
 
 
-    // useEffect(()=>{
-    //     // dispatch(fetchCart(sessionUser.id))
-    // },[])
+
     
     return (
         <li className='item-listing' >
@@ -45,7 +43,7 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
                     <p className='item-price'>{`$${listing.price}`}</p>
                     <p className='item-description'>{listing?.description}</p>
                 </div>
-                <button className='add-to-cart' onClick={createCartedItem}>{cartQuantity? cartQuantity:"+"}</button>
+                <button className='add-to-cart' onClick={createCartedItem}>+</button>
         </li>
      )
 }

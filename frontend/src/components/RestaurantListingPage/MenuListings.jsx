@@ -3,18 +3,19 @@ import './RestaurantListingPage.css'
 import ListingsBlock from './ListingsBlock'
 import { useState } from 'react'
 import MenuItemModal from './modals/MenuItemModal'
+import { useSelector } from 'react-redux'
+import { createCart, getCart } from '../../store/cart'
 //bring in intersection observer here, have it change based class whats clicked
 
 const MenuListings = ({menuItems}) => {
- 
+    const usersCart = useSelector(getCart)
     const [menuItemModal, setMenuItemModal] = useState(false);  
     const [menuItem, setMenuItem] = useState('')
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
       }
 
-
-  return (
+    return (
     <div className='listings-main'>
 
         <div className='table-of-contents'>
@@ -34,6 +35,7 @@ const MenuListings = ({menuItems}) => {
                     setMenuItem = {setMenuItem}
                     menuItemModal={menuItemModal} 
                     toggleItemModal={toggleItemModal}
+                    usersCart={usersCart}
                     /> 
             ))}
             {menuItemModal && <MenuItemModal menuItem={menuItem} setMenuItem={setMenuItem} menuItemModal={menuItemModal} toggleItemModal={toggleItemModal}/>}

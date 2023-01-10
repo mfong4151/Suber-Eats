@@ -25,6 +25,9 @@ export const getCart = state => {
     return state.cart
 }
 
+
+
+
 export const fetchCart = (userId) => async dispatch =>{
 
     const res = await csrfFetch(`/api/carts/${userId}`)

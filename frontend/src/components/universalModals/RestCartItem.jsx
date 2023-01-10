@@ -1,39 +1,34 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateCart, deleteCart} from '../../store/cart'
 import './UserMenuModal.css'
 
 
-const RestCartItem = ({cartItem}) => {
+const RestCartItem = ({restCartItem}) => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user)
-    const[itemSum, setSum] = useState(cartItem.cartSum);
-    const[cartQuantity, setCartQuantity] = useState(cartItem.quantity);
-    const [prevQuantity, setPrevQuantity] = useState(0)
-    const currentCart = () =>(
-        {   menuItemId: cartItem.menuItemId,
-            restaurantId: cartItem.restaurantId,
+
+    const currentCart = (cartQuantity) =>(
+        {   menuItemId: restCartItem.menuItemId,
+            restaurantId: restCartItem.restaurantId,
             userId: sessionUser.id,
             quantity: cartQuantity,}
     )
-    const incrementQuantity= e=>{
+    const addQuantity= e=>{
         e.preventDefault();
         e.stopPropagation();
-        setCartQuantity(cartQuantity+ 1)
-        dispatch(updateCart({cart:currentCart()}, cartItem.id))
+        dispatch(updateCart({cart:currentCart(restCartItem.quantity+ 1)}, restCartItem.id))
     }
 
     
    
-    const subCartQuantity = e =>{
+    const subQuantity = e =>{
         e.preventDefault()
         e.stopPropagation()
-        setPrevQuantity(cartQuantity)
-        setCartQuantity(cartQuantity -1 )
-        if (prevQuantity === 0) dispatch(deleteCart({cart:currentCart()}));
-        else if(prevQuantity) dispatch(updateCart({cart:currentCart()}));
+        if (restCartItem.cartSum - 1 <= 0) dispatch(deleteCart({cart:currentCart()}));
+        else dispatch(updateCart({cart:currentCart(restCartItem.quantity - 1)}, restCartItem.id))
+
 
     }
 
@@ -42,17 +37,17 @@ const RestCartItem = ({cartItem}) => {
     return (
       <li className='item-qty-form'>  
             <div className="udc item-qty-form">
-                    <button className="udc qty-btn grey-button qty" id="qty-left" onClick={subCartQuantity}>
+                    <button className="udc qty-btn grey-button qty" id="qty-left" onClick={subQuantity}>
                         -
                     </button>
-                    <span className='qty-form udc qty'>{cartQuantity}</span>
-                    <button className="udc qty-btn grey-button qty" id="qty-right" onClick={incrementQuantity}>
+                    <span className='qty-form udc qty'>{restCartItem.quantity}</span>
+                    <button className="udc qty-btn grey-button qty" id="qty-right" onClick={addQuantity}>
                         +
                     </button>
             </div>
             <div className='item-info'>
-                    <h3 className='cart-item-name'>{cartItem.itemName}</h3>
-                    <p className='cart-item-sum'>${itemSum}</p>
+                    <h3 className='cart-item-name'>{restCartItem.itemName}</h3>
+                    <p className='cart-item-sum'>${restCartItem.cartSum}</p>
             </div>
             <div>
                 {/* add the photo here if it exists  */}
