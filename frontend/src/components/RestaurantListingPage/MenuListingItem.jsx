@@ -23,7 +23,7 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
         toggleItemModal();
     }
 
-    const addCartQuantity = e =>{
+    const createCartedItem = e =>{
         e.preventDefault()
         e.stopPropagation()
         setPrevQuantity(cartQuantity)
@@ -45,7 +45,7 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
                     <p className='item-price'>{`$${listing.price}`}</p>
                     <p className='item-description'>{listing?.description}</p>
                 </div>
-                <button className='add-to-cart' onClick={addCartQuantity}>{cartQuantity? cartQuantity:"+"}</button>
+                <button className='add-to-cart' onClick={createCartedItem}>{cartQuantity? cartQuantity:"+"}</button>
         </li>
      )
 }

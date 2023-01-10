@@ -1,7 +1,7 @@
 class Api::CartsController < ApplicationController
 
     def show
-        @cart = User.find_by(id: params[:id]).current_cart
+        @cart = User.find_by(id: params[:id]).carts.includes(:carted_item, :restaurant)
         if @cart
             render :show
             return
@@ -10,8 +10,8 @@ class Api::CartsController < ApplicationController
 
     def create
         puts(cart_params)
-        @cart = Cart.new(cart_params)
-        if @cart.save!
+        @cart = [Cart.new(cart_params)]
+        if @cart[0].save!
             render :show
             return
         else
@@ -21,11 +21,9 @@ class Api::CartsController < ApplicationController
     end
    
     def update
-        puts 'PARAMS HERE PARAMS HERE PARAMS HERE'
-        puts(params)
-        @cart = Cart.find_by(cart_params)
-        puts 'YOUR CART HERE'
-        if @cart.update(cart_params)
+      
+        @cart = [Cart.find_by(cart_params)]
+        if @cart[0].update(cart_params)
             render :show
         else
             render json: @cart.errors.full_messages, status: 422
@@ -36,9 +34,8 @@ class Api::CartsController < ApplicationController
 
     def destroy
 
-        @cart = Cart.find_by(id: params[:id])
-        if @cart.delete
-            render :show
+        @cart = [Cart.find_by(id: params[:id])]
+        if @cart[0].delete
             return
         else
             render json: @cart.errors.full_messages, status: 422
