@@ -1,10 +1,15 @@
 /* Key: menu listings */
 
 /* .listing-info{} */
+
 .restaurant-name{
     font-family: var(--font-family-UMB);
     font-size:38px;
     font-weight:600;
+}
+.listing-text-spacing{
+    padding-right:6px;
+
 }
 .restaurant-info{
     padding-top: .5rem;
@@ -64,14 +69,31 @@
 .menu-options{
 
     display: grid;
-    grid-template-columns: auto auto;
-    gap:20px 20px
+    grid-template-columns: 1fr 1fr;
+    gap:20px 20px;
+    width:100%;
 }
 
 /* 3. MenuListing */
 
+.listings-block{
+    width:100%;
+
+}
+
 .item-listing{
     position: relative;
+    width:100%;
+}
+
+.item-listing-div-i-guess{
+
+}
+.item-listing:hover{
+    border-color:var(--color-grey-shadow);
+    border-style: solid;
+    border:1px;
+    word-break: break-all;
 }
 
 .item-name{

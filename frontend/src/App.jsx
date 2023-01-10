@@ -9,6 +9,8 @@ import PastOrders from './components/PastOrders';
 import { useState } from 'react';
 import { UXContext } from './components/UXContext';
 import { filters } from './components/utils/defaultFilters';
+import CheckoutPage from './components/CheckoutPage';
+
 
 function App() {
 
@@ -35,11 +37,11 @@ function App() {
 
   const toggleCartModals= () =>{
     setCartModal(restCartModal)
-    setRestCartModal(!restCartModal)
+    setRestCartModal(prev=> !prev)
   }
 
   const toggleRestCartModal = ()=>{
-    setRestCartModal(!restCartModal)
+    setRestCartModal(prev => !prev)
   }
 
   return (
@@ -48,15 +50,15 @@ function App() {
             <Route path="/" component={SplashPage} exact/>
             <Route path="/login" component={LoginFormPage}/>
             <UXContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, 
-                                menuModal, setMenuModal, toggleMenuModal,
-                                cartModal, setCartModal, toggleCartModal,
-                                locationModal, setLocationModal, toggleLocationModal,
-                                userLocation, setUserLocation, toggleRestCartModal,
-                                restCartModal, setRestCartModal, toggleCartModals
-          
-                                }}>
+                                        menuModal, setMenuModal, toggleMenuModal,
+                                        cartModal, setCartModal, toggleCartModal,
+                                        locationModal, setLocationModal, toggleLocationModal,
+                                        userLocation, setUserLocation, toggleRestCartModal,
+                                        restCartModal, setRestCartModal, toggleCartModals
+                                      }}>
               
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
+              <Route path="/checkout" component={CheckoutPage}/>
               <Route path="/deliverypickup" component={UserExperiencePage}/>
               <Route path="/yourorders" component={PastOrders}/>
             </UXContext.Provider>

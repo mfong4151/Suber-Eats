@@ -4,13 +4,15 @@ import restaurantsReducer from './restaurant';
 import sessionReducer from './session';
 import usersReducer from './user';
 import menusReducer from './menu'
+import cartsReducer from './cart';
 
 let enhancer;
 export const rootReducer = combineReducers({
     session: sessionReducer,
     users: usersReducer,
     restaurants: restaurantsReducer,
-    menu: menusReducer
+    menu: menusReducer,
+    cart:cartsReducer
 })
 
 if (process.env.NODE_ENV === 'production') {

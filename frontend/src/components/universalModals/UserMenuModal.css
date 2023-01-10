@@ -196,24 +196,130 @@
 /* secondary menu modal for specific restaurant */
 
 .sub-menu{
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    margin:atuo;
     background-color: var(--color-white);
     width:450px;
     height:100%;
-    left:70%;
+    right:0px;
     border: left 2px;
 }
 
+.sub-header-pos{    
+    padding-left: 1.5rem;
+
+    padding-top: 1rem;
+
+}
+
 .sub-menu-header{
+    font-family:var(--font-family-UMB);
+    font-size: 34px;
+
 
 }
 
 .sub-menu-text{
-    
+    font-family: var(--font-family);
+    font-size:16px;
+    color:var(--color-grey-text)
+}
+
+.sub-menu-buttons{
+    display: flex;
+    justify-content: start;
+}
+
+.sub-menu-button{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size:14px;
+    height:38px;
+    width:140;
 }
 
 
+
 .clear-cart{
-    color: var(--color-red-text);
+    color: var(--color-red-text);   
     
+}
+
+.clear-cart:hover{
+    cursor:pointer;
+}
+
+.clear-cart-holder{
+    height:100px;
+}
+
+.go-checkout{
+   
+    color: var(--color-white);
+    background-color: var(--color-black);
+    font-size: 20px;
+    width:90%;
+    height:54px;
+}
+
+
+
+/* checkout modal  */
+
+
+.qty{
+    height:40px
+}
+
+.qty-btn{
+    font-size:20px;
+    background-color: var(--color-greyButtonBG);
+    width:30px
+}
+
+.item-qty-form{
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+    margin-top:5%;
+    margin-bottom:5%;
+    
+}
+
+.qty-form{
+    background-color: var(--color-greyButtonBG);
+}
+
+#qty-left{
+    border-top-left-radius:2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+#qty-right{
+    border-top-right-radius:2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.item-info{
+    width:60%;
+}
+
+
+.cart-item-name{
+    font-family:var(--font-family-UMM), var(--font-family);;
+    font-size:18px;
+    word-wrap: break-word;
+
+}
+
+.cart-item-sum{
+    font-family:var(--font-family);
+    color: var(--color-grey-text);
+    font-size: 12px;
 }

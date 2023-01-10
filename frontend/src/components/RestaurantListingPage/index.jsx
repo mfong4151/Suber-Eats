@@ -11,6 +11,7 @@ import Reviews from './Reviews';
 import star from './assets/star_rating_dark.png'
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
+import { fetchCart } from '../../store/cart';
 
 //https://stackoverflow.com/questions/52064303/reactjs-pass-props-with-redirect-component
 //for handling redirection to this page
@@ -23,6 +24,10 @@ const RestaurantListing = () => {
   const menuItems = useSelector(getMenuItems);
   const reviews = useSelector(getMenuReviews);
   const sortedMenu = sortMenus(menuItems)
+  //not sure if this should go here but oh well
+  
+
+  
 
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
@@ -40,18 +45,17 @@ const RestaurantListing = () => {
         </div>
         <div className='restaurant-info univ-padding'>
           <div className='menu-row-1'>
-              <img src={star} alt='star' className="star"/>
-              {restaurant?.rating}
-              <span>(69420 ratings)</span>
-              <span>•</span>
-              <span>{restaurant?.cuisineType.toUpperCase().slice(0,1).concat(restaurant?.cuisineType.slice(1))}</span>
-              <span>•</span>
+              <img src={star} alt='star' className="star listing-text-spacing"/>
+              <span className='listing-text-spacing'>{restaurant?.rating}</span>
+              <span className='listing-text-spacing'>(69420 ratings)</span>
+              <span className='listing-text-spacing'>•</span>
+              <span className='listing-text-spacing'>{restaurant?.cuisineType.toUpperCase().slice(0,1).concat(restaurant?.cuisineType.slice(1))}</span>
+              <span className='listing-text-spacing'>•</span>
               {/* <img src={univPhotos.uberOne} className="uber-one-logo"/> */}
-              <div>Read 5-Star Reviews</div>
-              <span>•</span>
-              <div>
-                More Info
-              </div>
+              <span className='listing-text-spacing'>Read 5-Star reviews</span>
+              <span className='listing-text-spacing'>•</span>
+              <span className='listing-text-spacing' >More Info</span>
+
           </div>
           <div className="menu-row-1 menu-row-2">
             Open at Some Point

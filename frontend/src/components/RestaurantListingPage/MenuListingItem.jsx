@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import './RestaurantListingPage.css'
 
 const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
@@ -13,12 +12,14 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
         setMenuItem(listing);
         toggleItemModal();
     }
+
+    
     return (
         <li className='item-listing' onClick={menuModalMethods}>
-            <h4 className='item-name'>{listing.itemName}</h4>
-            <p className='item-price'>{`$${listing.price}`}</p>
-            <p className='item-description'>{listing?.description}</p>
-            <button className='add-to-cart'>+</button>
+                <h4 className='item-name'>{listing.itemName}</h4>
+                <p className='item-price'>{`$${listing.price}`}</p>
+                <p className='item-description'>{listing?.description}</p>
+                <button className='add-to-cart'>+</button>
         </li>
      )
 }

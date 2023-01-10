@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import UXHeader from '../UXHeader.jsx';
 import UXPickup from './UXPickup';
+import { fetchCart } from '../../store/cart.jsx';
 import { useContext } from 'react';
 import { UXContext } from '../UXContext.jsx';
 import UserMenuModal from '../universalModals/UserMenuModal.jsx'
@@ -20,9 +21,10 @@ const UserExperiencePage = () => {
     const allRestaurants = useSelector(getRestaurants);
     const restaurants = allRestaurants;
     const dispatch = useDispatch();
-  
+
     useEffect(()=>{
       dispatch(fetchRestaurants())
+      dispatch(fetchCart(sessionUser.id))
 
     },[])   
 

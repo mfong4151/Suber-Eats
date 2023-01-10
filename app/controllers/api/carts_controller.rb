@@ -1,6 +1,15 @@
 class Api::CartsController < ApplicationController
+
+    def show
+        @cart = User.find_by(id: params[:id]).current_cart
+        if @cart
+            render :show
+            return
+        end
+    end
+
     def create
-        @carts = Carts.new(cart_params)
+        @carts = Cart.new(cart_params)
         if @post.save
             render 'api/users/show'
             return
@@ -11,34 +20,18 @@ class Api::CartsController < ApplicationController
     end
    
     def update
-        @cart = Carts.find_by(id: params[:id])
+        puts(cart_params)
+        @cart = Cart.find_by(cart_params)
         
-        if params[:quantity] == 0:
-            delete_single_item(@cart)
-            return
+        if @cart.update(cart_params)
+            render 'api/users/show'
         else
-            if @cart.update(cart_params)
-                render 'api/users/show'
-                return
-            else
-                render json: @cart.errors.full_messages, status: 422
-            end
+            render json: @cart.errors.full_messages, status: 422
         end
 
-        return
     end
     
-    def delete_single_item(cart)
-        if cart
-            cart.delete
-            render 'api/users/show'
-            return
-        else 
-            render json: @cart.errors.full_messages, status: 422
-
-        end
-
-    end
+    
 
     def delete
 

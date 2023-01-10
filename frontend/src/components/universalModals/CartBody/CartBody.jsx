@@ -16,7 +16,6 @@ const CartBody = ({restName, userCartItems, setRestCart}) => {
         setRestCart(userCartItems[restName])
     }
 
-
     return (
         <div className='cart-tab' onClick={handleOnClick}>
 

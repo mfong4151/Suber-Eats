@@ -6,7 +6,7 @@ const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal}) => {
 
    
     return (
-        <div>
+        <div className='listings-block'>
             <div className='header-holder'>
                 <h2 className='listing-header'>{header}</h2>
             </div>
