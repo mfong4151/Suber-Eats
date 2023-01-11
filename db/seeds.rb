@@ -5,10 +5,10 @@ require "open-uri"
 
 #example from my own seed data
   
-class_names = [User, Restaurant, Menu, MenuItem, Review, Cart, Transaction]
-table_strings = ['users', 'restaurants', 'menus', 'menu_items', 'reviews', 'carts', 'transactions']
-EasySeeds.destroy_tables(class_names, table_strings)
-EasySeeds.create_easy_seed_data(class_names)
+# class_names = [User, Restaurant, Menu, MenuItem, Review, Cart, Transaction]
+# table_strings = ['users', 'restaurants', 'menus', 'menu_items', 'reviews', 'carts', 'transactions']
+# EasySeeds.destroy_tables(class_names, table_strings)
+# EasySeeds.create_easy_seed_data(class_names)
 
 
 # #Used to test delete, update methods
