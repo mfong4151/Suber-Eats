@@ -9,8 +9,7 @@ import Payment from './Payment'
 import AddOnWidgets from './AddOnWidgets.jsx'
 const CheckoutLeft = ({checkoutOrder}) => {
 
-
-  const firstOrder = checkoutOrder[0]
+  let firstOrder = checkoutOrder[0]
   let address = firstOrder.address.split(',')
   let street = address[0], city = address[1]
   
@@ -19,12 +18,12 @@ const CheckoutLeft = ({checkoutOrder}) => {
       <CheckoutHeader/>
       <div className="univ-padding checkout-lr">
           <h1 className='rest-title'>{firstOrder.restName}</h1>
-          <button className="checkout-deliv-pickup grey-button">
+          <button className="mp checkout-deliv-pickup grey-button">
               <span>Delivery</span>
               <span>Pickup</span>
           </button>
 
-          <div className="delivery-options">
+          <div className="delivery-options mp">
 
                 <div className='loc-left'>
                 <LocationIcon/>

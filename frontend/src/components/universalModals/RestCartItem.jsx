@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateCart, deleteCart} from '../../store/cart'
+import { updateCart, deleteCart, fetchCart} from '../../store/cart'
 import './UserMenuModal.css'
 
 
@@ -9,12 +9,13 @@ const RestCartItem = ({restCartItem}) => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user)
 
-    const currentCart = (cartQuantity) =>(
-        {   menuItemId: restCartItem.menuItemId,
+    const currentCart = (cartQuantity) =>{
+       
+        return {   menuItemId: restCartItem.menuItemId,
             restaurantId: restCartItem.restaurantId,
             userId: sessionUser.id,
             quantity: cartQuantity,}
-    )
+        }
     const addQuantity= e=>{
         e.preventDefault();
         e.stopPropagation();
@@ -26,13 +27,16 @@ const RestCartItem = ({restCartItem}) => {
     const subQuantity = e =>{
         e.preventDefault()
         e.stopPropagation()
-        if (restCartItem.cartSum - 1 <= 0) dispatch(deleteCart({cart:currentCart()}));
-        else dispatch(updateCart({cart:currentCart(restCartItem.quantity - 1)}, restCartItem.id))
+     
+        dispatch(updateCart({cart:currentCart(restCartItem.quantity - 1)}, restCartItem.id))
+            .then(()=>{
+                if(restCartItem.quantity === 1) dispatch(deleteCart(restCartItem.id))
 
 
+            })
+        
     }
 
- 
     
     return (
       <li className='item-qty-form'>  
@@ -47,7 +51,7 @@ const RestCartItem = ({restCartItem}) => {
             </div>
             <div className='item-info'>
                     <h3 className='cart-item-name'>{restCartItem.itemName}</h3>
-                    <p className='cart-item-sum'>${restCartItem.cartSum}</p>
+                    <p className='cart-item-sum'>${Math.round(restCartItem.cartSum *100)/100}</p>
             </div>
             <div>
                 {/* add the photo here if it exists  */}

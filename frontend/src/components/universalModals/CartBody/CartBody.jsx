@@ -25,7 +25,7 @@ const CartBody = ({restName, userCartItems, setRestCart}) => {
             <div className='cart-modal-text-holder'>
                 <span className='cart-modal-header'>{restName}</span>
                 <span className='cart-modal-text'>Delivery from {address}</span>
-                <span className='cart-modal-text'>Subtotal: ${subtotal}</span>
+                <span className='cart-modal-text'>Subtotal: ${Math.round(subtotal *100)/100}</span>
                 
            
             </div>

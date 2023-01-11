@@ -3,8 +3,8 @@ import React from 'react'
 const AddOnWidgets = () => {
   return (
     <div>
-       <button className="deliv-est-btn delivery-options">
-                <div className='loc-left'>
+       <button className="deliv-est-btn delivery-options mpm">
+                <div className='loc-left loc-left-est'>
 
                     <div className="delivery-options-text">
                        <h4 className="delivery-text-top">
@@ -15,8 +15,8 @@ const AddOnWidgets = () => {
                     </div>
                 </div>
             </button>
-            <button className="deliv-est-btn delivery-options">            
-                    <div className='loc-left'>
+            <button className="deliv-est-btn delivery-options mpm">            
+                    <div className='loc-left loc-left-est'>
 
                         <div className="delivery-options-text">
                             <h4 className="delivery-text-top">Standard</h4>

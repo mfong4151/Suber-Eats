@@ -7,19 +7,18 @@ const DeliveryEstimate = () => {
         
     },[highlightedBox])
       return (
-        <div>
+        <div className='mp'>
             <h4 className="deliv-est">Delivery estimate</h4>
-            <button className="deliv-est-btn delivery-options">
-                <div className='loc-left'>
-
-                    <div className="delivery-options-text">
+            <button className="deliv-est-btn delivery-options mp">
+                <div className='loc-left loc-left-est'>
+                    <div className="delivery-options-text ">
                        <h4 className="delivery-text-top">Priority</h4>
                        <p className="delivery-text-bottom">10-20 min</p>
                     </div>
                 </div>
             </button>
-            <button className="deliv-est-btn delivery-options">            
-                    <div className='loc-left'>
+            <button className="deliv-est-btn delivery-options mpm">            
+                    <div className='loc-left loc-left-est'>
 
                         <div className="delivery-options-text">
                             <h4 className="delivery-text-top">Standard</h4>
@@ -28,9 +27,9 @@ const DeliveryEstimate = () => {
                     </div>
             </button>
 
-            <button className="deliv-est-btn delivery-options">
+            <button className="deliv-est-btn delivery-options mpm">
 
-                <div className='loc-left'>
+                <div className='loc-left loc-left-est'>
 
                     <div className="delivery-options-text">
                         <h4 className="delivery-text-top">Schedule</h4>

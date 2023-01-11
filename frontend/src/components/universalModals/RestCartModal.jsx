@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
 import GroupOrderIcon from './SVGs/GroupOrderIcon';
@@ -39,8 +39,10 @@ const RestCartModal = ({restCart}) => {
     e.preventDefault()
     e.stopPropagation()
     setCheckoutOrder(restCart)
-    history.push({pathname:`/checkout`})
-
+    history.push(`/checkout`)
+    toggleRestCartModal()
+  
+  
   }
 
   useEffect(()=>{
@@ -66,13 +68,14 @@ const RestCartModal = ({restCart}) => {
                 </div>
                 <ul className='sub-menu-choices'>
                     {restCart.map((restCartItem,idx)=>(
-                      <RestCartItem restCartItem={restCartItem} key={idx}/>
-
+                      <> 
+                        {!!restCartItem.quantity && <RestCartItem restCartItem={restCartItem}  key={idx}/>}
+                      </>
                     ))}
                 </ul>
                 <div className="sub-menu-note"></div>
                 <div className='udc clear-cart-holder'>
-                    <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>
+                    {!!restCart && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
                 </div>
               </div>
 

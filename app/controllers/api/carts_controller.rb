@@ -22,7 +22,7 @@ class Api::CartsController < ApplicationController
    
     def update
       
-        @cart = [Cart.find_by(cart_params)]
+        @cart = [Cart.find_by(id: params[:id])]
         if @cart[0].update(cart_params)
             render :show
         else
@@ -33,6 +33,8 @@ class Api::CartsController < ApplicationController
     
 
     def destroy
+
+        puts(params)
 
         @cart = [Cart.find_by(id: params[:id])]
         if @cart[0].delete

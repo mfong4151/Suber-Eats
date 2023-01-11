@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import { useSelector } from 'react-redux';
-import { aggregateCart } from './utils/cartUtils';
 import CartBody from './CartBody/CartBody';
 import { getCart } from '../../store/cart';
 

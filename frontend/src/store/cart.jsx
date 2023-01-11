@@ -91,7 +91,7 @@ const cartsReducer = (state = {}, action) =>{
             return  {...state,...action.payload.cart}
         case REMOVE_CART:
             const newState = {...state}
-            delete newState[action.payload.cart.cartId]
+            delete newState[action.payload]
             return newState
         default:
             return state
