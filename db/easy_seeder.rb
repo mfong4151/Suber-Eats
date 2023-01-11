@@ -23,7 +23,7 @@ class EasySeeds
             ApplicationRecord.connection.reset_pk_sequence!(table_string)
             puts "Creating #{table_string}..."   
         
-            table.each {|table_row| class_name.create!(**table_row)}
+            table.each {|table_row| class_name.create(**table_row)}
             
         end
         
