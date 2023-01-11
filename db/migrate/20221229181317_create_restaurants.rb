@@ -8,7 +8,6 @@ class CreateRestaurants < ActiveRecord::Migration[7.0]
       t.float :rating, null:false
       t.float :longitude, null:false
       t.float :latitude, null:false
-      t.string :cuisine_type, null:false
       t.timestamps
     end
   end
