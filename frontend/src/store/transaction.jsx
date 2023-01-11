@@ -36,7 +36,7 @@ const transactionsReducer = (state = {}, action) =>{
     switch(action.type){
 
         case RECEIVE_TRANSACTION:
-            return{...state, ...action.payload.transactions}
+            return{...state, ...action.payload}
 
 
         default:

@@ -1,8 +1,9 @@
-class Api::TransactionController < ApplicationController
+class Api::TransactionsController < ApplicationController
 
     def show
         @transactions = User.find_by(id: params[:id]).transactions.includes(:selling_restaurant)
-        if @transaction
+
+        if @transactions
             render :show
             return
         end

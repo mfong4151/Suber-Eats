@@ -1,0 +1,11 @@
+
+.orders-header{
+    font-family: var(--font-family-UMB);
+    font-size: 48px;
+
+}
+
+.transaction-block{
+    height:240px;
+    width:100%;
+}
