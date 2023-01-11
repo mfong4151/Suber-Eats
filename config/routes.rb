@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :restaurants, only: [:index, :show] do
         resources :menus, only:[:show]
     end
-    resources :reviews, only:[:show, :update, :delete, :create]
+    resources :reviews, only:[:show, :update, :destroy, :create]
   end 
 
   get '*path', to: 'static_pages#frontend'

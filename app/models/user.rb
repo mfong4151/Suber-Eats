@@ -31,9 +31,8 @@ class User < ApplicationRecord
   class_name: :Cart
 
   has_many :cart_items,
-  through: :carts,
+  through: :carts,  
   source: :carted_item
-
 
   has_many :reviewed_restaurants,
   through: :reviews,
@@ -45,6 +44,14 @@ class User < ApplicationRecord
   class_name: :Transaction,
   dependent: :destroy
 
+  has_many :transaction_partners,
+  through: :transactions,
+  source: :selling_restaurant
+
+  def current_cart
+      Cart.select(:item_name, :quantity, 'restaurants.name AS rest_name', :menu_item_id, :restaurant_id, :price, "price * quantity AS cart_sum", :address, :id)
+      .joins(:carted_item).joins(:cart_owner).joins(:restaurant).where('users.id = ?', self.id.to_s)
+  end
 
 
   def self.find_by_credentials(credential, password)

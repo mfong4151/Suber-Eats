@@ -1,0 +1,152 @@
+
+
+#left{
+    width:50%
+}
+
+
+.checkout-page{
+    display:flex;
+    justify-content: space-around;
+}
+
+/* left side items  */
+
+
+.checkout-lr{
+    display: flex;
+    flex-direction: column;
+    width:40vw;
+}
+
+.rest-title{
+    font-family: var(--font-family-UMB), var(--font-family);
+    font-size: 40px;
+
+}
+
+
+.checkout-deliv-pickup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:40px;
+    border-radius: 3rem;
+}
+
+.delivery-options{
+    display: flex;
+    justify-content: space-between;
+    height:66;
+    width:auto
+}
+
+.loc-left{
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    
+}
+
+.loc-left-est{
+    margin-left:5%;
+}
+
+.delivery-edit{
+    height:35px;
+    width:60px;
+    border-radius: 5rem;
+    font-family: var(--font-family-UMM),var(--font-family);
+    font-size: 16px;
+}
+
+
+
+.delivery-text-bottom{
+    font-size: 12px;
+    color: var(--color-grey-text);
+}
+
+.deliv-est{
+    font-family: var(--font-family-UMB), var(--font-family);
+    font-size: 30px;
+
+}
+
+.deliv-est-btn{
+    border:solid;
+    border-radius: 1rem;
+    border-color: var(--color-greyButtonBG);
+    width:100%
+}
+
+.payment-your-items{
+    font-family: var(--font-family-UMB), var(--font-family);
+    font-size: 20px;
+
+}
+
+
+.checkout-right{
+    width:50vw;
+    height:100vh;
+    background-color: var(--color-grey);
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    align-items:baseline;
+
+}
+
+
+.place-order-holder{
+    
+    width:100%
+}
+
+.place-order{
+    width:80%;
+    height: 80px;
+    font-size: 30px;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border-radius: 1rem;
+    margin-top:10rem;
+}
+
+.place-order:hover{
+    cursor:pointer;
+ 
+}
+
+#subtext{
+    width:80%;
+    font-size:14px;
+    font-family: var(--font-family);
+    color: var(--color-grey-text);
+}
+
+
+.checkout-subtext{
+
+    width:100%;
+    font-family: var(--font-family);
+    color:var(--color-grey-text);
+    font-size: 14px;
+}
+
+.checkout-array{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    padding-left: 10%;
+    padding-right:10%;
+}
+
+.mp{
+    margin-top:4%;
+}
+
+.mpm{
+    margin-top:1%
+}

@@ -22,6 +22,7 @@ class Restaurant < ApplicationRecord
     validates :city, presence:true
     validates :longitude, presence:true
     validates :latitude, presence:true
+    validates :cuisine_type, presence:true
     
     
     has_one :menu,
@@ -38,7 +39,11 @@ class Restaurant < ApplicationRecord
     foreign_key: :restaurant_id,
     dependent: :destroy
 
-    
+    has_many :customer_cart,
+    foreign_key: :restaurant_id,
+    class_name: :Cart
+
+
     has_many :transactions, 
     foreign_key: :restaurant_id,
     class_name: :Transaction,

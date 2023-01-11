@@ -25,5 +25,8 @@ class MenuItem < ApplicationRecord
     foreign_key: :menu_item_id,
     class_name: :Cart
     
+    has_one :parent_restaurant,
+    through: :menu,
+    source: :restaurant
 end
 

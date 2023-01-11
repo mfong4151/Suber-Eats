@@ -1,25 +1,27 @@
 import React from 'react'
-import MenuListing from './MenuListing'
+import MenuListingItem from './MenuListingItem'
 import './RestaurantListingPage.css'
 
-
-const ListingsBlock = ({header, listings}) => {
-
-
+const ListingsBlock = ({setMenuItem, header, listings, toggleItemModal, usersCart}) => {
+   
     return (
-        <div>
+        <div className='listings-block'>
             <div className='header-holder'>
                 <h2 className='listing-header'>{header}</h2>
             </div>
             
             <ul className='menu-options'>
                 {listings.map((listing, idx)=>
-                    <MenuListing listing={listing} key={idx}/>
+                    <MenuListingItem listing={listing} 
+                    toggleItemModal={toggleItemModal} 
+                    setMenuItem = {setMenuItem}
+                    key={idx}
+                    usersCart={usersCart}
+                    />
                 )}
             </ul>
-
         </div>
     )
 }
 
-export default ListingsBlock
+export default ListingsBlock;

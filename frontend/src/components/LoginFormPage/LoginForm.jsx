@@ -66,11 +66,9 @@ const LoginForm = () => {
         } else if ((credential.match(/-/g)|| []).length === 2){
 
             if (handle_phone_number_errors) setErrors(['Please insert a valid phone number'])
-                
-                
+                        
         } else if (handle_email_errors(credential)) setErrors(['Please provide a valid email address'])
          else if (errors.length === 0) setValidCredential(true)
-            
         
     } 
       
