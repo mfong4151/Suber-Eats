@@ -48,6 +48,10 @@ class User < ApplicationRecord
   through: :transactions,
   source: :selling_restaurant
 
+  has_one :location,
+  foreign_key: :user_id,
+  class_name: :Location
+
   def current_cart
       Cart.select(:item_name, :quantity, 'restaurants.name AS rest_name', :menu_item_id, :restaurant_id, :price, "price * quantity AS cart_sum", :address, :id)
       .joins(:carted_item).joins(:cart_owner).joins(:restaurant).where('users.id = ?', self.id.to_s)

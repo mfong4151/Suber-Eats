@@ -1,9 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import PickUpNow from './SVGs/PickUpNow';
 import LocationIcon from './SVGs/LocationIcon';
 import ExitButton from './SVGs/ExitButton.jsx'
@@ -11,16 +10,29 @@ import ExitButton from './SVGs/ExitButton.jsx'
 const LocationModal = () => {
 
   //grab the context variable that makes sense from here
-  const { locationModal, setLocationModal, toggleLocationModal, userLocation, setUserLocation } = useContext(UXContext)
-
+  const { locationModal, setLocationModal, toggleLocationModal, userLocation} = useContext(UXContext)
+  const sessionUserId = useSelector(state => state.session.user.id)  
   //use dispatch if necessary
   const dispatch = useDispatch()
 
-  
+
   //controlling overflow
   if (locationModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
 
+  const handleSubmitAddress = e =>{
+    e.preventDefault();
+    e.stopPropagation();
+    // dispatch(updateLocation(
+    //     {
+    //       lat: userLocation.lat,
+    //       lng: userLocation.lng,
+    //       userId: sessionUserId
+
+    //     }
+    // ))
+
+  }
 
   //css classes for our modals:
   //modal
@@ -35,7 +47,7 @@ const LocationModal = () => {
                 <button><ExitButton/></button>
               </div>
               <div className='delivery-header'> 
-                <h1 className='loc-pickup-details'>Delivery Details</h1>
+                <h1 className='loc-pickup-details'>Find restaurants in your area</h1>
               </div>
 
               <div className='loc-options delivery-margin'>
@@ -43,12 +55,12 @@ const LocationModal = () => {
                   <LocationIcon/>
                   <div className='delivery-address'>
                     <div className='loc-sub-options'>
-                      <h2 className='menu-loc-option-text'>Delivery Address</h2>
+                      <h2 className='menu-loc-option-text'>Delivery Address: {userLocation.lat}, {userLocation.lng}</h2>
                     </div>
                   </div>
                 </div> 
                 
-                <button className='btn-round-two enter-address grey-button'><span>Enter Address</span></button>
+                <button className='btn-round-two enter-address grey-button' onClick={handleSubmitAddress}><span>Submit Address</span></button>
               </div>
 
               <div className='loc-options delivery-margin'>

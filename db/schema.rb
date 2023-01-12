@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_11_170524) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_12_184231) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_11_170524) do
     t.index ["menu_item_id"], name: "index_carts_on_menu_item_id"
     t.index ["restaurant_id"], name: "index_carts_on_restaurant_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.float "longitude", null: false
+    t.float "latitude", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_locations_on_user_id", unique: true
   end
 
   create_table "menu_items", force: :cascade do |t|
@@ -125,6 +134,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_11_170524) do
   add_foreign_key "carts", "menu_items"
   add_foreign_key "carts", "restaurants"
   add_foreign_key "carts", "users"
+  add_foreign_key "locations", "users"
   add_foreign_key "menu_items", "menus"
   add_foreign_key "menus", "restaurants"
   add_foreign_key "reviews", "restaurants"

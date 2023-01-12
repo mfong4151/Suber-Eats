@@ -1,31 +1,38 @@
-import React, { useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api";
 import "./GoogleMap.css"
-
 import RestaurantMarker from './RestaurantMarker';
-//map id for the styled map we made c9833b310ffc337b
+import { UXContext } from '../../../UXContext';
+
+// https://react-google-maps-api-docs.netlify.app/#googlemap
+
 const Map = ({restaurants}) => {
+  const {userLocation, setUserLocation} = useContext(UXContext)
+  
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
   })
   if(!isLoaded) return(<h1>loading...</h1>)
   
-  const coords = {lat: 37.72988998953665, lng: -122.45906484395803 }
   const options = {
         mapId: '73cef3161f877bcd',
         disableDefaultUI:false,
         clickableIcons:false,
 
     };
-  
+  const handleOnClick = e =>{
+    setUserLocation({lng: e.latLng.lng(), lat: e.latLng.lat()})
+    console.log(e.latLng.lng(), e.latLng.lat())
+  }
   
 
 
   return (
     <GoogleMap 
       zoom={13} 
-      center={coords} 
+      center={userLocation} 
       mapContainerClassName="map-container"
       options={options}
+      onClick={handleOnClick}
       >
             {Object.values(restaurants).map((restaurant, idx) =>(
               <RestaurantMarker restaurant={restaurant} key={idx}/>

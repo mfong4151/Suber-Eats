@@ -17,7 +17,7 @@ import { checkCartMembership } from './components/RestaurantListingPage/utils/me
 function App() {
   
   
-  const [userLocation, setUserLocation] = useState('');
+  const [userLocation, setUserLocation] = useState({lat: 37.747401957356246, lng: -122.4456108834198});
   const [numCarts, setNumCarts] = useState(0);
   const [sortOptions, setSortOptions] = useState(filters());
   const [menuModal, setMenuModal] = useState(false);
