@@ -1,7 +1,8 @@
 class Api::RestaurantsController < ApplicationController
 
     def index
-        @restaurants = Restaurant.all
+        ## if we cant get this to work, just default to Restaurant.all
+        @restaurants = Restaurant.restaurants_in_proximity
         render :index
     end
 

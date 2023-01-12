@@ -8,11 +8,14 @@ import LocationIcon from './SVGs/LocationIcon';
 import ExitButton from './SVGs/ExitButton.jsx'
 import { checkUserLoc, fetchLocations } from '../../store/location';
 import { updateLocation } from '../../store/location';
+import { LocationContext } from '../UserExperiencePage/LocationContext';
 
 const LocationModal = () => {
 
   //grab the context variable that makes sense from here
-  const { locationModal, setLocationModal, toggleLocationModal, userLocation} = useContext(UXContext)
+  const { locationModal, toggleLocationModal} = useContext(UXContext)
+  const {userLocation} = useContext(LocationContext)
+  console.log(userLocation)
   const sessionUserId = useSelector(state => state.session.user.id)  
   //use dispatch if necessary
   const dispatch = useDispatch()
@@ -31,13 +34,13 @@ const LocationModal = () => {
            latitude: userLocation.lat,
            longitude: userLocation.lng,
            userId: sessionUserId
-         }}, userLocObj.id
+
+          }}, userLocObj.id
+          
      )).then(
-
-      dispatch()
-
-
-     )}}
+      toggleLocationModal()
+     )
+  }}
 
   useEffect(()=>{
     dispatch(fetchLocations())

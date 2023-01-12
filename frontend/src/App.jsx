@@ -10,22 +10,17 @@ import { useState } from 'react';
 import { UXContext } from './components/UXContext';
 import { filters } from './components/utils/defaultFilters';
 import CheckoutPage from './components/CheckoutPage';
-import { useSelector } from 'react-redux';
-import { fetchCart, getCart } from './store/cart';
-import { checkCartMembership } from './components/RestaurantListingPage/utils/menuUtils';
 
 function App() {
   
   
-  const [userLocation, setUserLocation] = useState({lat: 37.747401957356246, lng: -122.4456108834198});
   const [numCarts, setNumCarts] = useState(0);
   const [sortOptions, setSortOptions] = useState(filters());
   const [menuModal, setMenuModal] = useState(false);
   const [cartModal, setCartModal] = useState(false);
   const [restCartModal, setRestCartModal] = useState(false);
-  const [locationModal, setLocationModal] = useState(false);
   const [checkoutOrder, setCheckoutOrder] = useState({})
-
+  
   const toggleMenuModal = () =>{ 
     setMenuModal(!menuModal)
   }    
@@ -33,7 +28,8 @@ function App() {
   const toggleCartModal = ()=>{
     setCartModal(!cartModal)
   }
-
+  
+  const [locationModal, setLocationModal] = useState(false);
   const toggleLocationModal = ()=>{
     setLocationModal(!locationModal)
   }
@@ -58,7 +54,7 @@ function App() {
                                         menuModal, setMenuModal, toggleMenuModal,
                                         cartModal, setCartModal, toggleCartModal,
                                         locationModal, setLocationModal, toggleLocationModal,
-                                        userLocation, setUserLocation, toggleRestCartModal,
+                                        toggleRestCartModal,
                                         restCartModal, setRestCartModal, toggleCartModals,
                                         checkoutOrder, setCheckoutOrder
                                       }}>

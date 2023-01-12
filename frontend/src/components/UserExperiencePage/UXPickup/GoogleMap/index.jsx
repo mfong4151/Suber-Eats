@@ -6,8 +6,7 @@ import { UXContext } from '../../../UXContext';
 
 // https://react-google-maps-api-docs.netlify.app/#googlemap
 
-const Map = ({restaurants}) => {
-  const {userLocation, setUserLocation} = useContext(UXContext)
+const Map = ({restaurants, userLocation, setUserLocation}) => {
   
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
   })
