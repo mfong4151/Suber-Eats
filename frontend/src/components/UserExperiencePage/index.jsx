@@ -18,8 +18,7 @@ import BundleModals from '../universalModals/BundleModals.jsx';
 
 const UserExperiencePage = () => {
     const sessionUser = useSelector(state => state.session.user);
-    const allRestaurants = useSelector(getRestaurants);
-    const restaurants = allRestaurants;
+    const restaurants = useSelector(getRestaurants);
     const dispatch = useDispatch();
 
     useEffect(()=>{

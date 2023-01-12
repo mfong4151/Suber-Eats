@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import PickUpNow from './SVGs/PickUpNow';
 import LocationIcon from './SVGs/LocationIcon';
 import ExitButton from './SVGs/ExitButton.jsx'
+import { checkUserLoc, fetchLocations } from '../../store/location';
+import { updateLocation } from '../../store/location';
 
 const LocationModal = () => {
 
@@ -14,7 +16,7 @@ const LocationModal = () => {
   const sessionUserId = useSelector(state => state.session.user.id)  
   //use dispatch if necessary
   const dispatch = useDispatch()
-
+  let userLocObj = useSelector(checkUserLoc(sessionUserId))
 
   //controlling overflow
   if (locationModal) document.body.classList.add('active-modal')
@@ -23,16 +25,24 @@ const LocationModal = () => {
   const handleSubmitAddress = e =>{
     e.preventDefault();
     e.stopPropagation();
-    // dispatch(updateLocation(
-    //     {
-    //       lat: userLocation.lat,
-    //       lng: userLocation.lng,
-    //       userId: sessionUserId
+    if(userLocObj){
+     dispatch(updateLocation(
+         {location:{
+           latitude: userLocation.lat,
+           longitude: userLocation.lng,
+           userId: sessionUserId
+         }}, userLocObj.id
+     )).then(
 
-    //     }
-    // ))
+      dispatch()
 
-  }
+
+     )}}
+
+  useEffect(()=>{
+    dispatch(fetchLocations())
+
+  }, [])
 
   //css classes for our modals:
   //modal
@@ -86,4 +96,4 @@ const LocationModal = () => {
   )
 }
 
-export default LocationModal
+export default LocationModal;

@@ -25,11 +25,13 @@ class Restaurant < ApplicationRecord
     validates :cuisine_type, presence:true
     
   
+
     def restaurants_in_proximity
         Restaurant.select('*')
-        .where('SQRT(SQUARE(restaurants.latitude - ?) + SQUARE(restaurants.longitude - ?)) <= .005', 
-        *[current_user.location.latitude, current_user.location.longitude] )
+        .where('SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= .06', 
+        *[User.find_by_id(1).location.latitude, User.find_by_id(1).location.longitude] )
     end
+  
   
     
     has_one :menu,

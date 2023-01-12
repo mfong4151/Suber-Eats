@@ -7,6 +7,7 @@ import menusReducer from './menu'
 import cartsReducer from './cart';
 import transactionsReducer from './transaction';
 import reviewsReducer from './review';
+import locationsReducer from './location';
 
 let enhancer;
 export const rootReducer = combineReducers({
@@ -16,6 +17,7 @@ export const rootReducer = combineReducers({
     menu: menusReducer,
     cart:cartsReducer,
     transaction: transactionsReducer,
+    locations:locationsReducer
 })
 
 if (process.env.NODE_ENV === 'production') {
