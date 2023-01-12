@@ -68,7 +68,7 @@ class EasySeeds
 
 
   ###Used in conjunction to destroy all of your tables
-  def self.destory_tables(class_names, table_strings)
+  def self.destroy_tables(class_names, table_strings)
     (class_names.length - 1).downto(0) do |i|
       EasySeeds.destroy_table(class_names[i], table_strings[i])
     end
