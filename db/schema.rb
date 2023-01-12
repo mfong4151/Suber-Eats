@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_11_053049) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_11_170524) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -101,6 +101,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_11_053049) do
     t.float "transaction_sum", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "review_left"
     t.index ["restaurant_id"], name: "index_transactions_on_restaurant_id"
     t.index ["user_id"], name: "index_transactions_on_user_id"
   end

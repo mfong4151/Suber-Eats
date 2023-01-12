@@ -9,7 +9,6 @@ class Api::CartsController < ApplicationController
     end
 
     def create
-        puts(cart_params)
         @cart = [Cart.new(cart_params)]
         if @cart[0].save!
             render :show

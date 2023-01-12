@@ -9,7 +9,7 @@ json.menu do
     end
     
     json.set! :reviews do
-        @menu.reviews.each do |review|
+        @menu.restaurant.reviews.each do |review|
             json.set! review.id do
                 json.partial! 'api/reviews/review', review: review
                 json.extract! review.reviewer, :name

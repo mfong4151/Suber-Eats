@@ -2,9 +2,17 @@ import csrfFetch from './csrf';
 
 
 const RECEIVE_MENU = 'menu/receiveMenu';
+const REMOVE_REVIEW = 'menu/review/removeReview';
 
 
-const receiveMenu = menu =>(
+export const removeReview = reviewId =>(
+    {
+        type: REMOVE_REVIEW,
+        payload: reviewId
+    }   
+)
+
+export const receiveMenu = menu =>(
     {
         type: RECEIVE_MENU,
         payload: menu
@@ -17,7 +25,7 @@ export const getMenuItems = state =>{
 }
 
 export const getMenuReviews = state =>{
-    if(!state.menu.menuItems) return [];
+    if(!state.menu.reviews) return [];
     return Object.values(state.menu.reviews);
 }
 
@@ -38,6 +46,10 @@ const menusReducer = (state = {}, action) =>{
         case RECEIVE_MENU:
             return {...state, ...action.payload.menu}
             
+        case REMOVE_REVIEW:
+            const newState = {...state}
+            delete newState.reviews[action.payload]
+            return newState
         default:
             return state
     }

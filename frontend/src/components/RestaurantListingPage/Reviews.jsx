@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Review from './Review';
+import { fetchMenu, getMenuReviews } from '../../store/menu';
+import { useState } from 'react';
 
-const Reviews = ({reviews}) => {
+const Reviews = () => {
+    const dispatch = useDispatch()
+    const reviews = useSelector(getMenuReviews);
+    const [ctr, setCtr] = useState(0)
 
-  const dispatch = useDispatch();
-
-
+  
     return (
       <div className="listings-main review-section">
           <div className='review-header univ-padding'>
@@ -15,7 +18,7 @@ const Reviews = ({reviews}) => {
           </div>
           <ul className='reviews'>
             {reviews.map((review, idx)=>
-              (<Review review={review} key={idx}/> )
+              (<Review review={review} key={idx} ctr={ctr} setCtr={setCtr}/> )
             )}
           </ul>   
 

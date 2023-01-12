@@ -11,3 +11,11 @@
     margin:auto;
     z-index: 4;
 }
+
+.delete-text{
+
+    font-size: 32px;
+    font-family:(--font-family-UMB);
+    color: var(--color-black);
+    margin-bottom:10%;
+}

@@ -14,8 +14,8 @@ const receiveTransaction = transaction =>(
 
 
 export const getTransactions = state => {
-    if (!state.transactions) return [];
-    return Object.values(state.transactions)
+    if (!state.transaction) return [];
+    return Object.values(state.transaction)
 }
 
 
@@ -29,6 +29,42 @@ export const fetchTransactions = userId => async dispatch =>{
     }
 }
 
+export const createTransaction = transaction => async dispatch => {
+    const res = await csrfFetch(`/api/transactions/`,{
+        method: "POST",
+        body: JSON.stringify(transaction),
+        headers:{ 
+            "Content-Type": 'application/json',
+            "Accept": 'application/json'
+        }
+    })
+    if (res.ok){
+        const transaction = await res.json();
+        dispatch(receiveTransaction(transaction))
+    }
+}
+
+
+
+export const updateTransaction = (transaction, transactionId) => async dispatch =>{
+    console.log(transaction, transactionId)
+    const res = await csrfFetch(`/api/transactions/${transactionId}`,{
+        method: "PATCH",
+        body: JSON.stringify(transaction),
+        headers:{ 
+            "Content-Type": 'application/json',
+            "Accept": 'application/json'
+        }
+    })
+
+    if (res.ok){
+        const transaction = await res.json();
+        dispatch(receiveTransaction(transaction))
+    }
+}
+
+
+
 
 
 const transactionsReducer = (state = {}, action) =>{
@@ -36,7 +72,7 @@ const transactionsReducer = (state = {}, action) =>{
     switch(action.type){
 
         case RECEIVE_TRANSACTION:
-            return{...state, ...action.payload}
+            return{...state, ...action.payload.transaction}
 
 
         default:

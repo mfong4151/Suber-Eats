@@ -9,6 +9,17 @@ class Api::TransactionsController < ApplicationController
         end
     end
 
+
+    def update
+      
+        @transaction = Transaction.find_by(id: params[:id])
+        if @transaction.update(transaction_params)
+        else
+            render json: @transaction.errors.full_messages, status: 422
+        end
+
+    end
+
     def create
 
         @transactions = Transaction.new(transaction_params)
@@ -21,5 +32,9 @@ class Api::TransactionsController < ApplicationController
             return
         end 
     end
+    
+    def transaction_params
+        params.require(:transaction).permit(:user_id, :restaurant_id, :review_left, :transaction_sum)
 
+    end
 end

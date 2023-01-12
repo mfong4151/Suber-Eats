@@ -179,11 +179,11 @@
     justify-content: space-between;
 
 }
-.report{
+.review-buttons{
     text-decoration: underline;
     padding-right: 3rem;
 }
-.report:hover{
+.review-buttons:hover{
     cursor:pointer
 }
 

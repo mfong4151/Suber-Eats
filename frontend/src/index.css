@@ -297,3 +297,61 @@ h2{
 .grey-border-for-white{
     border:1px solid var(--color-grey-shadow);
 }
+
+
+
+/* for shared modals in review and other */
+
+
+
+.review-modal-overlay{
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+.review-modal-content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: var(--color-white);
+    width:800px;
+    height:400px;
+    margin-top: 4%;
+    border-radius: 1rem;
+}
+
+.btn-holder{
+    display: flex;
+    justify-content: space-between;
+    width:80%
+}
+
+.review-btns{
+    height:40px;
+    width:48%;
+    border-radius: .5rem;
+}
+
+.review-form{
+    width:80%;
+    height:60%;
+    margin-top:2%;
+    margin-bottom:2%;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.review-input{
+    width:70%;
+    height:100%
+}
+
+.review-submit{
+    color: var(--color-white)
+}
+

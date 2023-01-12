@@ -11,7 +11,7 @@ const receiveRestaurants = restaurants =>(
 )
 
 
-const receiveRestaurant = restaurant =>(
+export const receiveRestaurant = restaurant =>(
     {
         type: RECEIVE_RESTAURANT,
         payload: restaurant

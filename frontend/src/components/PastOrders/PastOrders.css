@@ -5,7 +5,115 @@
 
 }
 
+.past-orders-holder{
+    
+}
+
+.transaction-section{
+    display: flex;
+    justify-content: flex-start;
+    width:30%;
+}
+
+
+.rest-photo{
+    padding-right: 2rem;
+}
 .transaction-block{
-    height:240px;
+    height:200px;
     width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transac-rest-name{
+    font-family: var(--font-family-UMB),var(--font-family);
+    font-size: 20px;
+}
+
+#transc-period{
+    font-family: var(--font-family);
+    color: var(--color-grey-text);
+    font-size:14px;
+}
+
+.transact-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.transact-buttons{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding-right:3rem;
+    
+}
+
+.transact-page-btn{
+    width:320px;
+    height:50px;
+    margin-bottom:1rem;
+}
+
+
+#view-store{
+    color: white;
+}
+
+
+.review-modal-overlay{
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+
+#review-modal-content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: var(--color-white);
+    width:800px;
+    height:400px;
+    margin-top: 4%;
+    border-radius: 1rem;
+}
+
+#btn-holder{
+    display: flex;
+    justify-content: space-between;
+    width:80%
+}
+
+.review-btns{
+    height:40px;
+    width:48%;
+    border-radius: .5rem;
+}
+
+.review-form{
+    width:80%;
+    height:60%;
+    margin-top:2%;
+    margin-bottom:2%;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.review-input{
+    width:70%;
+    height:100%
+}
+
+#review-submit{
+    color: var(--color-white)
+}
+
+#go-back{
+
 }

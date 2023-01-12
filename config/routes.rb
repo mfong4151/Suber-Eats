@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   
   namespace :api, defaults: { format: :json} do 
     resources :carts, only:[:destroy, :update, :create, :show]
-    resources :transactions, only:[:show, :create]
+    resources :transactions, only:[:show, :create, :update]
+    resources :reviews, only:[:show, :update, :destroy, :create]
     resources :users, only: [:create, :index, :show]
     resource :session, only: [:create, :show, :destroy]
     resources :restaurants, only: [:index, :show] do
         resources :menus, only:[:show]
     end
-    resources :reviews, only:[:show, :update, :destroy, :create]
   end 
 
   get '*path', to: 'static_pages#frontend'

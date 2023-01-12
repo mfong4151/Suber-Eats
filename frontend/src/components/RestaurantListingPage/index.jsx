@@ -12,22 +12,27 @@ import star from './assets/star_rating_dark.png'
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
 import { fetchCart } from '../../store/cart';
+import { useRef } from 'react';
 
 //https://stackoverflow.com/questions/52064303/reactjs-pass-props-with-redirect-component
 //for handling redirection to this page
 
 const RestaurantListing = () => {
-
   const sessionUserId = useSelector(state => state.session.user.id)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
   const menuItems = useSelector(getMenuItems);
-  const reviews = useSelector(getMenuReviews);
   const sortedMenu = sortMenus(menuItems)
-  //not sure if this should go here but oh well
-  
 
+  
+  // useEffect(() => {
+  //   console.log(reviewSectionRef)
+  //   if(window.location.hash === "#review-section"){
+  //       reviewSectionRef.current.scrollIntoView();
+  //   }
+  // }, []);
+  
 
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
@@ -72,7 +77,9 @@ const RestaurantListing = () => {
           <div></div>
       </div>
       <MenuListings menuItems={sortedMenu}/>
-      <Reviews reviews={reviews}/>
+      <a id="review-section">
+        <Reviews/>
+      </a>
       <BundleModals/>      
     </>
   )
