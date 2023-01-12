@@ -53,6 +53,7 @@ class EasySeeds
           object_id, url, filename = row
           class_instance = class_image_name.find_by_id(object_id)
           class_instance.image.attach(io: URI.open(url), filename: filename)
+          puts 'attached to ' + filename
       end
     end
   end
