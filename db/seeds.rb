@@ -21,3 +21,4 @@ EasySeeds.attach_images(class_image_names)
 # tables, table_strings = EasySeeds.tables_from_csvs()
 # EasySeeds.single_seeder(tables[4], Review, table_strings[4])
 # EasySeeds.single_seeder(tables[6], Transaction, table_strings[6])
+
