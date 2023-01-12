@@ -2,7 +2,7 @@
 .orders-header{
     font-family: var(--font-family-UMB);
     font-size: 48px;
-
+    margin-bottom:2%
 }
 
 .past-orders-holder{

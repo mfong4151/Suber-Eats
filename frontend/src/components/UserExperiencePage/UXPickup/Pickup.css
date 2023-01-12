@@ -112,10 +112,12 @@
 
 .restaurant-name{
     padding-left: .75rem;
-    font-family: var(--font-family);
-    font-size: 20px;
-    font-weight: 500;
+    font-family: var(--font-family-UMM), var(--font-family);
     padding-bottom: .4rem;
+}
+
+#rest-name{
+    font-size: 18px;
 }
 
 .listing-time-distance{
@@ -124,3 +126,4 @@
     color: var(--color-greyDarker);
     padding-bottom: .8rem;
 }   
+
