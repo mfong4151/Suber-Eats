@@ -86,6 +86,14 @@
     letter-spacing: 0.6px;
 }
 
+.btn-round-two{
+
+    border-radius: 30px;
+    border: 0;
+    font-family: var(--font-family);
+    letter-spacing: 0.6px;
+}
+
 .btn-round-simple{
     padding: 0.8rem 1rem;
     border-radius: 30px;

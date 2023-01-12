@@ -11,6 +11,12 @@
 }
 
 
+.delivery-header{
+    margin-left:1rem;
+    margin-top: 1rem;
+    margin-bottom:2rem;
+}
+
 .phone-buttons{
     display: flex;
     justify-content:flex-start;
@@ -63,22 +69,51 @@
 .loc-pickup-details{
     font-family: var(--font-family-UMB), var(--font-family);
     font-size: 30px;
+    margin-left:3%;
+}
 
+#exit-spacing{
+    margin-left: 1rem;
+    margin-top:1rem;
+}
+
+.delivery-margin{
+    margin-left:1rem;
+}
+
+
+
+.loc-icon-and-text{
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    width: 100px;
 }
 
 .loc-options{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left:3%;
+    margin-bottom:5%;
+    height:45px;
 }
 
+.loc-sub-options{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
 
 .menu-loc-option-text{
     font-family: var(--font-family-UMM), var(--font-family);
     font-size: 16px;
+    width:100%;
 }
 
 .loc-done{
-    width:80%;
+    width:90%;
     height:60px;
     background-color: var(--color-black);
     color: var(--color-white);
@@ -89,11 +124,19 @@
 }
 
 .loc-buttons{
-    background-color: var(--color-greyButtonBG);
     font-family: var(--font-family-UMM), var(--font-family);
     font-size: 15px;
+    height:40px;
+    width:100px;
 }
 
+.enter-address{
+    height:40px;
+}
+
+#schedule{
+    width:100px;
+}
 
 /* cart modal */
 
@@ -324,4 +367,17 @@
     font-family:var(--font-family);
     color: var(--color-grey-text);
     font-size: 12px;
+}
+.location-icon{
+    position: relative;
+    top:15px;
+    margin-left: 1rem;
+    margin-right:1rem;
+}
+
+.pick-up-icon{
+    position: relative;
+    top: -5px;
+    margin-left: 1rem;
+    margin-right:1rem;
 }

@@ -5,6 +5,9 @@ import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
 import PickUpNow from './SVGs/PickUpNow';
+import LocationIcon from './SVGs/LocationIcon';
+import ExitButton from './SVGs/ExitButton.jsx'
+
 const LocationModal = () => {
 
   //grab the context variable that makes sense from here
@@ -28,23 +31,42 @@ const LocationModal = () => {
     <div className="modal">
         <div className='modal-overlay' onClick={toggleLocationModal}>
           <div className="modal-loc-content">
-    
-              <div>
-                <h1 className='loc-pickup-details'>Pickup Details</h1>
+              <div className='delivery-margin' id='exit-spacing'>
+                <button><ExitButton/></button>
+              </div>
+              <div className='delivery-header'> 
+                <h1 className='loc-pickup-details'>Delivery Details</h1>
               </div>
 
-              <div className="loc-options">
-                  <h2 className='menu-loc-option-text'>Pick Up Now</h2>
-                  <button className='btn-round loc-buttons'>Schedule</button>
-              </div>
-              <div className="loc-options">
-                  <div>
-                    <PickUpNow/> 
-                    <h2 className='menu-loc-option-text'>Pick Up Now</h2>
-                    <button className='btn-round loc-buttons'>Schedule</button>
+              <div className='loc-options delivery-margin'>
+                <div className='loc-icon-and-text'>
+                  <LocationIcon/>
+                  <div className='delivery-address'>
+                    <div className='loc-sub-options'>
+                      <h2 className='menu-loc-option-text'>Delivery Address</h2>
+                    </div>
                   </div>
+                </div> 
+                
+                <button className='btn-round-two enter-address grey-button'><span>Enter Address</span></button>
               </div>
-              <button className='loc-done button-sq univ-padding'><span>Done</span></button>
+
+              <div className='loc-options delivery-margin'>
+                <div className='loc-icon-and-text'>
+                  <PickUpNow/> 
+                  <div className=' udc'>
+                      <h2 className='menu-loc-option-text'>Now</h2>
+                  </div>
+                </div>  
+                <button className='btn-round-two loc-buttons grey-button udc'><span>Schedule</span></button>
+
+              </div>
+
+               
+              <div className="udc">
+                <button className='loc-done button-sq udc'><span>Done</span></button>
+              </div>
+
           </div>
 
         </div>
