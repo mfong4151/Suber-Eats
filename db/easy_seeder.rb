@@ -41,7 +41,7 @@ class EasySeeds
     end
 
   def self.attach_images(class_image_names)
-    seed_folder = './db/seed_image_files'
+    seed_folder = '../seed_image_files'
     Dir.chdir(seed_folder)
 
     Dir.glob("*").each_with_index do |seed_file, i|
