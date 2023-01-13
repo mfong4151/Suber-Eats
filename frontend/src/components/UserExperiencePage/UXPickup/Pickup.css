@@ -127,3 +127,14 @@
     padding-bottom: .8rem;
 }   
 
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    width:95%
+}
+
+.rating-button{
+    height:30px;
+    width:30px;
+    border-radius: 3rem;
+}

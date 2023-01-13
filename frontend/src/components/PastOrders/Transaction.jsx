@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import ReviewModal from './ReviewModal';
 
-const Transaction = ({transaction, sessionUserId}) => {
+const Transaction = ({transaction}) => {
   const history = useHistory();
   const [showReviewModal, setShowReviewModal] = useState(false)
 
@@ -26,8 +26,8 @@ const Transaction = ({transaction, sessionUserId}) => {
 
         <div className="transaction-section univ-padding">
           <div className="rest-photo">
-            PHOTO HERE
-          </div>
+            <img className='options-image' src={transaction.imageUrl} />
+         </div>
 
           <div className="transact-info">
             <h4 className="transac-rest-name">

@@ -20,7 +20,6 @@ const Map = ({restaurants, userLocation, setUserLocation}) => {
     };
   const handleOnClick = e =>{
     setUserLocation({lng: e.latLng.lng(), lat: e.latLng.lat()})
-    console.log(e.latLng.lng(), e.latLng.lat())
   }
   
 

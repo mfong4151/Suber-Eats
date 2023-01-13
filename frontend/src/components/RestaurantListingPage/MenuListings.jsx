@@ -19,9 +19,11 @@ const MenuListings = ({sessionUserId}) => {
       setMenuItemModal(!menuItemModal)
       }
 
+  
     return (
     <div className='listings-main'>
-
+        
+        
         <div className='table-of-contents'>
             {Object.keys(menuItems).map((header, idx)=>(
                     <div className='toc-index'>

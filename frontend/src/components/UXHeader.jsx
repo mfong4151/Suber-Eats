@@ -24,7 +24,7 @@ const UXHeader = () => {
               </div>
         </div>
 
-        <button className="btn-round ux-buttons">Delivery Pickup</button>
+        <button className="btn-round ux-buttons" id="delivery-pickup">Delivery Pickup</button>
         <button className='btn-round ux-buttons' onClick={toggleLocationModal}><LocationIcon/><span className="map-location-text">Map Location Pick Up Now</span></button>
 
         <form className="form-bg">

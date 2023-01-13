@@ -8,15 +8,16 @@ import LocationIcon from './SVGs/LocationIcon';
 import ExitButton from './SVGs/ExitButton.jsx'
 import { checkUserLoc, fetchLocations } from '../../store/location';
 import { updateLocation } from '../../store/location';
-import { LocationContext } from '../UserExperiencePage/LocationContext';
+import { useHistory } from 'react-router-dom';
 import { fetchRestaurants, removeRestaurants } from '../../store/restaurant';
+import { useParams } from 'react-router-dom';
 
-const LocationModal = () => {
+const LocationModal = ({userLocation}) => {
 
   const { locationModal, toggleLocationModal} = useContext(UXContext)
-  const {userLocation} = useContext(LocationContext)
   const sessionUserId = useSelector(state => state.session.user.id)  
   const dispatch = useDispatch()
+  const history = useHistory()
   let userLocObj = useSelector(checkUserLoc(sessionUserId))
 
   if (locationModal) document.body.classList.add('active-modal')
@@ -67,7 +68,7 @@ const LocationModal = () => {
                   <LocationIcon/>
                   <div className='delivery-address'>
                     <div className='loc-sub-options'>
-                      <h2 className='menu-loc-option-text'>Delivery Address: {userLocation.lat}, {userLocation.lng}</h2>
+                      <h2 className='menu-loc-option-text'>Delivery Address: {userLocation?.lat}, {userLocation?.lng}</h2>
                     </div>
                   </div>
                 </div> 

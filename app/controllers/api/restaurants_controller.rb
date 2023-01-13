@@ -2,6 +2,7 @@ class Api::RestaurantsController < ApplicationController
 
     def index
         @restaurants = Restaurant.restaurants_in_proximity(current_user.id)
+        # @restaurants = Restaurant.all
         render :index
     end
 

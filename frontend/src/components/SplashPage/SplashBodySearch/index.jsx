@@ -17,11 +17,12 @@ const SplashBodySearch = () => {
                   <input type='text' name='location' placeholder='Enter delivery address'/> 
                  
                 </form> 
-
-                <select name='deliver-now'>
+                <div className='grey-button'>   
+                  <select name='deliver-now'  >
                       <option value="deliver-now">Deliver now</option>
                       <option value="schedule-for-later">Schedule for later</option>
                   </select> 
+                </div>
 
                 <button className="button-sq" id="find-food" type="submit" form="search-form">Find Food</button>
               </div>

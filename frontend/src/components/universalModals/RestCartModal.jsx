@@ -27,7 +27,7 @@ const RestCartModal = ({restCart}) => {
     for(const cart of restCart){
       dispatch(deleteCart(cart.id))
     }
-    dispatch(fetchCart(sessionUser.id))
+    dispatch(fetchCart(sessionUser.id)).then(()=>toggleRestCartModal())
   }
 
   const handleAddClick = e =>{

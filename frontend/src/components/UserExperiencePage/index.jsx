@@ -33,9 +33,8 @@ const UserExperiencePage = () => {
     <>  
         <UXHeader/>
         <UXPickup restaurants={restaurants} userLocation={userLocation} setUserLocation={setUserLocation}/>
-        <LocationContext.Provider value={{userLocation}}>
-          <BundleModals/>
-        </LocationContext.Provider>
+        <BundleModals userLocation={userLocation}/>
+        
     </>
   )
 }

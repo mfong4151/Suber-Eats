@@ -41,10 +41,7 @@ const renderApplication = () => {
   );
 }
 
-//uncomment for working around hanging csrf
-// renderApplication();
 
-//comment this out instead if csrf hangs
 if (sessionStorage.getItem("X-CSRF-Token") === null || sessionStorage.getItem("currentUser") === null) {
   store.dispatch(sessionActions.restoreSession()).then(renderApplication);
 } else {

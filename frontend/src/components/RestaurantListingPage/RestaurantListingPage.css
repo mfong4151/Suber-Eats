@@ -31,8 +31,10 @@
 /* restaurant-buttons' */
 .listings-main{
     display: flex;
-    justify-content: start;;
+    justify-content: start;
 }
+
+
 
 
 .table-of-contents{
@@ -46,9 +48,15 @@
 }
 
 
+.index-heading{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .toc-index{
     padding-top: 1rem;
-    height:40px;
+    height:auto;
 }
 
 

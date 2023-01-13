@@ -147,7 +147,7 @@
 
 .cart-tab{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center  ;
     height:100px;
     cursor: pointer;  
@@ -380,4 +380,21 @@
     top: -5px;
     margin-left: 1rem;
     margin-right:1rem;
+}
+
+.rest-profile-pic{
+    margin-left:5%;
+    width: 69px;
+    height: 69px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+.cart-profile-pic{
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
 }

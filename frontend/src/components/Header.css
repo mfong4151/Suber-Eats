@@ -25,6 +25,11 @@
 }
 
 .map-location-text{
-    padding-left: .5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
+#delivery-pickup{
+    font-family: var(--font-family-UMB);
+}
