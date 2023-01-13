@@ -10,8 +10,8 @@ table_strings = ['users', 'restaurants', 'menus', 'menu_items', 'reviews', 'cart
 # EasySeeds.create_easy_seed_data(class_names)
 # 
 
-# class_image_names = [Restaurant]
-# EasySeeds.attach_images(class_image_names)
+class_image_names = [Restaurant]
+EasySeeds.attach_images(class_image_names)
 
 
 

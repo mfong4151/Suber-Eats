@@ -9,13 +9,13 @@ import ExitButton from './SVGs/ExitButton.jsx'
 import { checkUserLoc, fetchLocations } from '../../store/location';
 import { updateLocation } from '../../store/location';
 import { LocationContext } from '../UserExperiencePage/LocationContext';
+import { fetchRestaurants } from '../../store/restaurant';
 
 const LocationModal = () => {
 
   //grab the context variable that makes sense from here
   const { locationModal, toggleLocationModal} = useContext(UXContext)
   const {userLocation} = useContext(LocationContext)
-  console.log(userLocation)
   const sessionUserId = useSelector(state => state.session.user.id)  
   //use dispatch if necessary
   const dispatch = useDispatch()
@@ -37,8 +37,9 @@ const LocationModal = () => {
 
           }}, userLocObj.id
           
-     )).then(
-      toggleLocationModal()
+     )).then(()=> dispatch(fetchRestaurants()).then(
+      ()=> toggleLocationModal()
+      )
      )
   }}
 
