@@ -56,7 +56,13 @@ const restaurantsReducer = (state = {}, action) =>{
     switch(action.type){
         
         case RECEIVE_RESTAURANTS:
-            return{...state, ...action.payload.restaurants}
+            const newState = {...state}
+            if(!Object.keys(newState)){
+                return{...state, ...action.payload.restaurants}
+            }
+            
+         
+            return action.payload.restaurants
             
         case RECEIVE_RESTAURANT:
             return {...state, [action.payload.restaurant.id]:action.payload.restaurant}

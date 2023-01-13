@@ -9,7 +9,7 @@ import ExitButton from './SVGs/ExitButton.jsx'
 import { checkUserLoc, fetchLocations } from '../../store/location';
 import { updateLocation } from '../../store/location';
 import { LocationContext } from '../UserExperiencePage/LocationContext';
-import { fetchRestaurants } from '../../store/restaurant';
+import { fetchRestaurants, removeRestaurants } from '../../store/restaurant';
 
 const LocationModal = () => {
 
@@ -37,7 +37,8 @@ const LocationModal = () => {
 
           }}, userLocObj.id
           
-     )).then(()=> dispatch(fetchRestaurants()).then(
+     ))
+     .then(()=> dispatch(fetchRestaurants()).then(
       ()=> toggleLocationModal()
       )
      )
