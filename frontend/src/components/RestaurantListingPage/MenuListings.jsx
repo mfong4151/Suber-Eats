@@ -4,13 +4,17 @@ import ListingsBlock from './ListingsBlock'
 import { useState } from 'react'
 import MenuItemModal from './modals/MenuItemModal'
 import { useSelector } from 'react-redux'
-import { createCart, getCart } from '../../store/cart'
+import { getCart } from '../../store/cart'
+import { getMenuItems } from '../../store/menu'
+import { sortMenus } from './utils/menuUtils'
 //bring in intersection observer here, have it change based class whats clicked
 
-const MenuListings = ({menuItems}) => {
+const MenuListings = ({sessionUserId}) => {
     const usersCart = useSelector(getCart)
     const [menuItemModal, setMenuItemModal] = useState(false);  
     const [menuItem, setMenuItem] = useState('')
+    const preSortedItems = useSelector(getMenuItems);
+    const menuItems = sortMenus(preSortedItems)
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
       }
@@ -36,6 +40,7 @@ const MenuListings = ({menuItems}) => {
                     menuItemModal={menuItemModal} 
                     toggleItemModal={toggleItemModal}
                     usersCart={usersCart}
+                    sessionUserId={sessionUserId}
                     /> 
             ))}
             {menuItemModal && <MenuItemModal menuItem={menuItem} setMenuItem={setMenuItem} menuItemModal={menuItemModal} toggleItemModal={toggleItemModal}/>}

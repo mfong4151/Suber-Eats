@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './RestaurantListingPage.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { createCart, updateCart, fetchCart, deleteCart, getCart} from '../../store/cart'
+import { useDispatch } from 'react-redux'
+import { createCart, updateCart, fetchCart} from '../../store/cart'
 
-const MenuListingItem = ({setMenuItem, listing, toggleItemModal, usersCart}) => {
+const MenuListingItem = ({setMenuItem, listing, toggleItemModal, usersCart, sessionUserId}) => {
     //We need to refactor this to format a certain way based on whats avalible, 
     const dispatch = useDispatch()
-    const sessionUserId = useSelector(state => state.session.user.id)
     let globalQuantity = 0
     if (usersCart[listing.menuId]) globalQuantity = usersCart[listing.menuId].quantity;
     const [cartQuantity, setCartQuantity] = useState(globalQuantity)

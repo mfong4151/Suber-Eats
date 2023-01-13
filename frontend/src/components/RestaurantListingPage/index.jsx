@@ -3,8 +3,7 @@ import UXHeader from '../UXHeader';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurant, getRestaurant } from '../../store/restaurant';
-import { fetchMenu, getMenuItems, getMenuReviews } from '../../store/menu';
-import { sortMenus } from './utils/menuUtils';
+import { fetchMenu } from '../../store/menu';
 import MenuListings from './MenuListings';
 import MapHeader from './MapHeader';
 import Reviews from './Reviews';
@@ -12,26 +11,14 @@ import star from './assets/star_rating_dark.png'
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
 import { fetchCart } from '../../store/cart';
-import { useRef } from 'react';
 
-//https://stackoverflow.com/questions/52064303/reactjs-pass-props-with-redirect-component
-//for handling redirection to this page
+
 
 const RestaurantListing = () => {
   const sessionUserId = useSelector(state => state.session.user.id)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
-  const menuItems = useSelector(getMenuItems);
-  const sortedMenu = sortMenus(menuItems)
-
-  
-  // useEffect(() => {
-  //   console.log(reviewSectionRef)
-  //   if(window.location.hash === "#review-section"){
-  //       reviewSectionRef.current.scrollIntoView();
-  //   }
-  // }, []);
   
 
   useEffect(()=>{
@@ -76,9 +63,9 @@ const RestaurantListing = () => {
           <div></div>
           <div></div>
       </div>
-      <MenuListings menuItems={sortedMenu}/>
+      <MenuListings sessionUserId={sessionUserId} />
       <a id="review-section">
-        <Reviews/>
+        <Reviews sessionUserId={sessionUserId}/>
       </a>
       <BundleModals/>      
     </>

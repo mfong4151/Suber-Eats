@@ -4,7 +4,7 @@ import Review from './Review';
 import { fetchMenu, getMenuReviews } from '../../store/menu';
 import { useState } from 'react';
 
-const Reviews = () => {
+const Reviews = ({sessionUserId}) => {
     const dispatch = useDispatch()
     const reviews = useSelector(getMenuReviews);
     const [ctr, setCtr] = useState(0)
@@ -18,7 +18,7 @@ const Reviews = () => {
           </div>
           <ul className='reviews'>
             {reviews.map((review, idx)=>
-              (<Review review={review} key={idx} ctr={ctr} setCtr={setCtr}/> )
+              (<Review review={review} key={idx} ctr={ctr} setCtr={setCtr} sessionUserId={sessionUserId}/> )
             )}
           </ul>   
 

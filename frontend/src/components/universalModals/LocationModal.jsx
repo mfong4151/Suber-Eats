@@ -13,15 +13,12 @@ import { fetchRestaurants, removeRestaurants } from '../../store/restaurant';
 
 const LocationModal = () => {
 
-  //grab the context variable that makes sense from here
   const { locationModal, toggleLocationModal} = useContext(UXContext)
   const {userLocation} = useContext(LocationContext)
   const sessionUserId = useSelector(state => state.session.user.id)  
-  //use dispatch if necessary
   const dispatch = useDispatch()
   let userLocObj = useSelector(checkUserLoc(sessionUserId))
 
-  //controlling overflow
   if (locationModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
 

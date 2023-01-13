@@ -6,8 +6,7 @@ import DeleteReviewModal from './modals/DeleteReviewModal'
 
 
 
-const Review = ({review,ctr, setCtr}) => {
-    const sessionUserId = useSelector(state => state.session.user.id)
+const Review = ({review,ctr, setCtr, sessionUserId}) => {
     const [editModal, setEditModal] = useState(false)
     const [deleteModal, setDeleteModal] = useState(false)
     const [reviewBody, setReviewBody] = useState(review.body)
