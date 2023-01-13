@@ -56,6 +56,11 @@ p{
 
 }
 
+.splash-subheader{
+    display: flex;
+    justify-content: space-between;
+}
+
 form{
     background-color: #EEEEEE;
 }

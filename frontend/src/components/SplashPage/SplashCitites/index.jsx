@@ -10,12 +10,12 @@ const SplashCities = () => {
 
   return (
     <div className="univ-padding splash-comps">
-        <div className='splash-header'>
+        <div className='splash-subheader'>
             <h1 className='splash-title'>Cities near me</h1>
             <Link to={'/temp'} className="splash-links">View all 500+ cities</Link>
         </div>
         
-        <h2> GOOGLE MAP HERE</h2>
+        <h2></h2>
 
         <div className='geo-location'>
 

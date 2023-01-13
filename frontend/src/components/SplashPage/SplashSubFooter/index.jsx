@@ -35,7 +35,7 @@ const SplashSubFooter = () => {
                   <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
           </div>
           <div>
-              <h1> apple and google logos here</h1>
+              {/* <h1> apple and google logos here</h1> */}
 
           </div>
         </div>

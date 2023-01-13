@@ -2,7 +2,7 @@ import React from 'react'
 
 const MapHeader = () => {
   return (
-    <div>Here goes the google map </div>
+    <div> </div>
   )
 }
 
