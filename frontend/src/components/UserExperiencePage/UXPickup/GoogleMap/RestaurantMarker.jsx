@@ -11,7 +11,6 @@ const RestaurantMarker = ({restaurant}) => {
         <Marker position = {{lat: restaurant.latitude, lng: restaurant.longitude }}
         animation={2}
         title={textDisplay}
-        // icon='https://toppng.com/uploads/preview/blue-map-pin-blue-google-maps-marker-11562932235xpqssxaj3p.png'
         onClick={()=> history.push(`/restaurantListing/${restaurant.id}`)}
         />
     )

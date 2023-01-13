@@ -8,7 +8,7 @@ import { UXContext } from '../../../UXContext';
 
 const Map = ({restaurants, userLocation, setUserLocation}) => {
   
-  const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
+  const { isLoaded} = useLoadScript({googleMapsApiKey: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'
   })
   if(!isLoaded) return(<h1>loading...</h1>)
   
