@@ -1,17 +1,13 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { updateTransaction } from '../../store/transaction';
 import { createReview } from '../../store/review';
-import { fetchMenu } from '../../store/menu';
 import './PastOrders.css';
 
-const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransaction}) => {
+const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransaction, sessionUserId}) => {
     const [reviewBody, setReviewBody] = useState('')
     const dispatch = useDispatch()
-    const sessionUserId = useSelector(state => state.session.user.id)
-    const history = useHistory()
 
     if (showReviewModal) document.body.classList.add('active-modal')
     else document.body.classList.remove('active-modal')
@@ -46,9 +42,7 @@ const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransac
         e.stopPropagation();
         if (reviewBody){
           dispatch(updateTransaction(updatedTransaction(), pastTransaction.id))
-          dispatch(createReview(createdReview())).then(
-
-            goToRest()
+          dispatch(createReview(createdReview())).then(()=> goToRest()
           )
 
         }

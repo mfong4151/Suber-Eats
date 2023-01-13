@@ -25,7 +25,7 @@ const PastOrders = () => {
         <h1 className='univ-padding orders-header'>Past Orders</h1>
       </div>
        {Object.values(transactions).map((transaction,idx) => (
-      <Transaction transaction={transaction} key={idx}
+      <Transaction transaction={transaction} sessionUserId={sessionUserId} key={idx}
         />))}
       
       <BundleModals/>

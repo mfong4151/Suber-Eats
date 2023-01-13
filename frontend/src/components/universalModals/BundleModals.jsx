@@ -14,16 +14,8 @@ const BundleModals = () => {
     const {menuModal, cartModal, locationModal, restCartModal} = useContext(UXContext)
     const [restCart, setRestCart] = useState('');
 
-    const dispatch = useDispatch()
-    const sessionUserId = useSelector(state => state.session.user.id)
     const currentCart = useSelector(getCart);
     const sortedCarts = aggregateCart(currentCart);
-
-    // useEffect(()=>{
-    //     dispatch(fetchCart(sessionUserId))
-
-    // },[currentCart])
-
     return (
         <>
             {menuModal && <UserMenuModal/>}

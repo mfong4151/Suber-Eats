@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import MenuIcon from '../../SVGs/MenuIcon'
 
 //would need to take in the restaurant array as an argument
-const CheckoutHeader = ({orderInfo}) => {
+const CheckoutHeader = ({}) => {
     const history = useHistory()
     const {toggleMenuModal} = useContext(UXContext)
 

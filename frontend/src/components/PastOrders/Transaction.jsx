@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import ReviewModal from './ReviewModal';
 
-const Transaction = ({transaction}) => {
+const Transaction = ({transaction, sessionUserId}) => {
   const history = useHistory();
   const [showReviewModal, setShowReviewModal] = useState(false)
 
@@ -46,7 +46,7 @@ const Transaction = ({transaction}) => {
 
         </div>
 
-        {showReviewModal && <ReviewModal pastTransaction={transaction} showReviewModal={showReviewModal} setShowReviewModal={setShowReviewModal} goToRest={goToRest}/>}
+        {showReviewModal && <ReviewModal pastTransaction={transaction} showReviewModal={showReviewModal} setShowReviewModal={setShowReviewModal} goToRest={goToRest} sessionUserId/>}
 
         <div className="transact-buttons">
             <button className="transact-page-btn udc black-button btn-rounded-corners" id='view-store' onClick={goToRest}>

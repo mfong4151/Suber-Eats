@@ -8,7 +8,6 @@ import { calcSubTotal,calcTaxAndFees } from '../utils/restaurantCrudUtils'
 const CheckoutRight = ({checkoutOrder}) => {
   const dispatch = useDispatch()
   const history = useHistory()
-  const sessionUserId = useSelector(state => state.session.user.id)
   const subtext = "If you’re not around when the delivery person arrives, they’ll leave your order at the door. By placing your order, you agree to take full responsibility for it once it’s delivered. Orders containing alcohol or other restricted items may not be eligible for leave at door and will be returned to the store if you are not available."
   let subtotal = calcSubTotal(checkoutOrder)
   const taxAndFees = calcTaxAndFees(subtotal)

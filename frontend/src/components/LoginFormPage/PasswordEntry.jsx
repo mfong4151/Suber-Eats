@@ -14,7 +14,6 @@ const PasswordEntry = () => {
     const history = useHistory()
     const sessionUser = useSelector(state => state.session.user)
     const {credential} = useContext(UsernameContext)
-    const [name, setName] = useState('')
     const [password, setPassword] = useState('')
     const [passwordView, setPasswordView] = useState('password')
     const [nextId, setNextId] = useState('btn-next')
