@@ -3,7 +3,7 @@ import {carouselLoader} from '../../utils/imageLoader'
 import "../Pickup.css"
 
 const OptionsCarousel = () => {
-  const icons = carouselLoader().slice(0, 10)
+  const icons = carouselLoader().slice(0, 9)
   
   return (
     <div className='carousel-body'> 
