@@ -101,7 +101,7 @@ const LoginForm = () => {
             <h1 className="head-text">What's your phone number or email?</h1>
             <div className="username-email">
                 <form className='login-form'> 
-                    <input className='form-contents' type='text' name='location' placeholder='Enter your username' onChange={e => setCredential(e.target.value)}/> 
+                    <input className='form-contents' type='text' name='location' placeholder='Enter your email or password' onChange={e => setCredential(e.target.value)}/> 
                
                 </form>
             </div>
@@ -111,9 +111,9 @@ const LoginForm = () => {
             <button htmlFor='submit-username' className='button-sq login-button' id="button-continue" onClick={handleSubmit}>Continue</button>
             <hr className="divider-thin"/>
 
-            <button className='button-sq login-button'><GoogleLogo/><span className="login-text">Continue with Google</span></button>
-            <button className='button-sq login-button'><AppleLogo/><span className="login-text">Continue with Apple</span></button>
-            <button className='button-sq login-button'><FacebookLogo/><span className="login-text">Continue with Facebook</span></button>
+            <button className='button-sq login-button' onClick={handleDemoUser}><GoogleLogo/><span className="login-text">Continue with Google</span></button>
+            <button className='button-sq login-button' onClick={handleDemoUser}><AppleLogo/><span className="login-text">Continue with Apple</span></button>
+            <button className='button-sq login-button' onClick={handleDemoUser}><FacebookLogo/><span className="login-text">Continue with Facebook</span></button>
             <button className='button-sq login-button' onClick={handleDemoUser}>Continue with Demo User</button>
             
             <div className='text-spacing'>

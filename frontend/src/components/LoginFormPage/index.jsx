@@ -18,7 +18,6 @@ const LoginFormPage = () => {
 
     useEffect(()=>{
         dispatch(fetchUsers())
-    
     }, [])
 
     let userSet = aggregateUserCredentials(allUsers)

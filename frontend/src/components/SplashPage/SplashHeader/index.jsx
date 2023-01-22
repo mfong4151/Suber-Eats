@@ -5,17 +5,11 @@ import {useHistory} from 'react-router-dom'
 const SplashHeader = () => {
   const history = useHistory();
   
-  const goTo = (url)=>{
-    history.push(url)
-  }
 
   const goToLogin = ()=>{
-      goTo('/login')
+    history.push('/login')
   }
-  
-  const goToSignUp = ()=>{
-    goTo('/signup')
-  }
+
   
   return (
      <header id="splash-header" className="univ-padding">
@@ -42,7 +36,7 @@ const SplashHeader = () => {
                     d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"></path>
                   </svg>
                   Log In</button>
-                <button id="sign-up"className='btn-round header-btn-round' onClick={goToSignUp}>Sign Up</button>
+                <button id="sign-up"className='btn-round header-btn-round' onClick={goToLogin}>Sign Up</button>
             </div>
 
        </header>

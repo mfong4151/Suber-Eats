@@ -12,7 +12,6 @@ const SplashCities = () => {
     <div className="univ-padding splash-comps">
         <div className='splash-subheader'>
             <h1 className='splash-title'>Suber Eats cities Near Me</h1>
-            <Link to={'/temp'} className="splash-links">View all 500+ cities</Link>
         </div>
         
         <h2></h2>

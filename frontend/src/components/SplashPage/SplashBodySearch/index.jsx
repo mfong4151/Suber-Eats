@@ -27,7 +27,7 @@ const SplashBodySearch = () => {
                 <button className="button-sq" id="find-food" type="submit" form="search-form">Find Food</button>
               </div>
 
-            <p><Link to={'/signIn'} id="sign-in">Sign In</Link> for your recent addresses</p>
+            <p><Link to={'/login'} id="sign-in">Sign In</Link> for your recent addresses</p>
           </div>
     </div>
   )
