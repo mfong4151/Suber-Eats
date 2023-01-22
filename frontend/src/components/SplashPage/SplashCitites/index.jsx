@@ -11,7 +11,7 @@ const SplashCities = () => {
   return (
     <div className="univ-padding splash-comps">
         <div className='splash-subheader'>
-            <h1 className='splash-title'>Cities near me</h1>
+            <h1 className='splash-title'>Suber Eats cities Near Me</h1>
             <Link to={'/temp'} className="splash-links">View all 500+ cities</Link>
         </div>
         
@@ -21,7 +21,7 @@ const SplashCities = () => {
 
           {
           cities.map((city, idx) =>(
-                <div key={idx}><Link to='/' >{city}</Link></div>
+                <div key={idx}>{city}</div>
               ))
           }
 
