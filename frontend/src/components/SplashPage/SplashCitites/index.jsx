@@ -29,5 +29,6 @@ const SplashCities = () => {
     </div>
   )
 }
+ 
 
 export default SplashCities;
