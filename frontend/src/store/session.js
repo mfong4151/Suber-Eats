@@ -16,6 +16,10 @@ const removeCurrentUser = () => {
   };
 };
 
+export const getSessionUserId = state =>{
+   if(!state.session.user.id) return null;
+   return state.session.user.id
+}
 export const login = (user) => async (dispatch) => {
   const { credential, password } = user;
   const response = await csrfFetch('/api/session', {

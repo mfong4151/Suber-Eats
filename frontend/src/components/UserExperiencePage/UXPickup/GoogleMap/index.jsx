@@ -3,11 +3,17 @@ import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api";
 import "./GoogleMap.css"
 import RestaurantMarker from './RestaurantMarker';
 import { UXContext } from '../../../UXContext';
+import { updateLocation, checkUserLoc} from '../../../../store/location';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSessionUserId } from '../../../../store/session';
+import { fetchRestaurants } from '../../../../store/restaurant';
 
 // https://react-google-maps-api-docs.netlify.app/#googlemap
 
 const Map = ({restaurants, userLocation, setUserLocation}) => {
-  
+  const dispatch = useDispatch()
+  const sessionUserId = useSelector(getSessionUserId)
+  let userLocObj = useSelector(checkUserLoc(sessionUserId))
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
   })
   if(!isLoaded) return(<h1>loading...</h1>)
@@ -20,6 +26,17 @@ const Map = ({restaurants, userLocation, setUserLocation}) => {
     };
   const handleOnClick = e =>{
     setUserLocation({lng: e.latLng.lng(), lat: e.latLng.lat()})
+    if(userLocObj){
+      dispatch(updateLocation(
+          {location:{
+            latitude: userLocation.lat,
+            longitude: userLocation.lng,
+            userId: sessionUserId
+ 
+           }}, userLocObj.id
+           
+      )).then(()=> dispatch(fetchRestaurants()))
+    }
   }
   
 

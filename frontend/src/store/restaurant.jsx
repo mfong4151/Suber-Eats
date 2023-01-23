@@ -34,11 +34,15 @@ export const getRestaurant = restaurantId => state => {
 }
 
 
+//its important to note here that a rammification of how this fetch is done is that we will not have a rerender if the user clicks in an area where no restaurants exist
+
 export const fetchRestaurants = () => async dispatch =>{
     const res = await csrfFetch("/api/restaurants")
     if (res.ok){
         const data = await res.json();
-        dispatch(receiveRestaurants(data))
+        if(!(Object.keys(data).length === 0)){
+            dispatch(receiveRestaurants(data))
+        }
     }
 }
 

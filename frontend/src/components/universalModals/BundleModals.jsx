@@ -6,11 +6,11 @@ import CartModal from './CartModal';
 import RestCartModal from './RestCartModal';
 import { useState } from 'react';
 import { aggregateCart } from './utils/cartUtils';
-import { fetchCart, getCart } from '../../store/cart';
+import { getCart } from '../../store/cart';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
-const BundleModals = ({userLocation}) => {
+const BundleModals = () => {
     const {menuModal, cartModal, locationModal, restCartModal} = useContext(UXContext)
     const [restCart, setRestCart] = useState('');
 
@@ -19,7 +19,7 @@ const BundleModals = ({userLocation}) => {
     return (
         <>
             {menuModal && <UserMenuModal/>}
-            {locationModal && <LocationModal userLocation={userLocation}/>}
+            {locationModal && <LocationModal/>}
             {cartModal && <CartModal setRestCart={setRestCart} sortedCarts={sortedCarts}/>}
             {restCartModal && <RestCartModal restCart={sortedCarts[restCart]}/>}
         </>

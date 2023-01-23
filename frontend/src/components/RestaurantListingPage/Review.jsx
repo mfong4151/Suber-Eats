@@ -49,7 +49,6 @@ const Review = ({review,ctr, setCtr, sessionUserId}) => {
                 <div>
                     {editButton}
                     {deleteButton}
-                    <button className='review-buttons'>Report</button>
                 </div>
             </div>
             <p className='review-text'>{reviewBody}</p>
