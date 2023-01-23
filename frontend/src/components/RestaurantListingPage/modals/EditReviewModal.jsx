@@ -47,7 +47,7 @@ const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, us
         <div className='modal-overlay review-modal-overlay udc' onClick={()=> setEditModal(!editModal)}>
           <div className="review-modal-content">
             <form className='review-form'>
-                <input className='review-input' type="text" placeholder={reviewBody} onChange={e => setReviewBody(e.target.value)} onClick={handleForm}/>
+                <input className='review-input' type="text" placeholder={reviewBody} value={reviewBody} onChange={e => setReviewBody(e.target.value)} onClick={handleForm}/>
              
             </form>
             <div className="btn-holder">
