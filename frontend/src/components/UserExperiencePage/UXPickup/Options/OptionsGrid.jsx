@@ -3,7 +3,7 @@ import OptionsGridItem from './OptionsGridItem'
 
 const OptionsGrid = ({restaurants}) => {
 
-  
+  restaurants = restaurants.slice(0,20)
   return (
 
     <div id='options-array'>
