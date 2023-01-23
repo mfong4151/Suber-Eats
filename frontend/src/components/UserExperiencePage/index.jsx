@@ -22,8 +22,10 @@ const UserExperiencePage = () => {
     
     useEffect(()=>{
 
-      dispatch(fetchLocations())
-      dispatch(fetchRestaurants())
+      dispatch(fetchLocations()).then(()=> 
+      
+        dispatch(fetchRestaurants())
+      )
       dispatch(fetchCart(sessionUser.id))
      
     },[dispatch])   
