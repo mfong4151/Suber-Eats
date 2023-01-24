@@ -1,14 +1,12 @@
 import React from 'react';
 import {GoogleMap, useLoadScript, } from "@react-google-maps/api";
-// import RestaurantMarker from './RestaurantMarker';
+import RestaurantMarker from './RestaurantMarker';
 import { useState } from 'react';
+import '../../CheckoutPage.css'
 
 // https://react-google-maps-api-docs.netlify.app/#googlemap
 
-const CheckoutMap = () => {
-  const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}) //this just refers to a default center
-    
-    // {lng: userLocation.longitude, lat: userLocation.latitude}
+const CheckoutMap = ({checkoutCoords}) => {
 
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY})
 
@@ -20,17 +18,18 @@ const CheckoutMap = () => {
         disableDefaultUI:true,
         clickableIcons:false,
         disableDoubleClickZoom: true,
+        draggable:false
     };
 
 
   return (
     <GoogleMap 
       zoom={13} 
-      center={mapCenter} 
-      mapContainerClassName="map-container"
+      center={checkoutCoords} 
+      mapContainerClassName="checkout-container"
       options={options}
       >
-     {/* <RestaurantMarker restaurant={restaurant} key={idx}/> */}
+     <RestaurantMarker checkoutCoords={checkoutCoords}/>
 
       </GoogleMap>)
 }

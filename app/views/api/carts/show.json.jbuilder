@@ -8,7 +8,8 @@ json.cart do
             json.item_name cart.carted_item.item_name
             json.price cart.carted_item.price
             json.cart_sum  cart.carted_item.price * cart.quantity
-        
+            json.rest_lng cart.restaurant.longitude
+            json.rest_lat cart.restaurant.latitude
         end
     end
 end 

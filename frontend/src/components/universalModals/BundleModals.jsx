@@ -14,8 +14,9 @@ const BundleModals = () => {
     const {menuModal, cartModal, locationModal, restCartModal} = useContext(UXContext)
     const [restCart, setRestCart] = useState('');
 
-    const currentCart = useSelector(getCart);
+    const currentCart = useSelector(getCart); 
     const sortedCarts = aggregateCart(currentCart);
+
     return (
         <>
             {menuModal && <UserMenuModal/>}

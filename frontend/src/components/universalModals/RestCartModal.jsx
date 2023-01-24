@@ -61,10 +61,7 @@ const RestCartModal = ({restCart}) => {
                       <span>+</span>
                       <span>Add items</span>
                     </button>
-                  <button className="btn-round-simple sub-menu-button grey-button">
-                    <span><GroupOrderIcon/></span>
-                    <span>Group Order</span>
-                  </button>
+                
                 </div>
                 <ul className='sub-menu-choices'>
                     {restCart.map((restCartItem,idx)=>(

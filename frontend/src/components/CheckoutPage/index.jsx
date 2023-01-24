@@ -6,9 +6,8 @@ import CheckoutRight from './CheckoutRight'
 import UserMenuModal from '../universalModals/UserMenuModal'
 
 const CheckoutPage = () => {
-        const {menuModal, toggleMenuModal, checkoutOrder} = useContext(UXContext)
+        const {menuModal, checkoutOrder} = useContext(UXContext)
         if(!checkoutOrder) return (<Redirect to={'/'}/>)
-
         return (
           <div className='checkout-page' >
             <div id='left'>

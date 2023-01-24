@@ -14,7 +14,6 @@ const CheckoutLeft = ({checkoutOrder}) => {
   let firstOrder = checkoutOrder[0]
   let address = firstOrder.address.split(',')
   let street = address[0], city = address[1]
-  console.log(checkoutOrder)  
   return (
     <>
       <CheckoutHeader/>
@@ -24,7 +23,7 @@ const CheckoutLeft = ({checkoutOrder}) => {
               <span>Delivery</span>
           </button>
 
-          <CheckoutMap/>
+          <CheckoutMap checkoutCoords={{lat: checkoutOrder[0]?.restLat, lng: checkoutOrder[0]?.restLng}}/>
 
           <div className="delivery-options mp">
 
