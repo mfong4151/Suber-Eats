@@ -22,7 +22,8 @@ const UserExperiencePage = () => {
     
     useEffect(()=>{
 
-      dispatch(fetchLocations()).then(()=> 
+      dispatch(fetchLocations())
+      .then(()=> 
       
         dispatch(fetchRestaurants())
       )

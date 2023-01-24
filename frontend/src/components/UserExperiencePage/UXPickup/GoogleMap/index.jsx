@@ -30,6 +30,7 @@ const Map = ({restaurants, userLocation}) => {
         clickableIcons:false,
         disableDoubleClickZoom: true,
     };
+    
   const handleOnClick = e =>{
     if(userLocObj){
       dispatch(updateLocation(
