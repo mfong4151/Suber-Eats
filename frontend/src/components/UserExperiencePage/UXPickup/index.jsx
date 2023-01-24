@@ -3,13 +3,13 @@ import Options from './Options';
 import Map from './GoogleMap';
 
 
-const Pickup = ({restaurants, userLocation, setUserLocation}) => {
+const Pickup = ({restaurants, userLocation}) => {
 
   return (
     <div className='pickup-cols'>
       
       <Options restaurants={restaurants}/>
-      <Map restaurants={restaurants} userLocation={userLocation} setUserLocation={setUserLocation}/> 
+      <Map restaurants={restaurants} userLocation={userLocation} /> 
 
     </div>
   )

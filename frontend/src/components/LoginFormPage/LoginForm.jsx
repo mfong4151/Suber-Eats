@@ -101,7 +101,7 @@ const LoginForm = () => {
             <h1 className="head-text">What's your phone number or email?</h1>
             <div className="username-email">
                 <form className='login-form'> 
-                    <input className='form-contents' type='text' name='location' placeholder='Enter your email or password' onChange={e => setCredential(e.target.value)}/> 
+                    <input className='form-contents' type='text' name='location' placeholder='Enter your email or phone number' onChange={e => setCredential(e.target.value)}/> 
                
                 </form>
             </div>

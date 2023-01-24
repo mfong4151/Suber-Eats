@@ -17,8 +17,8 @@ import { checkUserLoc, fetchLocations } from '../../store/location';
 const UserExperiencePage = () => {
     const sessionUser = useSelector(state => state.session.user);
     const restaurants = useSelector(getRestaurants);
+    const userLocation = useSelector(checkUserLoc(sessionUser.id))
     const dispatch = useDispatch();
-    const [userLocation, setUserLocation] = useState({lat: 37.747401957356246, lng: -122.4456108834198});
     
     useEffect(()=>{
 
@@ -35,7 +35,7 @@ const UserExperiencePage = () => {
     return (
     <>  
         <UXHeader/>
-        <UXPickup restaurants={restaurants} userLocation={userLocation} setUserLocation={setUserLocation}/>
+        <UXPickup restaurants={restaurants} userLocation={userLocation}/>
         <BundleModals/>
         
     </>

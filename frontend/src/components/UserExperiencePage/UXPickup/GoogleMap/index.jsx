@@ -1,36 +1,41 @@
-import React, { useContext, useMemo } from 'react';
-import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api";
+import React from 'react';
+import {GoogleMap, useLoadScript, } from "@react-google-maps/api";
 import "./GoogleMap.css"
 import RestaurantMarker from './RestaurantMarker';
-import { UXContext } from '../../../UXContext';
 import { updateLocation, checkUserLoc} from '../../../../store/location';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSessionUserId } from '../../../../store/session';
 import { fetchRestaurants } from '../../../../store/restaurant';
+import { useState } from 'react';
 
 // https://react-google-maps-api-docs.netlify.app/#googlemap
 
-const Map = ({restaurants, userLocation, setUserLocation}) => {
+const Map = ({restaurants, userLocation}) => {
   const dispatch = useDispatch()
   const sessionUserId = useSelector(getSessionUserId)
+  const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}) //this just refers to a default center
+    
+    // {lng: userLocation.longitude, lat: userLocation.latitude}
+
   let userLocObj = useSelector(checkUserLoc(sessionUserId))
-  const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
-  })
+  const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY})
+
+
   if(!isLoaded) return(<h1>loading...</h1>)
-  
+
+
   const options = {
         mapId: '73cef3161f877bcd',
-        disableDefaultUI:false,
+        disableDefaultUI:true,
         clickableIcons:false,
-
+        disableDoubleClickZoom: true,
     };
   const handleOnClick = e =>{
-    setUserLocation({lng: e.latLng.lng(), lat: e.latLng.lat()})
     if(userLocObj){
       dispatch(updateLocation(
           {location:{
-            latitude: userLocation.lat,
-            longitude: userLocation.lng,
+            latitude: e.latLng.lat(),
+            longitude:  e.latLng.lng(),
             userId: sessionUserId
  
            }}, userLocObj.id
@@ -44,7 +49,7 @@ const Map = ({restaurants, userLocation, setUserLocation}) => {
   return (
     <GoogleMap 
       zoom={13} 
-      center={userLocation} 
+      center={mapCenter} 
       mapContainerClassName="map-container"
       options={options}
       onClick={handleOnClick}

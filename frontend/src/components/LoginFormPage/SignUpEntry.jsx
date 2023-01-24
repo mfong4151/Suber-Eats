@@ -46,7 +46,6 @@ const SignUpEntry = () => {
                     else setErrors([res.statusText]);
                 }) 
         }
-        console.log(errors)
         setErrors(['Make sure your password fields match!']);
     }
 
