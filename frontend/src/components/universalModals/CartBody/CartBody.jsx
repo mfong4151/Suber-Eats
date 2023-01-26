@@ -5,9 +5,8 @@ import {useEffect} from 'react';
 import  {useDispatch, useSelector} from 'react-redux';
 import { fetchCart } from '../../../store/cart';
 
-const CartBody = ({restName, userCartItems, setRestCart, restCartModal, setRestCartModal}) => {
+const CartBody = ({restName, cartItems, setRestCart, restCartModal, setRestCartModal}) => {
 
-    let cartItems = userCartItems[restName]
     const dispatch = useDispatch();
     const sessionUserId = useSelector(state=> state.session.user.id)
     let {quantity, subtotal} = qtySubtotal(cartItems)
