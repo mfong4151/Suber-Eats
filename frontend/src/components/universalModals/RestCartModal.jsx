@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
-import GroupOrderIcon from './SVGs/GroupOrderIcon';
 import RestCartItem from './RestCartItem';
 import {useHistory} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
@@ -9,25 +8,25 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import './UserMenuModal.css'
 import { fetchCart } from '../../store/cart';
-import { Redirect } from 'react-router-dom';
+import { getSessionUserId } from '../../store/session';
 //cart modal for a specific restaurant
 
-const RestCartModal = ({restCart}) => {
+const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
   const dispatch = useDispatch()
   const {setCheckoutOrder} = useContext(UXContext)
-  const sessionUser = useSelector(state => state.session.user)
-  const {restCartModal, toggleRestCartModal} = useContext(UXContext);
+  const sessionUserId = useSelector(getSessionUserId)
   const history = useHistory()
 
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
+
   const clearCart = e =>{
     e.preventDefault();
     e.stopPropagation();
     for(const cart of restCart){
       dispatch(deleteCart(cart.id))
     }
-    dispatch(fetchCart(sessionUser.id)).then(()=>toggleRestCartModal())
+    dispatch(fetchCart(sessionUserId)).then(()=>setRestCartModal(!restCartModal))
   }
 
   const handleAddClick = e =>{
@@ -40,18 +39,17 @@ const RestCartModal = ({restCart}) => {
     e.stopPropagation()
     setCheckoutOrder(restCart)
     history.push(`/checkout`)
-    toggleRestCartModal()
-  
-  
+    setRestCartModal(!restCartModal)  
   }
 
   useEffect(()=>{
-    dispatch(fetchCart(sessionUser.id))
+    dispatch(fetchCart(sessionUserId))
+    
 }, [dispatch])
   
   return (
     <div className="modal">
-        <div className='modal-overlay cart-overlay' onClick={toggleRestCartModal}>
+        <div className='modal-overlay cart-overlay' onClick={()=>(setRestCartModal(!restCartModal))}>
           <div className="modal-content sub-menu grey-border-for-white">
               <div className='sub-header-pos'>
                 <h1 className="sub-menu-header">{restCart[0].restName}</h1>

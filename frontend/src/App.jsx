@@ -14,7 +14,6 @@ import CheckoutPage from './components/CheckoutPage';
 function App() {
   
   
-  const [numCarts, setNumCarts] = useState(0);
   const [sortOptions, setSortOptions] = useState(filters());
   const [menuModal, setMenuModal] = useState(false);
   const [cartModal, setCartModal] = useState(false);
@@ -50,7 +49,7 @@ function App() {
           <Switch>
             <Route path="/" component={SplashPage} exact/>
             <Route path="/login" component={LoginFormPage}/>
-            <UXContext.Provider value={{numCarts, setNumCarts, sortOptions, setSortOptions, 
+            <UXContext.Provider value={{sortOptions, setSortOptions, 
                                         menuModal, setMenuModal, toggleMenuModal,
                                         cartModal, setCartModal, toggleCartModal,
                                         locationModal, setLocationModal, toggleLocationModal,

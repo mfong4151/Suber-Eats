@@ -19,11 +19,10 @@ const UserExperiencePage = () => {
     const restaurants = useSelector(getRestaurants);
     const userLocation = useSelector(checkUserLoc(sessionUser.id))
     const dispatch = useDispatch();
-    
+    // https://redux-toolkit.js.org/api/createAsyncThunk#handling-thunk-results
     useEffect(()=>{
 
       dispatch(fetchLocations())
-
       
         .then(()=> dispatch(fetchRestaurants()))
       dispatch(fetchCart(sessionUser.id))

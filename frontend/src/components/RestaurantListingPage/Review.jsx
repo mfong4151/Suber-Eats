@@ -26,7 +26,7 @@ const Review = ({review,ctr, setCtr, sessionUserId}) => {
 
 
     if(review.userId === sessionUserId){
-         editButton =   <button className="review-buttons" onClick={handleReviewEdit}>Edit</button>
+         editButton = <button className="review-buttons" onClick={handleReviewEdit}>Edit</button>
          deleteButton = <button className="review-buttons" onClick={handleReviewDelete}>Delete</button>
     }
 

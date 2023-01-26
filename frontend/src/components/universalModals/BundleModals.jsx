@@ -1,28 +1,22 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import UserMenuModal from './UserMenuModal';
 import LocationModal from './LocationModal';
 import { UXContext } from '../UXContext';
 import CartModal from './CartModal';
-import RestCartModal from './RestCartModal';
-import { useState } from 'react';
-import { aggregateCart } from './utils/cartUtils';
-import { getCart } from '../../store/cart';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+
+
 
 const BundleModals = () => {
-    const {menuModal, cartModal, locationModal, restCartModal} = useContext(UXContext)
-    const [restCart, setRestCart] = useState('');
+    const {menuModal, cartModal, locationModal} = useContext(UXContext)
 
-    const currentCart = useSelector(getCart); 
-    const sortedCarts = aggregateCart(currentCart);
 
     return (
         <>
             {menuModal && <UserMenuModal/>}
             {locationModal && <LocationModal/>}
-            {cartModal && <CartModal setRestCart={setRestCart} sortedCarts={sortedCarts}/>}
-            {restCartModal && <RestCartModal restCart={sortedCarts[restCart]}/>}
+            {cartModal && <CartModal/>}
+            {/* refers to a particular restaurant */}
+
         </>
         )
 }

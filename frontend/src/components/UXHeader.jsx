@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 
 const UXHeader = () => {
   //temporary place holder until we iron out cart dynamics
-  const {toggleMenuModal, toggleLocationModal, toggleCartModal, numCarts} = useContext(UXContext);
+  const {toggleMenuModal, toggleLocationModal, toggleCartModal} = useContext(UXContext);
   const history = useHistory()
 
   return (
@@ -36,9 +36,7 @@ const UXHeader = () => {
             <span className='embedded-icon-padding'>
                 <SearchIcon/>
             </span>
-            {numCarts ? numCarts : ''}
-            {' '}
-            carts
+            Carts
         </button>
 
 

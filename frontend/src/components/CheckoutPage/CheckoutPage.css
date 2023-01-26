@@ -144,6 +144,21 @@
     padding-bottom:1%
 }
 
+#add-tip{
+    padding-bottom: 1rem;
+}
+
+#tip-choice{
+    display: flex;
+    justify-content: start;
+    padding-bottom: 1rem;
+}
+
+.tip-button{
+    color: var(--color-greyButtonBG);
+    height: 34px;
+}
+
 .mp{
     margin-top:4%;
 }

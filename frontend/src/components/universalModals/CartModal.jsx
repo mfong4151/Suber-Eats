@@ -2,31 +2,44 @@ import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CartBody from './CartBody/CartBody';
+import { fetchCart } from '../../store/cart';
+import { getSessionUserId } from '../../store/session';
+import { useState } from 'react';
+import RestCartModal from './RestCartModal';
+import { aggregateCart } from './utils/cartUtils';
 import { getCart } from '../../store/cart';
 
-const CartModal = ({setRestCart, sortedCarts}) => {
+const CartModal = ({}) => {
     //grab the context variable that makes sense from here
-    const {cartModal, toggleCartModal, setNumCarts} = useContext(UXContext);
-    const currentCart = useSelector(getCart);
-    const userCartItems = sortedCarts
+    const {cartModal, toggleCartModal} = useContext(UXContext);
+    const [restCartModal, setRestCartModal] = useState(false);
+    const [restCart, setRestCart] = useState('');
+    const currentCart = useSelector(getCart); 
+    const userCartItems = aggregateCart(currentCart);
+    const sessionUserId = useSelector(getSessionUserId);
+    const dispatch = useDispatch();
+
     if (cartModal) document.body.classList.add('active-modal')
     else document.body.classList.remove('active-modal')
 
     useEffect(()=>{
-        setNumCarts(Object.keys(userCartItems).length)
-    }, [currentCart])
+        dispatch(fetchCart(sessionUserId))
+    },[dispatch])
+    
     
     return (
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={toggleCartModal}>
               <div className="cart-modal-content">
-                {Object.keys(userCartItems).map((restName, idx)=>
+                {Object.keys(userCartItems)?.map((restName, idx)=>
                     <CartBody 
                         restName={restName} 
                         userCartItems={userCartItems}
                         setRestCart ={setRestCart}
+                        restCartModal = {restCartModal}
+                        setRestCartModal = {setRestCartModal}
                         key={idx}
                     />
                     )}
@@ -34,6 +47,9 @@ const CartModal = ({setRestCart, sortedCarts}) => {
               </div>
 
             </div>
+            {restCartModal && <RestCartModal restCart={userCartItems[restCart]} restCartModal={restCartModal} setRestCartModal={setRestCartModal}/>}
+
+
         </div>
     )
 
