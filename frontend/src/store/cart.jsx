@@ -1,9 +1,18 @@
 import csrfFetch from './csrf';
+import { aggregateCart, cartNames, sizeCarts } from './utils/cartMethods';
 
-
+export const RECEIVE_CARTS = `cart/RECEIVE_CARTS`;
 export const RECEIVE_CART =  `cart/RECEIVE_CART`;
 export const REMOVE_CART = `cart/REMOVE_CART`;
 
+
+
+const receiveCarts = carts =>(
+    {
+        type: RECEIVE_CARTS,
+        payload: carts
+    }   
+)
 
 const receiveCart = cart =>(
     {
@@ -20,9 +29,20 @@ const removeCart = cartId =>(
 )
 
 
-export const getCart = state => {
+export const getCartItems = state => {
     if (!state.cart) return null;    
-    return state.cart
+    return aggregateCart(state.cart)
+}
+
+export const getCartSize = state =>{
+    if(!state.cart) return null
+    
+    return sizeCarts(state.cart)
+}
+export const getCartNames = state =>{
+    if(!state.cart) return []
+    
+    return cartNames(state.cart)
 }
 
 
@@ -33,7 +53,7 @@ export const fetchCart = (userId) => async dispatch =>{
     const res = await csrfFetch(`/api/carts/${userId}`)
     if (res.ok){
         const data = await res.json();
-        dispatch(receiveCart(data))
+        dispatch(receiveCarts(data))
     }
 }
 
@@ -85,7 +105,8 @@ export const deleteCart = cartId => async dispatch =>{
 const cartsReducer = (state = {}, action) =>{
 
     switch(action.type){
-        
+        case RECEIVE_CARTS:
+            return {...action.payload.cart}
   
         case RECEIVE_CART:
             return  {...state,...action.payload.cart}

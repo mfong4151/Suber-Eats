@@ -25,7 +25,7 @@ const UserExperiencePage = () => {
       dispatch(fetchLocations())
       
         .then(()=> dispatch(fetchRestaurants()))
-      dispatch(fetchCart(sessionUser.id))
+      // dispatch(fetchCart(sessionUser.id))
      
     },[dispatch])   
 

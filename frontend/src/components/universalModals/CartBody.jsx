@@ -1,16 +1,21 @@
 import React from 'react'
-import { qtySubtotal, extractAddress } from '../utils/cartUtils';
-import ChevronRight from '../SVGs/ChevronRight';
+import { qtySubtotal, extractAddress } from './utils/cartUtils';
+import ChevronRight from './SVGs/ChevronRight';
 import {useEffect} from 'react';
 import  {useDispatch, useSelector} from 'react-redux';
-import { fetchCart } from '../../../store/cart';
+import { fetchCart } from '../../store/cart';
+import { getCartItems } from '../../store/cart';
+import { getSessionUserId } from '../../store/session';
 
-const CartBody = ({restName, cartItems, setRestCart, restCartModal, setRestCartModal}) => {
+const CartBody = ({restName, setRestCart, restCartModal, setRestCartModal}) => {
 
     const dispatch = useDispatch();
-    const sessionUserId = useSelector(state=> state.session.user.id)
+    const sessionUserId = useSelector(getSessionUserId)
+    const userCarts = useSelector(getCartItems)
+    const cartItems = userCarts[restName]
     let {quantity, subtotal} = qtySubtotal(cartItems)
     let address = extractAddress(cartItems)
+
 
     const handleOnClick = e =>{
         e.preventDefault();

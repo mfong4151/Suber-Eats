@@ -24,7 +24,7 @@ const RestaurantListing = () => {
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
     dispatch(fetchMenu(restaurantId))
-    dispatch(fetchCart(sessionUserId))
+    // dispatch(fetchCart(sessionUserId))
   },[dispatch, restaurantId])
   
 

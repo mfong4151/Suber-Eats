@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { getCartItems } from '../../store/cart';
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
 import RestCartItem from './RestCartItem';
@@ -16,6 +17,7 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
   const {setCheckoutOrder} = useContext(UXContext)
   const sessionUserId = useSelector(getSessionUserId)
   const history = useHistory()
+  const userCart = useSelector(getCartItems)[restCart]
 
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
@@ -23,7 +25,7 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
   const clearCart = e =>{
     e.preventDefault();
     e.stopPropagation();
-    for(const cart of restCart){
+    for(const cart of userCart){
       dispatch(deleteCart(cart.id))
     }
     dispatch(fetchCart(sessionUserId)).then(()=>setRestCartModal(!restCartModal))
@@ -31,13 +33,13 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
 
   const handleAddClick = e =>{
     e.preventDefault()
-    history.push(`/restaurantListing/${restCart[0].restaurantId}`)
+    history.push(`/restaurantListing/${userCart[0].restaurantId}`)
   }
   
   const handleCheckout = e =>{
     e.preventDefault()
     e.stopPropagation()
-    setCheckoutOrder(restCart)
+    setCheckoutOrder(userCart)
     history.push(`/checkout`)
     setRestCartModal(!restCartModal)  
   }
@@ -52,8 +54,8 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
         <div className='modal-overlay cart-overlay' onClick={()=>(setRestCartModal(!restCartModal))}>
           <div className="modal-content sub-menu grey-border-for-white">
               <div className='sub-header-pos'>
-                <h1 className="sub-menu-header">{restCart[0].restName}</h1>
-                <span className="sub-menu-text">Pickup at {restCart[0].address}</span>
+                <h1 className="sub-menu-header">{userCart[0].restName}</h1>
+                <span className="sub-menu-text">Pickup at {userCart[0].address}</span>
                 <div className="sub-menu-buttons">
                     <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
                       <span>+</span>
@@ -62,7 +64,7 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
                 
                 </div>
                 <ul className='sub-menu-choices'>
-                    {restCart.map((restCartItem,idx)=>(
+                    {userCart.map((restCartItem,idx)=>(
                       <> 
                         {!!restCartItem.quantity && <RestCartItem restCartItem={restCartItem}  key={idx}/>}
                       </>
@@ -70,7 +72,7 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
                 </ul>
                 <div className="sub-menu-note"></div>
                 <div className='udc clear-cart-holder'>
-                    {!!restCart && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
+                    {!!userCart && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
                 </div>
               </div>
 
