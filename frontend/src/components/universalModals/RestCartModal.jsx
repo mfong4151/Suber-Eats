@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getCartItems } from '../../store/cart';
+import { getCarts } from '../../store/cart';
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
 import RestCartItem from './RestCartItem';
@@ -17,7 +17,7 @@ const RestCartModal = ({restCart, restCartModal, setRestCartModal}) => {
   const {setCheckoutOrder} = useContext(UXContext)
   const sessionUserId = useSelector(getSessionUserId)
   const history = useHistory()
-  const userCart = useSelector(getCartItems)[restCart]
+  const userCart = useSelector(getCarts)
 
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')

@@ -8,6 +8,7 @@ json.cart do
             json.rest_lng cart.restaurant.longitude
             json.rest_lat cart.restaurant.latitude
             json.cart_items cart.carted_items.length *  cart.carted_items.sum{|item| item.quantity}
+            json.cart_items_sum cart.carted_items.sum{|item| item.quantity * item.item.price}
         
         end
     end

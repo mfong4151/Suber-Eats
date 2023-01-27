@@ -8,7 +8,7 @@ import { fetchCart, getCartSize, getCartNames} from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
 import { useState } from 'react';
 import RestCartModal from './RestCartModal';
-import { getCartItems } from '../../store/cart';
+import { getCarts } from '../../store/cart';
 
 const CartModal = () => {
     //grab the context variable that makes sense from here
@@ -16,9 +16,8 @@ const CartModal = () => {
     const [restCartModal, setRestCartModal] = useState(false);
     const [restCart, setRestCart] = useState('');
 
-    const userCarts = useSelector(getCartItems); 
-    const cartsSize = useSelector(getCartSize)
-    const cartsNames = useSelector(getCartNames);
+    const userCarts = useSelector(getCarts); 
+    console.log(userCarts)
     const sessionUserId = useSelector(getSessionUserId);
     const dispatch = useDispatch();
 
@@ -34,12 +33,12 @@ const CartModal = () => {
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={toggleCartModal}>
               <div className="cart-modal-content">
-                {cartsNames?.map((restName, idx)=>
+                {Object.values(userCarts)?.map((restaurant, idx)=>
                 <>
                     {
 
-                    cartsSize[restName] !== 0 && <CartBody 
-                            restName={restName} 
+                    restaurant.cartItems !== 0 && <CartBody 
+                            restName={restaurant.restName} 
                             setRestCart ={setRestCart}
                             restCartModal = {restCartModal}
                             setRestCartModal = {setRestCartModal}

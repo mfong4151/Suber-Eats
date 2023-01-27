@@ -29,9 +29,9 @@ const removeCart = cartId =>(
 )
 
 
-export const getCartItems = state => {
+export const getCarts = state => {
     if (!state.cart) return null;    
-    return aggregateCart(state.cart)
+    return state.cart
 }
 
 export const getCartSize = state =>{
