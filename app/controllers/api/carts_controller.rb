@@ -1,7 +1,9 @@
 class Api::CartsController < ApplicationController
 
     def show
-        @cart = User.find_by(id: params[:id]).carts.includes(:carted_item, :restaurant)
+        @cart = User.find_by(id: params[:id]).carts.includes(:restaurant)
+      
+
         if @cart
             render :show
             return
