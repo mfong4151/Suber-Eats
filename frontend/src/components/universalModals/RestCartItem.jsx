@@ -26,9 +26,7 @@ const RestCartItem = ({restCartItem}) => {
         e.stopPropagation();
         dispatch(updateCartItem({cartItem:currentCartItem(restCartItem.quantity- 1)},restCartItem.id))
         .then(()=>{
-                if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))
-
-
+            if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))
         })
         
     }
