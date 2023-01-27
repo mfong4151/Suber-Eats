@@ -1,54 +1,53 @@
 import React from 'react'
-import { qtySubtotal, extractAddress } from './utils/cartUtils';
 import ChevronRight from './SVGs/ChevronRight';
 import {useEffect} from 'react';
 import  {useDispatch, useSelector} from 'react-redux';
 import { fetchCart } from '../../store/cart';
 import { getCarts } from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
+import { useState } from 'react';
+import RestCartModal from './RestCartModal';
 
-const CartBody = ({restName, setRestCart, restCartModal, setRestCartModal}) => {
-
+const CartBody = ({cart}) => {
     const dispatch = useDispatch();
+    const [restCartModal, setRestCartModal] = useState(false);
+
     const sessionUserId = useSelector(getSessionUserId)
-    const userCarts = useSelector(getCarts)
-    const cartItems = userCarts[restName]
-    let {quantity, subtotal} = qtySubtotal(cartItems)
-    let address = extractAddress(cartItems)
+    // const userCarts = useSelector(getCarts)
 
 
     const handleOnClick = e =>{
         e.preventDefault();
         e.stopPropagation();
         setRestCartModal(!restCartModal)
-        setRestCart(restName)
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        dispatch(fetchCart(sessionUserId))
+    //     dispatch(fetchCart(sessionUserId))
         
-    }, [dispatch])
+    // }, [dispatch])
     
 
     return (
         <div className='cart-tab' onClick={handleOnClick}>
 
             <div className='rest-profile-pic'>
-                <img className='cart-profile-pic' src={cartItems[0].imageUrl} />
+                <img className='cart-profile-pic' src={cart.imageUrl} />
              </div>
 
             <div className='cart-modal-text-holder'>
-                <span className='cart-modal-header'>{restName}</span>
-                <span className='cart-modal-text'>Delivery from {address}</span>
-                <span className='cart-modal-text'>Subtotal: ${Math.round(subtotal *100)/100}</span>
+                <span className='cart-modal-header'>{cart.restName}</span>
+                <span className='cart-modal-text'>Delivery from {cart.address}</span>
+                <span className='cart-modal-text'>Subtotal: ${Math.round(cart.cartItemsSum *100)/100}</span>
             </div>
 
             <div className='num-items'>
-                <div><span className='cart-modal-text num-items-num'>{quantity}</span></div>
+                <div><span className='cart-modal-text num-items-num'>{cart.cartItems}</span></div>
                 <ChevronRight/>
             </div>
             <hr></hr>
+            {restCartModal && <RestCartModal cart={cart} restCartModal={restCartModal} setRestCartModal={setRestCartModal}/>}
 
         </div>
     )

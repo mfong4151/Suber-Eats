@@ -1,39 +1,35 @@
 import React from 'react'
-import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateCart, deleteCart, fetchCart} from '../../store/cart'
 import './UserMenuModal.css'
-
+import { updateCartItem } from '../../store/cartItems'
+import { deleteCartItem } from '../../store/cartItems'
 
 const RestCartItem = ({restCartItem}) => {
     const dispatch = useDispatch();
-    const sessionUser = useSelector(state => state.session.user)
 
-    const currentCart = (cartQuantity) =>{
-       
+    const currentCartItem = (cartQuantity) =>{
         return {   menuItemId: restCartItem.menuItemId,
-            restaurantId: restCartItem.restaurantId,
-            userId: sessionUser.id,
+            cartId: restCartItem.cartId,
             quantity: cartQuantity,}
+        
         }
     const addQuantity= e=>{
         e.preventDefault();
         e.stopPropagation();
-        dispatch(updateCart({cart:currentCart(restCartItem.quantity+ 1)}, restCartItem.id))
+        dispatch(updateCartItem({cartItem:currentCartItem(restCartItem.quantity+ 1)},restCartItem.id))
     }
 
     
    
     const subQuantity = e =>{
-        e.preventDefault()
-        e.stopPropagation()
-     
-        dispatch(updateCart({cart:currentCart(restCartItem.quantity - 1)}, restCartItem.id))
-            .then(()=>{
-                if(restCartItem.quantity === 1) dispatch(deleteCart(restCartItem.id))
+        e.preventDefault();
+        e.stopPropagation();
+        dispatch(updateCartItem({cartItem:currentCartItem(restCartItem.quantity- 1)},restCartItem.id))
+        .then(()=>{
+                if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))
 
 
-            })
+        })
         
     }
 
@@ -50,8 +46,8 @@ const RestCartItem = ({restCartItem}) => {
                     </button>
             </div>
             <div className='item-info'>
-                    <h3 className='cart-item-name'>{restCartItem.itemName}</h3>
-                    <p className='cart-item-sum'>${Math.round(restCartItem.cartSum *100)/100}</p>
+                    <h3 className='cart-item-name'>{restCartItem.name}</h3>
+                    <p className='cart-item-sum'>${Math.round(restCartItem.adjPrice *100)/100}</p>
             </div>
             <div>
                 {/* add the photo here if it exists  */}

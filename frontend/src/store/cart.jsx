@@ -1,5 +1,5 @@
 import csrfFetch from './csrf';
-import { aggregateCart, cartNames, sizeCarts } from './utils/cartMethods';
+import {cartNames, sizeCarts } from './utils/cartMethods';
 
 export const RECEIVE_CARTS = `cart/RECEIVE_CARTS`;
 export const RECEIVE_CART =  `cart/RECEIVE_CART`;

@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: transactions
+#
+#  id              :bigint           not null, primary key
+#  user_id         :bigint           not null
+#  restaurant_id   :bigint           not null
+#  transaction_sum :float            not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  review_left     :boolean
+#
 class Transaction < ApplicationRecord
     validates :transaction_sum, presence:true
 

@@ -34,11 +34,9 @@ class Api::CartsController < ApplicationController
     
 
     def destroy
-
-        puts(params)
-
-        @cart = [Cart.find_by(id: params[:id])]
-        if @cart[0].delete
+        
+        @cart = Cart.find_by(id: params[:id])
+        if @cart.destroy
             return
         else
             render json: @cart.errors.full_messages, status: 422

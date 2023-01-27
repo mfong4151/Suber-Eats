@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: cart_items
+#
+#  id           :bigint           not null, primary key
+#  menu_item_id :bigint           not null
+#  cart_id      :bigint           not null
+#  quantity     :integer          not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
 class CartItem < ApplicationRecord
     validates :quantity, presence:true
 

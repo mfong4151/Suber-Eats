@@ -4,12 +4,12 @@
 #
 #  id          :bigint           not null, primary key
 #  item_name   :string           not null
-#  description :text
 #  price       :float            not null
-#  header      :string
 #  menu_id     :bigint           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  description :string
+#  header      :string
 #
 
 

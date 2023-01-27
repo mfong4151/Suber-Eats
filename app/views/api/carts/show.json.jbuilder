@@ -1,7 +1,7 @@
 json.cart do
     @cart.each do |cart|
         json.set! cart.id do
-        json.extract!  cart, :restaurant_id, :id
+            json.extract!  cart, :restaurant_id, :id
             json.rest_name cart.restaurant.name
             # json.image_url cart.restaurant.image.url
             json.address cart.restaurant.address
