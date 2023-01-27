@@ -21,10 +21,10 @@ class MenuItem < ApplicationRecord
     foreign_key: :menu_id,
     class_name: :Menu
 
-    has_many :containing_carts,
+    has_many :cart_item_entries,
     foreign_key: :menu_item_id,
-    class_name: :Cart
-    
+    class_name: :CartItem
+
     has_one :parent_restaurant,
     through: :menu,
     source: :restaurant
