@@ -9,7 +9,6 @@ import { getSessionUserId } from '../../store/session';
 import { getCarts } from '../../store/cart';
 
 const CartModal = () => {
-    //grab the context variable that makes sense from here
     const {cartModal, toggleCartModal} = useContext(UXContext);
     const userCarts = useSelector(getCarts); 
     const sessionUserId = useSelector(getSessionUserId);

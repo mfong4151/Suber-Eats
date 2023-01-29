@@ -6,17 +6,14 @@ import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import './UserMenuModal.css'
-import { fetchCart } from '../../store/cart';
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
 import RestCartItem from './RestCartItem';
-import { getSessionUserId } from '../../store/session';
 
 const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
   const dispatch = useDispatch()
   const {setCheckoutOrder} = useContext(UXContext)
   const history = useHistory()
   const restCartItems = useSelector(getCartItems)
-  const sessionUserId = useSelector(getSessionUserId)
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
 

@@ -15,6 +15,7 @@ class Api::CartItemsController < ApplicationController
 
     def create
         @cart_item = CartItem.new(cart_params)
+        
         if @cart_item.save
             render :index
             return
@@ -50,5 +51,9 @@ class Api::CartItemsController < ApplicationController
 
     def cart_item_params
         params.require(:cart_item).permit(:menu_item_id, :cart_id, :quantity)
+    end
+
+    def check_for_cart
+
     end
 end

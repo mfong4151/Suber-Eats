@@ -34,6 +34,13 @@ export const getCarts = state => {
     return state.cart
 }
 
+export const getCartsRestIds = state =>{
+    const res = new Set()
+    if(!state.cart) return res;
+    for(const cart of Object.values(state.cart)) res.add(cart.restaurantId);
+    return res;
+}
+
 export const getCartSize = state =>{
     if(!state.cart) return null
     
@@ -49,7 +56,6 @@ export const getCartNames = state =>{
 
 
 export const fetchCart = (userId) => async dispatch =>{
-
     const res = await csrfFetch(`/api/carts/${userId}`)
     if (res.ok){
         const data = await res.json();

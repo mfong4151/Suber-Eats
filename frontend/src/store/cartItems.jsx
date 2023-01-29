@@ -31,6 +31,20 @@ export const getCartItems =  state =>{
     return Object.values(state.cartItems)
 }
 
+export const getCartItemsMap = state =>{
+    const res = {};
+    if(!state.cartItems) return res;
+    for(const cartItem of Object.values(state.cartItems)) res[cartItem.menuItemId] = cartItem.quantity
+    return res
+}
+
+
+export const getCartItemRestIds = state =>{
+    const res = new Set();
+    if(!state.cartItems) return res;
+    for(const cartItems of Object.values(state.cartItems)) res.add(cartItems.menuItemId);
+    return res;
+}
 
 
 export const fetchCartItems = (cartId) => async dispatch =>{

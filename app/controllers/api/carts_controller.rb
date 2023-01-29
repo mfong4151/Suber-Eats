@@ -11,8 +11,9 @@ class Api::CartsController < ApplicationController
     end
 
     def create
-        @cart = [Cart.new(cart_params)]
-        if @cart[0].save!
+        new_cart = Cart.new(restaurant_id: params[:restaurant_id], user_id: params[:user_id ])
+        @cart = User.find_by(id: params[:user_id]).carts.includes(:restaurant)
+        if new_cart.save!
             render :show
             return
         else
@@ -50,6 +51,6 @@ class Api::CartsController < ApplicationController
     private
     
     def cart_params
-        params.require(:cart).permit(:user_id, :restaurant_id, :menu_item_id, :quantity)
+        params.require(:cart).permit(:user_id, :restaurant_id)
     end
 end

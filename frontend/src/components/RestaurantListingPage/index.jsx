@@ -10,21 +10,24 @@ import Reviews from './Reviews';
 import star from './assets/star_rating_dark.png'
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
-import { fetchCart } from '../../store/cart';
-
+import { fetchCart, getCartsRestIds } from '../../store/cart';
+import { getSessionUserId } from '../../store/session';
+import { fetchCartItems, getCartItemRestIds } from '../../store/cartItems';
 
 
 const RestaurantListing = () => {
-  const sessionUserId = useSelector(state => state.session.user.id)
+  const sessionUserId = useSelector(getSessionUserId)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
-  
+
+
 
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
     dispatch(fetchMenu(restaurantId))
-    // dispatch(fetchCart(sessionUserId))
+    dispatch(fetchCart(sessionUserId))
+    dispatch(fetchCartItems(restaurantId))
   },[dispatch, restaurantId])
   
 
@@ -63,7 +66,7 @@ const RestaurantListing = () => {
           <div></div>
           <div></div>
       </div>
-      <MenuListings sessionUserId={sessionUserId} />
+      <MenuListings/>
       <a id="review-section">
         <Reviews sessionUserId={sessionUserId}/>
       </a>

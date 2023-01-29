@@ -1,20 +1,34 @@
 import React, { useState } from 'react'
 import './RestaurantListingPage.css'
-import { useDispatch } from 'react-redux'
-import { createCart, updateCart, fetchCart} from '../../store/cart'
+import { useDispatch, useSelector } from 'react-redux'
+import { createCart, updateCart, fetchCart, getCartsRestIds} from '../../store/cart'
+import { getCartItemRestIds, getCartItemsMap } from '../../store/cartItems'
+import { useParams } from 'react-router-dom'
+import { getSessionUserId } from '../../store/session'
+import { fetchCartItems } from '../../store/cartItems'
+import { useEffect } from 'react'
 
-const MenuListingItem = ({setMenuItem, listing, toggleItemModal, usersCart, sessionUserId}) => {
+const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
     //We need to refactor this to format a certain way based on whats avalible, 
+    const {restaurantId} = useParams()
+    const sessionUserId = useSelector(getSessionUserId)
+    const cartsRestIds = useSelector(getCartsRestIds)
+    const usersCart = useSelector(getCartItemsMap)
     const dispatch = useDispatch()
-    let globalQuantity = 0
-    if (usersCart[listing.menuId]) globalQuantity = usersCart[listing.menuId].quantity;
-    const [cartQuantity, setCartQuantity] = useState(globalQuantity)
+
+    const cartFact = () =>(
+        {
+            userId:sessionUserId,
+            restaurantId: restaurantId
+        }
+    )
     
-    const currentCart = (cartQuant) =>{
+
+    const cartItemFact = (cartItem) =>{
         return {  menuItemId: listing.id,
-            restaurantId: listing.menuId,
+            restaurantId: restaurantId,
             userId: sessionUserId,
-            quantity: cartQuant + 1}
+            quantity: usersCart[cartItem] ? usersCart[cartItem]  + 1: 1}
         }
     
     const menuModalMethods = e => {
@@ -22,17 +36,27 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal, usersCart, sess
         setMenuItem(listing);
         toggleItemModal();
     }
+    
+    const addToCart = () =>{
+        dispatch(fetchCartItems())
+
+    }
+
 
     const createCartedItem = e =>{
         e.preventDefault()
         e.stopPropagation()
-        setCartQuantity(prev => prev + 1)
-        if (!usersCart[listing.menuId]) dispatch(createCart({cart:currentCart(cartQuantity)}));
-        else dispatch(updateCart({cart:currentCart(cartQuantity)}, ));
-        dispatch(fetchCart(sessionUserId))
+        // if(!cartsRestIds.has(restaurantId)){
+        //     dispatch(createCart(cartFact()))
+        //     .then(dispatch(fetchCart(sessionUserId)))
+        //     .then(dispatch(addToCart()))
+        // } else{
+        //     dispatch(addToCart())
+
+        // }
+     
     }
-
-
+    
 
     
     return (
