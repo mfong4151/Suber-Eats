@@ -11,9 +11,11 @@ class Api::CartsController < ApplicationController
     end
 
     def create
-        new_cart = Cart.new(restaurant_id: params[:restaurant_id], user_id: params[:user_id ])
+        old_cart = Cart.find_by(restaurant_id: params[:restaurant_id], user_id: params[:user_id])
+
+        @new_cart = Cart.new(restaurant_id: params[:restaurant_id], user_id: params[:user_id ]) if !old_cart
         @cart = User.find_by(id: params[:user_id]).carts.includes(:restaurant)
-        if new_cart.save!
+        if old_cart  || @new_cart.save
             render :show
             return
         else

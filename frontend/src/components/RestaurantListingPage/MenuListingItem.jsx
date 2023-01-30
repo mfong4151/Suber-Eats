@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './RestaurantListingPage.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { createCart, updateCart, fetchCart, getCartsRestIds} from '../../store/cart'
-import { getCartItemRestIds, getCartItemsMap } from '../../store/cartItems'
+import { createCart, updateCart, fetchCart, getCartsRestIdKeys} from '../../store/cart'
+import { getCartItemRestIds, getCartItemsMap, createCartItem } from '../../store/cartItems'
 import { useParams } from 'react-router-dom'
 import { getSessionUserId } from '../../store/session'
 import { fetchCartItems } from '../../store/cartItems'
@@ -12,49 +12,31 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
     //We need to refactor this to format a certain way based on whats avalible, 
     const {restaurantId} = useParams()
     const sessionUserId = useSelector(getSessionUserId)
-    const cartsRestIds = useSelector(getCartsRestIds)
     const usersCart = useSelector(getCartItemsMap)
+    const usersCarts = useSelector(getCartsRestIdKeys)
     const dispatch = useDispatch()
 
-    const cartFact = () =>(
-        {
-            userId:sessionUserId,
-            restaurantId: restaurantId
-        }
-    )
-    
-
-    const cartItemFact = (cartItem) =>{
-        return {  menuItemId: listing.id,
-            restaurantId: restaurantId,
-            userId: sessionUserId,
+    const cartItemFact = (cartItem) =>(
+        {  cartItem:{menu_item_id: listing.id,
+            cart_id: usersCarts[restaurantId], 
             quantity: usersCart[cartItem] ? usersCart[cartItem]  + 1: 1}
         }
-    
+    )
     const menuModalMethods = e => {
         e.preventDefault();
         setMenuItem(listing);
         toggleItemModal();
     }
     
-    const addToCart = () =>{
-        dispatch(fetchCartItems())
-
-    }
 
 
-    const createCartedItem = e =>{
+    const addCartItem = e =>{
         e.preventDefault()
         e.stopPropagation()
-        // if(!cartsRestIds.has(restaurantId)){
-        //     dispatch(createCart(cartFact()))
-        //     .then(dispatch(fetchCart(sessionUserId)))
-        //     .then(dispatch(addToCart()))
-        // } else{
-        //     dispatch(addToCart())
+        dispatch(createCartItem(cartItemFact(), usersCarts[restaurantId]))
+        .then(dispatch(fetchCartItems(usersCart[restaurantId])))
+        .then(dispatch(fetchCart(sessionUserId)))
 
-        // }
-     
     }
     
 
@@ -66,7 +48,7 @@ const MenuListingItem = ({setMenuItem, listing, toggleItemModal}) => {
                     <p className='item-price'>{`$${listing.price}`}</p>
                     <p className='item-description'>{listing?.description}</p>
                 </div>
-                <button className='add-to-cart' onClick={createCartedItem}>+</button>
+                <button className='add-to-cart' onClick={addCartItem}>+</button>
         </li>
      )
 }

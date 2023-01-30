@@ -28,10 +28,23 @@ const removeCart = cartId =>(
     }
 )
 
+export const getCartsArray = state =>{
+    if (!state.carts) return []
+    return Object.values(state.cart)
+}
+
 
 export const getCarts = state => {
     if (!state.cart) return null;    
     return state.cart
+}
+
+export const getCartsRestIdKeys = state => {
+    const res = {}
+    if(!state.cart) return res;
+    for(const cart of Object.values(state.cart)) res[cart.restaurantId] = cart.id;
+    return res;
+    
 }
 
 export const getCartsRestIds = state =>{

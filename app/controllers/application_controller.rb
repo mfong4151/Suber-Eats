@@ -50,11 +50,13 @@ class ApplicationController < ActionController::API
     #     end
     # end
 
-    private
+    protected
 
     def snake_case_params
      params.deep_transform_keys!(&:underscore)
     end
+
+    private
 
     def attach_authenticity_token
         headers['X-CSRF-Token'] = masked_authenticity_token(session)

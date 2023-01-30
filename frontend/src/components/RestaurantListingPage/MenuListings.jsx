@@ -4,7 +4,6 @@ import ListingsBlock from './ListingsBlock'
 import { useState } from 'react'
 import MenuItemModal from './modals/MenuItemModal'
 import { useSelector } from 'react-redux'
-import { getCarts } from '../../store/cart'
 import { getMenuItems } from '../../store/menu'
 import { sortMenus } from './utils/menuUtils'
 
@@ -19,7 +18,7 @@ const MenuListings = () => {
 
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
-      }
+    }
     
 
   

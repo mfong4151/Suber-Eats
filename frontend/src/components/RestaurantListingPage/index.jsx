@@ -13,7 +13,7 @@ import BundleModals from '../universalModals/BundleModals';
 import { fetchCart, getCartsRestIds } from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
 import { fetchCartItems, getCartItemRestIds } from '../../store/cartItems';
-
+import { createCart } from '../../store/cart';
 
 const RestaurantListing = () => {
   const sessionUserId = useSelector(getSessionUserId)
@@ -22,12 +22,25 @@ const RestaurantListing = () => {
   const restaurant = useSelector(getRestaurant(restaurantId));
 
 
+  const cartFact = () =>(
+    {
+        userId:sessionUserId,
+        restaurantId: restaurantId
+    }
+)
+
+    // unfortunately this seems to be the most consistent way of getting 
+  useEffect(()=>{
+    
+  },[])
+
 
   useEffect(()=>{
+    dispatch(createCart(cartFact()))
+    .then(dispatch(fetchCart(sessionUserId)))
+    .then(    dispatch(fetchCartItems(restaurantId)))
     dispatch(fetchRestaurant(restaurantId))
     dispatch(fetchMenu(restaurantId))
-    dispatch(fetchCart(sessionUserId))
-    dispatch(fetchCartItems(restaurantId))
   },[dispatch, restaurantId])
   
 
