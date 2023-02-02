@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { getSessionUserId } from '../../store/session'
 import { fetchCart, getCart } from '../../store/cart'
-import { useParams, Redirect } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { fetchCartItems, getCartItems } from '../../store/cartItems'
 
 const CheckoutPage = () => {

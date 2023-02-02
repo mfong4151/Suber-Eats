@@ -1,9 +1,9 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import "../CheckoutPage.css"
-import { deleteCart, fetchCart} from '../../../store/cart'
+import { deleteCart} from '../../../store/cart'
 import { useHistory } from 'react-router-dom'
-import { calcSubTotal,calcTaxAndFees } from '../utils/restaurantCrudUtils'
+import { calcTaxAndFees } from '../utils/restaurantCrudUtils'
 import { useState } from 'react'
 
 const CheckoutRight = ({checkoutCart}) => {
