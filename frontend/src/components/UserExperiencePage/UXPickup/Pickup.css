@@ -1,11 +1,19 @@
 
+
+.pickup-cols{
+    display:flex;
+    justify-content: flex-start;
+}
+
 #options-dimensions{
-    
-    /* the scroll bar is distracting atm, uncomment later */
     overflow-y: scroll;
     overflow-x: hidden;
     height:1260px;
-    width: 1500px;
+    width: 45%;
+}
+
+#options-carousel{
+    height:160px;
 }
 
 
@@ -15,12 +23,43 @@
     flex-direction: row;
     justify-content: flex-start;
     word-break: break-all;
-    width:900px;
+    width:100%;
 }
+
+.carousel-lr-cont{
+    position:relative;
+    bottom:55%;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.carousel-lr-btn{
+    background-color: white;
+    border-color: var(--color-black);
+    border-radius: 5rem;
+    border-width: 10px;
+    height:40px;
+    width:40px;
+    position:absolute;
+
+}
+
+
+#carousel-r-btn{
+    right:0%
+
+}
+
+.carousel-lr-btn:hover{
+    background-color: var(--color-hover-grey);
+}
+
 
 .carousel-cont{
     text-align: center;
-    width:80px;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -42,6 +81,14 @@
 
 .carousel-buttons:hover{
     background-color: var(--color-hover-grey);
+}
+
+.carousel-buttons:focus{
+    background-color: var(--color-hover-black);
+}
+
+.carousel-buttons:active{
+    background-color: var(--color-black);
 }
 
 

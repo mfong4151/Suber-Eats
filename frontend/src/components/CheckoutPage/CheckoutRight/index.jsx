@@ -16,7 +16,7 @@ const CheckoutRight = ({checkoutCart}) => {
   const subtext = "If you’re not around when the delivery person arrives, they’ll leave your order at the door. By placing your order, you agree to take full responsibility for it once it’s delivered. Orders containing alcohol or other restricted items may not be eligible for leave at door and will be returned to the store if you are not available."
   let subtotal = checkoutCart.cartItemsSum
   const taxAndFees = calcTaxAndFees(subtotal)
-  console.log(checkoutCart)
+
   const transactionFact = () => (
     {transaction:{
       user_id:sessionUserId,

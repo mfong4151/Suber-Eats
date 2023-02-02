@@ -19,10 +19,6 @@
 }
 
 
-.pickup-cols{
-    display:flex;
-    justify-content: flex-start;
-}
 
 .map-location-text{
     text-overflow: ellipsis;

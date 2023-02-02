@@ -4,9 +4,9 @@ import { Redirect } from "react-router-dom";
 import UXHeader from '../UXHeader.jsx';
 import UXPickup from './UXPickup';
 import { fetchCart } from '../../store/cart.jsx';
-import { fetchRestaurants, getRestaurants } from '../../store/restaurant';
+import { fetchRestaurants } from '../../store/restaurant';
 import BundleModals from '../universalModals/BundleModals.jsx';
-import { checkUserLoc, fetchLocations } from '../../store/location';
+import { fetchLocations } from '../../store/location';
 //Not sure if cart management needs to be done in state, context, or store yet
 //I need some sort of state to manage the user's cart. 
 // I should finish seeding, databases, and tables before proceeding
@@ -14,12 +14,9 @@ import { checkUserLoc, fetchLocations } from '../../store/location';
 
 
 const UserExperiencePage = () => {
-    const sessionUser = useSelector(state => state.session.user);
-    const restaurants = useSelector(getRestaurants);
-    const userLocation = useSelector(checkUserLoc(sessionUser.id))
+    const sessionUser = useSelector(state=>state.session.user);
     const dispatch = useDispatch();
 
-    // https://redux-toolkit.js.org/api/createAsyncThunk#handling-thunk-results
     useEffect(()=>{
 
       dispatch(fetchLocations())
@@ -32,10 +29,9 @@ const UserExperiencePage = () => {
 
     return (
     <>  
-        <UXHeader/>
-        <UXPickup restaurants={restaurants} userLocation={userLocation}/>
-        <BundleModals/>
-        
+      <UXHeader/>
+      <UXPickup/>
+      <BundleModals/>        
     </>
   )
 }
