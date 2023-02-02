@@ -9,21 +9,20 @@ import Payment from './Payment'
 import AddOnWidgets from './AddOnWidgets.jsx'
 import CheckoutMap from './CheckoutMap'
 
-const CheckoutLeft = ({checkoutOrder}) => {
+const CheckoutLeft = ({checkoutCart}) => {
+  console.log(checkoutCart)
 
-  let firstOrder = checkoutOrder[0]
-  let address = firstOrder.address.split(',')
-  let street = address[0], city = address[1]
+  let street, city, state, country = checkoutCart.address.split(' ')
   return (
     <>
       <CheckoutHeader/>
       <div className="univ-padding checkout-lr">
-          <h1 className='rest-title'>{firstOrder.restName}</h1>
+          <h1 className='rest-title'>{checkoutCart.restName}</h1>
           <button className="mp checkout-deliv-pickup grey-button">
               <span>Delivery</span>
           </button>
 
-          <CheckoutMap checkoutCoords={{lat: checkoutOrder[0]?.restLat, lng: checkoutOrder[0]?.restLng}}/>
+          <CheckoutMap checkoutCoords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}}/>
 
           <div className="delivery-options mp">
 

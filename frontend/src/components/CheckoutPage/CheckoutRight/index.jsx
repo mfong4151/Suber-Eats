@@ -6,19 +6,17 @@ import { useHistory } from 'react-router-dom'
 import { calcSubTotal,calcTaxAndFees } from '../utils/restaurantCrudUtils'
 import { useState } from 'react'
 
-const CheckoutRight = ({checkoutOrder}) => {
+const CheckoutRight = ({checkoutCart}) => {
   const [tip, setTip] = useState(0)
   const dispatch = useDispatch()
   const history = useHistory()
   const subtext = "If you’re not around when the delivery person arrives, they’ll leave your order at the door. By placing your order, you agree to take full responsibility for it once it’s delivered. Orders containing alcohol or other restricted items may not be eligible for leave at door and will be returned to the store if you are not available."
-  let subtotal = calcSubTotal(checkoutOrder)
+  let subtotal = checkoutCart.cartItemsSum
   const taxAndFees = calcTaxAndFees(subtotal)
   const handlePlaceOrder = e=>{
       e.preventDefault();
       e.stopPropagation();
-      for(const cart of checkoutOrder){
-        dispatch(deleteCart(cart.id))
-      }
+      dispatch(deleteCart(checkoutCart.id))
       history.push('/')
     }
   

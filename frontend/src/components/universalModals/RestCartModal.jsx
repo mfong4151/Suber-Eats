@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import './UserMenuModal.css'
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
 import RestCartItem from './RestCartItem';
+import { NavLink } from 'react-router-dom';
 
 const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
   const dispatch = useDispatch()
@@ -71,7 +72,9 @@ const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
               
 
               <div className='udc sub-header-accent'>
-                <button className="udc btn-sq btn-rounded-corners go-checkout" onClick={handleCheckout}>Go to checkout </button>
+                <NavLink className="udc btn-sq btn-rounded-corners go-checkout" to={`/checkout/${cart.id}`}>
+                  Go to checkout 
+                </NavLink>
               </div>
           </div>
 

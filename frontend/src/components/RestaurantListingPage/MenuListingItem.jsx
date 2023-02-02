@@ -46,16 +46,16 @@ const MenuListingItem = ({setMenuItem, menuItem, toggleItemModal}) => {
     const addCartItem = e =>{
         e.preventDefault()
         e.stopPropagation()
-        let cartedItem = usersCartItems[menuItem.id]
+        // let cartedItem = usersCartItems[menuItem.id]
 
 
-        if (cartedItem){
-            dispatch(updateCartItem(currentCartItemFact(cartedItem) , cartedItem.cartId))
-            .then(dispatch(fetchCart(sessionUserId)))
-        }else{
+        // if (cartedItem){
+        //     dispatch(updateCartItem(currentCartItemFact(cartedItem) , cartedItem.cartId))
+        //     .then(dispatch(fetchCart(sessionUserId)))
+        // }else{
             dispatch(createCartItem(cartItemFact(), usersCarts[restaurantId]))
             .then(dispatch(fetchCart(sessionUserId)))
-        }
+        // }
 
     }
     

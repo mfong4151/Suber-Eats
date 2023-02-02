@@ -59,7 +59,7 @@ function App() {
                                       }}>
               
               <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
-              <Route path="/checkout" component={CheckoutPage}/>
+              <Route path="/checkout/:cartId" component={CheckoutPage}/>
               <Route path="/deliverypickup" component={UserExperiencePage}/>
               <Route path="/yourorders" component={PastOrders}/>
             </UXContext.Provider>

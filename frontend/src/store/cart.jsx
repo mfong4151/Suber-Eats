@@ -28,6 +28,11 @@ const removeCart = cartId =>(
     }
 )
 
+export const getCart = cartId => state =>{
+    if(!state.cart || !state.cart[cartId]) return null
+    return state.cart[cartId]
+}
+
 export const getCartsArray = state =>{
     if (!state.carts) return []
     return Object.values(state.cart)

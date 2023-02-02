@@ -19,6 +19,7 @@ const RestaurantListing = () => {
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
+  const usersCarts = useSelector(getCartsRestIdKeys)
   const cartFact = () =>(
     {
         userId:sessionUserId,
@@ -39,7 +40,7 @@ const RestaurantListing = () => {
     dispatch(createCart(cartFact()))
     .then(dispatch(fetchCart(sessionUserId)))
     
-  },[dispatch])
+  },[dispatch, restaurantId])
   
 
   return (
@@ -51,7 +52,7 @@ const RestaurantListing = () => {
           <div></div>
           <div></div>
       </div>
-      <MenuListings/>
+      <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
       <a id="review-section">
         <Reviews sessionUserId={sessionUserId}/>
       </a>
