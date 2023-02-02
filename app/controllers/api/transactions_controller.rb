@@ -22,13 +22,13 @@ class Api::TransactionsController < ApplicationController
 
     def create
 
-        @transactions = Transaction.new(transaction_params)
+        @transaction = Transaction.new(transaction_params)
 
-        if transactions.save
-            render :show
+        if @transaction.save!
+            # render :show
             return
         else
-            render json: @cart.errors.full_messages, status: 422
+            render json: @transaction.errors.full_messages, status: 422
             return
         end 
     end

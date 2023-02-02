@@ -1,23 +1,37 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import "../CheckoutPage.css"
 import { deleteCart} from '../../../store/cart'
 import { useHistory } from 'react-router-dom'
 import { calcTaxAndFees } from '../utils/restaurantCrudUtils'
 import { useState } from 'react'
+import { getSessionUserId } from '../../../store/session'
+import {createTransaction} from '../../../store/transaction'
 
 const CheckoutRight = ({checkoutCart}) => {
+  const sessionUserId = useSelector(getSessionUserId)
   const [tip, setTip] = useState(0)
   const dispatch = useDispatch()
   const history = useHistory()
   const subtext = "If you’re not around when the delivery person arrives, they’ll leave your order at the door. By placing your order, you agree to take full responsibility for it once it’s delivered. Orders containing alcohol or other restricted items may not be eligible for leave at door and will be returned to the store if you are not available."
   let subtotal = checkoutCart.cartItemsSum
   const taxAndFees = calcTaxAndFees(subtotal)
+  console.log(checkoutCart)
+  const transactionFact = () => (
+    {transaction:{
+      user_id:sessionUserId,
+      restaurant_id:checkoutCart.restaurantId,
+      transaction_sum: Math.ceil((taxAndFees.totalAmt + tip) * 100)/100
+    }}
+  )
+
+  
   const handlePlaceOrder = e=>{
       e.preventDefault();
       e.stopPropagation();
-      dispatch(deleteCart(checkoutCart.id))
-      history.push('/')
+      dispatch(createTransaction(transactionFact()))
+      .then(dispatch(deleteCart(checkoutCart.id)))
+      .then(history.push('/yourorders'))
     }
   
   const handleTip = e =>{
@@ -28,9 +42,7 @@ const CheckoutRight = ({checkoutCart}) => {
   
   return (
     <div className='checkout-right'>
-        <div className='place-order-holder udc'>
-          <button className="place-order udc" onClick={handlePlaceOrder}><span>Place order</span></button>
-        </div>
+    
         <div className='udc'>
           <p id='subtext'>{subtext}</p>    
         </div>
@@ -48,13 +60,13 @@ const CheckoutRight = ({checkoutCart}) => {
         <div className='checkout-array page-spacing'>
             
             <p className="checkout-text">Taxes & Other Fees</p>
-             <p className="checkout-text">${taxAndFees.tax + taxAndFees.californiaFees}</p>
+             <p className="checkout-text">${Math.ceil(taxAndFees.tax + taxAndFees.californiaFees *100)/100}</p>
             
         </div>
         <div id='add-tip' className='checkout-array'>
           
           <p>Add a tip</p>
-          <p>{tip !== 0 ? `$${tip}` : ''}</p>
+          <p>{tip !== 0 ? `$${Math.ceil((tip * 100))/100}` : ''}</p>
          </div>
 
 
@@ -68,7 +80,11 @@ const CheckoutRight = ({checkoutCart}) => {
           <div className='checkout-array checkout-subtext'>100% of your tip goes to your courier. Tips are based on your order total of {`$${subtotal}`} before any discounts or promotions.</div>
           <div id='total' className='checkout-array page-spacing'>
           <h3 className="total-text">Total</h3>
-          <h3 className='total-text'>${taxAndFees.totalAmt + tip}</h3>
+          <h3 className='total-text'>${Math.ceil((taxAndFees.totalAmt + tip) * 100)/100}</h3>
+        </div>
+
+        <div className='place-order-holder udc'>
+          <button className="place-order udc" onClick={handlePlaceOrder}><span>Place order</span></button>
         </div>
     </div>
   )

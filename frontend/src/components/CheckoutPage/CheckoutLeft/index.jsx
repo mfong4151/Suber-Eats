@@ -10,13 +10,12 @@ import AddOnWidgets from './AddOnWidgets.jsx'
 import CheckoutMap from './CheckoutMap'
 
 const CheckoutLeft = ({checkoutCart}) => {
-  console.log(checkoutCart)
 
   let street, city, state, country = checkoutCart.address.split(' ')
   return (
     <>
       <CheckoutHeader/>
-      <div className="univ-padding checkout-lr">
+      <div className="checkout-lr">
           <h1 className='rest-title'>{checkoutCart.restName}</h1>
           <button className="mp checkout-deliv-pickup grey-button">
               <span>Delivery</span>

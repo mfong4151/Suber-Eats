@@ -9,6 +9,7 @@ import { getSessionUserId } from '../../store/session'
 import { fetchCart, getCart } from '../../store/cart'
 import { useParams } from 'react-router-dom'
 import { fetchCartItems, getCartItems } from '../../store/cartItems'
+import { Redirect } from 'react-router-dom'
 
 const CheckoutPage = () => {
         const {menuModal} = useContext(UXContext)
@@ -16,14 +17,13 @@ const CheckoutPage = () => {
         const sessionUserId = useSelector(getSessionUserId)
         const checkoutCart = useSelector(getCart(cartId))
         const checkoutItems = useSelector(getCartItems)
-        console.log(checkoutCart)
         const dispatch = useDispatch();
         
         useEffect(()=>{
           dispatch(fetchCart(sessionUserId))
           dispatch(fetchCartItems(cartId))          
         },[])
-        // if(!checkoutCart) return (<Redirect to={'/'}/>)
+        if(!checkoutCart) return (<Redirect to={'/'}/>)
 
         return (
           <div className='checkout-page' >

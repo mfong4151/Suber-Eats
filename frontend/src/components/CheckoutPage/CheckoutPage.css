@@ -1,13 +1,14 @@
 
 
 #left{
-    width:50%
+    width:100%
 }
 
 
 .checkout-page{
     display:flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 /* left side items  */
@@ -16,14 +17,17 @@
 .checkout-lr{
     display: flex;
     flex-direction: column;
-    width:40vw;
+    width: 100vw;
+    height:50vh;
+    padding-left: 7rem;
+    padding-right:7rem;
 }
 
 .rest-title{
     font-family: var(--font-family-UMB), var(--font-family);
     font-size: 40px;
-
-}
+    
+}  
 
 
 .checkout-deliv-pickup{
@@ -50,6 +54,10 @@
 
 .loc-left-est{
     margin-left:5%;
+}
+
+.your-items{
+    padding-bottom: 4rem;
 }
 
 .delivery-edit{
@@ -88,8 +96,8 @@
 
 
 .checkout-right{
-    width:50vw;
-    height:100vh;
+    width:100vw;
+    height:40vh;
     background-color: var(--color-grey);
     display: flex;
     justify-content: baseline;
@@ -111,7 +119,6 @@
     background-color: var(--color-green);
     color: var(--color-white);
     border-radius: 1rem;
-    margin-top:10rem;
 }
 
 .place-order:hover{

@@ -47,7 +47,6 @@ export const createTransaction = transaction => async dispatch => {
 
 
 export const updateTransaction = (transaction, transactionId) => async dispatch =>{
-    console.log(transaction, transactionId)
     const res = await csrfFetch(`/api/transactions/${transactionId}`,{
         method: "PATCH",
         body: JSON.stringify(transaction),
