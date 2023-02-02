@@ -24,6 +24,23 @@ export const getMenuItems = state =>{
     return Object.values(state.menu.menuItems);
 }
 
+export const getMenuItemsSorted = state =>{
+    const res = {};
+    
+    if(!state.menu.menuItems) return res;
+
+    let header;
+    for(const item of Object.values(state.menu.menuItems)){
+        if (header !== item.header)  header = item.header;
+        res[header]||= [];
+        res[header].push(item)
+    }
+    
+    return res
+
+}
+
+
 export const getMenuReviews = state =>{
     if(!state.menu.reviews) return [];
     return Object.values(state.menu.reviews);

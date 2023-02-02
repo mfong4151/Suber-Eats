@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_29_231213) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_01_235957) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,8 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_29_231213) do
     t.integer "quantity", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
-    t.index ["menu_item_id"], name: "index_cart_items_on_menu_item_id"
+    t.index ["cart_id", "menu_item_id"], name: "index_cart_items_on_cart_id_and_menu_item_id", unique: true
   end
 
   create_table "carts", force: :cascade do |t|

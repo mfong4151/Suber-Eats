@@ -19,8 +19,6 @@ const CartModal = () => {
     const {restaurantId} = useParams()
     const dispatch = useDispatch();
 
-
-
     if (cartModal) document.body.classList.add('active-modal')
     else document.body.classList.remove('active-modal')
 
@@ -36,7 +34,6 @@ const CartModal = () => {
     useEffect(()=>{      
         for(const cart of Object.values(userCarts))if(cart.cartItems === 0 && restaurantId !== cart.restaurantId ) dispatch(deleteCart(cart.id))
     },[])
-
 
     
     return (

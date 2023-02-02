@@ -11,6 +11,7 @@
 #
 class CartItem < ApplicationRecord
     validates :quantity, presence:true
+    validates :cart_id, uniqueness: {scope: :menu_item_id}
 
     belongs_to :cart,
     foreign_key: :cart_id,

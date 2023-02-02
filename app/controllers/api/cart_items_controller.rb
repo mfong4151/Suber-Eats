@@ -20,11 +20,9 @@ class Api::CartItemsController < ApplicationController
 
         # @user_id, @restaurant_id = current_user.id,  MenuItem.find_by_id(id: params[:menu_item_id]).parent_restaurant.id
 
-        puts(cart_item_params)
-        puts('fuck ruby')
         @cart_item = CartItem.new(cart_item_params)
         if @cart_item.save
-            render :index
+            render :show
             return
         else
             render json: @cart_item.errors.full_messages, status: 422
@@ -43,7 +41,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def destroy
-        @cart_item.find_by(id: params[:id])
+        @cart_item = CartItem.find_by(id: params[:id])
         if @cart_item.delete
             return
         else

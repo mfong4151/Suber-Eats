@@ -3,24 +3,35 @@ import './RestaurantListingPage.css'
 import ListingsBlock from './ListingsBlock'
 import { useState } from 'react'
 import MenuItemModal from './modals/MenuItemModal'
-import { useSelector } from 'react-redux'
-import { getMenuItems } from '../../store/menu'
+import { useDispatch, useSelector } from 'react-redux'
+import { getMenuItems, getMenuItemsSorted } from '../../store/menu'
+import { fetchCartItems } from '../../store/cartItems'
 import { sortMenus } from './utils/menuUtils'
+import { useEffect } from 'react'
+import { getCartsRestIdKeys } from '../../store/cart'
+import { useParams } from 'react-router-dom'
 
 //bring in intersection observer here, have it change based class whats clicked
 
 const MenuListings = () => {
     const [menuItemModal, setMenuItemModal] = useState(false);  
     const [menuItem, setMenuItem] = useState('')
-    const preSortedItems = useSelector(getMenuItems);
-    const menuItems = sortMenus(preSortedItems)
-
+    const menuItems = useSelector(getMenuItemsSorted);
+    const usersCarts = useSelector(getCartsRestIdKeys)
+    const {restaurantId} = useParams()
+    const dispatch = useDispatch()
 
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
     }
-    
 
+    
+    useEffect(() => {
+
+        if (usersCarts[restaurantId]) dispatch(fetchCartItems(usersCarts[restaurantId]))
+        
+    },[dispatch])
+    
   
     return (
     <div className='listings-main'>
@@ -37,7 +48,7 @@ const MenuListings = () => {
             {Object.keys(menuItems).map((header, idx)=>(
                 <ListingsBlock 
                     header={header} 
-                    listings={menuItems[header]} 
+                    menuItems={menuItems[header]} 
                     key={idx}
                     setMenuItem = {setMenuItem}
                     menuItemModal={menuItemModal} 

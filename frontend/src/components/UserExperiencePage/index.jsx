@@ -6,7 +6,6 @@ import UXPickup from './UXPickup';
 import { fetchCart } from '../../store/cart.jsx';
 import { fetchRestaurants, getRestaurants } from '../../store/restaurant';
 import BundleModals from '../universalModals/BundleModals.jsx';
-import { useState } from 'react';
 import { checkUserLoc, fetchLocations } from '../../store/location';
 //Not sure if cart management needs to be done in state, context, or store yet
 //I need some sort of state to manage the user's cart. 
@@ -19,13 +18,13 @@ const UserExperiencePage = () => {
     const restaurants = useSelector(getRestaurants);
     const userLocation = useSelector(checkUserLoc(sessionUser.id))
     const dispatch = useDispatch();
+
     // https://redux-toolkit.js.org/api/createAsyncThunk#handling-thunk-results
     useEffect(()=>{
 
       dispatch(fetchLocations())
-      
-        .then(()=> dispatch(fetchRestaurants()))
-      // dispatch(fetchCart(sessionUser.id))
+      dispatch(fetchRestaurants())
+      dispatch(fetchCart(sessionUser.id))
      
     },[dispatch])   
 

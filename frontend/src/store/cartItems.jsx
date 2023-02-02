@@ -34,10 +34,17 @@ export const getCartItems =  state =>{
 export const getCartItemsMap = state =>{
     const res = {};
     if(!state.cartItems) return res;
-    for(const cartItem of Object.values(state.cartItems)) res[cartItem.menuItemId] = cartItem.quantity
+    for(const cartItem of Object.values(state.cartItems)) res[cartItem.menuItemId] = cartItem
     return res
 }
 
+export const getCartItemsSet = state =>{
+    const res = new Set();
+    if(!state.cartItems) return res;
+    for(const cartItem of Object.values(state.cartItems)) res.add(cartItem.menuItemId);
+    return res
+
+}
 
 export const getCartItemRestIds = state =>{
     const res = new Set();
@@ -57,7 +64,6 @@ export const fetchCartItems = (cartId) => async dispatch =>{
 }
 
 export const createCartItem = (cartItem) => async dispatch => {
-    console.log(cartItem)
     const res = await csrfFetch(`/api/carts/${cartItem.cartId}/cart_items`,{
         method: "POST",
         body: JSON.stringify(cartItem),
@@ -75,7 +81,7 @@ export const createCartItem = (cartItem) => async dispatch => {
 
 
 export const updateCartItem = (cartItem, cartItemId) => async dispatch =>{
-    const res = await csrfFetch(`/api/carts/${cartItem.cartItem.cartId}/cart_items/${cartItemId}`,{
+    const res = await csrfFetch(`/api/carts/${cartItem.cartId}/cart_items/${cartItemId}`,{
         method: "PATCH",
         body: JSON.stringify(cartItem),
         headers:{ 

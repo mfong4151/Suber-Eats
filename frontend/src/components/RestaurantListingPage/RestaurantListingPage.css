@@ -123,9 +123,6 @@
 }
 
 .add-to-cart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color:white;
     background-color: var(--color-black);
     border-radius: 1px;
@@ -135,9 +132,9 @@
     font-size: 26px;
     border-radius: 3rem;
     cursor:pointer;
-    position: absolute;
-    top:8px;
-    right:16px;
+    position:relative;
+    bottom:60%;
+    left: 80%
 
 }
 

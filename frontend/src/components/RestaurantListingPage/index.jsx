@@ -7,21 +7,18 @@ import { fetchMenu } from '../../store/menu';
 import MenuListings from './MenuListings';
 import MapHeader from './MapHeader';
 import Reviews from './Reviews';
-import star from './assets/star_rating_dark.png'
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
-import { fetchCart, getCartsRestIds } from '../../store/cart';
+import { fetchCart, getCartsRestIdKeys } from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
-import { fetchCartItems, getCartItemRestIds } from '../../store/cartItems';
 import { createCart } from '../../store/cart';
+import RestaurantInfo from './RestaurantInfo';
 
 const RestaurantListing = () => {
   const sessionUserId = useSelector(getSessionUserId)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
-
-
   const cartFact = () =>(
     {
         userId:sessionUserId,
@@ -30,51 +27,26 @@ const RestaurantListing = () => {
 )
 
     // unfortunately this seems to be the most consistent way of getting 
-  useEffect(()=>{
-    
-  },[])
 
+  //we need to somehow get the cartItems here, so we need a useSelector to listen in on changes to carts
+
+  useEffect(()=>{
+    dispatch(fetchRestaurant(restaurantId))
+    dispatch(fetchMenu(restaurantId))
+  },[])
 
   useEffect(()=>{
     dispatch(createCart(cartFact()))
     .then(dispatch(fetchCart(sessionUserId)))
-    .then(    dispatch(fetchCartItems(restaurantId)))
-    dispatch(fetchRestaurant(restaurantId))
-    dispatch(fetchMenu(restaurantId))
-  },[dispatch, restaurantId])
+    
+  },[dispatch])
   
 
   return (
     <>
       <UXHeader/>
       <MapHeader/>
-      <div className="listing-info">
-        <div className='univ-padding'>
-          <h1 className='restaurant-name '>{restaurant?.name}</h1>
-        </div>
-        <div className='restaurant-info univ-padding'>
-          <div className='menu-row-1'>
-              <img src={star} alt='star' className="star listing-text-spacing"/>
-              <span className='listing-text-spacing'>{restaurant?.rating}</span>
-              <span className='listing-text-spacing'>(69420 ratings)</span>
-              <span className='listing-text-spacing'>•</span>
-              <span className='listing-text-spacing'>{restaurant?.cuisineType.toUpperCase().slice(0,1).concat(restaurant?.cuisineType.slice(1))}</span>
-              <span className='listing-text-spacing'>•</span>
-              {/* <img src={univPhotos.uberOne} className="uber-one-logo"/> */}
-              <span className='listing-text-spacing'>Read 5-Star reviews</span>
-              <span className='listing-text-spacing'>•</span>
-              <span className='listing-text-spacing' >More Info</span>
-
-          </div>
-          <div className="menu-row-1 menu-row-2">
-            Open at Some Point
-          </div>
-          <div className="menu-row-1 menu-row-2">
-            Tap for hours, info, and more
-          </div>
-        </div>
-
-      </div>
+      <RestaurantInfo restaurant={restaurant}/>
       <div className='restaurant-buttons'>
           <div></div>
           <div></div>
