@@ -16,6 +16,8 @@ class Api::LocationsController < ApplicationController
         end
     end
 
+    
+
     def update
         @location = Location.find_by(user_id: current_user.id)
 
@@ -26,6 +28,8 @@ class Api::LocationsController < ApplicationController
             return
         end
     end
+    
+
 
     private 
 

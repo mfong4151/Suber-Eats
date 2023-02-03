@@ -7,7 +7,6 @@ import { getRestaurants } from '../../../store/restaurant';
 import { checkUserLoc } from '../../../store/location';
 import { getSessionUserId } from '../../../store/session';
 import { useState } from 'react';
-import { useEffect } from 'react';
 
 const Pickup = () => {
   const [options, SetOptions] = useState({

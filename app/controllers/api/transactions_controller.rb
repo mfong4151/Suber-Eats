@@ -25,7 +25,7 @@ class Api::TransactionsController < ApplicationController
         @transaction = Transaction.new(transaction_params)
 
         if @transaction.save!
-            # render :show
+            render :show
             return
         else
             render json: @transaction.errors.full_messages, status: 422

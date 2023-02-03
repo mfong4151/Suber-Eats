@@ -21,6 +21,7 @@ class User < ApplicationRecord
   validates :name , presence:true
   validates :phone_number, presence:true, uniqueness: true
   before_validation :ensure_session_token 
+  after_save :create_loc_from_signup
 
   has_many :reviews,
   foreign_key: :user_id,
@@ -58,6 +59,16 @@ class User < ApplicationRecord
       .joins(:carted_item).joins(:cart_owner).joins(:restaurant).where('users.id = ?', self.id.to_s)
   end
 
+  
+  def create_loc_from_signup
+ 
+    Location.create(
+        user_id: self.id,
+        latitude:  37.789739, 
+        longitude:-122.408607
+    ) if !Location.find_by(user_id: self.id)
+        
+  end
 
   def self.find_by_credentials(credential, password)
     if credential
