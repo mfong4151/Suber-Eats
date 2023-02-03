@@ -40,8 +40,8 @@ const Map = ({restaurants, userLocation}) => {
             userId: sessionUserId
  
            }}, userLocObj.id
-           
-      )).then(()=> dispatch(fetchRestaurants()))
+          ))
+      .then(()=> dispatch(fetchRestaurants()))
     }
   }
   

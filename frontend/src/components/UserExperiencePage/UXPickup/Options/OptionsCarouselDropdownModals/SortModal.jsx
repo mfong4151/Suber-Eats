@@ -1,11 +1,18 @@
 import React from 'react'
 
 const SortModal = () => {
+   
+ 
   return (
-    <div>
-      
+    <div className="modal">
+       
     </div>
   )
+
 }
 
 export default SortModal
+
+
+
+

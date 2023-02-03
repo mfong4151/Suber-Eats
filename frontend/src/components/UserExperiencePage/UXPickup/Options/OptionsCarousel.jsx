@@ -23,7 +23,7 @@ const OptionsCarousel = () => {
 
         </div>
         <div className='carousel-lr-cont'>
-            <button className="carousel-lr-btn udc" id="carousel-l-btn">
+            <button className="carousel-lr-btn udc">
                 <ButtonLeft/>
             </button>
             <button className="carousel-lr-btn udc" id="carousel-r-btn">

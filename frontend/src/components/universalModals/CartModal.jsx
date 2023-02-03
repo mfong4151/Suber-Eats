@@ -34,14 +34,13 @@ const CartModal = () => {
         for(const cart of Object.values(userCarts))if(cart.cartItems === 0 && restaurantId !== cart.restaurantId ) dispatch(deleteCart(cart.id))
     },[])
 
-    
     return (
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={toggleCartModal}>
               <div className="cart-modal-content">
                 {Object.values(userCarts)?.map((cart, idx)=>
                     <>
-                        { cart.cartItems > 0 && <CartBody cart= {cart}  key={idx} />}
+                        { cart.cartItems > 0 && <CartBody cart={cart} key={idx} />}
                     </>
                 )}
 

@@ -32,18 +32,18 @@
     width:100%;
     display: flex;
     justify-content: space-between;
+    z-index:2;
 }
 
 
 .carousel-lr-btn{
     background-color: white;
-    border-color: var(--color-black);
+    border:2px solid var(--color-grey-shadow);
     border-radius: 5rem;
-    border-width: 10px;
     height:40px;
     width:40px;
     position:absolute;
-
+    z-index: 3;
 }
 
 

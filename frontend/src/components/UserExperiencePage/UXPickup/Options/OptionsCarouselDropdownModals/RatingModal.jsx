@@ -1,11 +1,18 @@
 import React from 'react'
 
-const RatedModal = () => {
+const RatingModal = () => {
+   
+ 
   return (
-    <div>
-      
+    <div className="modal">
+       
     </div>
   )
+
 }
 
-export default RatedModal
+export default RatingModal
+
+
+
+

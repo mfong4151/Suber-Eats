@@ -1,0 +1,37 @@
+
+.options-modal-overlay{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-color: transparent;
+    transition: opacity 0.4s ease-in-out 0s;
+}
+
+.univ-options-body{
+    position: absolute;
+    background-color: var(--color-white);
+    border:1px solid var(--color-grey-shadow);
+}
+
+.sort-modal{
+
+    width:380px;
+    height:140px;
+    z-index: 10;
+}
+
+.price-modal{
+    width:380px;
+    height:140px;
+    z-index: 10;
+}
+
+.price-rating-modal{
+    width:380px;
+    height:60px;
+    z-index: 10;
+}

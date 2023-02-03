@@ -1,48 +1,59 @@
 import React from 'react'
 import ChevronDown from '../SVGs/ChevronDown'
 import '../Pickup.css'
-import SortModal from './OptionsCarouselDropdownModals/SortModal'
-import RatingModal from './OptionsCarouselDropdownModals/RatingModal'
-import PriceRangeModal from './OptionsCarouselDropdownModals/PriceRangeModal'
+import SortOptionsModal from './OptionsCarouselDropdownModals/SortOptionsModal'
 import { useState } from 'react'
+import { sortModalStyles, priceModalStyles, ratingModalStyles } from './OptionsCarouselDropdownModals/modalStyles'
 
 const OptionsDropdowns = () => {
-  const [ sortModal,setSortModal] = useState('')
+  const [ sortModal,setSortModal] = useState(false)
+  const [ priceModal,setPriceModal] = useState(false)
+  const [ ratingModal,setRatingModal] = useState(false)
 
 
-  const limitChildEle = e =>{
-    e.preventDefault();
-    e.stopPropagation()
-  }
-
-  const toggleSortOptions = e =>{
+  const toggleSortOptions =  e =>{
     e.preventDefault()
     e.stopPropagation()
-    setSortModal('sort')
-    console.log(sortModal)
+    setSortModal(prev=> !prev)
+  }
+
+  const togglePriceOptions =  e =>{
+    e.preventDefault()
+    e.stopPropagation()
+    setPriceModal(prev=> !prev)
+
   }
 
 
+  const toggleRatingOptions =  e =>{
+    e.preventDefault()
+    e.stopPropagation()
+    setRatingModal(prev=> !prev)
+  }
+
+  
   return (
     <div className='pickup-btns'>
-      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleSortOptions} value="sort" >
-        <span>
+      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleSortOptions}>
+        <span className='udc' onClick={toggleSortOptions}>
           Sort
         </span>
-        
-        <ChevronDown/>
-
+        <ChevronDown toggleOptions={toggleSortOptions}/>
       </button>
-      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleSortOptions} value="price" >
-        <span>Price Range</span><ChevronDown/>
+
+      <button className="btn-round ux-buttons ux-sort-buttons" onClick={togglePriceOptions} value="price" >
+        <span onClick={togglePriceOptions}>Price Range</span>
+        <ChevronDown toggleOptions={togglePriceOptions}/>
         </button>
-      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleSortOptions} value="rating" >
-        <span>Highest Rated</span><ChevronDown/>
+      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >
+        <span onClick={toggleRatingOptions}>Highest Rated</span>
+        <ChevronDown toggleOptions={toggleRatingOptions}
+        />
       </button>
       {/* <button className="btn-round ux-buttons ux-sort-buttons"><span>From Suber Eats</span><ChevronDown/></button> */}
-      {sortModal && <SortModal/>}
-      {/* {priceRangeModal && <PriceRangeModal/>}
-      {ratedModal && < RatingModal/>} */}
+      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles}/>}
+      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}/>}
+      {ratingModal && <SortOptionsModal sortModal={ratingModal} setSortModal={setRatingModal} styleOptions={ratingModalStyles}/>}
     </div>
   )
 }
