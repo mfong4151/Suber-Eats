@@ -15,13 +15,12 @@
 class User < ApplicationRecord
   has_secure_password
   validates :session_token, presence: true, uniqueness: true 
-  validates :username, length: {minimum:3, maximum:30}, format: { without: URI::MailTo::EMAIL_REGEXP, message: "Can't be an email" }, uniqueness: true 
   validates :email, length: {minimum:3, maximum:255}, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
   validates :password, length: { in: 6..225}, allow_nil: true 
   validates :name , presence:true
   validates :phone_number, presence:true, uniqueness: true
   before_validation :ensure_session_token 
-  after_save :create_loc_from_signup
+  after_commit :create_loc_from_signup
 
   has_many :reviews,
   foreign_key: :user_id,
@@ -77,8 +76,7 @@ class User < ApplicationRecord
     
       elsif credential.count('-') == 2
         user = User.find_by(phone_number: credential )
-      else 
-        user = User.find_by(username: credential )
+      
       end
 
       return user if user && user.authenticate(password)

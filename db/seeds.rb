@@ -19,6 +19,6 @@ EasySeeds.create_easy_seed_data(class_names)
 
 # #Used to test delete, update methods
 # tables, table_strings = EasySeeds.tables_from_csvs()
-# EasySeeds.single_seeder(tables[-4], Cart, table_strings[-4])
+# EasySeeds.single_seeder(tables[0], User, table_strings[0])
 # EasySeeds.single_seeder(tables[-5], CartItem, table_strings[-5])
 

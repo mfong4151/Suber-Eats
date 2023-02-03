@@ -57,7 +57,6 @@ const SignUpEntry = () => {
 
                 <form className='login-form'> 
                     
-                    <input className='form-contents sign-up-form-spacing' type='text' name='location' placeholder='Enter your username' onChange={e => setUsername(e.target.value)} required/>
                     <input className='form-contents sign-up-form-spacing' type='text' name='location' placeholder='Enter your email' onChange={e => setEmail(e.target.value)} required/> 
                     <input className='form-contents sign-up-form-spacing' type='text' name='location' placeholder='Enter your phone number' onChange={e => setPhoneNumber(e.target.value)} required/> 
                     <input className='form-contents sign-up-form-spacing' type='text' name='location' placeholder='Enter your name' onChange={e => setName(e.target.value)} required/> 

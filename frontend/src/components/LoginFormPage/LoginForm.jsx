@@ -19,17 +19,17 @@ const LoginForm = () => {
     if (sessionUser) return <Redirect to='/deliverypickup' />
     
 
-    const handle_phone_number_errors = phone_number => {
-        // let region, phone_number;
-        // region, phone_number = credential.split(' ')
-   
+    const handlePhoneNumberErrors = phoneNumber => {
+        // let region, phoneNumber;
+        // region, phoneNumber = credential.split(' ')
+        
         // Edit this if we ever add other countries
         //   if region != 1
         //     render json:{ errors:['Demo does not support regions outside of the United States']}, status: :unauthorized
         //     return
-        //   # elsif region == 1 && phone_number.length != 12
-        let splitNumber = phone_number.split('-');
-        if (splitNumber[0].length !== 3 || splitNumber[1].length !== 3 || splitNumber[2].length !== 4)return false;
+        //   # elsif region == 1 && phoneNumber.length != 12
+        let splitNumber = phoneNumber.split('-');
+        if (splitNumber[0].length === 3 && splitNumber[1].length === 3 && splitNumber[2].length === 4)return false;
         return true;
 
     }
@@ -59,16 +59,14 @@ const LoginForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         setErrors([]);
-
         if (credential === ''){
             setErrors(['Please enter a phone number or email'])
-
+            
         } else if ((credential.match(/-/g)|| []).length === 2){
-
-            if (handle_phone_number_errors) setErrors(['Please insert a valid phone number'])
-                        
+        
+            if (handlePhoneNumberErrors(credential)) setErrors(['Please insert a valid phone number'])
         } else if (handle_email_errors(credential)) setErrors(['Please provide a valid email address'])
-         else if (errors.length === 0) setValidCredential(true)
+        if (errors.length === 0) setValidCredential(true)
         
     } 
       
@@ -78,7 +76,7 @@ const LoginForm = () => {
         setErrors([]);
 
         return dispatch(login({
-            credential:'Demo-lition', 
+            credential:'demo@user.io', 
             password:'password'}))
             .catch(async res => {
                 let data; 
