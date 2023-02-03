@@ -27,7 +27,6 @@ const CartModal = () => {
     //but I feel that a side effect of this is that we're going to have compounded issues
     useEffect(()=>{
         dispatch(fetchCart(sessionUserId))
-        dispatch(fetchCartItems())
     },[dispatch])
     
 

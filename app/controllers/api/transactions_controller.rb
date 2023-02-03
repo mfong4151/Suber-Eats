@@ -1,9 +1,18 @@
 class Api::TransactionsController < ApplicationController
 
-    def show
-        @transactions = User.find_by(id: params[:id]).transactions.includes(:selling_restaurant)
-
+    def index
+        @transactions = User.find_by(id: current_user.id).transactions.includes(:selling_restaurant)
         if @transactions
+            render :index
+            return
+        end
+    end
+
+
+    def show
+        @transaction = User.find_by(id: params[:id]).transactions.includes(:selling_restaurant)
+
+        if @transaction
             render :show
             return
         end
@@ -24,7 +33,7 @@ class Api::TransactionsController < ApplicationController
 
         @transaction = Transaction.new(transaction_params)
 
-        if @transaction.save!
+        if @transaction.save
             render :show
             return
         else

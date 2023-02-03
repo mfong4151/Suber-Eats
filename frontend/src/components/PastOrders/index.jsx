@@ -14,8 +14,7 @@ const PastOrders = () => {
   const sessionUserId = useSelector(state=> state.session.user.id)
 
   useEffect(() => {
-    dispatch(fetchTransactions(sessionUserId))
-
+    dispatch(fetchTransactions())
   }, [])
 
   return (

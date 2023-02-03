@@ -2,7 +2,14 @@ import csrfFetch from './csrf';
 
 
 
+const RECEIVE_TRANSACTIONS = 'transaction/receiveTransactions';
 const RECEIVE_TRANSACTION = 'transaction/receiveTransaction';
+const receiveTransactions = transactions =>(
+    {
+        type: RECEIVE_TRANSACTIONS,
+        payload: transactions
+    }
+)
 
 
 const receiveTransaction = transaction =>(
@@ -20,12 +27,12 @@ export const getTransactions = state => {
 
 
 
-export const fetchTransactions = userId => async dispatch =>{
+export const fetchTransactions = () => async dispatch =>{
 
-    const res = await csrfFetch(`/api/transactions/${userId}`);
+    const res = await csrfFetch(`/api/transactions/`);
     if(res.ok){
         const data = await res.json();
-        dispatch(receiveTransaction(data))
+        dispatch(receiveTransactions(data))
     }
 }
 
@@ -69,9 +76,10 @@ export const updateTransaction = (transaction, transactionId) => async dispatch 
 const transactionsReducer = (state = {}, action) =>{
 
     switch(action.type){
-
-        case RECEIVE_TRANSACTION:
+        case RECEIVE_TRANSACTIONS:
             return{...state, ...action.payload.transaction}
+        case RECEIVE_TRANSACTIONS:
+            return{...state, [action.payload.transaction.id]: action.payload.transaction}
 
 
         default:
