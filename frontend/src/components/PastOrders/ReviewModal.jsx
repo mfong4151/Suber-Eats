@@ -36,13 +36,13 @@ const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransac
     )
       
 
-
     const handleSubmitReview = e =>{
         e.preventDefault();
         e.stopPropagation();
         if (reviewBody){
           dispatch(updateTransaction(updatedTransaction(), pastTransaction.id))
-          dispatch(createReview(createdReview())).then(()=> goToRest()
+          .then(dispatch(createReview(createdReview())))
+          .then(()=> goToRest()
           )
 
         }

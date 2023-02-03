@@ -5,5 +5,4 @@ json.transaction do
             json.restaurant_id @transaction.selling_restaurant.id
             json.image_url @transaction.selling_restaurant.image.url
         end
-    end
 end

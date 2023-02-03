@@ -23,6 +23,7 @@ class Api::TransactionsController < ApplicationController
       
         @transaction = Transaction.find_by(id: params[:id])
         if @transaction.update(transaction_params)
+            render :show
         else
             render json: @transaction.errors.full_messages, status: 422
         end
