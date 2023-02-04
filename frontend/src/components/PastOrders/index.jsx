@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchTransactions, getTransactions } from '../../store/transaction'
 import { useEffect } from 'react'
 import Transaction from './Transaction'
-import { useState } from 'react'
 import './PastOrders.css'
+import { getSessionUserId } from '../../store/session'
 
 const PastOrders = () => {
   const dispatch = useDispatch()
   const transactions = useSelector(getTransactions)
-  const sessionUserId = useSelector(state=> state.session.user.id)
+  const sessionUserId = useSelector(getSessionUserId)
 
   useEffect(() => {
     dispatch(fetchTransactions())
