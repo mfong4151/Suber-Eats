@@ -32,8 +32,9 @@ class Restaurant < ApplicationRecord
         *[User.find_by_id(userId).location.latitude, User.find_by_id(userId).location.longitude] )
     end
   
-    def self.get_dist_from_user(current_user, restaurant)
-     (1000 *Math.sqrt((current_user.location.longitude - restaurant.longitude) ** 2 + (current_user.location.latitude - restaurant.latitude) ** 2)).to_i
+    def self.get_dist_from_user(user_loc, restaurant)
+      
+     (1000 *Math.sqrt((user_loc.longitude - restaurant.longitude) ** 2 + (user_loc.latitude - restaurant.latitude) ** 2)).to_i
     end
 
     def avg_dish_price

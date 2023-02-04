@@ -5,7 +5,7 @@ import SortOptionsModal from './OptionsCarouselDropdownModals/SortOptionsModal'
 import { useState } from 'react'
 import { sortModalStyles, priceModalStyles, ratingModalStyles } from './OptionsCarouselDropdownModals/modalStyles'
 
-const OptionsDropdowns = () => {
+const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
   const [ sortModal,setSortModal] = useState(false)
   const [ priceModal,setPriceModal] = useState(false)
   const [ ratingModal,setRatingModal] = useState(false)
@@ -23,7 +23,6 @@ const OptionsDropdowns = () => {
     setPriceModal(prev=> !prev)
 
   }
-
 
   const toggleRatingOptions =  e =>{
     e.preventDefault()
@@ -46,8 +45,8 @@ const OptionsDropdowns = () => {
         <ChevronDown toggleOptions={togglePriceOptions}/>
       </button>
 
-      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles}/>}
-      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}/>}
+      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
+      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
 
       
       {/* below commented out code is in the pipeline */}

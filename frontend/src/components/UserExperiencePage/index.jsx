@@ -15,12 +15,12 @@ import { fetchLocations } from '../../store/location';
 
 const UserExperiencePage = () => {
     const sessionUser = useSelector(state=>state.session.user);
+
     const dispatch = useDispatch();
 
     useEffect(()=>{
 
       dispatch(fetchLocations())
-      dispatch(fetchRestaurants())
       dispatch(fetchCart(sessionUser.id))
      
     },[dispatch])   
