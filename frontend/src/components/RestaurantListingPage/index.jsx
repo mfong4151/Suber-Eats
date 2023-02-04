@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurant, getRestaurant, getRestaurantCoords } from '../../store/restaurant';
 import { fetchMenu } from '../../store/menu';
 import MenuListings from './MenuListings';
-import MapHeader from './MapHeader';
 import Reviews from './Reviews';
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
@@ -26,7 +25,6 @@ const RestaurantListing = () => {
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
   
-
 
   const reviewSection = useRef();
   const cartFact = () =>(
@@ -51,13 +49,12 @@ const RestaurantListing = () => {
     if(state && state.from && reviewSection.current && firstReviews){
       setFirstReviews(false)
       reviewSection.current.scrollIntoView({behavior:'smooth'})
-    }},500
+    }},1000
   )
   
   return (
     <>
       <UXHeader/>
-      <MapHeader/>
       <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
       <RestaurantInfo restaurant={restaurant}/>
       <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
