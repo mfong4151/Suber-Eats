@@ -136,6 +136,7 @@
 
 
 .black-button{
+    color: var(--color-white);
     background-color: var(--color-black);
 }
 
@@ -285,7 +286,7 @@ h2{
 
 .active-modal {
     overflow:hidden;
-    overflow-y:scroll;
+    overflow-y:auto;
 }
 
 

@@ -44,24 +44,23 @@ const OptionsDropdowns = () => {
       <button className="btn-round ux-buttons ux-sort-buttons" onClick={togglePriceOptions} value="price" >
         <span onClick={togglePriceOptions}>Price Range</span>
         <ChevronDown toggleOptions={togglePriceOptions}/>
-        </button>
-      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >
-        <span onClick={toggleRatingOptions}>Highest Rated</span>
-        <ChevronDown toggleOptions={toggleRatingOptions}
-        />
       </button>
-      {/* <button className="btn-round ux-buttons ux-sort-buttons"><span>From Suber Eats</span><ChevronDown/></button> */}
+
       {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles}/>}
       {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}/>}
-      {ratingModal && <SortOptionsModal sortModal={ratingModal} setSortModal={setRatingModal} styleOptions={ratingModalStyles}/>}
+
+      
+      {/* below commented out code is in the pipeline */}
+      {/* <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >
+        <span onClick={toggleRatingOptions}>Rating</span>
+        <ChevronDown toggleOptions={toggleRatingOptions}
+        />
+      </button> */}
+      {/* <button className="btn-round ux-buttons ux-sort-buttons"><span>From Suber Eats</span><ChevronDown/></button> */}
+     
+      {/* {ratingModal && <SortOptionsModal sortModal={ratingModal} setSortModal={setRatingModal} styleOptions={ratingModalStyles}/>} */}
     </div>
   )
 }
 
 export default OptionsDropdowns
-
-{/* <select name='deliver-now'>
-  <option value="deliver-now">Deliver now</option>
-  <option value="schedule-for-later">Schedule for later</option>
-</select>  */}
-

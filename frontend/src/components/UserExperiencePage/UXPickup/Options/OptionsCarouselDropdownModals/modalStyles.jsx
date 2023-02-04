@@ -17,7 +17,7 @@ export const priceModalStyles = () =>(
         activeModal:'active-modal',
         modal: 'modal',
         modalOverlay:'options-modal-overlay',
-        modalMenuContent:'univ-options-body price-rating-modal'
+        modalMenuContent:'univ-options-body price-modal price-rating-modal udc'
     }
 )
 export const ratingModalStyles = () =>(
@@ -26,6 +26,6 @@ export const ratingModalStyles = () =>(
         activeModal:'active-modal',
         modal: 'modal',
         modalOverlay:'options-modal-overlay',
-        modalMenuContent:'univ-options-body price-rating-modal'
+        modalMenuContent:'univ-options-body price-rating-modal rating-modal'
     }
 )

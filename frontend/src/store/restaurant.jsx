@@ -1,4 +1,5 @@
 import csrfFetch, {storeCSRFToken} from './csrf';
+import Heap from 'heap-js';
 
 const RECEIVE_RESTAURANTS = 'restaurant/receiveRestaurants';
 const RECEIVE_RESTAURANT = 'restaurant/receiveRestaurant';
@@ -17,6 +18,60 @@ export const receiveRestaurant = restaurant =>(
         payload: restaurant
     }   
 )
+
+// {
+//      cuisineType:''
+//     nearYou:false,
+//     topRated:false,
+//     rating:false,
+//     priceRange:0,
+//     ,
+//   }
+
+const scoreRestaurant = (filterOptions, rest) =>{
+    const {nearYou, topRated, priceRange, rating, cuisineType}  = filterOptions
+    let score = 0;
+
+    if (cuisineType && rest.cuisineType != cuisineType) {
+        rest['score'] = -1
+        return rest;
+    }
+
+    switch(priceRange){
+        case 1 && rest.price > 7:
+            rest['score'] = -1
+            return rest;
+        case 2 && (rest.price < 7 || rest.price > 13):
+            rest['score'] = -1
+            return rest;
+        case 3 && (rest.price < 13):
+            rest['score'] = -1
+            return rest;
+    }
+
+
+    if(nearYou) score += rest.distance
+    if(topRated) score += rest.rating
+    rest['score'] = score
+    return score;
+    
+
+
+    
+}
+//This is a little bit extra, and theres no reason to use a heap persay, other JS librarys will do the job
+export const getRestaurantHeap = filterOptions => state =>{
+    if (!state.restaurants) return [];
+
+    const maxHeap = new Heap((a, b) => a.score - b.score)    
+    maxHeap.init([])
+    for(const rest of Object.values(state.restaurants)) 
+        // maxHeap.push(scoreRestaurant(rest))
+    
+
+    return(maxHeap.toArray())
+    
+}
 
 export const getRestaurants = state => {
     if (!state.restaurants) return [];

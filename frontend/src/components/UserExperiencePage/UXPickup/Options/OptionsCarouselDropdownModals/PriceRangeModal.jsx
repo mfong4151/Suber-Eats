@@ -4,11 +4,28 @@ const PriceRange = () => {
    
   
 
+   
   return (
-    <div className="modal">
-       
+    <div className="sort-modal-radio">
+      <button className="btn-round-two grey-button sort-modal-btn udc">
+        <span>$</span>
+      </button>
+      <button className="btn-round-two grey-button sort-modal-btn udc">
+          <span>$$</span>
+
+      </button>
+      <button className="btn-round-two grey-button sort-modal-btn udc">
+        <span>$$$</span>
+
+      </button>
+      <button className="btn-round-two grey-button sort-modal-btn udc">
+      <span>$$$$</span>
+
+      </button>
+
     </div>
   )
+
 
 }
 

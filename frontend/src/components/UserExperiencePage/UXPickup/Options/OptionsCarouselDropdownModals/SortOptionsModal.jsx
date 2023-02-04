@@ -1,7 +1,10 @@
 import React from 'react'
 import './OptionsModals.css'
+import SortModal from './SortModal'
+import RatingModal from './RatingModal'
+import PriceRangeModal from './PriceRangeModal'
 
-const SortModal = ({sortModal, setSortModal, styleOptions}) => {
+const SortOptionsModal = ({sortModal, setSortModal, styleOptions}) => {
   const {filterType,modal, activeModal,  modalOverlay, modalMenuContent} = styleOptions();
   
   if (sortModal) document.body.classList.add(activeModal)
@@ -16,9 +19,9 @@ const SortModal = ({sortModal, setSortModal, styleOptions}) => {
     <div className={modal}>
         <div className={modalOverlay} onClick={()=>setSortModal(!sortModal)}>
           <div className={modalMenuContent}>
-              {filterType === 'sort' && true}             
-              {filterType === 'price' && true}            
-              {filterType === 'rating' && true}
+              {filterType === 'sort' && <SortModal/>}             
+              {filterType === 'price' && <PriceRangeModal/>}            
+              {/* {filterType === 'rating' && <RatingModal/>} */}
           </div>
         </div>
     </div>
@@ -26,4 +29,4 @@ const SortModal = ({sortModal, setSortModal, styleOptions}) => {
 
 }
 
-export default SortModal;
+export default SortOptionsModal;

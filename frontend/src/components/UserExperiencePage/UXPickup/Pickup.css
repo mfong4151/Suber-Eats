@@ -6,7 +6,7 @@
 }
 
 #options-dimensions{
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     height:1260px;
     width: 45%;
@@ -32,7 +32,6 @@
     width:100%;
     display: flex;
     justify-content: space-between;
-    z-index:2;
 }
 
 
@@ -42,8 +41,7 @@
     border-radius: 5rem;
     height:40px;
     width:40px;
-    position:absolute;
-    z-index: 3;
+    position:relative;
 }
 
 

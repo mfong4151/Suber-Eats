@@ -4,15 +4,14 @@
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "main": "index.js",
   "engines": {
-    "node":"16.x"
+    "node": "16.x"
   },
-
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install --prefix frontend && npm run build --prefix frontend" 
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
@@ -24,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/mfong4151/Suber-Eats/issues"
   },
-  "homepage": "https://github.com/mfong4151/Suber-Eats#readme"
+  "homepage": "https://github.com/mfong4151/Suber-Eats#readme",
+  "dependencies": {
+    "heap-js": "^2.2.0"
+  }
 }
