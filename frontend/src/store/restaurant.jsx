@@ -33,6 +33,16 @@ export const getRestaurant = restaurantId => state => {
      return state.restaurants[restaurantId]
 }
 
+export const getRestaurantCoords = restaurantId => state => {
+    const res = {}
+    if (!state.restaurants[restaurantId]) return res;
+    return (
+        {
+        lng:state.restaurants[restaurantId].longitude,
+        lat: state.restaurants[restaurantId].latitude
+         }
+    ) 
+}
 
 //its important to note here that a rammification of how this fetch is done is that we will not have a rerender if the user clicks in an area where no restaurants exist
 

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState} from 'react';
 import UXHeader from '../UXHeader';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRestaurant, getRestaurant } from '../../store/restaurant';
+import { fetchRestaurant, getRestaurant, getRestaurantCoords } from '../../store/restaurant';
 import { fetchMenu } from '../../store/menu';
 import MenuListings from './MenuListings';
 import MapHeader from './MapHeader';
@@ -22,12 +22,9 @@ const RestaurantListing = () => {
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
+  const coords = useSelector(getRestaurantCoords(restaurantId))
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
-  const coords = {
-      lng: restaurant.longitude,
-      lat: restaurant.latitude
-    }
   
 
 
