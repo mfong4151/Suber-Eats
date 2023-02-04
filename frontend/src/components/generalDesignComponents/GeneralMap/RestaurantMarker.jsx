@@ -1,11 +1,10 @@
 import React from 'react'
 import { Marker} from "@react-google-maps/api";
-import {useHistory } from 'react-router-dom'
 
 // https://react-google-maps-api-docs.netlify.app/#marker
-const RestaurantMarker = ({checkoutCoords}) => {
+const RestaurantMarker = ({coords}) => {
     return (
-        <Marker position = {checkoutCoords}
+        <Marker position = {coords}
         animation={2}
         // title={textDisplay}
         />

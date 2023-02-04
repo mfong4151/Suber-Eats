@@ -21,7 +21,7 @@ const UserExperiencePage = () => {
 
       dispatch(fetchLocations())
       dispatch(fetchRestaurants())
-      dispatch(fetchCart(sessionUser.id))
+      if(sessionUser)dispatch(fetchCart(sessionUser.id)) //conditional is needed her because this will crash before redirect without it
      
     },[dispatch])   
 

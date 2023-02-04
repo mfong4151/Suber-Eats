@@ -7,8 +7,7 @@ import DeliveryEstimate from './DeliveryEstimate'
 import YourItems from './YourItems'
 import Payment from './Payment'
 import AddOnWidgets from './AddOnWidgets.jsx'
-import CheckoutMap from './CheckoutMap'
-
+import GeneralMap from '../../generalDesignComponents/GeneralMap/index.jsx'
 const CheckoutLeft = ({checkoutCart}) => {
 
   let street, city, state, country = checkoutCart.address.split(' ')
@@ -21,7 +20,7 @@ const CheckoutLeft = ({checkoutCart}) => {
               <span>Delivery</span>
           </button>
 
-          <CheckoutMap checkoutCoords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}}/>
+          <GeneralMap coords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}} mapStyle={"checkout-container"}/>
 
           <div className="delivery-options mp">
 

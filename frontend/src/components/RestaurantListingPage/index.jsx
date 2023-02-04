@@ -14,6 +14,7 @@ import { getSessionUserId } from '../../store/session';
 import { createCart } from '../../store/cart';
 import RestaurantInfo from './RestaurantInfo';
 import { useLocation } from 'react-router-dom';
+import GeneralMap from '../generalDesignComponents/GeneralMap';
 
 const RestaurantListing = () => {
   const [firstReviews, setFirstReviews] = useState(true)
@@ -23,9 +24,14 @@ const RestaurantListing = () => {
   const restaurant = useSelector(getRestaurant(restaurantId));
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
+  const coords = {
+      lng: restaurant.longitude,
+      lat: restaurant.latitude
+    }
+  
+
 
   const reviewSection = useRef();
-  let first = true
   const cartFact = () =>(
     {
         userId:sessionUserId,
@@ -44,20 +50,19 @@ const RestaurantListing = () => {
 
   },[dispatch, restaurantId])
 
-  if(state && state.from && reviewSection.current && firstReviews){
-    setFirstReviews(false)
-    reviewSection.current.scrollIntoView({behavior:'smooth'})
-  } 
+  setTimeout(()=> {
+    if(state && state.from && reviewSection.current && firstReviews){
+      setFirstReviews(false)
+      reviewSection.current.scrollIntoView({behavior:'smooth'})
+    }},500
+  )
   
   return (
     <>
       <UXHeader/>
       <MapHeader/>
+      <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
       <RestaurantInfo restaurant={restaurant}/>
-      <div className='restaurant-buttons'>
-          <div></div>
-          <div></div>
-      </div>
       <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
       <div id="review-section" ref={reviewSection}>
         <Reviews sessionUserId={sessionUserId}/>
