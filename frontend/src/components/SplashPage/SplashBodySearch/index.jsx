@@ -12,7 +12,7 @@ const SplashBodySearch = () => {
           <div id='splash-main' className ="univ-padding">
               <h1 id='order-food-banner'>Order food to Your Door</h1>
 
-              <div id='search-options'>
+              {/* <div id='search-options'>
                 <form id='search-form'>  
                   <input type='text' name='location' placeholder='Enter delivery address'/> 
                  
@@ -24,10 +24,10 @@ const SplashBodySearch = () => {
                   </select> 
                 </div>
 
-                <button className="button-sq" id="find-food" type="submit" form="search-form">Find Food</button>
-              </div>
+                <Link to={'/login'} className="button-sq" id="find-food" type="submit" form="search-form">Find Food</Link>
+              </div> */}
 
-            <p><Link to={'/login'} id="sign-in">Sign In</Link> for your recent addresses</p>
+            <p><Link to={'/login'} id="sign-in">Sign in</Link> for your recent addresses</p>
           </div>
     </div>
   )
