@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import Transaction from './Transaction'
 import './PastOrders.css'
 import { getSessionUserId } from '../../store/session'
+import Footer from '../generalDesignComponents/Footer'
 
 const PastOrders = () => {
   const dispatch = useDispatch()
@@ -23,10 +24,11 @@ const PastOrders = () => {
       <div className="udc-left past-orders-holder">
         <h1 className='univ-padding orders-header'>Past Orders</h1>
       </div>
-       {Object.values(transactions).map((transaction,idx) => (
-      <Transaction transaction={transaction} sessionUserId={sessionUserId} key={idx}
-        />))}
-      
+       {Object.values(transactions).reverse().map((transaction,idx) => (
+        <Transaction 
+          transaction={transaction} sessionUserId={sessionUserId} key={idx}
+          />))}
+      <Footer/>
       <BundleModals/>
     </>
   )

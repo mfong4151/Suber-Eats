@@ -61,6 +61,10 @@ p{
     justify-content: space-between;
 }
 
+
+#splash-bottom{
+    padding-bottom: 5rem;
+}
 form{
     background-color: #EEEEEE;
 }
@@ -90,6 +94,11 @@ input{
     background-color: var(--color-grey);
     color: var(--color-black);
 }
+
+#sign-in{
+    text-decoration: underline;
+}
+
 #sign-up{
     background-color: var(--color-black);
     color: var(--color-white)

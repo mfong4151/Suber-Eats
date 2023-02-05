@@ -21,7 +21,7 @@ const SplashPage= () => {
         <SplashOptions />
         <SplashCities />
         <SplashCountries/>
-        <SplashSubFooter/>
+        {/* <SplashSubFooter/> */}
         <Footer/>
     </>
   )

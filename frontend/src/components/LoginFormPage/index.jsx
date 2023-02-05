@@ -7,6 +7,7 @@ import { UsernameContext } from './UsernameContext.jsx';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchUsers, getUsers } from '../../store/user.js';
 import { aggregateUserCredentials } from './utils/compileUserSet.jsx';
+import Footer from '../generalDesignComponents/Footer/index.jsx';
 
 const LoginFormPage = () => {
 
@@ -28,7 +29,6 @@ const LoginFormPage = () => {
                 {!validCredential && <LoginForm/>}
                 {validCredential && <LoginSignupHandler/>}
             </UsernameContext.Provider>
-
         </>
     )
     

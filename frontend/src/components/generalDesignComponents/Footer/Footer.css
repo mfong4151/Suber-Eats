@@ -1,0 +1,45 @@
+
+#sub-footer{
+    padding-top:5rem;
+    padding-bottom:5rem;
+}
+
+.footer-divider{
+    border: none;
+    height: 2px;
+    background: var(--color-grey);
+}
+
+#footer-bottom{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:150px;
+    padding-right: 3rem;
+}
+
+
+#footer-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-text{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:50px
+}
+
+.footer-text:hover{
+    text-decoration-line: underline;
+}
+
+.subfooter-holder{
+    padding-top:5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.github-linkedin{
+}

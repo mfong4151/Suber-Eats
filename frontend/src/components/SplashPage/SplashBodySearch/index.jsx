@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import splashRamen from './assets/splash-ramen.png'
 import '../SplashPage.css'
 
@@ -27,7 +27,7 @@ const SplashBodySearch = () => {
                 <Link to={'/login'} className="button-sq" id="find-food" type="submit" form="search-form">Find Food</Link>
               </div> */}
 
-            <p><Link to={'/login'} id="sign-in">Sign in</Link> for your recent addresses</p>
+            <p><NavLink to={'/login'} id="sign-in">Sign in</NavLink> for your recent addresses</p>
           </div>
     </div>
   )
