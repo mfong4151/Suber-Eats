@@ -4,13 +4,11 @@ import SearchIcon from './UserExperiencePage/UXPickup/SVGs/SearchIcon';
 import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { UXContext } from './UXContext.jsx';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const UXHeader = () => {
-  //temporary place holder until we iron out cart dynamics
   const {toggleMenuModal, toggleLocationModal, toggleCartModal} = useContext(UXContext);
   const history = useHistory()
-
   return (
     <header className="splash-header univ-padding">
 
@@ -25,11 +23,15 @@ const UXHeader = () => {
         </div>
 
         {/* <button className="btn-round ux-buttons" id="delivery-pickup">Preset Locations</button> */}
-        <button className='btn-round ux-buttons' onClick={toggleLocationModal}><LocationIcon/>
+        {/* {location.pathname=== '/deliverypickup' && <button className='btn-round ux-buttons' onClick={toggleLocationModal}><LocationIcon/>
+              <span className="map-location-text">{' How to use map interface'}
+              </span>
+        </button>} */}
+
+          <button className='btn-round ux-buttons' onClick={toggleLocationModal}><LocationIcon/>
               <span className="map-location-text">{' How to use map interface'}
               </span>
         </button>
-
         <form className="form-bg">
           <SearchIcon/>
           <input  type='text' name='location' placeholder='What are you craving?'/> 

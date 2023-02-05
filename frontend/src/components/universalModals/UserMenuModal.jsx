@@ -35,12 +35,11 @@ const UserMenuModal = () => {
               <div className="modal-item-univ modal-menu-button"><WalletIcon/>Contact me</div>
               <div className="modal-item-univ modal-menu-button">
                 <img src={linkedin} className='github-linkedin'/>
-                <a href="https://www.linkedin.com/in/mfong415/" target="_blank" className='a-link-spacing'>My Linkedin</a>
+                <a href="https://www.linkedin.com/in/mfong415/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My Linkedin</a>
               </div>
               <div className="modal-item-univ modal-menu-button">
                 <img src={gitHubBlack} className='github-linkedin'/>
-                
-                <a href="https://www.linkedin.com/in/mfong415/" target="_blank" className='a-link-spacing'>My github</a>
+                <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My github</a>
               </div>
               
               <div className="modal-item-univ modal-menu-button"><HelpIcon/>My personal site</div>

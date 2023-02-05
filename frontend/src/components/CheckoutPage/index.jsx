@@ -16,7 +16,6 @@ const CheckoutPage = () => {
         const {cartId} = useParams()
         const sessionUserId = useSelector(getSessionUserId)
         const checkoutCart = useSelector(getCart(cartId))
-        const checkoutItems = useSelector(getCartItems)
         const dispatch = useDispatch();
         
         useEffect(()=>{
