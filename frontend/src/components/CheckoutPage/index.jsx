@@ -10,6 +10,7 @@ import { fetchCart, getCart } from '../../store/cart'
 import { useParams } from 'react-router-dom'
 import { fetchCartItems, getCartItems } from '../../store/cartItems'
 import { Redirect } from 'react-router-dom'
+import Footer from '../generalDesignComponents/Footer'
 
 const CheckoutPage = () => {
         const {menuModal} = useContext(UXContext)
@@ -34,6 +35,7 @@ const CheckoutPage = () => {
 
             </div>
             {menuModal && <UserMenuModal/>}
+            <Footer/>
           </div>
       )
 }

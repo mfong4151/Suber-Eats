@@ -44,7 +44,7 @@ const SplashOptions = () => {
                     <img className="listings-image" src={typing} alt="typing-splash"/>
                 </div>
                 <div className="listings-cont">
-                    <h3 className="listings-header">Deliver with Uber Eats</h3>
+                    <h3 className="listings-header">Deliver with Suber Eats</h3>
                     <div>
                         <NavLink to='/login'>
                             <span className="listings-text">Sign up to deliver</span>

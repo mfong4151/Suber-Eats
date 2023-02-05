@@ -14,6 +14,7 @@ import { createCart } from '../../store/cart';
 import RestaurantInfo from './RestaurantInfo';
 import { useLocation } from 'react-router-dom';
 import GeneralMap from '../generalDesignComponents/GeneralMap';
+import Footer from '../generalDesignComponents/Footer';
 
 const RestaurantListing = () => {
   const [firstReviews, setFirstReviews] = useState(true)
@@ -61,6 +62,7 @@ const RestaurantListing = () => {
       <div id="review-section" ref={reviewSection}>
         <Reviews sessionUserId={sessionUserId}/>
       </div>
+      <Footer/>
       <BundleModals/>      
     </>
   )
