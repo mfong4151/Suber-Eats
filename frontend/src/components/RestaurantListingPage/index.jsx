@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import UXHeader from '../UXHeader';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRestaurant, getRestaurant } from '../../store/restaurant';
+import { fetchRestaurant, getRestaurant, getRestaurantCoords } from '../../store/restaurant';
 import { fetchMenu } from '../../store/menu';
 import MenuListings from './MenuListings';
-import MapHeader from './MapHeader';
 import Reviews from './Reviews';
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
@@ -13,23 +12,27 @@ import { fetchCart, getCartsRestIdKeys } from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
 import { createCart } from '../../store/cart';
 import RestaurantInfo from './RestaurantInfo';
+import { useLocation } from 'react-router-dom';
+import GeneralMap from '../generalDesignComponents/GeneralMap';
 
 const RestaurantListing = () => {
+  const [firstReviews, setFirstReviews] = useState(true)
   const sessionUserId = useSelector(getSessionUserId)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
+  const coords = useSelector(getRestaurantCoords(restaurantId))
   const usersCarts = useSelector(getCartsRestIdKeys)
+  const {state} = useLocation()
+  
+
+  const reviewSection = useRef();
   const cartFact = () =>(
     {
         userId:sessionUserId,
         restaurantId: restaurantId
     }
 )
-
-    // unfortunately this seems to be the most consistent way of getting 
-
-  //we need to somehow get the cartItems here, so we need a useSelector to listen in on changes to carts
 
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
@@ -39,23 +42,25 @@ const RestaurantListing = () => {
   useEffect(()=>{
     dispatch(createCart(cartFact()))
     .then(dispatch(fetchCart(sessionUserId)))
-    
-  },[dispatch, restaurantId])
-  
 
+  },[dispatch, restaurantId])
+
+  setTimeout(()=> {
+    if(state && state.from && reviewSection.current && firstReviews){
+      setFirstReviews(false)
+      reviewSection.current.scrollIntoView({behavior:'smooth'})
+    }},1000
+  )
+  
   return (
     <>
       <UXHeader/>
-      <MapHeader/>
+      <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
       <RestaurantInfo restaurant={restaurant}/>
-      <div className='restaurant-buttons'>
-          <div></div>
-          <div></div>
-      </div>
       <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
-      <a id="review-section">
+      <div id="review-section" ref={reviewSection}>
         <Reviews sessionUserId={sessionUserId}/>
-      </a>
+      </div>
       <BundleModals/>      
     </>
   )

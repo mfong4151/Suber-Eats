@@ -1,5 +1,5 @@
 // import SignupFormPage from "./components/SignupFormPage";
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Route, Switch} from 'react-router-dom'
 import SplashPage from "./components/SplashPage"
 import LoginFormPage from "./components/LoginFormPage";

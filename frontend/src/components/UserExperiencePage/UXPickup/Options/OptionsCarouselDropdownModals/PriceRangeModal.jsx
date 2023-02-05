@@ -5,17 +5,13 @@ const PriceRange = ({filterOptions, setFilterOptions}) => {
 
   const handleOnClick = e =>{
     e.preventDefault()
+    e.stopPropagation()
     const value = Number(e.target.value)
     setActivePrice(value)
     const newFilterOptions = {...filterOptions}
     newFilterOptions['priceRange'] = value
     setFilterOptions(newFilterOptions)
   }
-  
-  useEffect(() => {
-    
-  
-  }, [activePrice])
   
    
   return (

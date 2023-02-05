@@ -66,7 +66,7 @@ export const getRestaurantHeap = filterOptions => state =>{
     const maxHeap = new Heap((a, b) => a.score - b.score)    
     maxHeap.init([])
     for(const rest of Object.values(state.restaurants)) 
-        // maxHeap.push(scoreRestaurant(rest))
+        maxHeap.push(scoreRestaurant(filterOptions, rest))
     
 
     return(maxHeap.toArray())
@@ -88,6 +88,16 @@ export const getRestaurant = restaurantId => state => {
      return state.restaurants[restaurantId]
 }
 
+export const getRestaurantCoords = restaurantId => state => {
+    const res = {}
+    if (!state.restaurants[restaurantId]) return res;
+    return (
+        {
+        lng:state.restaurants[restaurantId].longitude,
+        lat: state.restaurants[restaurantId].latitude
+         }
+    ) 
+}
 
 //its important to note here that a rammification of how this fetch is done is that we will not have a rerender if the user clicks in an area where no restaurants exist
 

@@ -16,7 +16,6 @@ export const aggregateUserCredentials = users => {
 
 
 export const checkExistingUser = (credential, allUserCredentials) =>{
-    // console.log(credential, allUserCredentials)
     if(allUserCredentials.has(credential)) return true;
     return false;
 }

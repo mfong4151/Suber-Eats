@@ -33,8 +33,8 @@ export const photoLoader = ()=>{
 }
 
 
-export const titleLoader =( ) => {
-    return [
+export const titleLoader =( ) => (
+    [
         'Ice Cream + Frozen',
         'Comfort Food',
         'Coffee and Tea',
@@ -50,8 +50,27 @@ export const titleLoader =( ) => {
         'Vietnamese',
         'Healthy'
     ]
+)
 
-}
+export const mapCategories = ()=>(
+    {
+        'american': [],
+        'bakery': [],
+        'bar': [],
+        'boba': [],
+        'chinese': [],
+        'comfort food': [],
+        'diner': [],
+        'healthy': [],
+        'ice cream and frozen': [],
+        'italian': [],
+        'japanese': [],
+        'mexican': [],
+        'pizza': [],
+        'thai': [],
+        'vietnamese': []
+    }
+)
 
 export const carouselLoader = () => {
 

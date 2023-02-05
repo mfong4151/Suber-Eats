@@ -4,7 +4,7 @@ import "../Pickup.css"
 import ButtonLeft from '../SVGs/ButtonLeft'
 import ButtonRight from '../SVGs/ButtonRight'
 
-const OptionsCarousel = () => {
+const OptionsCarousel = ({filterOptions, setFilterOptions}) => {
   //The .slice is a temporary measure to keep my sanity only
   const icons = carouselLoader().slice(0, 9)
   

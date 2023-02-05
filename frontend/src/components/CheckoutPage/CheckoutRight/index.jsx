@@ -71,6 +71,8 @@ const CheckoutRight = ({checkoutCart}) => {
 
 
         <div id='tip-choice'  className='checkout-array'>
+
+            <button className="btn-round black-button tip-button udc" onClick={handleTip} value={0}>None</button>
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.10}>10%</button>
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.15}>15%</button>
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.20}>20%</button>

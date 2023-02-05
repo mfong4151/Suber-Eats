@@ -7,7 +7,6 @@ import { updateReview } from '../../../store/review';
 const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, userId, restaurantId, reviewId, ctr, setCtr}) => {
     const dispatch = useDispatch();
     const [origReview, setOrigReview] = useState(reviewBody);
-    const sessionUserId = useSelector(state => state.session.user.id);
 
 
     if (editModal) document.body.classList.add('active-modal')

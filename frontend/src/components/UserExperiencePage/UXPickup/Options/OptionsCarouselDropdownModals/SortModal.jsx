@@ -8,27 +8,50 @@ const SortModal = ({filterOptions, setFilterOptions}) => {
   const [ nearClicked, setNearClicked] = useState(false)
   const [ topRatedClicked, setTopRatedClicked] = useState(false)
   
-
-  useEffect(() => {
+  const newFilterOptions = filterParameter => {
+    let newFilter = {...filterOptions}
+    if(filterParameter === 'nearyou') newFilter['nearYou'] = nearClicked
+    else if(filterParameter ==='toprated') newFilter['topRated'] = topRatedClicked
+    else if(filterParameter === 'foryou' && !forClicked){
+      newFilter = { 
+        'score': 0,
+        'nearYou':false,
+        'topRated':false,
+        'rating':false,
+        'priceRange':0,
+        'cuisineType':'',
+      }
+    }
+    return newFilter;
+  }
     
-  }, [forClicked, nearClicked, topRatedClicked])
+  
+
   
   const toggleForClicked = e =>{
     e.preventDefault()
     e.stopPropagation()
-    switch(e.target.value){
+    const value = e.target.value
+    switch(value){
       case 'foryou': 
           setForClicked(!forClicked)
+          setFilterOptions(newFilterOptions(value))
           return
       case 'nearyou': 
           setNearClicked(!nearClicked)
+          setFilterOptions(newFilterOptions(value))
           return
       case 'toprated':  
         setTopRatedClicked(!topRatedClicked)
+        setFilterOptions(newFilterOptions(value))
         return 
     }
   }
+  
 
+  // useEffect(() => {
+    
+  // }, [forClicked, nearClicked, topRatedClicked])
 
 
 

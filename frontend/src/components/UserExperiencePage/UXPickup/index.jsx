@@ -31,6 +31,9 @@ const Pickup = () => {
 
   },[dispatch, filterOptions])
 
+  useEffect(()=>{
+    console.log(filterOptions)
+  },[filterOptions])
   return (
     <div className='pickup-cols'>
       

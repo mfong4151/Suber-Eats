@@ -11,7 +11,7 @@ const Reviews = ({sessionUserId}) => {
 
   
     return (
-      <div className="listings-main review-section">
+      <div className="listings-main review-section" >
           <div className='review-header univ-padding'>
             <h1 className='reviews-header-text'>See Restaurant Reviews</h1>
             <p className='reviews-subtext'>Hear from people who love this spot</p>

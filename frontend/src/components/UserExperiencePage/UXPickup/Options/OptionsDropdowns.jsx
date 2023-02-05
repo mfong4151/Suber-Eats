@@ -24,11 +24,12 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
 
   }
 
-  const toggleRatingOptions =  e =>{
-    e.preventDefault()
-    e.stopPropagation()
-    setRatingModal(prev=> !prev)
-  }
+  // //for future featuer
+  // const toggleRatingOptions =  e =>{
+  //   e.preventDefault()
+  //   e.stopPropagation()
+  //   setRatingModal(prev=> !prev)
+  // }
 
   
   return (

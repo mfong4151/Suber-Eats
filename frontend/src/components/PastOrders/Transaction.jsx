@@ -8,8 +8,10 @@ const Transaction = ({transaction}) => {
 
   const dateObj = new Date(transaction.createdAt)
   const goToRest = () =>{
-    history.push(`/restaurantListing/${transaction.restaurantId}/`)
-  }
+    history.push({pathname:`/restaurantListing/${transaction.restaurantId}/`, 
+                  state: {from:'reviews'}})
+    }
+  
 
 
   const handleReviewButton = () =>{
