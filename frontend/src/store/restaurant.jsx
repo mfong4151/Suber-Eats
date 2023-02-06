@@ -28,14 +28,13 @@ export const receiveRestaurant = restaurant =>(
 //     ,
 //   }
 
-const calculateDistance = ( )=>{
-
-}
+const calculateDistance = (userLoc, restLoc)=>(
+        Math.sqrt((restLoc.lat - userLoc.latitude)** 2 + (restLoc.lng - userLoc.longitude) ** 2) * 100
+)
 
 const scoreRestaurant = (filterOptions, rest) =>{
-    const {nearYou, topRated, priceRange, rating, cuisineType}  = filterOptions
+    const {nearYou, topRated, priceRange, rating, cuisineType, location}  = filterOptions
     let score = 0;
-
     if (cuisineType && rest.cuisineType !== cuisineType) score = -1
 
     if((priceRange === 1 && rest.avgPrice > 7) ||
@@ -45,7 +44,8 @@ const scoreRestaurant = (filterOptions, rest) =>{
         score = -1
 
     if (score !== -1){
-        if(nearYou) score += rest.distance
+
+        if(nearYou) score += calculateDistance(location, {lat:rest.latitude, lng: rest.longitude})
         if(topRated && score !== -1) score += rest.rating
     }
 
@@ -64,8 +64,10 @@ export const getRestaurantHeap = filterOptions => state =>{
         scoredRest = scoreRestaurant(filterOptions, rest)
         if(scoredRest.score !== -1) maxHeap.push(scoredRest)
     }
-    
-    // console.log(maxHeap.toArray())
+    console.log(filterOptions.nearYou)
+    console.log(maxHeap.toArray().reverse())
+    if(filterOptions.nearYou) return (maxHeap.toArray().reverse())
+    //it would be better to get a cleaner solution that doesn't cost O(n)
 
     return(maxHeap.toArray())
     

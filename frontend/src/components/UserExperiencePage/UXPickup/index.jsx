@@ -33,7 +33,7 @@ const Pickup = () => {
   
   useEffect(()=>{
     const newFilterOptions = {...filterOptions}
-    newFilterOptions['distance'] = userLocation
+    newFilterOptions['location'] = userLocation
     setFilterOptions(newFilterOptions)
   }, [userLocation])
  
