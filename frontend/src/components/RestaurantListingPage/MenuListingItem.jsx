@@ -5,7 +5,6 @@ import { fetchCart, getCartsRestIdKeys} from '../../store/cart'
 import { getCartItemsMap, createCartItem, updateCartItem} from '../../store/cartItems'
 import { useParams } from 'react-router-dom'
 import { getSessionUserId } from '../../store/session'
-import { useEffect } from 'react'
 
 const MenuListingItem = ({setMenuItem, menuItem, toggleItemModal}) => {
     //We need to refactor this to format a certain way based on whats avalible, 

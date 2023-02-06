@@ -31,23 +31,47 @@ const CartModal = () => {
     
 
     useEffect(()=>{      
-        for(const cart of Object.values(userCarts))if(cart.cartItems === 0 && restaurantId !== cart.restaurantId ) dispatch(deleteCart(cart.id))
+        for(const cart of Object.values(userCarts))if(cart.cartItems === 0 && restaurantId !== cart.restaurantId ) 
+            dispatch(deleteCart(cart.id))
     },[])
 
-    return (
+    
+    // if (userCarts.length > 0)
+        return (
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={toggleCartModal}>
-              <div className="cart-modal-content">
-                {Object.values(userCarts)?.map((cart, idx)=>
+              {userCarts.length > 0 && 
+                <div className="cart-modal-content">
+                    {userCarts?.map((cart, idx)=>
                     <>
-                        { cart.cartItems > 0 && <CartBody cart={cart} key={idx} />}
+                        {cart.cartItems > 0 && <CartBody cart={cart} key={idx} />}
                     </>
-                )}
+                    )}
 
-              </div>
+              </div>}
+              {userCarts.length === 0 &&
+                <div className="cart-modal-content udc" id='no-carts-content'>
+                    <h1 id='no-cart-title'>
+                        You currently have no carts!
+                    </h1>
+                    <h2 id='no-cart-text'>
+                        Go check out a restaurant and add to your cart
+                    </h2>
+                </div>
+                }
+              
             </div>
         </div>
     )
+
+    // else
+    //     return(
+    //         <div>
+    //             <h1>
+
+    //             </h1>
+    //         </div>
+    //     )
 
 }
 

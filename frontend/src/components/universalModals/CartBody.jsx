@@ -1,9 +1,6 @@
 import React from 'react'
 import ChevronRight from './SVGs/ChevronRight';
-import {useEffect} from 'react';
 import  {useDispatch, useSelector} from 'react-redux';
-import { fetchCart } from '../../store/cart';
-import { getCarts } from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
 import { useState } from 'react';
 import RestCartModal from './RestCartModal';

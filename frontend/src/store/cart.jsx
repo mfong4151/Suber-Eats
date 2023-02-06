@@ -33,15 +33,11 @@ export const getCart = cartId => state =>{
     return state.cart[cartId]
 }
 
-export const getCartsArray = state =>{
-    if (!state.carts) return []
-    return Object.values(state.cart)
-}
 
 
 export const getCarts = state => {
-    if (!state.cart) return null;    
-    return state.cart
+    if (!state.cart) return [];    
+    return Object.values(state.cart)
 }
 
 export const getCartsRestIdKeys = state => {

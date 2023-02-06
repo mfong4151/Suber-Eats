@@ -201,6 +201,18 @@
     border:1px solid var(--color-grey-shadow);
 }
 
+#no-carts-content{
+    height:100px;
+    flex-direction: column;
+}
+
+#no-cart-title{
+    font-size: 26px;
+}
+
+#no-cart-text{
+    font-size:14px;
+}
 
 .cart-modal-text-holder{
     display: flex;
