@@ -20,13 +20,13 @@ const Footer = () => {
           <div className='subfooter-holder'>
                 <div className="udc">
                     <a href="https://www.linkedin.com/in/mfong415/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>
-                        <img src={linkedin} className='github-linkedin'/>
+                        <img src={linkedin} className='github-linkedin-footer'/>
                     </a>
               </div>
               <div className="udc">
                 
                 <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>
-                    <img src={gitHubBlack} className='github-linkedin'/>
+                    <img src={gitHubBlack} className='github-linkedin-footer'/>
                 </a>
               </div>
               
@@ -40,10 +40,15 @@ const Footer = () => {
                 <p>Email me: mfong415@gmail.com</p>
             </div>
             <div className="footer-text">
-                <p>My Linkedin</p>
+                <a href="https://www.linkedin.com/in/mfong415/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>
+                    <p>My Linkedin</p>
+                </a>
+
             </div>
             <div className="footer-text">
-                <p>My Github</p>
+                <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>
+                    <p>My Github</p>
+                </a>
 
             </div>
 
