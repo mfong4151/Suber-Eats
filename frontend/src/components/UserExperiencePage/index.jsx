@@ -8,9 +8,6 @@ import { fetchRestaurants } from '../../store/restaurant';
 import BundleModals from '../universalModals/BundleModals.jsx';
 import { fetchLocations } from '../../store/location';
 import Footer from '../generalDesignComponents/Footer/index.jsx';
-//Not sure if cart management needs to be done in state, context, or store yet
-//I need some sort of state to manage the user's cart. 
-// I should finish seeding, databases, and tables before proceeding
 
 
 

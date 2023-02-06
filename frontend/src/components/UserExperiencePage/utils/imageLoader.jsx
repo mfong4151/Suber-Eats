@@ -26,7 +26,6 @@ export const photoLoader = ()=>{
             thai,
             pizza,
             italian,
-            wings,
             vietnamese,
             healthy
             ]
@@ -35,20 +34,39 @@ export const photoLoader = ()=>{
 
 export const titleLoader =( ) => (
     [
-        'Ice Cream + Frozen',
-        'Comfort Food',
-        'Coffee and Tea',
-        'Bakery',
-        'Asian',
-        'Bubble Tea',
-        'Indian',
-        'American',
-        'Thai',
-        'Pizza',
-        'Italian',
-        'Wings',
-        'Vietnamese',
-        'Healthy'
+        'Ice Cream + Frozen',                           
+        'Comfort Food',                             
+        'Coffee and Tea',                           
+        'Bakery',                           
+        'Asian',                            
+        'Bubble Tea',                           
+        'Indian',                           
+        'American',                             
+        'Thai',                             
+        'Pizza',                            
+        'Italian',                          
+        'Vietnamese',                           
+        'Healthy'                           
+    ]
+)
+
+export const keyLoader = () =>(
+
+    [
+        'ice cream and frozen',
+        'comfort food',
+        'coffee and tea' ,
+        'bakery',
+        'asian',
+        'boba',
+        'indian',
+        'american',
+        'thai',
+        'pizza',
+        'italian',
+        'vietnamese',
+        'healthy',
+
     ]
 )
 
@@ -97,8 +115,8 @@ return {
 export const carouselLoader = () => {
 
     const res = []
-    const photos = photoLoader(), titles = titleLoader()
-    for(let i = 0; i < photos.length; i++ ) res.push({photo: photos[i], title: titles[i]})
+    const photos = photoLoader(), titles = titleLoader(), catKeys = keyLoader()
+    for(let i = 0; i < photos.length; i++ ) res.push({photo: photos[i], title: titles[i], key:catKeys[i]})
 
 
     return res

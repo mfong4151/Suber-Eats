@@ -32,28 +32,26 @@ const scoreRestaurant = (filterOptions, rest) =>{
     const {nearYou, topRated, priceRange, rating, cuisineType}  = filterOptions
     let score = 0;
 
-    if (cuisineType && rest.cuisineType != cuisineType) {
-        rest['score'] = -1
-        return rest;
+    if (cuisineType && rest.cuisineType !== cuisineType) {
+        score = -1
     }
 
-    switch(priceRange){
-        case 1 && rest.price > 7:
-            rest['score'] = -1
-            return rest;
-        case 2 && (rest.price < 7 || rest.price > 13):
-            rest['score'] = -1
-            return rest;
-        case 3 && (rest.price < 13):
-            rest['score'] = -1
-            return rest;
+    if(priceRange){
+        if(priceRange === 1 && rest.avgPrice > 7){
+            score = -1
+        }else if(priceRange === 2 && (rest.avgPrice < 7 || rest.avgPrice > 15)){
+            score = -1
+
+        }else if(priceRange === 3 && (rest.avgPrice < 15)){
+            score = -1
+        }
     }
 
-
-    if(nearYou) score += rest.distance
-    if(topRated) score += rest.rating
+    if(nearYou && score !== -1) score += rest.distance
+    if(topRated && score !== -1) score += rest.rating
     rest['score'] = score
-    return score;
+    // console.log(rest)
+    return rest;
     
 
 
@@ -63,11 +61,11 @@ const scoreRestaurant = (filterOptions, rest) =>{
 export const getRestaurantHeap = filterOptions => state =>{
     if (!state.restaurants) return [];
 
-    const maxHeap = new Heap((a, b) => a.score - b.score)    
+    const maxHeap = new Heap((a, b) =>  b.score- a.score)    
     maxHeap.init([])
-    for(const rest of Object.values(state.restaurants)) 
-        maxHeap.push(scoreRestaurant(filterOptions, rest))
+    for(const rest of Object.values(state.restaurants))  maxHeap.push(scoreRestaurant(filterOptions, rest))
     
+    // console.log(maxHeap.toArray())
 
     return(maxHeap.toArray())
     

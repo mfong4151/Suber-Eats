@@ -8,7 +8,7 @@ import Transaction from './Transaction'
 import './PastOrders.css'
 import { getSessionUserId } from '../../store/session'
 import Footer from '../generalDesignComponents/Footer'
-
+import { Redirect } from 'react-router'
 const PastOrders = () => {
   const dispatch = useDispatch()
   const transactions = useSelector(getTransactions)
@@ -17,6 +17,7 @@ const PastOrders = () => {
   useEffect(() => {
     dispatch(fetchTransactions())
   }, [])
+  if(!sessionUserId) return <Redirect to='/login'/>
 
   return (
     <>

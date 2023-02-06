@@ -64,7 +64,6 @@ export const updateTransaction = (transaction, transactionId) => async dispatch 
     })
 
     if (res.ok){
-        console.log(res)
         const transaction = await res.json();
         dispatch(receiveTransaction(transaction))
     }

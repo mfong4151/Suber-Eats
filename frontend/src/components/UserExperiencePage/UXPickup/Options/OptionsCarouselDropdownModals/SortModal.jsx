@@ -24,36 +24,27 @@ const SortModal = ({filterOptions, setFilterOptions}) => {
     }
     return newFilter;
   }
-    
-  
 
   
   const toggleForClicked = e =>{
     e.preventDefault()
     e.stopPropagation()
     const value = e.target.value
-    switch(value){
-      case 'foryou': 
+  
+    if(value === 'foryou'){
           setForClicked(!forClicked)
           setFilterOptions(newFilterOptions(value))
-          return
-      case 'nearyou': 
+          
+    }else if (value === 'nearyou'){
           setNearClicked(!nearClicked)
           setFilterOptions(newFilterOptions(value))
-          return
-      case 'toprated':  
+    }else if( value === 'toprated'){
         setTopRatedClicked(!topRatedClicked)
         setFilterOptions(newFilterOptions(value))
-        return 
+      
     }
   }
   
-
-  // useEffect(() => {
-    
-  // }, [forClicked, nearClicked, topRatedClicked])
-
-
 
 
   return (

@@ -9,6 +9,7 @@ import { getSessionUserId } from '../../../store/session';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
+
 const Pickup = () => {
   const [filterOptions, setFilterOptions] = useState(
     {
@@ -18,9 +19,9 @@ const Pickup = () => {
       'rating':false,
       'priceRange':0,
       'cuisineType':'',
+      'distance':{'lat':0, 'lng':0}
     })
   
-  const restaurants = useSelector(getRestaurants);
   const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions));
   const sessionUserId = useSelector(getSessionUserId);
   const userLocation = useSelector(checkUserLoc(sessionUserId))
@@ -28,17 +29,17 @@ const Pickup = () => {
 
   useEffect(()=>{
     dispatch(fetchRestaurants())
-
   },[dispatch, filterOptions])
 
   useEffect(()=>{
-    console.log(filterOptions)
-  },[filterOptions])
+    // setFilterOptions()
+  }, [userLocation])
+ 
   return (
     <div className='pickup-cols'>
       
-      <Options restaurants={restaurants} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>
-      <Map restaurants={restaurants} userLocation={userLocation} /> 
+      <Options restaurants={restaurantsHeap} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>
+      <Map restaurants={restaurantsHeap} userLocation={userLocation} /> 
 
     </div>
   )

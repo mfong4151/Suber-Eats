@@ -23,7 +23,7 @@ const CheckoutPage = () => {
           dispatch(fetchCart(sessionUserId))
           dispatch(fetchCartItems(cartId))          
         },[])
-        if(!checkoutCart) return (<Redirect to={'/'}/>)
+        if(!checkoutCart || !sessionUserId ) return <Redirect to={'/'}/>
 
         return (
           <div className='checkout-page' >

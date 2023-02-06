@@ -15,7 +15,7 @@ import RestaurantInfo from './RestaurantInfo';
 import { useLocation } from 'react-router-dom';
 import GeneralMap from '../generalDesignComponents/GeneralMap';
 import Footer from '../generalDesignComponents/Footer';
-
+import { Redirect } from 'react-router-dom';
 const RestaurantListing = () => {
   const [firstReviews, setFirstReviews] = useState(true)
   const sessionUserId = useSelector(getSessionUserId)
@@ -52,7 +52,8 @@ const RestaurantListing = () => {
       reviewSection.current.scrollIntoView({behavior:'smooth'})
     }},1000
   )
-  
+  if(!sessionUserId) return <Redirect to='/login'/>
+
   return (
     <>
       <UXHeader/>
