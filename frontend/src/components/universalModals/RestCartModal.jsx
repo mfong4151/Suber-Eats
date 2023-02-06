@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
-import {useHistory, useLocation, NavLink} from 'react-router-dom';
+import {useHistory, NavLink} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';

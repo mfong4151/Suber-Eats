@@ -7,14 +7,12 @@ import CartBody from './CartBody';
 import { deleteCart, fetchCart} from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
 import { getCarts } from '../../store/cart';
-import { useLocation, useParams } from 'react-router-dom';
-import { fetchCartItems } from '../../store/cartItems';
+import { useParams } from 'react-router-dom';
 
 const CartModal = () => {
     const {cartModal, toggleCartModal} = useContext(UXContext);
     const userCarts = useSelector(getCarts); 
     const sessionUserId = useSelector(getSessionUserId);
-    const location = useLocation()
     const {restaurantId} = useParams()
     const dispatch = useDispatch();
 

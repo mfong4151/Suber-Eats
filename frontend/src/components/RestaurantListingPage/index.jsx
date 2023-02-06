@@ -9,7 +9,6 @@ import Reviews from './Reviews';
 import './RestaurantListingPage.css';
 import BundleModals from '../universalModals/BundleModals';
 import { fetchCart, getCartsRestIdKeys } from '../../store/cart';
-import { getSessionUserId } from '../../store/session';
 import { createCart } from '../../store/cart';
 import RestaurantInfo from './RestaurantInfo';
 import { useLocation } from 'react-router-dom';
@@ -28,12 +27,31 @@ const RestaurantListing = () => {
   const {state} = useLocation()
   const reviewSection = useRef();
   
+  //for later implementation post greenlighting
+  // const observer = new IntersectionObserver((entries)=>{
+  //   entries.forEach((entry) =>{ 
+
+  //       if(entry.isIntersecting) entry.target.classList.add('show');
+
+  //       else entry.target.classList.remove('show')  
+
+  //   });
+  // });
+
   const cartFact = () =>(
     {
         userId:sessionUser.id,
         restaurantId: restaurantId
     }
-)
+  )
+  const toReviewSection = () => {
+    if(state && state.from && reviewSection.current && firstReviews){
+      setFirstReviews(false)
+      reviewSection.current.scrollIntoView({behavior:'smooth'})
+    }
+  }
+  
+
 
   useEffect(()=>{
     dispatch(fetchRestaurant(restaurantId))
@@ -46,19 +64,15 @@ const RestaurantListing = () => {
 
   },[dispatch, restaurantId])
 
-  setTimeout(()=> {
-    if(state && state.from && reviewSection.current && firstReviews){
-      setFirstReviews(false)
-      reviewSection.current.scrollIntoView({behavior:'smooth'})
-    }},1000
-  )
+  setTimeout(toReviewSection,1000)
+
   if(!sessionUser.id) return <Redirect to='/login'/>
 
   return (
     <>
       <UXHeader/>
       <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
-      <RestaurantInfo restaurant={restaurant}/>
+      <RestaurantInfo restaurant={restaurant} reviewRef={reviewSection}/>
       <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
       <div id="review-section" ref={reviewSection}>
         <Reviews sessionUserId={sessionUser.id}/>
