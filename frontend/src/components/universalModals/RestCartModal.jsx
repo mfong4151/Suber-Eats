@@ -1,23 +1,22 @@
 import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useLocation, NavLink} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import './UserMenuModal.css'
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
 import RestCartItem from './RestCartItem';
-import { NavLink } from 'react-router-dom';
 
 const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
   const dispatch = useDispatch()
   const {setCheckoutOrder} = useContext(UXContext)
   const history = useHistory()
+
   const restCartItems = useSelector(getCartItems)
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
-
   const clearCart = e =>{
     e.preventDefault();
     e.stopPropagation();

@@ -14,8 +14,7 @@ const CartModal = () => {
     const {cartModal, toggleCartModal} = useContext(UXContext);
     const userCarts = useSelector(getCarts); 
     const sessionUserId = useSelector(getSessionUserId);
-    //I would like to encorporate this into the first useEffect if possible 
-    // const location = useLocation()
+    const location = useLocation()
     const {restaurantId} = useParams()
     const dispatch = useDispatch();
 
@@ -31,8 +30,8 @@ const CartModal = () => {
     
 
     useEffect(()=>{      
-        for(const cart of Object.values(userCarts))if(cart.cartItems === 0 && restaurantId !== cart.restaurantId ) 
-            dispatch(deleteCart(cart.id))
+        for(const cart of userCarts)if(cart.cartItems === 0 && Number(restaurantId) !== cart.restaurantId )  dispatch(deleteCart(cart.id))
+            
     },[])
 
     

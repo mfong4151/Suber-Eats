@@ -19,7 +19,7 @@ import { Redirect } from 'react-router-dom';
 
 const RestaurantListing = () => {
   const [firstReviews, setFirstReviews] = useState(true)
-  const sessionUserId = useSelector(getSessionUserId)
+  const sessionUser = useSelector(state => state.session.user)
   const dispatch = useDispatch();
   const {restaurantId} = useParams();
   const restaurant = useSelector(getRestaurant(restaurantId));
@@ -30,7 +30,7 @@ const RestaurantListing = () => {
   
   const cartFact = () =>(
     {
-        userId:sessionUserId,
+        userId:sessionUser.id,
         restaurantId: restaurantId
     }
 )
@@ -42,7 +42,7 @@ const RestaurantListing = () => {
 
   useEffect(()=>{
     dispatch(createCart(cartFact()))
-    .then(dispatch(fetchCart(sessionUserId)))
+    .then(dispatch(fetchCart(sessionUser.id)))
 
   },[dispatch, restaurantId])
 
@@ -52,7 +52,7 @@ const RestaurantListing = () => {
       reviewSection.current.scrollIntoView({behavior:'smooth'})
     }},1000
   )
-  if(!sessionUserId) return <Redirect to='/login'/>
+  if(!sessionUser.id) return <Redirect to='/login'/>
 
   return (
     <>
@@ -61,7 +61,7 @@ const RestaurantListing = () => {
       <RestaurantInfo restaurant={restaurant}/>
       <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
       <div id="review-section" ref={reviewSection}>
-        <Reviews sessionUserId={sessionUserId}/>
+        <Reviews sessionUserId={sessionUser.id}/>
       </div>
       <Footer/>
       <BundleModals/>      
