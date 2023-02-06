@@ -19,7 +19,6 @@ const Pickup = () => {
       'rating':false,
       'priceRange':0,
       'cuisineType':'',
-      'distance':{'lat':0, 'lng':0}
     })
   
   const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions));
@@ -31,8 +30,11 @@ const Pickup = () => {
     dispatch(fetchRestaurants())
   },[dispatch, filterOptions])
 
+  
   useEffect(()=>{
-    // setFilterOptions()
+    const newFilterOptions = {...filterOptions}
+    newFilterOptions['distance'] = userLocation
+    setFilterOptions(newFilterOptions)
   }, [userLocation])
  
   return (

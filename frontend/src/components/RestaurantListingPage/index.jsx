@@ -16,6 +16,7 @@ import { useLocation } from 'react-router-dom';
 import GeneralMap from '../generalDesignComponents/GeneralMap';
 import Footer from '../generalDesignComponents/Footer';
 import { Redirect } from 'react-router-dom';
+
 const RestaurantListing = () => {
   const [firstReviews, setFirstReviews] = useState(true)
   const sessionUserId = useSelector(getSessionUserId)
@@ -25,9 +26,8 @@ const RestaurantListing = () => {
   const coords = useSelector(getRestaurantCoords(restaurantId))
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
-  
-
   const reviewSection = useRef();
+  
   const cartFact = () =>(
     {
         userId:sessionUserId,

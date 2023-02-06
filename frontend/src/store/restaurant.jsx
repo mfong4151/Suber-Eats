@@ -28,42 +28,42 @@ export const receiveRestaurant = restaurant =>(
 //     ,
 //   }
 
+const calculateDistance = ( )=>{
+
+}
+
 const scoreRestaurant = (filterOptions, rest) =>{
     const {nearYou, topRated, priceRange, rating, cuisineType}  = filterOptions
     let score = 0;
 
-    if (cuisineType && rest.cuisineType !== cuisineType) {
+    if (cuisineType && rest.cuisineType !== cuisineType) score = -1
+
+    if((priceRange === 1 && rest.avgPrice > 7) ||
+        (priceRange === 2 && (rest.avgPrice < 7 || rest.avgPrice > 15)) ||
+        (priceRange === 3 && (rest.avgPrice < 15))
+        )
         score = -1
+
+    if (score !== -1){
+        if(nearYou) score += rest.distance
+        if(topRated && score !== -1) score += rest.rating
     }
 
-    if(priceRange){
-        if(priceRange === 1 && rest.avgPrice > 7){
-            score = -1
-        }else if(priceRange === 2 && (rest.avgPrice < 7 || rest.avgPrice > 15)){
-            score = -1
-
-        }else if(priceRange === 3 && (rest.avgPrice < 15)){
-            score = -1
-        }
-    }
-
-    if(nearYou && score !== -1) score += rest.distance
-    if(topRated && score !== -1) score += rest.rating
     rest['score'] = score
-    // console.log(rest)
     return rest;
     
-
-
-    
 }
+
 //This is a little bit extra, and theres no reason to use a heap persay, other JS librarys will do the job
 export const getRestaurantHeap = filterOptions => state =>{
     if (!state.restaurants) return [];
-
     const maxHeap = new Heap((a, b) =>  b.score- a.score)    
     maxHeap.init([])
-    for(const rest of Object.values(state.restaurants))  maxHeap.push(scoreRestaurant(filterOptions, rest))
+    let scoredRest
+    for(const rest of Object.values(state.restaurants)){
+        scoredRest = scoreRestaurant(filterOptions, rest)
+        if(scoredRest.score !== -1) maxHeap.push(scoredRest)
+    }
     
     // console.log(maxHeap.toArray())
 

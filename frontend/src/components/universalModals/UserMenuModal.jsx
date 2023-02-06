@@ -43,18 +43,18 @@ const UserMenuModal = () => {
               </div>
               
               <div className="modal-item-univ modal-menu-button"><HelpIcon/>My personal site</div>
-              <div className="modal-item-univ modal-menu-button"><Promotions/>Promotions</div>
+              {/* <div className="modal-item-univ modal-menu-button"><Promotions/>Promotions</div> */}
               {/* <div className="modal-item-univ modal-menu-button"><InviteFriendsIcon/>Invite friends</div> */}
               <button className='modal-menu-button sign-out' onClick={signOut}><span>Sign Out</span></button>
               <hr className="divider-slim"/>
-              <div className="modal-item-univ modal-menu-text-options">Create a business account</div>
+              {/* <div className="modal-item-univ modal-menu-text-options">Create a business account</div>
               <div className="modal-item-univ modal-menu-text-options">Add your restaurant</div>
               <div className="modal-item-univ modal-menu-text-options">Sign up to deliver</div>
 
               <div className='phone-buttons'>
                 <button className="btn-round ux-buttons">iPhone</button>
                 <button className="btn-round ux-buttons">Android</button>
-              </div>
+              </div> */}
           </div>
 
         </div>
