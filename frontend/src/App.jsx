@@ -63,7 +63,6 @@ function App() {
               <Route path="/deliverypickup" component={UserExperiencePage}/>
               <Route path="/yourorders" component={PastOrders}/>
             </UXContext.Provider>
-
             <Route path ="/" component={SplashPage}/>
           </Switch>
     </>

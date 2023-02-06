@@ -43,8 +43,8 @@ export const mapCategories = ()=>{
 export const checkCategoryInclusion = (filterReq, restCuisineType) => {
     const catMap = mapCategories();
     if (!catMap[filterReq]) return true
-    console.log(catMap[filterReq])
-    console.log(restCuisineType)
+    // console.log(catMap[filterReq])
+    // console.log(restCuisineType)
     if (catMap[filterReq].has(restCuisineType)) return true
     return false
 }

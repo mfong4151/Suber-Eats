@@ -3,8 +3,6 @@ import { useState } from 'react'
 
 const SortModal = ({filterOptions, setFilterOptions}) => {
 
-
-  
   const toggleForClicked = e =>{
     e.preventDefault()
     e.stopPropagation()
