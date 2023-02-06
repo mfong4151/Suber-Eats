@@ -52,7 +52,7 @@ const CartModal = () => {
               {userCarts.length === 0 &&
                 <div className="cart-modal-content udc" id='no-carts-content'>
                     <h1 id='no-cart-title'>
-                        You currently have no carts!
+                        You currently have no cart!
                     </h1>
                     <h2 id='no-cart-text'>
                         Go check out a restaurant and add to your cart

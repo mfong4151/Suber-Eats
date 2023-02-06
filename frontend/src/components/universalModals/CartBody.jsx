@@ -4,27 +4,25 @@ import  {useDispatch, useSelector} from 'react-redux';
 import { getSessionUserId } from '../../store/session';
 import { useState } from 'react';
 import RestCartModal from './RestCartModal';
+import { useContext } from 'react';
+import { UXContext } from '../UXContext';
 
 const CartBody = ({cart}) => {
+
     const dispatch = useDispatch();
     const [restCartModal, setRestCartModal] = useState(false);
 
-    const sessionUserId = useSelector(getSessionUserId)
-    // const userCarts = useSelector(getCarts)
+
 
 
     const handleOnClick = e =>{
         e.preventDefault();
         e.stopPropagation();
         setRestCartModal(!restCartModal)
+        
     }
 
-    // useEffect(() => {
-
-    //     dispatch(fetchCart(sessionUserId))
-        
-    // }, [dispatch])
-    
+   
 
     return (
         <div className='cart-tab' onClick={handleOnClick}>
