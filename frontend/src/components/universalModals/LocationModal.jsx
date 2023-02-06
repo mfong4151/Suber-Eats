@@ -25,8 +25,8 @@ const LocationModal = () => {
 
               <div id='loc-modal-text'>
                 <p>To use the map simply click anywhere on the map, our backend server will pick out all the locations within a 1-2 mile radius with restauraunts.</p>
-                <p>Click once to recenter the map, double click to update your location</p>
-                <p>See the preset cities tab for a list of all the cities that we have seed data for.</p>
+                <p>Click once to update your location</p>
+                {/* <p>See the preset cities tab for a list of all the cities that we have seed data for.</p> */}
               </div>
              
 

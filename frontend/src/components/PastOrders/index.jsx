@@ -12,12 +12,12 @@ import { Redirect } from 'react-router'
 const PastOrders = () => {
   const dispatch = useDispatch()
   const transactions = useSelector(getTransactions)
-  const sessionUserId = useSelector(getSessionUserId)
+  const sessionUser = useSelector(state => state.session.user)
 
   useEffect(() => {
     dispatch(fetchTransactions())
   }, [])
-  if(!sessionUserId) return <Redirect to='/login'/>
+  if(!sessionUser) return <Redirect to='/login'/>
 
   return (
     <>
@@ -27,7 +27,7 @@ const PastOrders = () => {
       </div>
        {Object.values(transactions).reverse().map((transaction,idx) => (
         <Transaction 
-          transaction={transaction} sessionUserId={sessionUserId} key={idx}
+          transaction={transaction} sessionUserId={sessionUser.id} key={idx}
           />))}
       <Footer/>
       <BundleModals/>

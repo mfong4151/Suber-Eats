@@ -1,5 +1,6 @@
 import csrfFetch, {storeCSRFToken} from './csrf';
 import Heap from 'heap-js';
+import { checkCategoryInclusion } from './utils/filtrationMethods';
 
 const RECEIVE_RESTAURANTS = 'restaurant/receiveRestaurants';
 const RECEIVE_RESTAURANT = 'restaurant/receiveRestaurant';
@@ -19,34 +20,25 @@ export const receiveRestaurant = restaurant =>(
     }   
 )
 
-// {
-//      cuisineType:''
-//     nearYou:false,
-//     topRated:false,
-//     rating:false,
-//     priceRange:0,
-//     ,
-//   }
 
 const calculateDistance = (userLoc, restLoc)=>(
         Math.sqrt((restLoc.lat - userLoc.latitude)** 2 + (restLoc.lng - userLoc.longitude) ** 2) * 100
 )
 
 const scoreRestaurant = (filterOptions, rest) =>{
-    const {nearYou, topRated, priceRange, rating, cuisineType, location}  = filterOptions
+    const {nearYou, topRated, priceRange, rating, cuisineType, location}  = filterOptions;
     let score = 0;
-    if (cuisineType && rest.cuisineType !== cuisineType) score = -1
 
     if((priceRange === 1 && rest.avgPrice > 7) ||
         (priceRange === 2 && (rest.avgPrice < 7 || rest.avgPrice > 15)) ||
-        (priceRange === 3 && (rest.avgPrice < 15))
+        (priceRange === 3 && (rest.avgPrice < 15)) ||
+        (cuisineType && !checkCategoryInclusion(cuisineType, rest.cuisineType))
         )
         score = -1
 
     if (score !== -1){
-
         if(nearYou) score += calculateDistance(location, {lat:rest.latitude, lng: rest.longitude})
-        if(topRated && score !== -1) score += rest.rating
+        if(topRated) score += rating
     }
 
     rest['score'] = score
@@ -56,6 +48,7 @@ const scoreRestaurant = (filterOptions, rest) =>{
 
 //This is a little bit extra, and theres no reason to use a heap persay, other JS librarys will do the job
 export const getRestaurantHeap = filterOptions => state =>{
+    // console.log(filterOptions)
     if (!state.restaurants) return [];
     const maxHeap = new Heap((a, b) =>  b.score- a.score)    
     maxHeap.init([])
@@ -64,10 +57,10 @@ export const getRestaurantHeap = filterOptions => state =>{
         scoredRest = scoreRestaurant(filterOptions, rest)
         if(scoredRest.score !== -1) maxHeap.push(scoredRest)
     }
-    console.log(filterOptions.nearYou)
-    console.log(maxHeap.toArray().reverse())
-    if(filterOptions.nearYou) return (maxHeap.toArray().reverse())
+    // console.log(filterOptions.nearYou)
+    // console.log(maxHeap.toArray().reverse())
     //it would be better to get a cleaner solution that doesn't cost O(n)
+    if(filterOptions.nearYou) return (maxHeap.toArray().reverse())
 
     return(maxHeap.toArray())
     

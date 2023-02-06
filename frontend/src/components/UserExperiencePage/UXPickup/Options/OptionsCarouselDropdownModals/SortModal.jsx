@@ -30,8 +30,8 @@ const SortModal = ({filterOptions, setFilterOptions}) => {
 
   return (
     <div className="sort-modal-radio">
-        <button className="btn-round-two grey-button sort-modal-btn udc"  onClick={toggleForClicked} value={'foryou'}>
-            For you (default)
+        <button className="btn-round-two grey-button sort-modal-btn udc" id="default-sort" onClick={toggleForClicked} value={'foryou'}>
+          Defaults
         </button>
         <button className="btn-round-two grey-button sort-modal-btn udc"  onClick={toggleForClicked} value={'nearYou'}>
             Near you

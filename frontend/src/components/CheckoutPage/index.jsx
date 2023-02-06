@@ -5,25 +5,25 @@ import CheckoutRight from './CheckoutRight'
 import UserMenuModal from '../universalModals/UserMenuModal'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { getSessionUserId } from '../../store/session'
 import { fetchCart, getCart } from '../../store/cart'
 import { useParams } from 'react-router-dom'
-import { fetchCartItems, getCartItems } from '../../store/cartItems'
+import { fetchCartItems } from '../../store/cartItems'
 import { Redirect } from 'react-router-dom'
 import Footer from '../generalDesignComponents/Footer'
 
 const CheckoutPage = () => {
         const {menuModal} = useContext(UXContext)
         const {cartId} = useParams()
-        const sessionUserId = useSelector(getSessionUserId)
+        const sessionUser = useSelector(state => state.session.user)
         const checkoutCart = useSelector(getCart(cartId))
         const dispatch = useDispatch();
         
         useEffect(()=>{
-          dispatch(fetchCart(sessionUserId))
+          dispatch(fetchCart(sessionUser.id))
           dispatch(fetchCartItems(cartId))          
         },[])
-        if(!checkoutCart || !sessionUserId ) return <Redirect to={'/'}/>
+
+        if(!checkoutCart || !sessionUser ) return <Redirect to={'/'}/>
 
         return (
           <div className='checkout-page' >
