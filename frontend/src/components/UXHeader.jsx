@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import LocationIcon from './SVGs/LocationIcon';
-import SearchIcon from './UserExperiencePage/UXPickup/SVGs/SearchIcon';
+import SearchIcon from './UserExperiencePage/UXView/SVGs/SearchIcon';
 import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { UXContext } from './UXContext.jsx';

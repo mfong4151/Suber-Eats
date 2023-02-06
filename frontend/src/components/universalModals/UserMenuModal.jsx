@@ -17,7 +17,7 @@ const UserMenuModal = () => {
 
   const {menuModal, toggleMenuModal} = useContext(UXContext)
   const dispatch = useDispatch()
-  const {linkedin, gitHubBlack, gitHubWhite} = univPhotos()
+  const {linkedin, gitHubBlack} = univPhotos()
   
   if (menuModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')

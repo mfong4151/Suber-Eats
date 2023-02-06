@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import UXHeader from '../UXHeader.jsx';
-import UXPickup from './UXPickup';
+import UXView from './UXView';
 import { fetchCart } from '../../store/cart.jsx';
 import { fetchRestaurants } from '../../store/restaurant';
 import BundleModals from '../universalModals/BundleModals.jsx';
@@ -29,7 +29,7 @@ const UserExperiencePage = () => {
     return (
     <>  
       <UXHeader/>
-      <UXPickup/>
+      <UXView/>
       <Footer/>
       <BundleModals/>        
     </>

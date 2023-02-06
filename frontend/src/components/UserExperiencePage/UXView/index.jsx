@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
 
-const Pickup = () => {
+const UXView = () => {
   const [filterOptions, setFilterOptions] = useState(
     {
       'score': 0,
@@ -47,4 +47,4 @@ const Pickup = () => {
   )
 }
 
-export default Pickup;
+export default UXView;

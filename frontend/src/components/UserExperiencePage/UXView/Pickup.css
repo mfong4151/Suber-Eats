@@ -120,6 +120,10 @@
     gap: 2px
 }
 
+.options-listing{
+    width:100%
+}
+
 #rest-null{
     flex-direction: column;
 }
@@ -148,6 +152,7 @@
 
 .options-body{
     background-color:  var(--color-white);
+    width:300px;
 }
 
 .options-body:hover{
@@ -161,7 +166,7 @@
     /* height: 140px;
     width: 370px; */
     object-fit: cover;
-    width: 100%;
+    width: 280px;
     height: 140px;
     /* clip-path:inset(10%, 10%, 10%, 10%); */
 

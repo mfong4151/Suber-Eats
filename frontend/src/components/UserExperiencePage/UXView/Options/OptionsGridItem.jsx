@@ -9,6 +9,7 @@ const OptionsGridItem = ({restaurant}) => {
       <NavLink to={`/restaurantListing/${restaurant.id}`}>
         <div className='options-body'>
          {/* <img className='options-image' src={restaurant.imageUrl} /> */}
+         {/* //comment in for temporarily disabling pictures */}
          <img className='options-image' src={null} />
 
         <div className='info-container'>

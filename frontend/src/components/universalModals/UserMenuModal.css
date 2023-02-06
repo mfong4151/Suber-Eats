@@ -10,7 +10,7 @@
     margin-bottom: 1rem
 }
 
-
+profile
 .delivery-header{
     margin-left:1rem;
     margin-top: 1rem;
@@ -217,7 +217,7 @@
 .cart-modal-text-holder{
     display: flex;
     flex-direction: column;
-
+    width:200px;
 }
 
 .cart-modal-header{
@@ -416,6 +416,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+    
 }
 
 

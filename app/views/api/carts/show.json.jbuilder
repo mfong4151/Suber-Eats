@@ -3,7 +3,7 @@ json.cart do
         json.set! cart.id do
             json.extract!  cart, :restaurant_id, :id
             json.rest_name cart.restaurant.name
-            # json.image_url cart.restaurant.image.url
+            json.image_url cart.restaurant.image.url
             json.address cart.restaurant.address
             json.rest_lng cart.restaurant.longitude
             json.rest_lat cart.restaurant.latitude
