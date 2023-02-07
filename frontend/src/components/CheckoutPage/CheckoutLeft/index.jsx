@@ -1,5 +1,5 @@
 import React from 'react'
-import CheckoutHeader from './CheckoutHeader'
+import CheckoutHeader from '../CheckoutHeader'
 import LocationIcon from '../../SVGs/LocationIcon.jsx'
 import '../CheckoutPage.css'
 import { useState } from 'react'
@@ -11,7 +11,6 @@ const CheckoutLeft = ({checkoutCart}) => {
   let [street, city, state, country] = checkoutCart.address.split(',')
   return (
       <>
-      <CheckoutHeader/>
       <div className="checkout-lr">
           <h1 className='rest-title'>{checkoutCart.restName}</h1>
           <div className="mp checkout-deliv-pickup grey-button">

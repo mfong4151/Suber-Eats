@@ -1,10 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-import { useContext } from 'react';
-import { UXContext } from './../UXContext';
+import { NavLink, useHistory } from 'react-router-dom';
 import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
 import { logout } from './../../store/session';
+import { useLocation } from 'react-router-dom';
 import FavoritesIcon from './SVGs/FavoritesIcon';
 import OrdersIcon from './SVGs/OrdersIcon';
 import WalletIcon from './SVGs/WalletIcon';
@@ -13,24 +12,37 @@ import Promotions from './SVGs/Promotions';
 import InviteFriendsIcon from './SVGs/InviteFriendsIcon';
 import univPhotos from '../assets/photoExport'
 
-const UserMenuModal = () => {
-
-  const {menuModal, toggleMenuModal} = useContext(UXContext)
+const UserMenuModal = ({modalStates}) => {
+  const {menuModal, setMenuModal} = modalStates;
   const dispatch = useDispatch()
+  const location = useLocation()
+  const history = useHistory()
   const {linkedin, gitHubBlack} = univPhotos()
   
   if (menuModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
+  
+  const onMain = () =>(
+    location.pathname === '/'
+  )
+
   const signOut = (e) => {
     e.preventDefault();
     dispatch(logout());
 
   };
+
+  const signIn = e =>{
+    e.preventDefault();
+    history.push('/login')
+    
+  }
+
   return (
     <div className="modal">
-        <div className='modal-overlay' onClick={toggleMenuModal}>
+        <div className='modal-overlay' onClick={()=> setMenuModal(!menuModal)}>
           <div className="modal-menu-content">
-              <div className="modal-item-univ modal-menu-button"><NavLink to={'/yourorders'}><OrdersIcon/>Orders</NavLink></div>
+              {!onMain() && <div className="modal-item-univ modal-menu-button"><NavLink to={'/yourorders'}><OrdersIcon/>Orders</NavLink></div>}
               {/* <div className="modal-item-univ modal-menu-button"><FavoritesIcon/>Favorites</div> */}
               <div className="modal-item-univ modal-menu-button"><WalletIcon/>Contact me</div>
               <div className="modal-item-univ modal-menu-button">
@@ -45,7 +57,9 @@ const UserMenuModal = () => {
               <div className="modal-item-univ modal-menu-button"><HelpIcon/>My personal site</div>
               {/* <div className="modal-item-univ modal-menu-button"><Promotions/>Promotions</div> */}
               {/* <div className="modal-item-univ modal-menu-button"><InviteFriendsIcon/>Invite friends</div> */}
-              <button className='modal-menu-button sign-out' onClick={signOut}><span>Sign Out</span></button>
+              {onMain() && <button className='modal-menu-button sign-out' onClick={signIn}><span>Sign In</span></button>}
+              {!onMain() && <button className='modal-menu-button sign-out' onClick={signOut}><span>Sign Out</span></button>}
+              
               <hr className="divider-slim"/>
               {/* <div className="modal-item-univ modal-menu-text-options">Create a business account</div>
               <div className="modal-item-univ modal-menu-text-options">Add your restaurant</div>

@@ -1,19 +1,19 @@
 import React, { useContext } from 'react'
-import { UXContext } from '../../UXContext'
+import { UXContext } from '../UXContext'
 import { useHistory } from 'react-router-dom'
-import MenuIcon from '../../SVGs/MenuIcon'
+import MenuIcon from '../SVGs/MenuIcon'
 
 //would need to take in the restaurant array as an argument
-const CheckoutHeader = ({}) => {
+const CheckoutHeader = ({modalStates}) => {
+    const {menuModal, setMenuModal} = modalStates;
     const history = useHistory()
-    const {toggleMenuModal} = useContext(UXContext)
 
     
     return (
         <header className="splash-header univ-padding">
 
         <div className="logo header-left">
-              <button className='menu-modal' onClick={toggleMenuModal}>
+              <button className='menu-modal' onClick={()=>setMenuModal(!menuModal)}>
                 <MenuIcon/>
               </button>
       

@@ -17,6 +17,13 @@ import Footer from '../generalDesignComponents/Footer';
 import { Redirect } from 'react-router-dom';
 
 const RestaurantListing = () => {
+
+  const [menuModal, setMenuModal ] = useState(false);
+  const [locationModal, setLocationModal] = useState(false);
+  const [cartModal, setCartModal] = useState(false);
+  const [restCartModal, setRestCartModal] = useState(false); 
+  const modalStates = {menuModal, setMenuModal, locationModal, setLocationModal, cartModal, setCartModal, restCartModal, setRestCartModal}
+  
   const [firstReviews, setFirstReviews] = useState(true)
   const sessionUser = useSelector(state => state.session.user)
   const dispatch = useDispatch();
@@ -26,6 +33,8 @@ const RestaurantListing = () => {
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
   const reviewSection = useRef();
+
+
   
   //for later implementation post greenlighting
   // const observer = new IntersectionObserver((entries)=>{
@@ -70,7 +79,7 @@ const RestaurantListing = () => {
 
   return (
     <>
-      <UXHeader/>
+      <UXHeader modalStates={modalStates}/>
       <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
       <RestaurantInfo restaurant={restaurant} reviewRef={reviewSection}/>
       <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
@@ -78,7 +87,7 @@ const RestaurantListing = () => {
         <Reviews sessionUserId={sessionUser.id}/>
       </div>
       <Footer/>
-      <BundleModals/>      
+      <BundleModals modalStates={modalStates}/>      
     </>
   )
 }

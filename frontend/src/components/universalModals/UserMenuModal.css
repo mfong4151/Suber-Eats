@@ -82,11 +82,17 @@ profile
     margin-left:3%;
 }
 
+.exit:hover{
+    cursor: pointer;
+}
+
+
 #exit-spacing{
     margin-left: 1rem;
     margin-top:1rem;
     margin-bottom:.5rem;
 }
+
 
 .delivery-margin{
     margin-left:1rem;

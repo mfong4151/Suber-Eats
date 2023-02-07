@@ -3,8 +3,7 @@ import "../SplashPage.css"
 import {useState} from 'react'
 import {useHistory} from 'react-router-dom'
 
-const SplashHeader = () => {
-  const [menuModal, setMenuModal ] = useState(false)
+const SplashHeader = ({menuModal, setMenuModal}) => {
   const history = useHistory();
 
   const goToLogin = ()=>{
@@ -16,7 +15,7 @@ const SplashHeader = () => {
      <header id="splash-header" className="univ-padding">
 
             <div className="logo header-left">
-                <div onClick={()=> setMenuModal(!menuModal)}>
+                <div id='splash-hamburger' onClick={()=> setMenuModal(!menuModal)}>
                   <svg width="22" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </div>

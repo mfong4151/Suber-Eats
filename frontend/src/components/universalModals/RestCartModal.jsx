@@ -11,7 +11,6 @@ import RestCartItem from './RestCartItem';
 
 const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
   const dispatch = useDispatch()
-  const {setCheckoutOrder} = useContext(UXContext)
   const history = useHistory()
 
   const restCartItems = useSelector(getCartItems)
@@ -32,7 +31,6 @@ const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
   const handleCheckout = e =>{
     e.preventDefault();
     e.stopPropagation();
-    setCheckoutOrder(cart) //maybe refactor this to send the item in the body of history
     history.push(`/checkout`)
     setRestCartModal(!restCartModal)  
   }

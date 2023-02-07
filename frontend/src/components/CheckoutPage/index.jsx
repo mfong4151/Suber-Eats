@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { UXContext } from '../UXContext'
+import React, { useState } from 'react'
+import CheckoutHeader from './CheckoutHeader'
 import CheckoutLeft from './CheckoutLeft'
 import CheckoutRight from './CheckoutRight'
 import UserMenuModal from '../universalModals/UserMenuModal'
@@ -12,7 +12,8 @@ import { Redirect } from 'react-router-dom'
 import Footer from '../generalDesignComponents/Footer'
 
 const CheckoutPage = () => {
-        const {menuModal} = useContext(UXContext)
+        const [menuModal, setMenuModal ] = useState(false);
+        const modalStates = {menuModal, setMenuModal}
         const {cartId} = useParams()
         const sessionUser = useSelector(state => state.session.user)
         const checkoutCart = useSelector(getCart(cartId))
@@ -27,6 +28,8 @@ const CheckoutPage = () => {
 
         return (
           <div className='checkout-page' >
+            <CheckoutHeader modalStates={modalStates}/>
+
             <div id='left'>
                 <CheckoutLeft checkoutCart={checkoutCart}/>
             </div>
@@ -34,7 +37,7 @@ const CheckoutPage = () => {
               <CheckoutRight checkoutCart={checkoutCart}/>
 
             </div>
-            {menuModal && <UserMenuModal/>}
+            {menuModal && <UserMenuModal modalStates={modalStates}/>}
             <Footer/>
           </div>
       )

@@ -3,9 +3,8 @@ import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import ExitButton from './SVGs/ExitButton.jsx'
 
-const LocationModal = () => {
-
-  const { locationModal, toggleLocationModal} = useContext(UXContext)
+const LocationModal = ({modalStates}) => {
+  const {locationModal, setLocationModal} = modalStates;
 
 
   if (locationModal) document.body.classList.add('active-modal')
@@ -14,10 +13,10 @@ const LocationModal = () => {
 
   return (
     <div className="modal">
-        <div className='modal-overlay' onClick={toggleLocationModal}>
+        <div className='modal-overlay' onClick={() => {setLocationModal(!locationModal)}}>
           <div className="modal-loc-content">
               <div className='delivery-margin' id='exit-spacing'>
-                <button><ExitButton/></button>
+                <button className='exit'><ExitButton/></button>
               </div>
               <div className='delivery-header'> 
                 <h1 className='loc-pickup-details'>Using the Map</h1>
@@ -33,7 +32,7 @@ const LocationModal = () => {
               
                
               <div className="udc" id="loc-button-holder">
-                <button className='loc-done button-sq udc'><span>Done</span></button>
+                <button className='loc-done exit button-sq udc'><span>Done</span></button>
               </div>
 
           </div>

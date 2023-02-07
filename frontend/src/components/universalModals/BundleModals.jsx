@@ -6,20 +6,21 @@ import CartModal from './CartModal';
 import RestCartModal from './RestCartModal';
 
 // const [menuModal, setMenuModal ] = useState(false)
+// const [locationModal, setLocationModal] = useState(false)
 // const [cartModal, setCartModal] = useState(false);
 // const [restCartModal, setRestCartModal] = useState(false);  
 
 
-const BundleModals = () => {
-    const {menuModal, cartModal, locationModal} = useContext(UXContext)
+const BundleModals = ({modalStates}) => {
+    const {menuModal, locationModal, cartModal, restCartModal} = modalStates
 
 
     return (
         <>
-            {menuModal && <UserMenuModal/>}
-            {locationModal && <LocationModal/>}
-            {cartModal && <CartModal/>}
-            {/* {restCartModal && <RestCartModal/>} */}
+            {menuModal && <UserMenuModal modalStates={modalStates}/>}
+            {locationModal && <LocationModal modalStates={modalStates}/>}
+            {cartModal && <CartModal modalStates={modalStates}/>}
+            {/* {restCartModal && <RestCartModal modalStates={modalStates}/>} */}
         </>
         )
 }

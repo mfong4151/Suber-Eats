@@ -9,8 +9,8 @@ import { getSessionUserId } from '../../store/session';
 import { getCarts } from '../../store/cart';
 import { useParams } from 'react-router-dom';
 
-const CartModal = () => {
-    const {cartModal, toggleCartModal} = useContext(UXContext);
+const CartModal = ({modalStates}) => {
+    const {cartModal, setCartModal} = modalStates;
     const userCarts = useSelector(getCarts); 
     const sessionUserId = useSelector(getSessionUserId);
     const {restaurantId} = useParams()
@@ -36,7 +36,7 @@ const CartModal = () => {
     // if (userCarts.length > 0)
         return (
         <div className="modal">
-            <div className='modal-overlay cart-overlay' onClick={toggleCartModal}>
+            <div className='modal-overlay cart-overlay' onClick={()=> setCartModal(!cartModal)}>
               {userCarts.length > 0 && 
                 <div className="cart-modal-content">
                     {userCarts?.map((cart, idx)=>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import UXHeader from '../UXHeader.jsx';
@@ -12,6 +12,13 @@ import Footer from '../generalDesignComponents/Footer/index.jsx';
 
 
 const UserExperiencePage = () => {
+
+    const [menuModal, setMenuModal ] = useState(false);
+    const [locationModal, setLocationModal] = useState(false);
+    const [cartModal, setCartModal] = useState(false);
+    const [restCartModal, setRestCartModal] = useState(false); 
+    const modalStates = {menuModal, setMenuModal, locationModal, setLocationModal, cartModal, setCartModal, restCartModal, setRestCartModal}
+    
     const sessionUser = useSelector(state=>state.session.user);
     const dispatch = useDispatch();
 
@@ -27,10 +34,10 @@ const UserExperiencePage = () => {
 
     return (
     <>  
-      <UXHeader/>
+      <UXHeader modalStates={modalStates}/>
       <UXView/>
       <Footer/>
-      <BundleModals/>        
+      <BundleModals modalStates={modalStates}/>        
     </>
   )
 }

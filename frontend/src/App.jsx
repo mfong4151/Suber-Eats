@@ -47,13 +47,6 @@ function App() {
           <Switch>
 
             <Route exact path="/login" component={LoginFormPage}/>
-            <UXContext.Provider value={{
-                                        menuModal, setMenuModal, toggleMenuModal,
-                                        cartModal, setCartModal, toggleCartModal,
-                                        locationModal, setLocationModal, toggleLocationModal,
-                                        toggleRestCartModal,
-                                        restCartModal, setRestCartModal, toggleCartModals,
-                                      }}>
               
               <Route exact path="/deliverypickup" component={UserExperiencePage}/>
               <Route exact path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
@@ -63,7 +56,6 @@ function App() {
 
               <Route exact path="/" component={SplashPage} />
 
-            </UXContext.Provider>
           </Switch>
     </>
   );
