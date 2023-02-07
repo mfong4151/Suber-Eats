@@ -13,7 +13,6 @@ import Footer from '../generalDesignComponents/Footer/index.jsx';
 
 const UserExperiencePage = () => {
     const sessionUser = useSelector(state=>state.session.user);
-
     const dispatch = useDispatch();
 
     useEffect(()=>{

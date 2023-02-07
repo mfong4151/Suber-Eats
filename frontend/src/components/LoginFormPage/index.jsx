@@ -3,11 +3,8 @@ import LoginForm from './LoginForm.jsx';
 import LoginHeader from './LoginHeader.jsx';
 import LoginSignupHandler from './LoginSignupHandler.jsx';
 import {useState } from 'react';
-import { UsernameContext } from './UsernameContext.jsx';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchUsers, getUsers } from '../../store/user.js';
-import { aggregateUserCredentials } from './utils/compileUserSet.jsx';
-import Footer from '../generalDesignComponents/Footer/index.jsx';
 
 const LoginFormPage = () => {
 
