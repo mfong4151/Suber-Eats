@@ -14,16 +14,24 @@
 
 #options-carousel{
     height:160px;
+
 }
+
 
 
 .carousel-body{
     padding-top: 1.3rem;
+    padding-left: 1.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     word-break: break-all;
-    width:100%;
+    width:80%;
+}
+
+
+.carousel-body::-webkit-scrollbar{
+    display:none
 }
 
 .carousel-lr-cont{
@@ -32,17 +40,16 @@
     width:100%;
     display: flex;
     justify-content: space-between;
-    z-index: 0;
 }
 
 
 .carousel-lr-btn{
+    position:relative;
     background-color: white;
     border:2px solid var(--color-grey-shadow);
     border-radius: 5rem;
     height:40px;
     width:40px;
-    position:relative;
 }
 
 
@@ -82,7 +89,7 @@
     background-color: var(--color-hover-grey);
 }
 
-.carousel-buttons:focus{
+.carousel-buttons-clicked{
     background-color: var(--color-hover-black);
 }
 

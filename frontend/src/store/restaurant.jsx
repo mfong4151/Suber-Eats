@@ -48,7 +48,6 @@ const scoreRestaurant = (filterOptions, rest) =>{
 
 //This is a little bit extra, and theres no reason to use a heap persay, other JS librarys will do the job
 export const getRestaurantHeap = filterOptions => state =>{
-    // console.log(filterOptions)
     if (!state.restaurants) return [];
     const maxHeap = new Heap((a, b) =>  b.score- a.score)    
     maxHeap.init([])

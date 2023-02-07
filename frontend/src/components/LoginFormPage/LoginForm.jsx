@@ -18,22 +18,21 @@ const LoginForm = ({credential, setCredential, setValidCredential}) => {
     
 
 
-    const handleSubmit = e => {
+    const  handleSubmit = e => {
 
         if (!credential) {
             setErrors(['Please enter a phone number or email'])
             return
-        }else if ((credential.match(/-/g)|| []).length === 2 && handlePhoneNumberErrors(credential)){
+        }else if (credential.includes('-') && handlePhoneNumberErrors(credential)){
             setErrors(['Please insert a valid phone number'])
             return
-        } else if (handleEmailErrors(credential)){
+        } else if (!credential.includes('-') && handleEmailErrors(credential)){
             setErrors(['Please provide a valid email address'])
             return
         } 
         
         //throwing issues with detecting errors, maybe due to async ness
         if (errors.length === 0) { 
-             console.log(errors)
              setValidCredential(true)
         }
         

@@ -18,16 +18,16 @@ export const photoLoader = ()=>{
     return [frozendesert,
             comfortfood,
             coffeeandtea,
+            american,
             bakery,
+            pizza,
             asian,
             bubbletea,
-            indian,
-            american,
             thai,
-            pizza,
             italian,
             vietnamese,
-            healthy
+            healthy,
+            indian,
             ]
 }
 
@@ -37,16 +37,16 @@ export const titleLoader =( ) => (
         'Ice Cream + Frozen',                           
         'Comfort Food',                             
         'Coffee and Tea',                           
+        'American',                             
         'Bakery',                           
+        'Pizza',                            
         'Asian',                            
         'Bubble Tea',                           
-        'Indian',                           
-        'American',                             
         'Thai',                             
-        'Pizza',                            
         'Italian',                          
         'Vietnamese',                           
-        'Healthy'                           
+        'Healthy',                           
+        'Indian',                      
     ]
 )
 
@@ -56,17 +56,17 @@ export const keyLoader = () =>(
         'ice cream and frozen',
         'comfort food',
         'coffee and tea' ,
+        'american',
         'bakery',
+        'pizza',
         'asian',
         'boba',
-        'indian',
-        'american',
         'thai',
-        'pizza',
         'italian',
         'vietnamese',
         'healthy',
-
+        'indian',
+        
     ]
 )
 
