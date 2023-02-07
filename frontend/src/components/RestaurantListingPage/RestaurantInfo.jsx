@@ -25,7 +25,7 @@ const RestaurantInfo = ({restaurant, reviewRef}) => {
         Open at some point
       </div>
       <div className="menu-row-1 menu-row-2">
-        {restaurant.address.split(',').slice(0,3).join(' ,')}
+        {restaurant?.address.split(',').slice(0,3).join(' ,')}
       </div>
       {/* <div className="menu-row-1 menu-row-2">
         Tap for hours, info, and more
