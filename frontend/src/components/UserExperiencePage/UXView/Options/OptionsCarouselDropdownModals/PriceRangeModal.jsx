@@ -12,7 +12,6 @@ const PriceRange = ({filterOptions, setFilterOptions}) => {
     newFilterOptions['priceRange'] = value
     setFilterOptions(newFilterOptions)
   }
-  console.log(filterOptions)
    
   return (
     <div className="sort-modal-radio">
