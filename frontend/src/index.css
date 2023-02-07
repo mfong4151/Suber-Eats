@@ -364,3 +364,6 @@ h2{
     color: var(--color-white)
 }
 
+.errors{
+    color: var(--color-red-text)
+}

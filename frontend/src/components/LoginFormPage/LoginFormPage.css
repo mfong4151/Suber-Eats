@@ -162,7 +162,7 @@ hr.divider-thin{
  #btn-next{
     background-color: #F6F6F6;
     color: #AFAFAF;
-    cursor:not-allowed;
+    /* cursor:not-allowed; */
  }
 
 #btn-next-clickable{

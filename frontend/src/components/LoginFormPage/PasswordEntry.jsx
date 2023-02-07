@@ -9,11 +9,10 @@ import ArrowRight from './SVGs/ArrowRight';
 import './LoginFormPage.css'
 
 // Assuming the user exists in our set of users we render here
-const PasswordEntry = () => {
+const PasswordEntry = ({credential}) => {
     const dispatch = useDispatch();
     const history = useHistory()
     const sessionUser = useSelector(state => state.session.user)
-    const {credential} = useContext(UsernameContext)
     const [password, setPassword] = useState('')
     const [passwordView, setPasswordView] = useState('password')
     const [nextId, setNextId] = useState('btn-next')

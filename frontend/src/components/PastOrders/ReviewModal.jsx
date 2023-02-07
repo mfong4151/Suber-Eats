@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { updateTransaction } from '../../store/transaction';
@@ -7,6 +7,7 @@ import './PastOrders.css';
 
 const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransaction, sessionUserId}) => {
     const [reviewBody, setReviewBody] = useState('')
+    const [errors, setErrors] = useState([])
     const dispatch = useDispatch()
 
     if (showReviewModal) document.body.classList.add('active-modal')
@@ -39,7 +40,9 @@ const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransac
     const handleSubmitReview = e =>{
         e.preventDefault();
         e.stopPropagation();
-        if (reviewBody){
+        if(!reviewBody){
+          setErrors(['Review body cannot be blank!'])
+        }else{
           dispatch(updateTransaction(updatedTransaction(), pastTransaction.id))
           .then(dispatch(createReview(createdReview())))
           .then(()=> goToRest()
@@ -49,6 +52,10 @@ const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransac
         
     }
 
+
+    useEffect(()=>{
+      setErrors([])
+    }, [reviewBody])
  
   return (
     <div className="modal">
@@ -61,6 +68,13 @@ const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransac
             <div id="btn-holder">
                 <button className="review-btns btn-square black-button udc review-submit" onClick={handleSubmitReview}><span className="review-btn-text">Submit a review</span></button>
                 <button className="review-btns btn-square grey-button udc"><span className="review-btn-text">Go Back</span></button>
+            </div>
+            <div>
+              {errors.length > 0 && <p className='errors'>
+                
+                {errors}
+              </p>
+                }
             </div>
           </div>
 

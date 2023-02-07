@@ -11,24 +11,21 @@ import Footer from '../generalDesignComponents/Footer/index.jsx';
 
 const LoginFormPage = () => {
 
-
     const [credential, setCredential] = useState('');
     const [validCredential, setValidCredential] = useState(false)
-    const dispatch = useDispatch();
-    const allUsers = useSelector(getUsers)
 
+    const dispatch = useDispatch();
+    
     useEffect(()=>{
         dispatch(fetchUsers())
     }, [])
+    
 
-    let userSet = aggregateUserCredentials(allUsers)
     return (
         <>
-            <UsernameContext.Provider value={{credential, setCredential, validCredential,setValidCredential, userSet}}>
                 <LoginHeader/> 
-                {!validCredential && <LoginForm/>}
-                {validCredential && <LoginSignupHandler/>}
-            </UsernameContext.Provider>
+                {!validCredential && <LoginForm credential={credential} setCredential={setCredential} setValidCredential={setValidCredential}/>}
+                {validCredential && <LoginSignupHandler credential={credential}/>}
         </>
     )
     

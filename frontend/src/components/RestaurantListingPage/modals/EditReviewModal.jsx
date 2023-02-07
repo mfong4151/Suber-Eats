@@ -1,13 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import { updateReview } from '../../../store/review';
 
 const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, userId, restaurantId, reviewId, ctr, setCtr}) => {
     const dispatch = useDispatch();
     const [origReview, setOrigReview] = useState(reviewBody);
-
+    const [errors, setErrors] = useState(reviewBody);
 
     if (editModal) document.body.classList.add('active-modal')
     else document.body.classList.remove('active-modal')
@@ -27,6 +26,10 @@ const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, us
     const handleSubmitReview = e =>{
       e.preventDefault();
       e.stopPropagation();
+      if (reviewBody === ''){
+        setErrors(['Review body cannot be blank!'])
+        return
+      }
       if (reviewBody !== origReview){
         
         dispatch(updateReview({review:{
@@ -40,6 +43,10 @@ const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, us
       
   }
 
+  useEffect(()=>{
+    setErrors([])
+  }, [reviewBody])
+
  
   return (
     <div className="modal">
@@ -52,6 +59,13 @@ const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, us
             <div className="btn-holder">
                 <button className="review-btns btn-square black-button udc review-submit"  onClick={handleSubmitReview}><span className="review-btn-text">Edit your review</span></button>
                 <button className="review-btns btn-square grey-button udc go-back" onClick={handleGoBack}><span className="review-btn-text">Go Back</span></button>
+            </div>
+            <div>
+              {errors.length > 0 && <p className='errors'>
+                
+                {errors}
+              </p>
+                }
             </div>
           </div>
 

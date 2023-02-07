@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/session";
 import { Redirect, Link } from "react-router-dom";
@@ -7,68 +7,44 @@ import './LoginFormPage.css'
 import AppleLogo from "./SVGs/AppleLogo";
 import FacebookLogo from "./SVGs/FacebookLogo";
 import { UsernameContext } from "./UsernameContext";
-
-const LoginForm = () => {
+import { handlePhoneNumberErrors, handleEmailErrors } from "./utils/handleErrors";
+const LoginForm = ({credential, setCredential, setValidCredential}) => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user)
-    const {credential, setCredential, setValidCredential } = useContext(UsernameContext)
 
     const [errors, setErrors] = useState([]);
     const optOut = 'By proceeding, you consent to get calls, WhatsApp or SMS messages, including by automated dialer, from Uber and its affiliates to the number provided. Text “STOP” to 89203 to opt out.'
     
-    if (sessionUser) return <Redirect to='/deliverypickup' />
     
-
-    const handlePhoneNumberErrors = phoneNumber => {
-        // let region, phoneNumber;
-        // region, phoneNumber = credential.split(' ')
-        
-        // Edit this if we ever add other countries
-        //   if region != 1
-        //     render json:{ errors:['Demo does not support regions outside of the United States']}, status: :unauthorized
-        //     return
-        //   # elsif region == 1 && phoneNumber.length != 12
-        let splitNumber = phoneNumber.split('-');
-        if (splitNumber[0].length === 3 && splitNumber[1].length === 3 && splitNumber[2].length === 4)return false;
-        return true;
-
-    }
-
-    const handle_email_errors = email => {
-        email = email.split('')
-
-        let atSym = false, period = false, atSymIndex, periodIndex;
-        for(const[idx, c] of email.entries()){
-
-            if(c === '@'){
-                atSym = true;
-                atSymIndex = idx;
-            }
-
-            if(c === '.'){
-
-                period = true;
-                periodIndex = idx;
-            }
-        }
-        if (atSymIndex > periodIndex || !atSym || !period) return true;
-        return false;
-    }
 
 
     const handleSubmit = e => {
-        e.preventDefault();
-        setErrors([]);
-        if (credential === ''){
+
+        if (!credential) {
             setErrors(['Please enter a phone number or email'])
-            
-        } else if ((credential.match(/-/g)|| []).length === 2){
+            return
+        }else if ((credential.match(/-/g)|| []).length === 2 && handlePhoneNumberErrors(credential)){
+            setErrors(['Please insert a valid phone number'])
+            return
+        } else if (handleEmailErrors(credential)){
+            setErrors(['Please provide a valid email address'])
+            return
+        } 
         
-            if (handlePhoneNumberErrors(credential)) setErrors(['Please insert a valid phone number'])
-        } else if (handle_email_errors(credential)) setErrors(['Please provide a valid email address'])
-        if (errors.length === 0) setValidCredential(true)
+        //throwing issues with detecting errors, maybe due to async ness
+        if (errors.length === 0) { 
+             console.log(errors)
+             setValidCredential(true)
+        }
+        
         
     } 
+
+    useEffect(
+        ()=>{
+            setErrors([])
+        },[credential]
+    )
       
 
     const handleDemoUser = e => {
@@ -91,6 +67,7 @@ const LoginForm = () => {
             });
 
     }
+    if (sessionUser) return <Redirect to='/deliverypickup' />
 
 
     return(
