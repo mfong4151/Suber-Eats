@@ -47,8 +47,7 @@ function App() {
   return (
     <>
           <Switch>
-            <Route path="/" component={SplashPage} exact/>
-            <Route path="/login" component={LoginFormPage}/>
+            <Route exact path="/login" component={LoginFormPage}/>
             <UXContext.Provider value={{sortOptions, setSortOptions, 
                                         menuModal, setMenuModal, toggleMenuModal,
                                         cartModal, setCartModal, toggleCartModal,
@@ -58,12 +57,12 @@ function App() {
                                         checkoutOrder, setCheckoutOrder
                                       }}>
               
-              <Route path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
-              <Route path="/checkout/:cartId" component={CheckoutPage}/>
-              <Route path="/deliverypickup" component={UserExperiencePage}/>
-              <Route path="/yourorders" component={PastOrders}/>
+              <Route exact path="/restaurantListing/:restaurantId" component={RestaurantListing}/>
+              <Route exact path="/checkout/:cartId" component={CheckoutPage}/>
+              <Route exact path="/deliverypickup" component={UserExperiencePage}/>
+              <Route exact path="/yourorders" component={PastOrders}/>
+              <Route path="/" component={SplashPage} />
             </UXContext.Provider>
-            <Route path ="/" component={SplashPage}/>
           </Switch>
     </>
   );
