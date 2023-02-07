@@ -85,6 +85,7 @@ profile
 #exit-spacing{
     margin-left: 1rem;
     margin-top:1rem;
+    margin-bottom:.5rem;
 }
 
 .delivery-margin{
@@ -94,7 +95,7 @@ profile
 #loc-modal-text{
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -413,7 +414,6 @@ profile
     margin-left:5%;
     width: 69px;
     height: 69px;
-    position: relative;
     overflow: hidden;
     border-radius: 50%;
     

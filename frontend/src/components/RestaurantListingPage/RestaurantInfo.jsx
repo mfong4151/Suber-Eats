@@ -2,7 +2,7 @@ import React from 'react'
 import star from './assets/star_rating_dark.png'
 
 const RestaurantInfo = ({restaurant, reviewRef}) => {
-  console.log(restaurant)
+
   return (
     <div className="listing-info">
       <div className='univ-padding'>

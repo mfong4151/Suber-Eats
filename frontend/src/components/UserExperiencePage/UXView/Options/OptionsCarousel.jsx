@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {carouselLoader} from '../../utils/imageLoader'
 import "../Pickup.css"
 import ButtonLeft from '../SVGs/ButtonLeft'
@@ -6,7 +6,13 @@ import ButtonRight from '../SVGs/ButtonRight'
 
 const OptionsCarousel = ({filterOptions, setFilterOptions}) => {
   //The .slice is a temporary measure to keep my sanity only
+  const buttonLeft = useRef()
+  const buttonRight = useRef()
   const icons = carouselLoader().slice(0, 9)
+
+  // console.log(buttonLeft.current.offsetLeft)
+  // console.log(buttonRight.current.offsetLeft)
+  
 
   const handleOnClick = (e, key) =>{
     const newFilterOptions = {...filterOptions}
@@ -32,10 +38,10 @@ const OptionsCarousel = ({filterOptions, setFilterOptions}) => {
 
         </div>
         <div className='carousel-lr-cont'>
-            <button className="carousel-lr-btn udc">
+            <button className="carousel-lr-btn udc" ref={buttonLeft}>
                 <ButtonLeft/>
             </button>
-            <button className="carousel-lr-btn udc" id="carousel-r-btn">
+            <button className="carousel-lr-btn udc" id="carousel-r-btn"  ref={buttonRight}>
               <ButtonRight/>
             </button> 
         </div>

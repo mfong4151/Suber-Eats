@@ -32,7 +32,7 @@ const LocationModal = () => {
 
               
                
-              <div className="udc">
+              <div className="udc" id="loc-button-holder">
                 <button className='loc-done button-sq udc'><span>Done</span></button>
               </div>
 
