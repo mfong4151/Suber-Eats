@@ -31,6 +31,7 @@ const Map = ({restaurants, userLocation}) => {
         disableDefaultUI:true,
         clickableIcons:false,
         disableDoubleClickZoom: true,
+        scrollwheel: false
     };
     
   const handleOnClick = e =>{
