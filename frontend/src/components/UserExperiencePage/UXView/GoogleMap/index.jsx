@@ -18,7 +18,8 @@ const Map = ({restaurants, userLocation}) => {
     // {lng: userLocation.longitude, lat: userLocation.latitude}
 
   let userLocObj = useSelector(checkUserLoc(sessionUserId))
-  const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY ? process.env.REACT_APP_MAPS_API_KEY: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
+  // const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY ? process.env.REACT_APP_MAPS_API_KEY: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
+  const { isLoaded} = useLoadScript({googleMapsApiKey: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
 
 
 
