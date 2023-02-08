@@ -8,7 +8,7 @@ import { sortModalStyles, priceModalStyles, ratingModalStyles } from './OptionsC
 const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
   const [ sortModal,setSortModal] = useState(false)
   const [ priceModal,setPriceModal] = useState(false)
-  const [ ratingModal,setRatingModal] = useState(false)
+  // const [ ratingModal,setRatingModal] = useState(false)
 
 
   const toggleSortOptions =  e =>{
@@ -34,15 +34,15 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
   
   return (
     <div className='pickup-btns'>
-      <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleSortOptions}>
+      <button className={`btn-round ux-buttons ux-sort-buttons ${sortModal && `black-button`}`} onClick={toggleSortOptions}>
         <span className='udc' onClick={toggleSortOptions}>
           Sort
         </span>
         <ChevronDown toggleOptions={toggleSortOptions}/>
       </button>
 
-      <button className="btn-round ux-buttons ux-sort-buttons" onClick={togglePriceOptions} value="price" >
-        <span onClick={togglePriceOptions}>Price Range</span>
+      <button className={`btn-round ux-buttons ux-sort-buttons ${priceModal && `black-button`}`} onClick={togglePriceOptions} value="price" >
+        <span onClick={togglePriceOptions}>Price range</span>
         <ChevronDown toggleOptions={togglePriceOptions}/>
       </button>
 
