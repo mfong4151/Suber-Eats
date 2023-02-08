@@ -166,7 +166,7 @@
 }
 
 .options-body:hover{
-    background-color: var(--color-hover-grey);
+    background-color: var(--color-grey-array-hover);
 }
 
 .options-image{
@@ -182,7 +182,7 @@
 
 }
 .options-image:hover{
-    background-color: var(--color-hover-grey);
+    background-color: var(--color-grey-array-hover);
 }
 
 .restaurant-name{

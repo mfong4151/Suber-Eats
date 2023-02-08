@@ -15,9 +15,11 @@
   
 :root{
     --color-green: #06c167;
+    --color-green-active: #037840;
     --color-grey: rgb(238, 238, 238);
     --color-greyDarker: rgb(84, 84, 84);
     --color-grey-text: #8D8D8D;
+    --color-grey-array-hover:#F6F6F6;
     --color-greyButtonBG: #EEEEEE;
     --color-grey-shadow: #E2E2E2;
     --color-hover-grey: #E2E2E2;

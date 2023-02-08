@@ -23,16 +23,19 @@ const UXHeader = ({modalStates}) => {
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
         </div>
+        
 
         <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>
               <span className="map-location-text">{' How to use map interface'}
               </span>
         </button>
-        <form className="form-bg minimal-header-padding">
-          <SearchIcon/>
-          <input id='search-form' type='text' name='location' placeholder='What are you craving?'/> 
+        
+          <form className="form-bg minimal-header-padding">
+            <SearchIcon/>
+            <input id='search-form' type='text' name='location' placeholder='What are you craving?'/> 
 
-        </form>
+          </form>
+          
         <div className='header-button-spacing'>
 
           <button id='cart-button' className='btn-round ux-buttons' onClick={()=> setCartModal(!cartModal)}>

@@ -160,11 +160,17 @@
     background-color: var(--color-green);
     color: var(--color-white);
     border-radius: 1rem;
+    
 }
 
 .place-order:hover{
+    
     cursor:pointer;
  
+}
+
+.place-order:active{
+    background-color: var(--color-green-active);
 }
 
 #subtext{
