@@ -17,12 +17,10 @@ const UserExperiencePage = () => {
     const [locationModal, setLocationModal] = useState(false);
     const [cartModal, setCartModal] = useState(false);
     const [restCartModal, setRestCartModal] = useState(false); 
-    const windowSize = useWindowSize()
     const modalStates = {menuModal, setMenuModal, locationModal, setLocationModal, cartModal, setCartModal, restCartModal, setRestCartModal}
     const sessionUser = useSelector(state=>state.session.user);
     const dispatch = useDispatch();
 
-    console.log(windowSize)    
 
     useEffect(()=>{
 

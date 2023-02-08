@@ -86,7 +86,7 @@
 #your-items-section{
     overflow:hidden;
     overflow-y:auto;
-    height:140px;
+    height:110px;
 }
 
 .your-items-item{
@@ -125,6 +125,7 @@
 }
 
 .delivery-header-holder{
+    margin-top:1%;
     margin-bottom:2%
 }
 

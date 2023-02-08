@@ -4,11 +4,13 @@ import SearchIcon from './UserExperiencePage/UXView/SVGs/SearchIcon';
 import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { useHistory,  } from 'react-router-dom';
+import useWindowSize from './customHooks/useWindowSize';
 import BundleModals from './universalModals/BundleModals';
 
 const UXHeader = ({modalStates}) => {
   const {menuModal, setMenuModal, cartModal,    setCartModal, restCartModal, setRestCartModal, locationModal, setLocationModal} = modalStates;
- 
+  const windowSize = useWindowSize()
+
   const history = useHistory()
   return (
     <header className="splash-header univ-padding">
