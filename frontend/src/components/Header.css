@@ -1,9 +1,10 @@
 
 #ux-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 92px;
+    padding-right:2rem;
 }
 
 
@@ -31,4 +32,8 @@
 
 #delivery-pickup{
     font-family: var(--font-family-UMB);
+}
+
+.header-button-spacing{
+    padding-left:1rem;
 }

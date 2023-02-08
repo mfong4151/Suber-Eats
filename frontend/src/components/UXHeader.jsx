@@ -33,12 +33,16 @@ const UXHeader = ({modalStates}) => {
           <input id='search-form' type='text' name='location' placeholder='What are you craving?'/> 
 
         </form>
-        <button id='cart-button' className='btn-round ux-buttons' onClick={()=> setCartModal(!cartModal)}>
+        <div className='header-button-spacing'>
+
+          <button id='cart-button' className='btn-round ux-buttons' onClick={()=> setCartModal(!cartModal)}>
             <span className='embedded-icon-padding'>
                 <SearchIcon/>
             </span>
             Carts
-        </button>
+          </button>
+        </div>
+
 
     </header>
 

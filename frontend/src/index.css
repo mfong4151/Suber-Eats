@@ -77,8 +77,7 @@
 
 .btn-round{
     margin: auto;
-
-    
+    padding: 0.8rem 1rem;
     border-radius: 30px;
     border: 0;
     font-family: var(--font-family);
