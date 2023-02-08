@@ -1,17 +1,20 @@
 
-#splash-header{
-    background-color: #FFFFFF;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+#ux-header{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    height: 92px;
+}
 
+
+.minimal-header-padding{
+    padding-right:2rem;
 }
 
 #cart-button{
     background-color: var(--color-black);
-    color: var(--color-white)
+    color: var(--color-white);
+    float:right;
 }
 
 #cart-button:hover{

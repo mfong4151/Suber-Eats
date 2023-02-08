@@ -5,7 +5,6 @@ import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { useHistory,  } from 'react-router-dom';
 import useWindowSize from './customHooks/useWindowSize';
-import BundleModals from './universalModals/BundleModals';
 
 const UXHeader = ({modalStates}) => {
   const {menuModal, setMenuModal, cartModal,    setCartModal, restCartModal, setRestCartModal, locationModal, setLocationModal} = modalStates;
@@ -13,31 +12,25 @@ const UXHeader = ({modalStates}) => {
 
   const history = useHistory()
   return (
-    <header className="splash-header univ-padding">
+    <header className="univ-padding" id="ux-header">
 
         <div className="logo header-left">
-              <button className='menu-modal' onClick={()=> setMenuModal(!menuModal)}>
+              <button className='menu-modal minimal-header-padding' onClick={()=> setMenuModal(!menuModal)}>
                 <MenuIcon/>
               </button>
       
-              <div onClick={()=> history.push('/')}>
+              <div id='logo-holder' onClick={()=> history.push('/')}>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
         </div>
 
-        {/* <button className="btn-round ux-buttons" id="delivery-pickup">Preset Locations</button> */}
-        {/* {location.pathname=== '/deliverypickup' && <button className='btn-round ux-buttons' onClick={toggleLocationModal}><LocationIcon/>
-              <span className="map-location-text">{' How to use map interface'}
-              </span>
-        </button>} */}
-
-          <button className='btn-round ux-buttons' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>
+        <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>
               <span className="map-location-text">{' How to use map interface'}
               </span>
         </button>
-        <form className="form-bg">
+        <form className="form-bg minimal-header-padding">
           <SearchIcon/>
-          <input  type='text' name='location' placeholder='What are you craving?'/> 
+          <input id='search-form' type='text' name='location' placeholder='What are you craving?'/> 
 
         </form>
         <button id='cart-button' className='btn-round ux-buttons' onClick={()=> setCartModal(!cartModal)}>
