@@ -9,7 +9,9 @@
     overflow-y: auto;
     overflow-x: hidden;
     height:1260px;
+    min-width: 700px;
     width: 45%;
+    
 }
 
 #options-carousel{

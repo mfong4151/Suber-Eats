@@ -8,19 +8,21 @@ import { fetchRestaurants } from '../../store/restaurant';
 import BundleModals from '../universalModals/BundleModals.jsx';
 import { fetchLocations } from '../../store/location';
 import Footer from '../generalDesignComponents/Footer/index.jsx';
-
+import useWindowSize from '../customHooks/useWindowSize.jsx';
 
 
 const UserExperiencePage = () => {
-
+    
     const [menuModal, setMenuModal ] = useState(false);
     const [locationModal, setLocationModal] = useState(false);
     const [cartModal, setCartModal] = useState(false);
     const [restCartModal, setRestCartModal] = useState(false); 
+    const windowSize = useWindowSize()
     const modalStates = {menuModal, setMenuModal, locationModal, setLocationModal, cartModal, setCartModal, restCartModal, setRestCartModal}
-    
     const sessionUser = useSelector(state=>state.session.user);
     const dispatch = useDispatch();
+
+    console.log(windowSize)    
 
     useEffect(()=>{
 

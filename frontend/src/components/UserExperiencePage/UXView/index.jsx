@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
 
-const UXView = () => {
+const UXView = ({}) => {
   const [filterOptions, setFilterOptions] = useState(
     {
       'score': 0,
