@@ -6,7 +6,7 @@ Suber Eats is a Uber Eats clone. Seed data is generated from restaurants in the 
 
 ![Screen Shot 2023-01-13 at 8 44 48 AM](https://user-images.githubusercontent.com/24309253/212373582-a27e6fc5-a431-4e69-b95d-ab17c642e630.png)
 
-```
+```ruby
 
     def self.restaurants_in_proximity(userId)
         Restaurant.select('*')
@@ -28,7 +28,7 @@ Users can all the restaurants within a 1.5 - 2 mile proximity by using the locat
 On click users will be redirected to a page for the restaurant. Each of these menus contains native restaurant data.
 ![Screen Shot 2023-01-13 at 8 45 55 AM](https://user-images.githubusercontent.com/24309253/212373797-95e7ab2a-8246-4d33-8885-bbfa37707938.png)
 
-```
+```javascript
 const MenuListings = ({sessionUserId}) => {
     const usersCart = useSelector(getCart)
     const [menuItemModal, setMenuItemModal] = useState(false);  
