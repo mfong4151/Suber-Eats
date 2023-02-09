@@ -2,6 +2,11 @@
     cursor: pointer;
 }
 
+#splash-header-left{
+    height:3rem;
+}
+
+
 #search-component{
 
     position: relative;
