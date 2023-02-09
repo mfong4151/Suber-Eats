@@ -10,6 +10,7 @@
 
 .minimal-header-padding{
     padding-right:2rem;
+  
 }
 
 #cart-button{
@@ -43,5 +44,7 @@
 }
 
 .header-left{
+    display: flex;
+    align-items: center;
     width:auto;
 }

@@ -180,7 +180,9 @@
 
 /* for the logo "suberEats" */
 #logo-holder{
-    min-width:150px;
+    min-width:160px;
+    height:2.5rem;
+    padding-right: 1.5rem;
 }
 
 .logo{
@@ -275,6 +277,7 @@ h2{
 }
 
 .menu-modal{
+    height:2rem;
     cursor: pointer;
 }
 
