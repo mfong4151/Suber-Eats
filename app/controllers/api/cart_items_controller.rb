@@ -32,7 +32,9 @@ class Api::CartItemsController < ApplicationController
     end
 
     def update
-        @cart_item = CartItem.find_by(id: params[:id])
+        @cart_item = CartItem.find_by_id(params[:id])
+        puts 'fuck fuck fuck fuck fuck'
+        puts(@cart_item)
         if @cart_item.update(cart_item_params)
             render :show
         else

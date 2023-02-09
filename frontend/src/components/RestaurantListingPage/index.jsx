@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurant, getRestaurant, getRestaurantCoords } from '../../store/restaurant';
 import { fetchMenu } from '../../store/menu';
+import { fetchCartItems } from '../../store/cartItems'
 import MenuListings from './MenuListings';
 import Reviews from './Reviews';
 import './RestaurantListingPage.css';
@@ -33,7 +34,6 @@ const RestaurantListing = () => {
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
   const reviewSection = useRef();
-
 
   
   //for later implementation post greenlighting
@@ -70,8 +70,12 @@ const RestaurantListing = () => {
   useEffect(()=>{
     dispatch(createCart(cartFact()))
     .then(dispatch(fetchCart(sessionUser.id)))
+    .then(dispatch(fetchCartItems(usersCarts[restaurantId])))
 
-  },[dispatch, restaurantId])
+  },[dispatch])
+
+
+
 
   setTimeout(toReviewSection,1000)
 
@@ -79,6 +83,7 @@ const RestaurantListing = () => {
 
   return (
     <>
+    
       <UXHeader modalStates={modalStates}/>
       <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
       <RestaurantInfo restaurant={restaurant} reviewRef={reviewSection}/>
@@ -88,6 +93,7 @@ const RestaurantListing = () => {
       </div>
       <Footer/>
       <BundleModals modalStates={modalStates}/>      
+
     </>
   )
 }

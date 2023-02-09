@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LocationIcon from './SVGs/LocationIcon';
 import SearchIcon from './UserExperiencePage/UXView/SVGs/SearchIcon';
 import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { useHistory,  } from 'react-router-dom';
 import useWindowSize from './customHooks/useWindowSize';
+import { useLocation } from 'react-router-dom';
+import { fetchCart, getCartSizeFromWildcard } from '../store/cart';
+import {useSelector, useDispatch} from 'react-redux'
 
 const UXHeader = ({modalStates}) => {
-  const {menuModal, setMenuModal, cartModal,    setCartModal, restCartModal, setRestCartModal, locationModal, setLocationModal} = modalStates;
+  const {menuModal, setMenuModal, cartModal, setCartModal, restCartModal, setRestCartModal, locationModal, setLocationModal} = modalStates;
+  const sessionUser = useSelector(state => state.session.user)
+  const dispatch = useDispatch()
   const windowSize = useWindowSize()
+  let {pathname} = useLocation();
+  const [_, path, wildCard] = pathname.split('/');
+  const history = useHistory();
+  const cartQuant = useSelector(getCartSizeFromWildcard(Number(wildCard)))
 
-  const history = useHistory()
+
   return (
     <header className="univ-padding" id="ux-header">
 
@@ -42,7 +51,8 @@ const UXHeader = ({modalStates}) => {
             <span className='embedded-icon-padding'>
                 <SearchIcon/>
             </span>
-            Carts
+            {path !== 'restaurantListing' && `Carts`} 
+            {path == 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : ''}`} 
           </button>
         </div>
 

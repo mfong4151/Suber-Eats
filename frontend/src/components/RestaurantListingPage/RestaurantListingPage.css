@@ -142,7 +142,27 @@
     cursor:pointer;
     position:relative;
     bottom:60%;
-    left: 80%
+    left: 80%;
+    transition: width 0.2s;
+
+}
+
+#see-your-cart{
+    color:white;
+    background-color: var(--color-black);
+    border-radius: 1px;
+    border-color: var(--color-white);
+    height: 34px;
+    width:150px;
+    font-size: 16px;
+    border-radius: 3rem;
+    cursor:pointer;
+    position:sticky;
+    bottom:70%;
+    left:85%;
+    z-index:1;
+    transition: width 0.2s;
+
 
 }
 

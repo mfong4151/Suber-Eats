@@ -15,24 +15,20 @@ import { useParams } from 'react-router-dom'
 
 const MenuListings = () => {
     const [menuItemModal, setMenuItemModal] = useState(false);  
+    const [seeYourCart, setSeeYourCart] = useState(-1)
+
     const [menuItem, setMenuItem] = useState('')
     const menuItems = useSelector(getMenuItemsSorted);
     const usersCarts = useSelector(getCartsRestIdKeys)
     const {restaurantId} = useParams()
     const dispatch = useDispatch()
-
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
     }
 
-    
-    useEffect(() => {
+    useEffect(()=>{
+    }, [dispatch])
 
-        if (usersCarts[restaurantId]) dispatch(fetchCartItems(usersCarts[restaurantId]))
-        
-    },[dispatch])
-    
-  
     return (
     <div className='listings-main'>
         
@@ -50,9 +46,10 @@ const MenuListings = () => {
                     header={header} 
                     menuItems={menuItems[header]} 
                     key={idx}
-                    setMenuItem = {setMenuItem}
                     menuItemModal={menuItemModal} 
                     toggleItemModal={toggleItemModal}
+                    seeYourCart={seeYourCart}
+                    setSeeYourCart={setSeeYourCart}
                     /> 
             ))}
             {/* feature is currently not ready */}

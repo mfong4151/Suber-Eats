@@ -28,6 +28,20 @@ const removeCart = cartId =>(
     }
 )
 
+export const getCartSizeFromWildcard = restId => state =>{
+    
+    if(!state.cart) return 0;
+    for(const cart of Object.values(state.cart)){
+        if(cart.restaurantId === restId) {
+            return cart.cartItems; 
+        }
+
+    } 
+    return 0;
+}
+
+
+
 export const getCart = cartId => state =>{
     if(!state.cart || !state.cart[cartId]) return null
     return state.cart[cartId]
