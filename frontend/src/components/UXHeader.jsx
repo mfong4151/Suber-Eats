@@ -52,7 +52,7 @@ const UXHeader = ({modalStates}) => {
                 <SearchIcon/>
             </span>
             {path !== 'restaurantListing' && `Carts`} 
-            {path == 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : ''}`} 
+            {path == 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : `0`}`} 
           </button>
         </div>
 
