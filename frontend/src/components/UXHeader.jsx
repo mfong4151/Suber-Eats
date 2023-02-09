@@ -31,19 +31,19 @@ const UXHeader = ({modalStates}) => {
               <div id='logo-holder' onClick={()=> history.push('/')}>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
+              <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>
+                <span className="map-location-text">{' How to use map interface'}
+                </span>
+              </button>
         </div>
         
 
-        <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>
-              <span className="map-location-text">{' How to use map interface'}
-              </span>
-        </button>
         
-          <form className="form-bg minimal-header-padding">
+          {/* <form className="form-bg minimal-header-padding">
             <SearchIcon/>
             <input id='search-form' type='text' name='location' placeholder='What are you craving?'/> 
 
-          </form>
+          </form> */}
           
         <div className='header-button-spacing'>
 
@@ -52,7 +52,7 @@ const UXHeader = ({modalStates}) => {
                 <SearchIcon/>
             </span>
             {path !== 'restaurantListing' && `Carts`} 
-            {path == 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : `0`}`} 
+            {path === 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : `0`}`} 
           </button>
         </div>
 
