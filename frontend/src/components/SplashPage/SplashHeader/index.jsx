@@ -15,7 +15,7 @@ const SplashHeader = ({menuModal, setMenuModal}) => {
      <header id="splash-header" className="univ-padding">
 
         <div className="logo header-left" id='splash-header-left'>
-              <button className='menu-modal minimal-header-padding'>
+              <button className='menu-modal minimal-header-padding' onClick={()=> setMenuModal(!menuModal)}>
                 <MenuIcon/>
               </button>
       
