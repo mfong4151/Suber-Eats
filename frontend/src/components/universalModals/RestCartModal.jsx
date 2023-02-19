@@ -1,26 +1,39 @@
 import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { UXContext } from '../UXContext';
-import {useHistory, NavLink} from 'react-router-dom';
+import {useHistory, NavLink, useParams} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import './UserMenuModal.css'
-import { fetchCartItems, getCartItems } from '../../store/cartItems';
+import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cartItems';
 import RestCartItem from './RestCartItem';
 
 const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
   const dispatch = useDispatch()
   const history = useHistory()
-
+  const {restaurantId} = useParams()
   const restCartItems = useSelector(getCartItems)
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
+  console.log(restCartItems)
+
   const clearCart = e =>{
     e.preventDefault();
     e.stopPropagation();
-    dispatch(deleteCart(cart.id))
-    .then(()=>setRestCartModal(!restCartModal))
+    
+
+    //The main difference between these two lines is the else condition is more optimized
+    //And it corresponds to the case where we are actually on the page
+    if(Number(restaurantId) === cart.restaurantId){
+      for(const cartItem of restCartItems) dispatch(deleteCartItem(cartItem.id))
+      .then(()=>setRestCartModal(!restCartModal))
+
+    } else{
+      dispatch(deleteCart(cart.id))
+      .then(()=>setRestCartModal(!restCartModal))
+    
+    }
   }
 
   const handleAddClick = e =>{

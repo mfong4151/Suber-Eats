@@ -25,6 +25,7 @@ class Cart < ApplicationRecord
     class_name: :CartItem,
     dependent: :destroy
 
+    
     has_many :cart_item_restaurants,
     through: :carted_item,
     source: :parent_restaurant

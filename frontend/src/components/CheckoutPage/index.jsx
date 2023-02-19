@@ -12,6 +12,7 @@ import { Redirect } from 'react-router-dom'
 import Footer from '../generalDesignComponents/Footer'
 
 const CheckoutPage = () => {
+  
         const [menuModal, setMenuModal ] = useState(false);
         const modalStates = {menuModal, setMenuModal}
         const {cartId} = useParams()

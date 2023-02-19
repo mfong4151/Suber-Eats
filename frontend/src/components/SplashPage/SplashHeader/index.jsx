@@ -1,6 +1,5 @@
 import React from 'react'
 import "../SplashPage.css"
-import {useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import MenuIcon from '../../SVGs/MenuIcon'
 const SplashHeader = ({menuModal, setMenuModal}) => {

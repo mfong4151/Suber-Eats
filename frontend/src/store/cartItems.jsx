@@ -60,7 +60,6 @@ export const getCartItemRestIds = state =>{
 
 
 export const fetchCartItems = (cartId) => async dispatch =>{
-    console.log(cartId)
     const res = await csrfFetch(`/api/carts/${cartId}/cart_items`)
     if (res.ok){
         const data = await res.json();
@@ -86,7 +85,6 @@ export const createCartItem = (cartItem) => async dispatch => {
 
 
 export const updateCartItem = (cartItem, cartItemId) => async dispatch =>{
-    console.log(cartItem, cartItemId)
     const res = await csrfFetch(`/api/carts/${cartItem.cartId}/cart_items/${cartItemId}`,{
         method: "PATCH",
         body: JSON.stringify(cartItem),
