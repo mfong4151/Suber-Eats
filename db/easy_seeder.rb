@@ -14,14 +14,13 @@ class EasySeeds
         ##Someone else can do the hard work of finding a way to get rid of this variable
 
 
-
     def self.single_seeder(table, class_name, table_string)
 
         class_name.destroy_all
         ApplicationRecord.connection.reset_pk_sequence!(table_string)
         puts "Creating #{table_string}..."   
         
-        table.each {|table_row| class_name.create!(**table_row)}
+        table.each {|row| class_name.create!(**row)}
             
         puts "DONE WITH #{table_string.upcase}, #{table_string.upcase} SEEDING SUCCESSFUL"
         
@@ -33,11 +32,8 @@ class EasySeeds
 
       tables, table_strings = csv_to_seeds = EasySeeds.tables_from_csvs
   
-      (0...tables.length).each do |i|
-  
-          class_name = class_names[i]
-          EasySeeds.single_seeder(tables[i], class_name, table_strings[i])
-      end
+      (0...tables.length).each{|i| EasySeeds.single_seeder(tables[i], class_names[i], table_strings[i])}
+    
     end
 
   def self.attach_images(class_image_names)
@@ -70,9 +66,7 @@ class EasySeeds
 
   ###Used in conjunction to destroy all of your tables
   def self.destroy_tables(class_names, table_strings)
-    (class_names.length - 1).downto(0) do |i|
-      EasySeeds.destroy_table(class_names[i], table_strings[i])
-    end
+    (class_names.length - 1).downto(0) {|i| EasySeeds.destroy_table(class_names[i], table_strings[i])}
   end
 
 

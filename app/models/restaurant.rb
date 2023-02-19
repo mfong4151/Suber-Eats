@@ -26,11 +26,11 @@ class Restaurant < ApplicationRecord
     
   
 
-    def self.restaurants_in_proximity(userId)
-      
+    def self.restaurants_in_proximity(user_id)
+        user_loc = User.find_by_id(user_id).location
         Restaurant.select('*')
         .where('SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= .026', 
-        *[User.find_by_id(userId).location.latitude, User.find_by_id(userId).location.longitude] )
+        *[user_loc.latitude, user_loc  .longitude] )
 
     end
   
