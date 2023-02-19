@@ -12,8 +12,7 @@ import {useSelector, useDispatch} from 'react-redux'
 const UXHeader = ({modalStates}) => {
   const {menuModal, setMenuModal, cartModal, setCartModal, restCartModal, setRestCartModal, locationModal, setLocationModal} = modalStates;
   const sessionUser = useSelector(state => state.session.user)
-  const dispatch = useDispatch()
-  const windowSize = useWindowSize()
+
   let {pathname} = useLocation();
   const [_, path, wildCard] = pathname.split('/');
   const history = useHistory();

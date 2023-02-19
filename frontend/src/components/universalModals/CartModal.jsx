@@ -9,7 +9,8 @@ import { getSessionUserId } from '../../store/session';
 import { getCarts } from '../../store/cart';
 import { useParams } from 'react-router-dom';
 
-const CartModal = ({modalStates}) => {
+const CartModal = ({modalStates, activeCartState}) => {
+
     const {cartModal, setCartModal} = modalStates;
     const userCarts = useSelector(getCarts); 
     const sessionUserId = useSelector(getSessionUserId);
@@ -28,7 +29,7 @@ const CartModal = ({modalStates}) => {
     
 
     useEffect(()=>{      
-        for(const cart of userCarts)if(cart.cartItems === 0 && Number(restaurantId) !== cart.restaurantId )  dispatch(deleteCart(cart.id))
+        for(const cart of userCarts)if(cart.cartItems === 0 && Number(restaurantId) !== cart.restaurantId ) dispatch(deleteCart(cart.id))
             
     },[])
 
@@ -41,7 +42,7 @@ const CartModal = ({modalStates}) => {
                 <div className="cart-modal-content">
                     {userCarts?.map((cart, idx)=>
                     <>
-                        {cart.cartItems > 0 && <CartBody cart={cart} key={idx} />}
+                        {cart.cartItems > 0 && <CartBody cart={cart} key={idx} modalStates ={modalStates} activeCartState={activeCartState}/>}
                     </>
                     )}
 
@@ -60,15 +61,6 @@ const CartModal = ({modalStates}) => {
             </div>
         </div>
     )
-
-    // else
-    //     return(
-    //         <div>
-    //             <h1>
-
-    //             </h1>
-    //         </div>
-    //     )
 
 }
 

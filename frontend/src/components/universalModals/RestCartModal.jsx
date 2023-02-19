@@ -9,14 +9,15 @@ import './UserMenuModal.css'
 import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cartItems';
 import RestCartItem from './RestCartItem';
 
-const RestCartModal = ({cart, restCartModal, setRestCartModal}) => {
+const RestCartModal = ({cart, modalStates}) => {
   const dispatch = useDispatch()
   const history = useHistory()
+  const {restCartModal, setRestCartModal} =modalStates;
   const {restaurantId} = useParams()
   const restCartItems = useSelector(getCartItems)
+  
   if (restCartModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
-  console.log(restCartItems)
 
   const clearCart = e =>{
     e.preventDefault();

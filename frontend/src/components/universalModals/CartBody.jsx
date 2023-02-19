@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ChevronRight from './SVGs/ChevronRight';
 import { useState } from 'react';
-import RestCartModal from './RestCartModal';
 
-const CartBody = ({cart}) => {
+const CartBody = ({cart, modalStates, activeCartState}) => {
 
-    const [restCartModal, setRestCartModal] = useState(false);
-
+    const {cartModal, setCartModal, restCartModal, setRestCartModal} = modalStates;
+    const {setActiveCart} = activeCartState;
 
     const handleOnClick = e =>{
         e.preventDefault();
         e.stopPropagation();
+        setActiveCart(cart)
+        setCartModal(!cartModal)
         setRestCartModal(!restCartModal)
         
     }
-   
+
+    useEffect(()=>{
+        setActiveCart({})    
+    },[])
 
     return (
         <div className='cart-tab' onClick={handleOnClick}>
@@ -36,7 +40,6 @@ const CartBody = ({cart}) => {
                 <ChevronRight/>
             </div>
             <hr></hr>
-            {restCartModal && <RestCartModal cart={cart} restCartModal={restCartModal} setRestCartModal={setRestCartModal}/>}
 
         </div>
     )
