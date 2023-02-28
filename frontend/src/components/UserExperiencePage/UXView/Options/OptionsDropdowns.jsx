@@ -3,7 +3,8 @@ import ChevronDown from '../SVGs/ChevronDown'
 import '../Pickup.css'
 import SortOptionsModal from './OptionsCarouselDropdownModals/SortOptionsModal'
 import { useState } from 'react'
-import { sortModalStyles, priceModalStyles, ratingModalStyles } from './OptionsCarouselDropdownModals/modalStyles'
+import { sortModalStyles, priceModalStyles, ratingModalStyles, cityModalStyles } from './OptionsCarouselDropdownModals/modalStyles'
+import CityOptionsModal from './OptionsCarouselDropdownModals/CityOptionsModal'
 
 const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
   const [ sortModal,setSortModal] = useState(false)
@@ -61,7 +62,7 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
 
       {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
       {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
-    
+      {cityModal && <CityOptionsModal cityModal={cityModal} setCityModal={setCityModal}/>}
       
       {/* below commented out code is in the pipeline */}
       {/* <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >

@@ -30,7 +30,6 @@ const CartModal = ({modalStates, activeCartState}) => {
 
     useEffect(()=>{      
         for(const cart of userCarts)if(cart.cartItems === 0 && Number(restaurantId) !== cart.restaurantId ) dispatch(deleteCart(cart.id))
-            
     },[])
 
     

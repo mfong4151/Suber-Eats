@@ -20,6 +20,17 @@ export const priceModalStyles = () =>(
         modalMenuContent:'univ-options-body price-modal price-rating-modal udc'
     }
 )
+
+export const cityModalStyles = () =>(
+    {
+        filterType: 'cities',
+        activeModal:'active-modal',
+        modal: 'modal',
+        modalOverlay:'options-modal-overlay',
+        modalMenuContent:'univ-options-body price-modal price-rating-modal udc'
+    }
+)
+
 export const ratingModalStyles = () =>(
     {
         filterType: 'rating',
