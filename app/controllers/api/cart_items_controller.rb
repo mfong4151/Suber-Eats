@@ -21,6 +21,7 @@ class Api::CartItemsController < ApplicationController
         # @user_id, @restaurant_id = current_user.id,  MenuItem.find_by_id(id: params[:menu_item_id]).parent_restaurant.id
 
         @cart_item = CartItem.new(cart_item_params)
+        
         if @cart_item.save
             render :show
             return

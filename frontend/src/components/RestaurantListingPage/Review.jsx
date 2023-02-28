@@ -30,6 +30,7 @@ const Review = ({review,ctr, setCtr, sessionUserId}) => {
          deleteButton = <button className="review-buttons" onClick={handleReviewDelete}>Delete</button>
     }
 
+    
     return(
         <div className='review-body'>
             <div className='review-upper'>
@@ -43,6 +44,7 @@ const Review = ({review,ctr, setCtr, sessionUserId}) => {
                                             reviewBody={reviewBody} setReviewBody={setReviewBody}
                                             userId={review.userId} restaurantId={review.restaurantId} reviewId={review.id} 
                                             ctr={ctr} setCtr={setCtr}/>}
+                
                 {deleteModal && <DeleteReviewModal 
                                 reviewId={review.id} deleteModal={deleteModal} setDeleteModal={setDeleteModal} ctr={ctr} setCtr={setCtr}/>}
 

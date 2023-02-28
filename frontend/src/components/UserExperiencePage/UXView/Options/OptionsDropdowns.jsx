@@ -8,6 +8,7 @@ import { sortModalStyles, priceModalStyles, ratingModalStyles } from './OptionsC
 const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
   const [ sortModal,setSortModal] = useState(false)
   const [ priceModal,setPriceModal] = useState(false)
+  const [cityModal, setCityModal] = useState(false)
   // const [ ratingModal,setRatingModal] = useState(false)
 
 
@@ -22,6 +23,12 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
     e.stopPropagation()
     setPriceModal(prev=> !prev)
 
+  }
+
+  const toggleCityOptions =  e =>{
+    e.preventDefault()
+    e.stopPropagation()
+    setCityModal(prev=> !prev)
   }
 
   // //for future featuer
@@ -46,9 +53,15 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
         <ChevronDown toggleOptions={togglePriceOptions}/>
       </button>
 
+
+      <button className={`btn-round ux-buttons ux-sort-buttons ${cityModal && `black-button`}`} onClick={togglePriceOptions}>
+        <span onClick={toggleCityOptions}>Change Cities</span>
+        <ChevronDown toggleOptions={toggleCityOptions}/>
+      </button>
+
       {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
       {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
-
+    
       
       {/* below commented out code is in the pipeline */}
       {/* <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >

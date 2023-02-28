@@ -47,6 +47,7 @@ const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, us
     setErrors([])
   }, [reviewBody])
 
+  // const [reviewBody, setReviewBody] = useState(review.body)
  
   return (
     <div className="modal">
@@ -54,7 +55,6 @@ const EditReviewModal = ({editModal, setEditModal, reviewBody, setReviewBody, us
           <div className="review-modal-content">
             <form className='review-form'>
                 <input className='review-input' type="text" placeholder={reviewBody} value={reviewBody} onChange={e => setReviewBody(e.target.value)} onClick={handleForm}/>
-             
             </form>
             <div className="btn-holder">
                 <button className="review-btns btn-square black-button udc review-submit"  onClick={handleSubmitReview}><span className="review-btn-text">Edit your review</span></button>
