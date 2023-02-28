@@ -7,7 +7,12 @@ const CityOptionsModal = ({cityModal, setCityModal}) => {
   const suberCities = suberEatsCities()
   if (cityModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
-     
+  
+  const handleChangeCity = (e, city) =>{
+    e.preventDefault()
+    e.stopPropagation()
+    setClickedCity(clickedCity => city)
+  }
 
   return (
     <div className='modal'>
@@ -16,11 +21,11 @@ const CityOptionsModal = ({cityModal, setCityModal}) => {
                 <h1 id='city-modal-header'>Take a look at other cities!</h1>
                 <div id='city-options'>
                     {Object.keys(suberCities).map((city, idx) =>
-                    <div key={idx}>
+                    <div key={idx} className="city-option">
                         <p>
                             {city}
                         </p>
-                        <button onClick={()=>setClickedCity(city)}>
+                        <button onClick={e => handleChangeCity(e, city)}>
                             Look Here!
                         </button>
                     </div>

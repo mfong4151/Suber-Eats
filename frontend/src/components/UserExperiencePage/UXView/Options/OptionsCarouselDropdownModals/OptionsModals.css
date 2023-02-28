@@ -77,3 +77,9 @@
     display: flex;
     justify-content: center;
 }
+
+.city-option{
+    display: flex;
+    justify-content: space-between;
+    
+}
