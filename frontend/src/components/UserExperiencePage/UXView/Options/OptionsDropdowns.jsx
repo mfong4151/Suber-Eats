@@ -55,7 +55,7 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
       </button>
 
 
-      <button className={`btn-round ux-buttons ux-sort-buttons ${cityModal && `black-button`}`} onClick={togglePriceOptions}>
+      <button className={`btn-round ux-buttons ux-sort-buttons ${cityModal && `black-button`}`} onClick={toggleCityOptions}>
         <span onClick={toggleCityOptions}>Change Cities</span>
         <ChevronDown toggleOptions={toggleCityOptions}/>
       </button>

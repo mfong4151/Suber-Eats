@@ -35,6 +35,13 @@
     left:150px;
 }
 
+.city-modal-body{
+    width:380px;
+    height:300px;
+    left:300px;
+    overflow: auto;
+    overflow-y: auto;
+}
 
 .rating-modal{
     left: 300px;
@@ -59,3 +66,14 @@
     height:36px;
 }
 
+.city-modal-overlay{
+    background-color: transparent;
+}
+
+
+/* styles for other cities modal */
+
+#city-modal-header{
+    display: flex;
+    justify-content: center;
+}

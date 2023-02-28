@@ -117,10 +117,9 @@ const restaurantsReducer = (state = {}, action) =>{
     switch(action.type){
         
         case RECEIVE_RESTAURANTS:
-            const newState = {...state}
-            if(!Object.keys(newState)){
-                return{...state, ...action.payload.restaurants}
-            }
+            // const newState = {...state}
+            // if(!Object.keys(newState)) return{...state, ...action.payload.restaurants}
+            
             
          
             return action.payload.restaurants

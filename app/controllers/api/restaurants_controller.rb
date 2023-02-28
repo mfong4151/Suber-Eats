@@ -3,6 +3,8 @@ class Api::RestaurantsController < ApplicationController
     def index
         @restaurants = Restaurant.restaurants_in_proximity(current_user.id)
         render :index
+
+        
     end
 
     def show
