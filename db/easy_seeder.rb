@@ -24,7 +24,7 @@ class EasySeeds
 
     def self.single_seeder(table, class_name, table_string)
 
-        class_name.destroy_all
+        class_name.  
         ApplicationRecord.connection.reset_pk_sequence!(table_string)
         puts "Creating #{table_string} seed data..."   
         

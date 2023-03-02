@@ -11,7 +11,7 @@ const CityOptionsModal = ({cityModal, setCityModal}) => {
   const handleChangeCity = (e, city) =>{
     e.preventDefault()
     e.stopPropagation()
-    setClickedCity(clickedCity => city)
+    setClickedCity(prev => city)
   }
 
   return (
