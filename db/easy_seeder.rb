@@ -24,7 +24,6 @@ class EasySeeds
 
     def self.single_seeder(table, class_name, table_string)
 
-        class_name.  
         ApplicationRecord.connection.reset_pk_sequence!(table_string)
         puts "Creating #{table_string} seed data..."   
         
@@ -39,15 +38,29 @@ class EasySeeds
     def self.create_easy_seed_data(class_names)
 
       tables, table_strings = csv_to_seeds = EasySeeds.tables_from_csvs
-  
       (0...tables.length).each{|i| EasySeeds.single_seeder(tables[i], class_names[i], table_strings[i])}
     
     end
 
+
+
+    def self.find_photo_folder
+      seed_folder =''
+      cwd = Dir.pwd
+
+      if cwd.include('/db')
+      end
+
+    end
+
+    def self.images_only
+      Dir.pwd + '/db/seed_image_files'
+    end
+
     #Attaches images
 
-    def self.attach_images(class_image_names)
-      seed_folder = '../seed_image_files'
+    def self.attach_images(class_image_names, seed_folder='../seed_image_files')
+
       Dir.chdir(seed_folder)
 
       Dir.glob("*").each_with_index do |seed_file, i|
@@ -56,11 +69,20 @@ class EasySeeds
         puts "Attaching to #{class_image_name}..."
 
         data.each_with_index do |row|
+
             object_id, url, filename = row
             class_instance = class_image_name.find_by_id(object_id)
-            puts class_instance, url, filename
-            class_instance.image.attach(io: URI.open(url), filename: filename)
-            puts "Attached to #{filename}"
+
+            begin
+              class_instance.image.attach(io: URI.open(url), filename: filename)
+              puts "Attached to #{filename}"
+              
+            rescue OpenURI::HTTPError
+              puts('Waiting 30 seconds before seeding the next row of data, please be patient')
+              sleep(30.second)
+              class_instance.image.attach(io: URI.open(url), filename: filename)
+              puts "Attached to #{filename}"
+            end
         end
       end
     end
@@ -76,7 +98,8 @@ class EasySeeds
 
     ###Used in conjunction to destroy all of your tables
     def self.destroy_tables(class_names, table_strings)
-      (class_names.length - 1).downto(0) {|i| EasySeeds.destroy_table(class_names[i], table_strings[i])}
+
+      (class_names.length - 1).downto(0) {|i|EasySeeds.destroy_table(class_names[i], table_strings[i])}
     end
 
 
@@ -102,7 +125,7 @@ class EasySeeds
         Dir.chdir(seed_folder)
         
         Dir.glob("*").each do |seed_file|
-        
+
             seed_res = []
             headers, data = unpack_csvs(seed_file)
             

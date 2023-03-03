@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import './OptionsModals.css'
 import { suberEatsCities } from './utils/suberEatsCities'
+import {useDispatch, useSelector } from 'react-redux'
+import { getSessionUserId } from '../../../../../store/session'
+import { checkUserLoc, updateLocation } from '../../../../../store/location'
+import { fetchRestaurants } from '../../../../../store/restaurant'
 
 const CityOptionsModal = ({cityModal, setCityModal}) => {
-  const [clickedCity, setClickedCity] = useState('')
+  const [selectedButton, setSelectedButton] = useState('')
+
+  const dispatch = useDispatch()
+  const sessionUserId = useSelector(getSessionUserId)
+  const userLocObj = useSelector(checkUserLoc(sessionUserId))
+
+
   const suberCities = suberEatsCities()
   if (cityModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
@@ -11,8 +21,26 @@ const CityOptionsModal = ({cityModal, setCityModal}) => {
   const handleChangeCity = (e, city) =>{
     e.preventDefault()
     e.stopPropagation()
-    setClickedCity(prev => city)
+    setSelectedButton(prev => city)
+    const latLng = suberCities[city]
+
+    if(userLocObj){
+      dispatch(updateLocation(
+          {location:{
+            latitude: latLng.lat,
+            longitude:  latLng.lng,
+            userId: sessionUserId
+ 
+           }}, userLocObj.id
+          ))
+      .then(()=> dispatch(fetchRestaurants()))
+    }
+
+
+
   }
+
+
 
   return (
     <div className='modal'>
@@ -25,7 +53,7 @@ const CityOptionsModal = ({cityModal, setCityModal}) => {
                         <p>
                             {city}
                         </p>
-                        <button onClick={e => handleChangeCity(e, city)}>
+                        <button className={`btn-round-two grey-button sort-modal-btn udc ${selectedButton === city && 'black-button'}`} onClick={e => handleChangeCity(e, city)}>
                             Look Here!
                         </button>
                     </div>

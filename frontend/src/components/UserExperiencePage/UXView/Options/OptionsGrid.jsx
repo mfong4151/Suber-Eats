@@ -2,9 +2,6 @@ import React from 'react'
 import OptionsGridItem from './OptionsGridItem'
 
 const OptionsGrid = ({restaurants}) => {
-
-  restaurants = restaurants.slice(0,20)
-
   if (restaurants.length > 0) return (
 
     <div id='options-array'>

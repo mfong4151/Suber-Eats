@@ -17,7 +17,7 @@
 class Restaurant < ApplicationRecord
     validates :name, presence:true
     validates :rating, presence:true
-    validates :address, presence:true, uniqueness: true
+    validates :address, presence:true
     validates :state_code, presence:true
     validates :city, presence:true
     validates :longitude, presence:true

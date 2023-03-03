@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
 
-const UXView = ({}) => {
+const UXView = () => {
   const [filterOptions, setFilterOptions] = useState(
     {
       'score': 0,
@@ -21,7 +21,7 @@ const UXView = ({}) => {
       'cuisineType':'',
     })
   
-  const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions));
+  const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions)).slice(0, 30);
   const sessionUserId = useSelector(getSessionUserId);
   const userLocation = useSelector(checkUserLoc(sessionUserId))
   const dispatch = useDispatch()

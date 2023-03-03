@@ -15,14 +15,12 @@ const Map = ({restaurants, userLocation}) => {
   const sessionUserId = useSelector(getSessionUserId)
   const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}) //this just refers to a default center
     
-    // {lng: userLocation.longitude, lat: userLocation.latitude}
 
-  let userLocObj = useSelector(checkUserLoc(sessionUserId))
+  const userLocObj = useSelector(checkUserLoc(sessionUserId))
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY ? process.env.REACT_APP_MAPS_API_KEY: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
-  // const { isLoaded} = useLoadScript({googleMapsApiKey: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
 
 
-
+  console.log(userLocObj)
   if(!isLoaded) return(<h1>loading...</h1>)
 
 
@@ -35,6 +33,7 @@ const Map = ({restaurants, userLocation}) => {
     };
     
   const handleOnClick = e =>{
+    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
     if(userLocObj){
       dispatch(updateLocation(
           {location:{
@@ -53,7 +52,7 @@ const Map = ({restaurants, userLocation}) => {
   return (
     <GoogleMap 
       zoom={13} 
-      center={mapCenter} 
+      center={userLocObj ? {lng: userLocObj.longitude, lat: userLocObj.latitude} : {lat: 37.747401957356246, lng: -122.4456108834198}} 
       mapContainerClassName="map-container"
       options={options}
       onClick={handleOnClick}

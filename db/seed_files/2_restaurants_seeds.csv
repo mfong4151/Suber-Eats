@@ -1,45 +1,1465 @@
-name:string,address:string,rating:float,city:string,state_code:string,longitude:float,latitude:float,cuisine_type:string,avg_price:int
-21 Taste House,"1109 Ocean Ave, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4544376,37.7233872,japanese,10
-4505 Burgers & BBQ,"705 Divisadero St, San Francisco, CA 94117, United States",4.3,San Francisco,CA,-122.4382157,37.7761885,comfort food,12
+name:string,address:string,rating:float,city:string,state_code:string,longitude:float,latitude:float,cuisine_type:string,avg_price:float
+Thai Tamarind Restaurant,"1316 El Camino Real, Belmont, CA 94002, United States",4.2,Belmont,CA,-122.273782,37.518154,thai,10.86
+Spoon & Fork,"1480 El Camino Real, Belmont, CA 94002, United States",4.6,Belmont,CA,-122.271415,37.5162765,thai,10.95
+Cj's Gourmet Delicatessen,"290 Primrose Rd, Burlingame, CA 94010, United States",4.4,Burlingame,CA,-122.3476774,37.5776281,comfort food,10.95
+Little Lucca,"1809 El Camino Real, Burlingame, CA 94010, United States",4.5,Burlingame,CA,-122.384414,37.59413,american,10.95
+American Bull Bar & Grill,"1819 El Camino Real, Burlingame, CA 94010, United States",4.3,Burlingame,CA,-122.3846773,37.5943292,bar,10.95
+Copenhagen Bakery & Cafe,"1216 Burlingame Ave, Burlingame, CA 94010, United States",4.4,Burlingame,CA,-122.3466312,37.5790407,bakery,10.95
+Tiger Tea & Juice,"1803 El Camino Real, Burlingame, CA 94010, United States",4.5,Burlingame,CA,-122.384345,37.5940691,boba,10.95
+Feng Cha Teahouse,"1199 Broadway Ste 2, Burlingame, CA 94010, United States",4.7,Burlingame,CA,-122.3642615,37.5863038,boba,10.95
+Tpumps,"1118 Burlingame Ave, Burlingame, CA 94010, United States",4.4,Burlingame,CA,-122.3459633,37.5795191,boba,10.95
+Narin Thai Cuisine,"231 Park Rd, Burlingame, CA 94010, United States",4.4,Burlingame,CA,-122.3463457,37.5774603,thai,10.95
+Ristorante Rocca,"1205 Broadway, Burlingame, CA 94010, United States",4.5,Burlingame,CA,-122.3646845,37.5860175,italian,10.95
+Que SeRaw SeRaw,"1160 Capuchino Ave, Burlingame, CA 94010, United States",4.8,Burlingame,CA,-122.3653646,37.584866,healthy,10.95
+Pho 777,"1065 W Argyle St, Chicago, IL 60640, United States",4.3,Chicago,IL,-87.6574247,41.973169,vietnamese,10.95
+Pho Nam Lua,"6261 N McCormick Blvd, Chicago, IL 60659, United States",4.5,Chicago,IL,-87.7125261,41.9956397,vietnamese,10.95
+Pho Cafe,"232 W Cermak Rd, Chicago, IL 60616, United States",4.2,Chicago,IL,-87.6330613,41.8531013,vietnamese,10.95
+Tank Noodle,"4953-55 N Broadway, Chicago, IL 60640, United States",4.3,Chicago,IL,-87.65949,41.973113,vietnamese,10.95
+Pho Viet,"4941 N Broadway, Chicago, IL 60640, United States",4.5,Chicago,IL,-87.6595678,41.972743,vietnamese,10.95
+Sunset Pho Caffe,"2856 N Clark St, Chicago, IL 60657, United States",4.8,Chicago,IL,-87.646367,41.934256,vietnamese,10.95
+LD Pho,"4722 N Kedzie Ave, Chicago, IL 60625, United States",4.6,Chicago,IL,-87.7085727,41.9673117,vietnamese,10.95
+Pho 888,"1137 W Argyle St, Chicago, IL 60640, United States",4.2,Chicago,IL,-87.6592287,41.9731412,vietnamese,10.95
+Pho Le 777,"6257 N McCormick Blvd, Chicago, IL 60659, United States",4.4,Chicago,IL,-87.7126258,41.9954971,vietnamese,10.95
+Saigon Pho,"3222 W Bryn Mawr Ave, Chicago, IL 60659, United States",4.6,Chicago,IL,-87.7098586,41.9832501,vietnamese,10.95
+Delicious Pho,"5033 N Elston Ave Unit 143, Chicago, IL 60630, United States",4.4,Chicago,IL,-87.7457287,41.9727333,vietnamese,10.95
+King Pho,"5414 W Devon Ave, Chicago, IL 60646, United States",4.4,Chicago,IL,-87.764453,41.997567,vietnamese,10.95
+Phodega,"1547 N Ashland Ave, Chicago, IL 60622, United States",4.7,Chicago,IL,-87.6673889,41.9101941,vietnamese,10.95
+HaiSous Vietnamese Kitchen,"1800 S Carpenter St, Chicago, IL 60608, United States",4.5,Chicago,IL,-87.6533712,41.8578927,vietnamese,10.95
+Le Colonial Chicago,"57 E Oak St, Chicago, IL 60611, United States",4.5,Chicago,IL,-87.6260999,41.9005227,vietnamese,10.95
+Saigon Sisters,"567 W Lake St, Chicago, IL 60661, United States",4.7,Chicago,IL,-87.6421656,41.8855703,vietnamese,10.95
+Simply Pasteur,"5525 N Broadway, Chicago, IL 60640, United States",4.4,Chicago,IL,-87.6597405,41.9825693,vietnamese,10.95
+Miss Saigon Restaurant,"1129 W Argyle St, Chicago, IL 60640, United States",4.5,Chicago,IL,-87.6589633,41.973147,vietnamese,10.95
+MingHin Cuisine,"333 E Benton Pl #300, Chicago, IL 60601, United States",4.3,Chicago,IL,-87.6191526,41.8851696,chinese,10.95
+MCCB Chicago,"2138 S Archer Ave, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.633664,41.8539063,chinese,10.95
+Lao Peng You,"2020 W Chicago Ave, Chicago, IL 60622, United States",4.5,Chicago,IL,-87.6778955,41.8960754,chinese,10.95
+D Cuisine,"2723 N Clark St, Chicago, IL 60614, United States",4.5,Chicago,IL,-87.6443751,41.9320836,chinese,10.95
+Minghin Cuisine,"1234 S Michigan Ave, Chicago, IL 60605, United States",4.6,Chicago,IL,-87.6243086,41.866528,chinese,10.95
+MingHin Cuisine,"2168 S Archer Ave, Chicago, IL 60616, United States",4.4,Chicago,IL,-87.6348425,41.8532774,chinese,10.95
+Minghin Cuisine,"215 E Ohio St, Chicago, IL 60611, United States",4.4,Chicago,IL,-87.621188,41.8923683,chinese,10.95
+Shanghai Terrace,"108 E Superior St, Chicago, IL 60611, United States",4.5,Chicago,IL,-87.6250083,41.8960222,chinese,10.95
+Go 4 Food,"212 W 23rd St, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6326051,41.8511146,chinese,10.95
+Young's Chinese Restaurant,"3949 N Ashland Ave, Chicago, IL 60613, United States",4.6,Chicago,IL,-87.6686892,41.953879,chinese,10.95
+Duck Duck Goat,"857 W Fulton Market, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.649714,41.8866386,chinese,10.95
+Big Bowl,"60 E Ohio St, Chicago, IL 60611, United States",4.3,Chicago,IL,-87.6257708,41.8926214,chinese,10.95
+Xi'an Cuisine,"769 W Jackson Blvd, Chicago, IL 60661, United States",4.3,Chicago,IL,-87.6466677,41.8778109,chinese,10.95
+Evergreen Restaurant,"2411 S Wentworth Ave, Chicago, IL 60616, United States",4.3,Chicago,IL,-87.6315956,41.8487231,chinese,10.95
+Phoenix Restaurant,"2131 S Archer Ave, Chicago, IL 60616, United States",4.2,Chicago,IL,-87.6329562,41.8536197,chinese,10.95
+XOchimilco Mexican Restaurant,"2030 W Montrose Ave, Chicago, IL 60618, United States",4.8,Chicago,IL,-87.6802639,41.9616806,mexican,10.95
+XOCO,"449 N Clark St, Chicago, IL 60654, United States",4.5,Chicago,IL,-87.6306125,41.890726,mexican,10.95
+Mi Tocaya Antojeria,"2800 W Logan Blvd, Chicago, IL 60647, United States",4.6,Chicago,IL,-87.6976843,41.9288865,mexican,10.95
+Frontera Grill,"445 N Clark St, Chicago, IL 60654, United States",4.4,Chicago,IL,-87.6308469,41.8905206,mexican,10.95
+Lena Brava,"900 W Randolph St, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.6498987,41.8845847,mexican,10.95
+El Tezcal Authentic Restaurant,"4305 N Kedzie Ave, Chicago, IL 60618, United States",4.7,Chicago,IL,-87.7080539,41.9595711,mexican,10.95
+Maria's Mexican Restaurant,"9440 Foster Ave, Chicago, IL 60656, United States",4.4,Chicago,IL,-87.863822,41.9735257,mexican,10.95
+El Nuevo Mexicano Restaurant,"2914 N Clark St, Chicago, IL 60657, United States",4.4,Chicago,IL,-87.6472453,41.9353788,mexican,10.95
+Mayan Palace Mexican Cuisine,"2721 N Halsted St, Chicago, IL 60614, United States",4.5,Chicago,IL,-87.648727,41.9322209,mexican,10.95
+Dos Urban Cantina,"2829 W Armitage Ave, Chicago, IL 60647, United States",4.5,Chicago,IL,-87.6984194,41.9173333,mexican,10.95
+Burger Bar Chicago,"1150 S Michigan Ave, Chicago, IL 60605, United States",4.2,Chicago,IL,-87.6244181,41.8678473,comfort food,10.95
+Epic Burger,"1000 W North Ave, Chicago, IL 60642, United States",4.2,Chicago,IL,-87.6542884,41.9118633,comfort food,10.95
+The Burger Point,"1900 S State St, Chicago, IL 60616, United States",4.7,Chicago,IL,-87.6273633,41.8562294,comfort food,10.95
+Butcher & The Burger,"1021 W Armitage Ave, Chicago, IL 60614, United States",4.5,Chicago,IL,-87.6541834,41.9179972,comfort food,10.95
+Chicago Burger Company,"301 E North Water St, Chicago, IL 60611, United States",3.8,Chicago,IL,-87.61985,41.889133,comfort food,10.95
+Epic Burger,"517 S State St, Chicago, IL 60605, United States",4.2,Chicago,IL,-87.6272969,41.8750415,comfort food,10.95
+M Burger,"161 E Huron St, Chicago, IL 60611, United States",4,Chicago,IL,-87.623165,41.894776,comfort food,10.95
+Burger Theory Chicago,"7353 Cicero Ave, Chicago, IL 60629, United States",4.4,Chicago,IL,-87.7409553,41.7590519,comfort food,10.95
+Busy Burger,"1120 W Taylor St, Chicago, IL 60607, United States",4.4,Chicago,IL,-87.6551946,41.8695806,comfort food,10.95
+Epic Burger,"40 E Pearson St, Chicago, IL 60611, United States",4.1,Chicago,IL,-87.626688,41.8976758,comfort food,10.95
+M Burger,"835 N Michigan Ave, Chicago, IL 60611, United States",3.6,Chicago,IL,-87.6227779,41.897803,comfort food,10.95
+La Chaparrita Taqueria,"2500 S Whipple St #4138, Chicago, IL 60623, United States",4.4,Chicago,IL,-87.7016879,41.8462924,comfort food,10.95
+Taqueria El Jardin,"1303 W Huron St #1, Chicago, IL 60642, United States",4.8,Chicago,IL,-87.6598004,41.8942544,comfort food,10.95
+Taqueria Moran,"2226 N California Ave, Chicago, IL 60647, United States",4.5,Chicago,IL,-87.6975009,41.9225319,comfort food,10.95
+Taqueria Tayahua,"2411 S Western Ave, Chicago, IL 60608, United States",4.3,Chicago,IL,-87.6853323,41.8480167,comfort food,10.95
+Taqueria Michoacan,"3332 W 63rd St, Chicago, IL 60629, United States",4.5,Chicago,IL,-87.70691,41.779044,comfort food,10.95
+Taqueria San Jose,"3253 S Halsted St, Chicago, IL 60608, United States",3.9,Chicago,IL,-87.6460447,41.8349073,comfort food,10.95
+Manny's Cafeteria & Delicatessen,"1141 S Jefferson St, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.6419647,41.8679561,comfort food,10.95
+Nini's Deli,"543 N Noble St, Chicago, IL 60642, United States",4.6,Chicago,IL,-87.6620944,41.8923806,comfort food,10.95
+The Bagel Restaurant and Deli,"3107 N Broadway, Chicago, IL 60657, United States",4.4,Chicago,IL,-87.6441829,41.937877,comfort food,10.95
+Jason's Deli,"1258 S Canal St, Chicago, IL 60607, United States",4.4,Chicago,IL,-87.6401531,41.8655701,comfort food,10.95
+Deli & More,"330 W Diversey Pkwy, Chicago, IL 60657, United States",4.6,Chicago,IL,-87.6384566,41.9331195,comfort food,10.95
+Gio's Cafe and Deli,"2724 S Lowe Ave, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6429021,41.8436571,comfort food,10.95
+Tempesta Market,"1372 W Grand Ave, Chicago, IL 60642, United States",4.8,Chicago,IL,-87.6618175,41.8911617,comfort food,10.95
+Kathy De's Deli,"3642 S Parnell Ave, Chicago, IL 60609, United States",4.6,Chicago,IL,-87.6401152,41.8277447,comfort food,10.95
+Morry's Deli,"5500 S Cornell Ave, Chicago, IL 60637, United States",4.1,Chicago,IL,-87.5856238,41.7950886,comfort food,10.95
+Steingold's of Chicago,"3737 N Southport Ave, Chicago, IL 60613, United States",4.3,Chicago,IL,-87.663925,41.9500767,comfort food,10.95
+Bari Foods,"1120 W Grand Ave #1, Chicago, IL 60642, United States",4.7,Chicago,IL,-87.655557,41.89129,comfort food,10.95
+The Hat Chicago,"1604 W North Ave, Chicago, IL 60622, United States",4.3,Chicago,IL,-87.6679312,41.9107222,american,10.95
+McDonald's,"600 N Clark St, Chicago, IL 60610, United States",3.8,Chicago,IL,-87.6314199,41.8928626,american,10.95
+McDonald's Global Menu Restaurant,"1035 W Randolph St, Chicago, IL 60607, United States",4,Chicago,IL,-87.6536238,41.883837,american,10.95
+McDonald's,"180 W Adams St, Chicago, IL 60603, United States",3.8,Chicago,IL,-87.6335512,41.879519,american,10.95
+Checkers,"5451 S Wentworth Ave, Chicago, IL 60609, United States",3.2,Chicago,IL,-87.6302791,41.7949533,american,10.95
+McDonald's,"1380 W Lake St, Chicago, IL 60607, United States",3.7,Chicago,IL,-87.6620115,41.8857455,american,10.95
+McDonald's,"111 W Jackson Blvd, Chicago, IL 60604, United States",4.2,Chicago,IL,-87.6316761,41.8779841,american,10.95
+Which Wich Superior Sandwiches,"108 N State St space 002, Chicago, IL 60602, United States",4.1,Chicago,IL,-87.628299,41.883594,american,10.95
+Potbelly,"190 N State St, Chicago, IL 60601, United States",4.1,Chicago,IL,-87.6282191,41.8855976,american,10.95
+Moon's Sandwich Shop,"16 S Western Ave, Chicago, IL 60612, United States",4.3,Chicago,IL,-87.6866218,41.8806697,american,10.95
+Potbelly,"57 E Chicago Ave, Chicago, IL 60611, United States",4.2,Chicago,IL,-87.6259835,41.8965372,american,10.95
+Capriotti's Sandwich Shop,"174 N Wabash Ave, Chicago, IL 60601, United States",4.4,Chicago,IL,-87.62647,41.885265,american,10.95
+Potbelly,"200 S Michigan Ave Ste 140 Ste 140, Chicago, IL 60604, United States",4.2,Chicago,IL,-87.6249224,41.8793168,american,10.95
+Potbelly,"508 N Clark St, Chicago, IL 60654, United States",4,Chicago,IL,-87.6312759,41.89114,american,10.95
+The Corned Beef Factory Sandwich Shop,"1016 W Lake St, Chicago, IL 60607, United States",4.6,Chicago,IL,-87.6528925,41.8856943,american,10.95
+Danke,"125 S Clark St, Chicago, IL 60603, United States",4.3,Chicago,IL,-87.6302668,41.8795715,american,10.95
+Boar's Head Cafe,"210 W Lake St, Chicago, IL 60606, United States",4.5,Chicago,IL,-87.6344338,41.8858866,american,10.95
+Potbelly,"222 W Merchandise Mart Plaza Fl 1, Chicago, IL 60654, United States",4,Chicago,IL,-87.6354498,41.8884096,american,10.95
+Seven Bar and Restaurant,"400 E Randolph St, Chicago, IL 60601, United States",3.5,Chicago,IL,-87.6164952,41.8846364,bar,10.95
+Plymouth Restaurant & Rooftop Bar,"327 S Plymouth Ct, Chicago, IL 60604, United States",3.9,Chicago,IL,-87.6285532,41.8774756,bar,10.95
+House of Blues Restaurant & Bar,"329 N Dearborn St, Chicago, IL 60654, United States",4.3,Chicago,IL,-87.6289432,41.888285,bar,10.95
+LUXBAR,"18 E Bellevue Pl, Chicago, IL 60611, United States",4.5,Chicago,IL,-87.6276068,41.9016937,bar,10.95
+Miller's Pub,"134 S Wabash Ave, Chicago, IL 60603, United States",4.4,Chicago,IL,-87.6263398,41.8796604,bar,10.95
+Eight Bar and Patio,"8 W Maple St #1, Chicago, IL 60610, United States",4.6,Chicago,IL,-87.6285,41.9020203,bar,10.95
+Maison Marcel,"3114 N Broadway, Chicago, IL 60657, United States",4.1,Chicago,IL,-87.644511,41.9381728,bakery,10.95
+Klein's Bakery & Cafe,"426 W Diversey Pkwy, Chicago, IL 60614, United States",4.7,Chicago,IL,-87.640436,41.9330179,bakery,10.95
+Corner Bakery,"188 W Washington St, Chicago, IL 60602, United States",4.2,Chicago,IL,-87.6336401,41.8834481,bakery,10.95
+Corner Bakery,"140 S Dearborn St, Chicago, IL 60603, United States",4.3,Chicago,IL,-87.6295789,41.879871,bakery,10.95
+Corner Bakery,"56 W Randolph St #44, Chicago, IL 60601, United States",4.2,Chicago,IL,-87.630005,41.884624,bakery,10.95
+Klein's Bakery & Cafe,"4155 N Broadway, Chicago, IL 60613, United States",4.4,Chicago,IL,-87.652806,41.958324,bakery,10.95
+Corner Bakery,"200 N La Salle St Ste 100, Chicago, IL 60601, United States",4.1,Chicago,IL,-87.6328762,41.8861074,bakery,10.95
+Corner Bakery,"120 S La Salle St, Chicago, IL 60603, United States",4.2,Chicago,IL,-87.6325512,41.88007,bakery,10.95
+La Fournette,"1547 N Wells St, Chicago, IL 60610, United States",4.7,Chicago,IL,-87.6344961,41.910496,bakery,10.95
+Corner Bakery,"35 E Monroe St, Chicago, IL 60603, United States",4.3,Chicago,IL,-87.6264663,41.880588,bakery,10.95
+Ferrara Bakery,"2210 W Taylor St, Chicago, IL 60612, United States",4.6,Chicago,IL,-87.6816038,41.8691519,bakery,10.95
+Vivi Bubble Tea,"333 S State St, Chicago, IL 60604, United States",4.3,Chicago,IL,-87.6274283,41.8773044,boba,10.95
+Ten Cafe,"3308 N Western Ave, Chicago, IL 60618, United States",4.8,Chicago,IL,-87.688743,41.941241,boba,10.95
+Hello Jasmine,"2026 S Clark St unit c, Chicago, IL 60616, United States",4.5,Chicago,IL,-87.6302911,41.8545487,boba,10.95
+Zenwich X Elite Boba Wicker Park,"1415 N Milwaukee Ave, Chicago, IL 60622, United States",4.1,Chicago,IL,-87.6728915,41.9077159,boba,10.95
+Tsaocaa Lincoln Park,"1337 W Fullerton Ave, Chicago, IL 60614, United States",4.4,Chicago,IL,-87.6616791,41.9249622,boba,10.95
+Hello Jasmine-Lincoln Park,"953 W Webster Ave, Chicago, IL 60614, United States",4.3,Chicago,IL,-87.6530523,41.9215737,boba,10.95
+Gosa Tea,"4048 N Narragansett Ave, Chicago, IL 60634, United States",4.6,Chicago,IL,-87.786975,41.954329,boba,10.95
+Stella's Diner,"3042 N Broadway #5316, Chicago, IL 60657, United States",4.5,Chicago,IL,-87.644538,41.93776,diner,10.95
+Eggy's Diner Chicago,"333 E Benton Pl #103, Chicago, IL 60601, United States",4.4,Chicago,IL,-87.618823,41.8853303,diner,10.95
+Diner Grill,"1635 W Irving Park Rd, Chicago, IL 60613, United States",4.5,Chicago,IL,-87.6705296,41.9540975,diner,10.95
+Griddle 24,"334 W Chicago Ave, Chicago, IL 60654, United States",4.4,Chicago,IL,-87.6369897,41.8967038,diner,10.95
+White Palace Grill,"1159 S Canal St, Chicago, IL 60607, United States",4.2,Chicago,IL,-87.6389681,41.8675497,diner,10.95
+Golden Apple Grill & Breakfast House,"2971 N Lincoln Ave, Chicago, IL 60657, United States",4.2,Chicago,IL,-87.6632145,41.9360044,diner,10.95
+Hollywood Grill,"1601 W North Ave, Chicago, IL 60622, United States",4.4,Chicago,IL,-87.6678778,41.9105011,diner,10.95
+Dollop Diner,"5060 N Clark St, Chicago, IL 60640, United States",4.4,Chicago,IL,-87.6683374,41.9742406,diner,10.95
+Tempo Cafe,"6 E Chestnut St, Chicago, IL 60611, United States",4.3,Chicago,IL,-87.6279931,41.8985241,diner,10.95
+Meli Cafe,"540 N Wells St, Chicago, IL 60654, United States",4.3,Chicago,IL,-87.634259,41.8920152,american,10.95
+Iguana Cafe,"517 N Halsted St, Chicago, IL 60642, United States",4.6,Chicago,IL,-87.64743,41.891779,american,10.95
+Meli Cafe,"301 S Halsted St, Chicago, IL 60661, United States",4.4,Chicago,IL,-87.647108,41.8777873,american,10.95
+Cafe Con Leche,"2714 N Milwaukee Ave, Chicago, IL 60647, United States",4.5,Chicago,IL,-87.7098164,41.9304141,american,10.95
+Meli Cafe,"500 S Dearborn St, Chicago, IL 60605, United States",4.3,Chicago,IL,-87.6294064,41.8754049,american,10.95
+Ceres Cafe,"141 W Jackson Blvd, Chicago, IL 60604, United States",4.5,Chicago,IL,-87.6319758,41.8778132,american,10.95
+Chicago Diplomat Cafe,"3134 N Lincoln Ave, Chicago, IL 60657, United States",4.6,Chicago,IL,-87.6675365,41.9385017,american,10.95
+Sweet Maple Cafe,"1339 W Taylor St, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.6607381,41.8692564,american,10.95
+Cafecito,"26 East Ida B. Wells Drive #1, Chicago, IL 60605, United States",4.5,Chicago,IL,-87.6265107,41.875788,american,10.95
+Windy City Cafe,"1062 W Chicago Ave, Chicago, IL 60642, United States",4.5,Chicago,IL,-87.6550338,41.8964731,american,10.95
+Mango Mango Dessert,"2161 S China Pl 2nd fl, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6347661,41.853703,ice cream and frozen,10.95
+Scoops Dessert Bar,"838 N State St, Chicago, IL 60610, United States",3.9,Chicago,IL,-87.6284045,41.8978851,ice cream and frozen,10.95
+Ghirardelli Ice Cream & Chocolate Shop,"400 N Michigan Ave Suite 100, Chicago, IL 60611, United States",4.6,Chicago,IL,-87.6247187,41.8895457,ice cream and frozen,10.95
+Crepe House Cafe,"5033 N Elston Ave suite 107-a, Chicago, IL 60630, United States",4.8,Chicago,IL,-87.7461089,41.97246,ice cream and frozen,10.95
+Momotaro,"820 W Lake St, Chicago, IL 60607, United States",4.6,Chicago,IL,-87.64845,41.885886,japanese,10.95
+Cocoro Restaurant,"668 N Wells St, Chicago, IL 60654, United States",4.5,Chicago,IL,-87.6342992,41.8943749,japanese,10.95
+Midori Japanese Restaurant,"3310 W Bryn Mawr Ave, Chicago, IL 60659, United States",4.6,Chicago,IL,-87.7117106,41.983149,japanese,10.95
+Umai,"730 S Clark St, Chicago, IL 60605, United States",4.5,Chicago,IL,-87.6308608,41.8725288,japanese,10.95
+SUMI,"1303 S Michigan Ave, Chicago, IL 60605, United States",4.3,Chicago,IL,-87.6238097,41.8656083,japanese,10.95
+Kameya,"806 W Webster Ave, Chicago, IL 60614, United States",4.6,Chicago,IL,-87.64909,41.921933,japanese,10.95
+Kikuya Japanese Restaurant,"1601 E 55th St, Chicago, IL 60615, United States",4.5,Chicago,IL,-87.586574,41.7950914,japanese,10.95
+Sakura Teppanyaki & Sushi,"730 W Diversey Pkwy, Chicago, IL 60614, United States",4.4,Chicago,IL,-87.6478594,41.9328411,japanese,10.95
+Kamehachi,"1531 N Wells St, Chicago, IL 60611, United States",4.3,Chicago,IL,-87.6344818,41.9100756,japanese,10.95
+Niu Japanese Fusion Lounge,"332 E Illinois St, Chicago, IL 60611, United States",4.4,Chicago,IL,-87.618685,41.891168,japanese,10.95
+Ukai Sushi,"1059 W Belmont Ave, Chicago, IL 60657, United States",4.5,Chicago,IL,-87.65637,41.9396968,japanese,10.95
+Juno Sushi Chicago,"2638 N Lincoln Ave, Chicago, IL 60614, United States",4.4,Chicago,IL,-87.6551302,41.9298354,japanese,10.95
+Noble Thai,"1371 W Chicago Ave, Chicago, IL 60642, United States",4.6,Chicago,IL,-87.6621856,41.8959693,thai,10.95
+Chim Thai Cuisine,"3254 W Montrose Ave, Chicago, IL 60618, United States",4.8,Chicago,IL,-87.7104232,41.9612772,thai,10.95
+Bangkok Thai Cuisine,"6144 N Lincoln Ave, Chicago, IL 60659, United States",4.4,Chicago,IL,-87.7131657,41.993598,thai,10.95
+Arun's Thai Restaurant,"4156 N Kedzie Ave, Chicago, IL 60618, United States",4.5,Chicago,IL,-87.7082611,41.957447,thai,10.95
+Dao Thai Restaurant and Noodle Palace,"230 E Ohio St, Chicago, IL 60611, United States",3.9,Chicago,IL,-87.6215025,41.8926967,thai,10.95
+Rainbow Thai Cuisine,"4825 N Western Ave Unit A, Chicago, IL 60625, United States",4.3,Chicago,IL,-87.6887332,41.9694144,thai,10.95
+Amarit Thai and sushi,"600 S Dearborn St, Chicago, IL 60605, United States",4.1,Chicago,IL,-87.6293366,41.8742563,thai,10.95
+Spoon Thai,"4608 N Western Ave, Chicago, IL 60625, United States",4.3,Chicago,IL,-87.6891599,41.9651936,thai,10.95
+Silver Spoon Thai Restaurant,"710 N Rush St, Chicago, IL 60611, United States",4.1,Chicago,IL,-87.6256485,41.8953896,thai,10.95
+Siam Noodle & Rice Restaurant,"4142 N Broadway, Chicago, IL 60613, United States",4.7,Chicago,IL,-87.6530027,41.9579678,thai,10.95
+Talay Chicago,"1222 W Madison St, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.6577772,41.8817241,thai,10.95
+Sticky Rice,"4018 N Western Ave, Chicago, IL 60618, United States",4.2,Chicago,IL,-87.6887507,41.9546683,thai,10.95
+Nine Thai Cuisine,"2349 N Clark St, Chicago, IL 60614, United States",4,Chicago,IL,-87.6400467,41.9251456,thai,10.95
+Royal Thai Restaurant,"2209 W Montrose Ave, Chicago, IL 60618, United States",4.2,Chicago,IL,-87.6842453,41.9612866,thai,10.95
+Pizano's Pizza & Pasta,"864 N State St, Chicago, IL 60610, United States",4.3,Chicago,IL,-87.6284908,41.8986347,pizza,10.95
+Pizzeria Portofino,"317 N Clark St, Chicago, IL 60654, United States",4.4,Chicago,IL,-87.6307625,41.8879836,pizza,10.95
+Connie's Pizza,"2373 S Archer Ave, Chicago, IL 60616, United States",4.4,Chicago,IL,-87.6406395,41.849122,pizza,10.95
+Robert's Pizza and Dough Company,"465 N McClurg Ct, Chicago, IL 60611, United States",4.4,Chicago,IL,-87.6164505,41.8905699,pizza,10.95
+Pizano's Pizza & Pasta,"61 E Madison St, Chicago, IL 60603, United States",4.1,Chicago,IL,-87.6256854,41.8819637,pizza,10.95
+Bonci Pizzeria,"161 N Sangamon St, Chicago, IL 60607, United States",4.7,Chicago,IL,-87.6507725,41.8848438,pizza,10.95
+Lou Malnati's Pizzeria,"439 N Wells St, Chicago, IL 60654, United States",4.5,Chicago,IL,-87.633882,41.8903472,pizza,10.95
+My Pi Pizza,"2010 N Damen Ave, Chicago, IL 60647, United States",4.6,Chicago,IL,-87.6780496,41.9183985,pizza,10.95
+Coalfire,"1321 W Grand Ave, Chicago, IL 60642, United States",4.6,Chicago,IL,-87.6599093,41.8909115,pizza,10.95
+La Crosta Woodfire Pizzeria Italiana,"2360 N Lincoln Ave, Chicago, IL 60614, United States",4.5,Chicago,IL,-87.648261,41.9248893,pizza,10.95
+Exchequer Restaurant & Pub,"226 S Wabash Ave, Chicago, IL 60604, United States",4.4,Chicago,IL,-87.6265671,41.8787244,pizza,10.95
+Eataly,"43 E Ohio St, Chicago, IL 60611, United States",4.4,Chicago,IL,-87.6259524,41.8920991,italian,10.95
+Riccardo Trattoria,"2119 N Clark St, Chicago, IL 60614, United States",4.6,Chicago,IL,-87.6373687,41.9207233,italian,10.95
+Piccolo Sogno,"464 N Halsted St, Chicago, IL 60642, United States",4.5,Chicago,IL,-87.6478939,41.8908676,italian,10.95
+Osteria Langhe,"2824 W Armitage Ave, Chicago, IL 60647, United States",4.7,Chicago,IL,-87.6982833,41.9176306,italian,10.95
+Mart Anthony's Italian Restaurant,"1200 W Hubbard St, Chicago, IL 60642, United States",4.7,Chicago,IL,-87.6576712,41.8901221,italian,10.95
+Coco Pazzo,"300 W Hubbard St, Chicago, IL 60654, United States",4.5,Chicago,IL,-87.635807,41.8902,italian,10.95
+Nonnina,"340 N Clark St, Chicago, IL 60654, United States",4.5,Chicago,IL,-87.6312199,41.888674,italian,10.95
+Topo Gigio Ristorante,"1516 N Wells St, Chicago, IL 60610, United States",4.6,Chicago,IL,-87.6348324,41.9096736,italian,10.95
+Siena Tavern,"51 W Kinzie St, Chicago, IL 60654, United States",4.5,Chicago,IL,-87.6298924,41.8890864,italian,10.95
+Volare Ristorante Italiano,"201 E Grand Ave, Chicago, IL 60611, United States",4.6,Chicago,IL,-87.6225667,41.8915361,italian,10.95
+RAMEN-SAN,"59 W Hubbard St #2, Chicago, IL 60654, United States",4.4,Chicago,IL,-87.6303638,41.8899006,japanese,10.95
+Strings Ramen Shop,"2141 S Archer Ave, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6332468,41.8534556,japanese,10.95
+Gyuro Ramen,"171 N Aberdeen St, Chicago, IL 60607, United States",4.6,Chicago,IL,-87.6542602,41.8850715,japanese,10.95
+Ramen Takeya,"819 W Fulton Market, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.6483101,41.8866679,japanese,10.95
+KINTON RAMEN,"163 N Sangamon St, Chicago, IL 60607, United States",4.3,Chicago,IL,-87.6508038,41.8849445,japanese,10.95
+Tamashii Ramen,"810 W Jackson Blvd, Chicago, IL 60607, United States",4.6,Chicago,IL,-87.6478044,41.8781743,japanese,10.95
+Friends Ramen,"808 N State St, Chicago, IL 60610, United States",4.3,Chicago,IL,-87.6283348,41.8970879,japanese,10.95
+RAMEN-SAN Deluxe,"165 E Huron St, Chicago, IL 60611, United States",4.3,Chicago,IL,-87.6229935,41.8948318,japanese,10.95
+E Ramen,"451 W 31st St, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6380931,41.8380454,japanese,10.95
+Tanaka Ramen,"553 W Diversey Pkwy, Chicago, IL 60614, United States",4.4,Chicago,IL,-87.6432429,41.9326465,japanese,10.95
+RAKKAN Ramen,"4926 N Broadway, Chicago, IL 60640, United States",4.5,Chicago,IL,-87.6602301,41.9723096,japanese,10.95
+Furious Spoon Logan Square,"2410 N Milwaukee Ave, Chicago, IL 60647, United States",4.1,Chicago,IL,-87.7009725,41.9249681,japanese,10.95
+Sumu Tokyo ramen & Sushi,"1131 W Madison St, Chicago, IL 60607, United States",4.5,Chicago,IL,-87.655536,41.8815232,japanese,10.95
+Legend Tasty House,"2242 S Wentworth Ave, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6321278,41.8516088,ice cream and frozen,10.95
+Jeni's Splendid Ice Creams,"908 W Randolph St, Chicago, IL 60607, United States",4.7,Chicago,IL,-87.6502177,41.8846584,ice cream and frozen,10.95
+Cameron's Ice Cream & Grill,"1401 W Diversey Pkwy, Chicago, IL 60614, United States",4.4,Chicago,IL,-87.6636649,41.932332,ice cream and frozen,10.95
+Amorino,"38 S Michigan Ave, Chicago, IL 60603, United States",4.1,Chicago,IL,-87.6247994,41.8809803,ice cream and frozen,10.95
+Pretty Cool Ice Cream,"2353 N California Ave, Chicago, IL 60647, United States",4.7,Chicago,IL,-87.6972509,41.9243463,ice cream and frozen,10.95
+Jeni's Splendid Ice Creams,"3404 N Southport Ave, Chicago, IL 60657, United States",4.7,Chicago,IL,-87.6640863,41.9436557,ice cream and frozen,10.95
+Jeni's Splendid Ice Creams,"900 W Armitage Ave, Chicago, IL 60614, United States",4.8,Chicago,IL,-87.6512642,41.9182693,ice cream and frozen,10.95
+Annette's Italian Ice,"2009 N Bissell St, Chicago, IL 60614, United States",4.6,Chicago,IL,-87.6520531,41.9182419,ice cream and frozen,10.95
+Sweet Cream,"840 N Orleans St, Chicago, IL 60610, United States",2.7,Chicago,IL,-87.6373789,41.8977587,ice cream and frozen,10.95
+Jeni's Splendid Ice Creams,"1505 N Milwaukee Ave, Chicago, IL 60622, United States",4.8,Chicago,IL,-87.6749006,41.9088817,ice cream and frozen,10.95
+Lickity Split Frozen Custard,"6056 N Broadway, Chicago, IL 60660, United States",4.8,Chicago,IL,-87.6605373,41.9926262,ice cream and frozen,10.95
+Chicago Raw,"51 W Huron St, Chicago, IL 60654, United States",4.4,Chicago,IL,-87.6301157,41.8947136,healthy,10.95
+Soul Veg City,"203 E 75th St, Chicago, IL 60619, United States",4.4,Chicago,IL,-87.6196992,41.7582154,healthy,10.95
+Majani Restaurant,"7167 S Exchange Ave, Chicago, IL 60649, United States",4.6,Chicago,IL,-87.5649604,41.7647401,healthy,10.95
+PLANTA Queen,"413 N Clark St, Chicago, IL 60654, United States",4.6,Chicago,IL,-87.630752,41.8898892,healthy,10.95
+Bloom Vegetarian Kitchen,"1559 N Milwaukee Ave, Chicago, IL 60622, United States",4.6,Chicago,IL,-87.6764643,41.9098906,healthy,10.95
+Veggie House,"2109 S China Pl, Chicago, IL 60616, United States",4.6,Chicago,IL,-87.6327958,41.8546209,healthy,10.95
+Vegan Plate,"1550 W Fullerton Ave, Chicago, IL 60614, United States",4.7,Chicago,IL,-87.6677316,41.9252816,healthy,10.95
+Handlebar,"2311 W North Ave, Chicago, IL 60647, United States",4.6,Chicago,IL,-87.6852901,41.9102486,healthy,10.95
+Penelope's Vegan Taqueria,"230 W Chicago Ave, Chicago, IL 60654, United States",4.8,Chicago,IL,-87.6354497,41.8967153,healthy,10.95
+Kitchen 17,"2554 W Diversey Ave, Chicago, IL 60647, United States",4.5,Chicago,IL,-87.6926471,41.9323139,healthy,10.95
+Stand-Up Burgers,"204 N Wells St, Chicago, IL 60606, United States",4.5,Chicago,IL,-87.6340867,41.8858679,healthy,10.95
+Fancy Plants Kitchen,"1443 W Fullerton Ave, Chicago, IL 60614, United States",4.5,Chicago,IL,-87.6650007,41.9250879,healthy,10.95
+Fancy Plants Cafe,"613 W Briar Pl, Chicago, IL 60657, United States",4.6,Chicago,IL,-87.6449073,41.9390517,healthy,10.95
+Amitabul Simply Vegan,"6207 N Milwaukee Ave, Chicago, IL 60646, United States",4.8,Chicago,IL,-87.7844266,41.9941281,healthy,10.95
+Pho New Saigon,"1088 Foster City Blvd, Foster City, CA 94404, United States",4,Foster City,CA,-122.2567351,37.553428,vietnamese,10.95
+The Habit Burger Grill,"1297 Chess Dr A, Foster City, CA 94404, United States",4.3,Foster City,CA,-122.2790963,37.5618948,comfort food,10.95
+Plaza Gourmet Delicatessen,"929 Edgewater Blvd, Foster City, CA 94404, United States",4.5,Foster City,CA,-122.2706394,37.5453464,comfort food,10.95
+Sweet Basil Thai Cuisine,"1473 Beach Park Blvd, Foster City, CA 94404, United States",4.3,Foster City,CA,-122.2503833,37.5630909,thai,10.95
+Pho Saigon,"2808 Milam St D, Houston, TX 77006, United States",4.4,Houston,TX,-95.3775862,29.7451251,vietnamese,10.95
+Pho Houston,"10961 North Fwy APT 108, Houston, TX 77037, United States",4.6,Houston,TX,-95.413185,29.925297,vietnamese,10.95
+Pho Binh,"8336 Southwest Fwy, Houston, TX 77074, United States",4.6,Houston,TX,-95.5313232,29.6891508,vietnamese,10.95
+Simply Pho,"2929 Milam St, Houston, TX 77006, United States",4.3,Houston,TX,-95.3776612,29.7438588,vietnamese,10.95
+Pho Ngon,"10780 Bellaire Blvd, Houston, TX 77072, United States",3.9,Houston,TX,-95.5679694,29.7043722,vietnamese,10.95
+Pho One,"11148 Westheimer Rd, Houston, TX 77042, United States",4.1,Houston,TX,-95.5723075,29.7376053,vietnamese,10.95
+Pho Duy,"6968 Wilcrest Dr SUITE # F, Houston, TX 77072, United States",4.1,Houston,TX,-95.5718942,29.7012154,vietnamese,10.95
+Pho Binh,"5901 Westheimer Rd U, Houston, TX 77057, United States",4.3,Houston,TX,-95.4853293,29.7371235,vietnamese,10.95
+Pho 54,"10623 Bellaire Blvd c198, Houston, TX 77072, United States",4.4,Houston,TX,-95.5696309,29.7030299,vietnamese,10.95
+Pho Thanh Long,"21542 TX-249 # 1, Houston, TX 77070, United States",4.4,Houston,TX,-95.58092,29.9999702,vietnamese,10.95
+Local Pho,"2313 Edwards St #145, Houston, TX 77007, United States",4.2,Houston,TX,-95.3814165,29.7702692,vietnamese,10.95
+Pho Bo To & Bo Ne,"8388 W Sam Houston Pkwy S #162, Houston, TX 77072, United States",4.5,Houston,TX,-95.5600181,29.6874476,vietnamese,10.95
+Pho King,"4720 Washington Ave Suite B-1, Houston, TX 77007, United States",4.7,Houston,TX,-95.408886,29.7708784,vietnamese,10.95
+Vietnam Coast Restaurant,"2910 Hillcroft Ave, Houston, TX 77057, United States",4.5,Houston,TX,-95.5016292,29.7341971,vietnamese,10.95
+Roostar,"1411 Gessner Rd Suite I, Houston, TX 77080, United States",4.7,Houston,TX,-95.545122,29.7956781,vietnamese,10.95
+Miss Saigon Cafe,"1421 Richmond Ave., Houston, TX 77006, United States",4.5,Houston,TX,-95.3984135,29.7340509,vietnamese,10.95
+Me'lange,"311 W Gray St B, Houston, TX 77019, United States",4.1,Houston,TX,-95.386393,29.7533098,vietnamese,10.95
+Pho Luc Lac,"9457 Kempwood Dr, Houston, TX 77080, United States",4.6,Houston,TX,-95.5254045,29.8210739,vietnamese,10.95
+Old Saigon Cafe,"6383 Westheimer Rd Suite B, Houston, TX 77057, United States",4.7,Houston,TX,-95.4972361,29.7372694,vietnamese,10.95
+Vietopia,"3805 Southwest Fwy, Houston, TX 77027, United States",4.3,Houston,TX,-95.4373231,29.7284316,vietnamese,10.95
+Le Colonial,"4444 Westheimer Rd, Houston, TX 77027, United States",4.3,Houston,TX,-95.4532933,29.7419142,vietnamese,10.95
+Mala Sichuan Bistro,"1201 Westheimer Rd, Houston, TX 77006, United States",4.5,Houston,TX,-95.3930104,29.7440845,chinese,10.95
+Mein,"9630 Clarewood Dr Ste A13, Houston, TX 77036, United States",4.5,Houston,TX,-95.5500467,29.7075275,chinese,10.95
+Eastern Chinese Restaurant,"2100 W 34th St, Houston, TX 77018, United States",4.4,Houston,TX,-95.4367625,29.8174802,chinese,10.95
+Mala Sichuan Bistro,"9348 Bellaire Blvd, Houston, TX 77036, United States",4.5,Houston,TX,-95.548255,29.705936,chinese,10.95
+Qin Dynasty,"5115 Buffalo Speedway #900, Houston, TX 77005, United States",4.4,Houston,TX,-95.4270024,29.7280465,chinese,10.95
+Ginger & Fork,"4705 Inker St, Houston, TX 77007, United States",4.4,Houston,TX,-95.4088294,29.7752946,chinese,10.95
+Chang's Chinese Restaurant,"5761 San Felipe St, Houston, TX 77057, United States",3.8,Houston,TX,-95.4782317,29.7493605,chinese,10.95
+Peking Cuisine,"8332 Southwest Fwy, Houston, TX 77074, United States",4.3,Houston,TX,-95.5312619,29.6892298,chinese,10.95
+Spicy Girl,"917 Winbern St Unit B, Houston, TX 77002, United States",4.4,Houston,TX,-95.3800382,29.7391541,chinese,10.95
+Wanna Bao,"2708 Bagby St, Houston, TX 77006, United States",4.4,Houston,TX,-95.3802753,29.747711,chinese,10.95
+Dona Maria,"2601 Navigation Blvd, Houston, TX 77003, United States",4.6,Houston,TX,-95.3432306,29.757877,mexican,10.95
+Irma's Southwest,"1475 Texas Ave, Houston, TX 77002, United States",4.4,Houston,TX,-95.3582291,29.7576388,mexican,10.95
+Tony's Mexican Restaurant,"2222 Ella Blvd, Houston, TX 77008, United States",4.4,Houston,TX,-95.4288962,29.8064348,mexican,10.95
+Puebla's Mexican Kitchen,"6320 N Main St, Houston, TX 77009, United States",4.6,Houston,TX,-95.3892645,29.808071,mexican,10.95
+Hopdoddy Burger Bar,"5510 Morningside Dr Suite 100, Houston, TX 77005, United States",4.4,Houston,TX,-95.4152803,29.7162198,comfort food,10.95
+Bubba's Texas Burger Shack,"5230 Westpark Dr, Houston, TX 77056, United States",4.6,Houston,TX,-95.4668935,29.7259763,comfort food,10.95
+The Burger Palace,"2800 Sage Rd #1100, Houston, TX 77056, United States",4.2,Houston,TX,-95.4681931,29.7373808,comfort food,10.95
+Hopdoddy Burger Bar,"4444 Westheimer Rd Suite H100, Houston, TX 77027, United States",4.5,Houston,TX,-95.4536582,29.7435144,comfort food,10.95
+Hopdoddy Burger Bar,"449 W 19th St suite d-100, Houston, TX 77008, United States",4.3,Houston,TX,-95.4053051,29.8030314,comfort food,10.95
+Hopdoddy Burger Bar,"142 Vintage Park Blvd Suite A, Houston, TX 77070, United States",4.4,Houston,TX,-95.5737063,29.995997,comfort food,10.95
+Pappas Burger,"5815 Westheimer Rd, Houston, TX 77057, United States",4.5,Houston,TX,-95.4811818,29.7376071,comfort food,10.95
+Stack Burger,"703 St Joseph Pkwy, Houston, TX 77002, United States",4.6,Houston,TX,-95.3726488,29.751833,comfort food,10.95
+Taqueria Abasolo,"1109 Hogan St, Houston, TX 77009, United States",4.4,Houston,TX,-95.3574157,29.7777954,comfort food,10.95
+El Rey Taqueria,"910 Shepherd Dr, Houston, TX 77007, United States",4.3,Houston,TX,-95.4092929,29.7703359,comfort food,10.95
+Laredo Taqueria,"915 Snover St, Houston, TX 77007, United States",4.5,Houston,TX,-95.4050483,29.7701259,comfort food,10.95
+Taqueria Cancun,"2227 Gessner Rd, Houston, TX 77080, United States",4.2,Houston,TX,-95.5457212,29.8147246,comfort food,10.95
+La Chingada Tacos & Tequila,"1402 Northwood St, Houston, TX 77009, United States",4.3,Houston,TX,-95.3778764,29.8040483,comfort food,10.95
+Kenny & Ziggy's New York Delicatessen,"1743 Post Oak Blvd, Houston, TX 77056, United States",4.6,Houston,TX,-95.4597441,29.7482777,comfort food,10.95
+Louis Deli,"415 1/2 San Jacinto St, Houston, TX 77002, United States",4.7,Houston,TX,-95.3599055,29.7598593,comfort food,10.95
+Mandola's Deli,"4105 Leeland St, Houston, TX 77023, United States",4.6,Houston,TX,-95.3395365,29.7374709,comfort food,10.95
+Jason's Deli,"2611 S Shepherd Dr, Houston, TX 77098, United States",4.4,Houston,TX,-95.4104406,29.7420409,comfort food,10.95
+Victor's Deli & Restaurant,"4710 Farm to Market 1960 Rd W, Houston, TX 77069, United States",4.4,Houston,TX,-95.5021906,29.9861215,comfort food,10.95
+Deli Deluxe,"4550 Post Oak Pl Dr UNIT 144, Houston, TX 77027, United States",5,Houston,TX,-95.4506859,29.7506535,comfort food,10.95
+Deli Deluxe,"1001 McKinney St, Houston, TX 77002, United States",4.7,Houston,TX,-95.3643095,29.756905,comfort food,10.95
+Midtown Cafe & Deli,"55 Waugh Dr # 520, Houston, TX 77007, United States",4.4,Houston,TX,-95.3976459,29.7671876,comfort food,10.95
+Jason's Deli,"901 McKinney St, Houston, TX 77002, United States",4.3,Houston,TX,-95.3654952,29.7575405,comfort food,10.95
+Jason's Deli,"11120 Northwest Fwy, Houston, TX 77092, United States",4.4,Houston,TX,-95.4664137,29.8185246,comfort food,10.95
+Deli Deluxe,"1600 Smith St #275, Houston, TX 77002, United States",4.2,Houston,TX,-95.3726674,29.7547219,comfort food,10.95
+Mom's Country Deli,"7918 Pinemont Dr, Houston, TX 77040, United States",4.4,Houston,TX,-95.5109266,29.8418708,comfort food,10.95
+Nielsen's Delicatessen,"4500 Richmond Ave., Houston, TX 77027, United States",4.6,Houston,TX,-95.450857,29.7328498,comfort food,10.95
+Ploughman's Deli & Cafe,"965 Pinemont Dr #100, Houston, TX 77018, United States",4.7,Houston,TX,-95.4201264,29.8406976,comfort food,10.95
+Jason's Deli,"5860 Westheimer Rd, Houston, TX 77057, United States",4.3,Houston,TX,-95.4827154,29.7386933,comfort food,10.95
+Jollibee,"8001 Main St #100, Houston, TX 77025, United States",4.2,Houston,TX,-95.4146391,29.6934859,american,10.95
+Whataburger,"1000 Main St, Houston, TX 77002, United States",4.3,Houston,TX,-95.3659594,29.7568378,american,10.95
+Five Guys,"2902 N Shepherd Dr, Houston, TX 77008, United States",4.2,Houston,TX,-95.4099118,29.8136247,american,10.95
+Louisiana Famous Fried Chicken,"2001 Fannin St, Houston, TX 77002, United States",3.9,Houston,TX,-95.3701857,29.7482996,american,10.95
+Whataburger,"3797 Southwest Fwy, Houston, TX 77027, United States",4.1,Houston,TX,-95.4367957,29.7284112,american,10.95
+Taco Bell,"2245 W Holcombe Blvd, Houston, TX 77030, United States",3.8,Houston,TX,-95.4112949,29.7058248,american,10.95
+Ike's Love & Sandwiches,"1051 Heights Blvd, Houston, TX 77008, United States",4.1,Houston,TX,-95.3981928,29.7904529,american,10.95
+Potbelly,"1200 McKinney St, Houston, TX 77010, United States",4.2,Houston,TX,-95.3626334,29.7547627,american,10.95
+Thien An Sandwiches,"2611 San Jacinto St, Houston, TX 77004, United States",4.5,Houston,TX,-95.3725167,29.7437292,american,10.95
+Potbelly,"2625 Louisiana St, Houston, TX 77006, United States",4.3,Houston,TX,-95.3767281,29.746489,american,10.95
+Potbelly,"3800 Southwest Fwy, Houston, TX 77027, United States",4.4,Houston,TX,-95.4381303,29.7298084,american,10.95
+The Nickel Sandwich Grill,"5601 Lyons Ave, Houston, TX 77020, United States",4.5,Houston,TX,-95.3148603,29.7767686,american,10.95
+Which Wich Superior Sandwiches,"1001 Louisiana St #B040, Houston, TX 77002, United States",4.5,Houston,TX,-95.367455,29.7579387,american,10.95
+Cheba Hut,"2150 Edwards St, Houston, TX 77007, United States",4.8,Houston,TX,-95.3804918,29.7711364,american,10.95
+Potbelly,"1000 Main St Ste T-70 Ste T-70, Houston, TX 77002, United States",4.1,Houston,TX,-95.3659038,29.7567954,american,10.95
+Schlotzsky's,"815 Walker St, Houston, TX 77002, United States",4,Houston,TX,-95.3652906,29.758489,american,10.95
+The Community Bar,"2703 Smith St, Houston, TX 77006, United States",4.4,Houston,TX,-95.3782235,29.7462925,bar,10.95
+MKT Bar,"1001 Austin St, Houston, TX 77010, United States",4.4,Houston,TX,-95.3613563,29.7545754,bar,10.95
+Pour Behavior,"2211 Travis St, Houston, TX 77002, United States",4,Houston,TX,-95.372624,29.748059,bar,10.95
+Boheme,"307 Fairview St, Houston, TX 77006, United States",4.3,Houston,TX,-95.3860836,29.7480798,bar,10.95
+93' Til,"1601 W Main St, Houston, TX 77006, United States",4.7,Houston,TX,-95.399486,29.7357537,bar,10.95
+Piggy's Kitchen & Bar,"3412 W Lamar St, Houston, TX 77019, United States",4.3,Houston,TX,-95.4019977,29.7579099,bar,10.95
+Holman Draft Hall,"820 Holman St, Houston, TX 77002, United States",4.5,Houston,TX,-95.3797981,29.7402553,bar,10.95
+Houston Bakery & Cafe,"2435 Fulton St # A, Houston, TX 77009, United States",4.1,Houston,TX,-95.3611775,29.7839125,bakery,10.95
+Corner Bakery Cafe,"9311 Katy Fwy, Houston, TX 77024, United States",4.3,Houston,TX,-95.521646,29.783255,bakery,10.95
+Corner Bakery Cafe,"2615 Southwest Fwy Ste 100, Houston, TX 77098, United States",4.3,Houston,TX,-95.4198724,29.7296971,bakery,10.95
+Corner Bakery Cafe,"1000 Main St, Houston, TX 77002, United States",4.4,Houston,TX,-95.365364,29.75687,bakery,10.95
+Corner Bakery Cafe,"107 Yale St Ste 100, Houston, TX 77007, United States",4.3,Houston,TX,-95.3988595,29.7728471,bakery,10.95
+Dessert Gallery Bakery & Cafe,"3600 Kirby Dr # D, Houston, TX 77098, United States",4.3,Houston,TX,-95.4194012,29.7333304,bakery,10.95
+Croissant-Brioche,"2435 Rice Boulevard, Houston, TX 77005, United States",4.6,Houston,TX,-95.4162614,29.717306,bakery,10.95
+Epicure Cafe,"2005 W Gray St, Houston, TX 77019, United States",4.4,Houston,TX,-95.4089271,29.7528564,bakery,10.95
+Fu Belly Asian Cuisine & Bubble Tea Bar,"5727 Westheimer Rd, Houston, TX 77057, United States",4.1,Houston,TX,-95.4780022,29.7371141,boba,10.95
+Boba Cafe,"1113 Holman St, Houston, TX 77004, United States",4,Houston,TX,-95.3768788,29.7391236,boba,10.95
+Bubble Boba,"8070 S Gessner Rd, Houston, TX 77036, United States",4.7,Houston,TX,-95.5338211,29.6894739,boba,10.95
+Tapioca Blossom,"14175 Northwest Fwy, Houston, TX 77040, United States",4.6,Houston,TX,-95.5273134,29.8597657,boba,10.95
+Avalon Diner,"2417 Westheimer Rd, Houston, TX 77098, United States",4.4,Houston,TX,-95.4171507,29.7418572,diner,10.95
+Hanz Diner,"185 W Dyna Dr, Houston, TX 77037, United States",4.4,Houston,TX,-95.4106089,29.9214111,diner,10.95
+Nate's Diner,"11509 Veterans Memorial Dr, Houston, TX 77067, United States",4.6,Houston,TX,-95.4693812,29.9489979,diner,10.95
+Avalon Diner,"8823 Katy Fwy, Houston, TX 77024, United States",4.3,Houston,TX,-95.5072963,29.7833182,diner,10.95
+Avalon Diner,"11611 Katy Fwy, Houston, TX 77079, United States",4.3,Houston,TX,-95.5886961,29.783823,diner,10.95
+Zydeco Louisiana Diner,"1119 Pease St, Houston, TX 77002, United States",4.6,Houston,TX,-95.3673551,29.7509408,diner,10.95
+District 7 Grill Midtown,"501 Pierce St, Houston, TX 77002, United States",4.3,Houston,TX,-95.3748546,29.7520991,diner,10.95
+Dinner Bell Cafeteria and Bakery,"6525 Lawndale St, Houston, TX 77023, United States",4.3,Houston,TX,-95.3123122,29.7256144,diner,10.95
+Empire Cafe,"1732 Westheimer Rd, Houston, TX 77098, United States",4.4,Houston,TX,-95.4035854,29.7428774,american,10.95
+Le cafe josephine,"201 E 20th St, Houston, TX 77008, United States",4.7,Houston,TX,-95.3965409,29.8042042,american,10.95
+LONDON CAFE,"2310 S Texas 6 B, Houston, TX 77077, United States",4.8,Houston,TX,-95.6447737,29.7395741,american,10.95
+Hobbit Cafe,"2243 Richmond Ave., Houston, TX 77098, United States",4.5,Houston,TX,-95.4146589,29.7335887,american,10.95
+Cafe Leonelli,"5500 Main St, Houston, TX 77004, United States",4.2,Houston,TX,-95.3900469,29.7261349,american,10.95
+Cafe Rabelais,"2442 Times Blvd, Houston, TX 77005, United States",4.5,Houston,TX,-95.4156971,29.7168939,american,10.95
+Cafe Paris,"1100 Texas Ave A, Houston, TX 77002, United States",3.5,Houston,TX,-95.3615126,29.7591816,american,10.95
+Roots Cafe,"5120 Woodway Dr #145, Houston, TX 77056, United States",4.5,Houston,TX,-95.4665156,29.763158,american,10.95
+Red Dessert Dive,"1045 Studewood St, Houston, TX 77008, United States",4.4,Houston,TX,-95.3879731,29.7902913,ice cream and frozen,10.95
+Popfancy Dessert Bar,"9393 Bellaire Blvd a6, Houston, TX 77036, United States",4.4,Houston,TX,-95.5492973,29.7045207,ice cream and frozen,10.95
+Sweet Memes,"9630 Clarewood Dr Suite A-8, Houston, TX 77036, United States",4.4,Houston,TX,-95.5504225,29.7075363,ice cream and frozen,10.95
+Chillax,"1035 Blalock Rd, Houston, TX 77055, United States",4.6,Houston,TX,-95.5221973,29.7857644,ice cream and frozen,10.95
+Nu Ice and Drinks,"5901 Westheimer Rd B1, Houston, TX 77057, United States",4.6,Houston,TX,-95.4846549,29.7370124,ice cream and frozen,10.95
+Cupcake Kitchen Houston,"2533 Southmore Blvd, Houston, TX 77004, United States",3.2,Houston,TX,-95.373406,29.7204277,ice cream and frozen,10.95
+Uchi,"904 Westheimer Rd Suite A, Houston, TX 77006, United States",4.7,Houston,TX,-95.390693,29.7447973,japanese,10.95
+Teppay,"6516 Westheimer Rd A2, Houston, TX 77057, United States",4.4,Houston,TX,-95.5007796,29.7387258,japanese,10.95
+Miyazaki,"9527 Westheimer Rd D, Houston, TX 77063, United States",3.9,Houston,TX,-95.5341587,29.7362315,japanese,10.95
+Miyako,"4601 Washington Ave Ste 150, Houston, TX 77007, United States",4.4,Houston,TX,-95.4076731,29.7702356,japanese,10.95
+MF Sushi,"1401 Binz St #100, Houston, TX 77004, United States",4.6,Houston,TX,-95.3858813,29.7237893,japanese,9.42
+Thai Bistro,"3241 Southwest Fwy, Houston, TX 77027, United States",4.5,Houston,TX,-95.4304837,29.7286989,thai,13.09
+Tony Thai Restaurant,"10613 Bellaire Blvd Ste A101, Houston, TX 77072, United States",4.4,Houston,TX,-95.5693975,29.7026628,thai,12.48
+Vieng Thai,"6929 Long Point Rd, Houston, TX 77055, United States",4.3,Houston,TX,-95.470921,29.802625,thai,8.2
+Asia Market Thai Restaurant,"4822 Fulton St #2603, Houston, TX 77009, United States",4.5,Houston,TX,-95.3682533,29.8039354,thai,9.9
+Nidda Thai Cuisine,"1226 Westheimer Rd, Houston, TX 77006, United States",4.1,Houston,TX,-95.394266,29.744597,thai,14.55
+Aim Thai Restaurant,"9734 W Montgomery Rd, Houston, TX 77088, United States",4.6,Houston,TX,-95.4498951,29.8842796,thai,10.16
+NUA Thai,"2020 Louisiana St, Houston, TX 77002, United States",4.5,Houston,TX,-95.3742001,29.7506551,thai,13.94
+Thai Bistro,"11660 Westheimer Rd #115, Houston, TX 77077, United States",4.4,Houston,TX,-95.583472,29.7373492,thai,13.09
+Ginger Thai Cuisine,"303 Grasshopper Ln, Houston, TX 77079, United States",4.3,Houston,TX,-95.643497,29.783174,thai,14.23
+Morningside Thai restaurant,"2473 S Braeswood Blvd Suite A Suite A, Houston, TX 77030, United States",4.2,Houston,TX,-95.4160968,29.6960314,thai,9.39
+Thai Lanna,"1714 W Loop N Fwy, Houston, TX 77008, United States",4.3,Houston,TX,-95.4482316,29.8009045,thai,13.08
+Rim Tanon,"2241 Richmond Ave., Houston, TX 77098, United States",4.5,Houston,TX,-95.4147547,29.7339758,thai,13.14
+Thai Village Restaurant,"2512 Times Blvd, Houston, TX 77005, United States",4.1,Houston,TX,-95.417144,29.716912,thai,12.45
+Nara Thai Express,"2111 Fannin St, Houston, TX 77002, United States",4.2,Houston,TX,-95.3704827,29.7475892,thai,12.76
+Mango Tree,"10130 Grant Rd #224, Houston, TX 77070, United States",4.3,Houston,TX,-95.5707977,29.9679535,thai,13.8
+Street to Kitchen,"6501 Harrisburg Blvd, Houston, TX 77011, United States",4.7,Houston,TX,-95.3112102,29.7389472,thai,13.66
+Luigis Pizzeria,"3700 Almeda Rd, Houston, TX 77004, United States",4.4,Houston,TX,-95.3746045,29.7354321,pizza,6.43
+Romano's Pizza,"1528 W Gray St, Houston, TX 77019, United States",4.6,Houston,TX,-95.4003685,29.7543716,pizza,21.77
+Pizaro's Pizza Napoletana,"1000 W Gray St, Houston, TX 77019, United States",4.4,Houston,TX,-95.3919436,29.7535871,pizza,16.22
+Luna Pizzeria,"3435 Kirby Dr, Houston, TX 77098, United States",4.6,Houston,TX,-95.4177082,29.7350927,pizza,7
+Pizzeria Solario,"3333 Weslayan St #100, Houston, TX 77027, United States",4.4,Houston,TX,-95.4411774,29.7347851,pizza,11.12
+Star Pizza,"2111 Norfolk St, Houston, TX 77098, United States",4.5,Houston,TX,-95.4110553,29.7324321,pizza,13.34
+Zalat Pizza,"510 Gray St Suite 2B, Houston, TX 77002, United States",4.5,Houston,TX,-95.3755229,29.7506872,pizza,18.53
+The Gypsy Poet,"2404 Austin St, Houston, TX 77004, United States",4.8,Houston,TX,-95.3703396,29.7441444,pizza,13.43
+Pink's Pizza,"3404 N Shepherd Dr, Houston, TX 77018, United States",4.2,Houston,TX,-95.4099163,29.8176686,pizza,21.87
+Star Pizza,"77 Harvard St, Houston, TX 77007, United States",4.5,Houston,TX,-95.3962108,29.7700191,pizza,13.34
+Chicago Italian Beef & Pizza,"1777 Airline Dr, Houston, TX 77009, United States",4.2,Houston,TX,-95.3822392,29.8028751,pizza,11.33
+Luna Pizzeria,"107 Yale St #400, Houston, TX 77007, United States",4.6,Houston,TX,-95.3989866,29.7725799,pizza,7
+Fuzzy's Pizza,"823 Antoine Dr, Houston, TX 77024, United States",4.1,Houston,TX,-95.4760808,29.7821143,pizza,11.54
+North Italia,"1700 Post Oak Blvd Ste 190, Houston, TX 77056, United States",4.5,Houston,TX,-95.4621751,29.7485654,italian,15.75
+La Griglia,"2002 W Gray St, Houston, TX 77019, United States",4.5,Houston,TX,-95.4086422,29.753359,italian,18.32
+Fiori,"4315 Montrose Blvd, Houston, TX 77006, United States",4.3,Houston,TX,-95.3908297,29.7339195,italian,125
+Amalfi,"6100 Westheimer Rd, Houston, TX 77057, United States",4.5,Houston,TX,-95.491263,29.739106,italian,22.11
+Prego,"2520 Amherst St, Houston, TX 77005, United States",4.4,Houston,TX,-95.4175406,29.7160512,italian,21.24
+Perbacco,"700 Milam St, Houston, TX 77002, United States",4.6,Houston,TX,-95.3651944,29.7601639,italian,15.71
+Roma,"2347 University Blvd, Houston, TX 77005, United States",4.4,Houston,TX,-95.4147576,29.714878,italian,20.69
+Damian's Cucina Italiana,"3011 Smith St, Houston, TX 77006, United States",4.5,Houston,TX,-95.3796997,29.7443259,italian,19.37
+Mia Bella Trattoria,"3773 Richmond Ave., Houston, TX 77046, United States",4.6,Houston,TX,-95.4372172,29.7324201,italian,10.61
+Ramen Tatsu-ya,"1722 California St, Houston, TX 77006, United States",4.4,Houston,TX,-95.3982662,29.7432043,japanese,9.62
+Ninja Ramen,"4219 Washington Ave, Houston, TX 77007, United States",4.2,Houston,TX,-95.4039025,29.7701365,japanese,12.44
+Rakkan Ramen,"600 N Shepherd Dr Suite 515, Houston, TX 77007, United States",4.4,Houston,TX,-95.4079198,29.7828833,japanese,10.82
+Ramen Jin,"11181 Westheimer Rd, Houston, TX 77042, United States",4.3,Houston,TX,-95.5728519,29.7359273,japanese,4.9
+Shokku Ramen,"933 Studewood St Suite A, Houston, TX 77008, United States",3.7,Houston,TX,-95.3880983,29.7886815,japanese,9.9
+Tiger Den,"9889 Bellaire Blvd STE 230, Houston, TX 77036, United States",4.5,Houston,TX,-95.5534119,29.7035541,japanese,6.81
+Tamashi,"2518 W Holcombe Blvd, Houston, TX 77030, United States",4.6,Houston,TX,-95.4172291,29.7064098,japanese,11.2
+Tamashi,"9896 Bellaire Blvd #C2, Houston, TX 77036, United States",4.5,Houston,TX,-95.5542618,29.7063988,japanese,11.2
+Tamashi,"1106 Silber Rd d1, Houston, TX 77055, United States",4.6,Houston,TX,-95.467511,29.78782,japanese,11.2
+Amorino,"4444 Westheimer Rd C150, Houston, TX 77027, United States",4.7,Houston,TX,-95.45317,29.7435824,ice cream and frozen,13.79
+Amy's Ice Creams,"3816 Farnham St, Houston, TX 77098, United States",4.3,Houston,TX,-95.4123658,29.7327872,ice cream and frozen,13.89
+Van Leeuwen Ice Cream,"2565 Amherst St Suite A, Houston, TX 77005, United States",4.2,Houston,TX,-95.417716,29.715684,ice cream and frozen,10.37
+Flower & Cream,"2617 W Holcombe Blvd Suite B, Houston, TX 77030, United States",4.6,Houston,TX,-95.4191844,29.7057686,ice cream and frozen,14.62
+Van Leeuwen Ice Cream,"1151 Uptown Park Blvd Suite 8, Houston, TX 77056, United States",4.2,Houston,TX,-95.457099,29.754561,ice cream and frozen,10.37
+Jeni's Splendid Ice Creams,"375 W 19th St, Houston, TX 77008, United States",4.6,Houston,TX,-95.4034654,29.8030102,ice cream and frozen,13.22
+Honeychild's Sweet Creams,"600 N Shepherd Dr Suite 450, Houston, TX 77007, United States",4.7,Houston,TX,-95.4086855,29.7831195,ice cream and frozen,6.08
+Van Leeuwen Ice Cream,"888 Westheimer Rd Suite 157, Houston, TX 77006, United States",4.6,Houston,TX,-95.390276,29.745009,ice cream and frozen,10.37
+Cheaters Creamery,"5335 Washington Ave, Houston, TX 77007, United States",4.6,Houston,TX,-95.416053,29.770337,ice cream and frozen,7.29
+green seed vegan,"4320 Almeda Rd, Houston, TX 77004, United States",4.5,Houston,TX,-95.3764422,29.7304022,healthy,6.43
+Trendy Vegan,"3821 Richmond Ave., Houston, TX 77027, United States",4.6,Houston,TX,-95.4391711,29.7322539,healthy,10.5
+Soul Food Vegan,"2901 Emancipation Ave, Houston, TX 77004, United States",3.9,Houston,TX,-95.3635099,29.7360065,healthy,16.25
+Korny Vibes,"403 Westheimer Rd, Houston, TX 77006, United States",4.4,Houston,TX,-95.3861332,29.7442742,healthy,12.97
+Loving Hut,"2825 S Kirkwood Rd #100, Houston, TX 77082, United States",4.5,Houston,TX,-95.5887866,29.7324127,healthy,7.94
+Veegos,"10932 Westheimer Rd #A, Houston, TX 77042, United States",4.7,Houston,TX,-95.569267,29.7375754,healthy,7.33
+Chef Kenny's Asian Vegan Cuisine,"6128 Wilcrest Dr, Houston, TX 77072, United States",4.6,Houston,TX,-95.5721644,29.7146453,healthy,11.26
+Lindiana's Southern Vegan Kitchen,"6502 Dixie Dr, Houston, TX 77087, United States",4.5,Houston,TX,-95.3136439,29.6793641,healthy,15.17
+Cascabel,"1415 Murray Bay St, Houston, TX 77080, United States",4.6,Houston,TX,-95.5383834,29.7945227,healthy,15.02
+Pat Greer's Kitchen,"412 W Clay St, Houston, TX 77019, United States",4.9,Houston,TX,-95.3870384,29.755658,healthy,10.4
+Planet Vegan,"12000 Martin Luther King Blvd, Houston, TX 77048, United States",4.3,Houston,TX,-95.3415846,29.6304831,healthy,8.83
+Pho Saigon Pearl,"519 S Fairfax Ave, Los Angeles, CA 90036, United States",4.2,Los Angeles,CA,-118.3615729,34.0668719,vietnamese,11.13
+KTown Pho,"974 S Western Ave, Los Angeles, CA 90006, United States",4.5,Los Angeles,CA,-118.3089222,34.0534563,vietnamese,8.22
+Thank U Pho,"3522 B W 8th St, Los Angeles, CA 90005, United States",4.3,Los Angeles,CA,-118.3075639,34.0573639,vietnamese,14.34
+Pho Cafe,"2841 Sunset Blvd, Los Angeles, CA 90026, United States",3.7,Los Angeles,CA,-118.2723523,34.0826547,vietnamese,10.25
+K5 pho and rolls,"7315 N Figueroa St #103, Los Angeles, CA 90041, United States",4.6,Los Angeles,CA,-118.189483,34.1367432,vietnamese,14.39
+Pho Saigon Republic,"818 N Spring St, Los Angeles, CA 90012, United States",4.2,Los Angeles,CA,-118.2364839,34.0625759,vietnamese,11.65
+Nong La Cafe,"2055 Sawtelle Blvd, Los Angeles, CA 90025, United States",4.4,Los Angeles,CA,-118.4426985,34.0396244,vietnamese,12.8
+Vui Ve,"319 E 2nd St #205, Los Angeles, CA 90012, United States",4.3,Los Angeles,CA,-118.2406847,34.0494038,vietnamese,12.39
+Pho Shop,"333 Alameda St # 125, Los Angeles, CA 90013, United States",4.3,Los Angeles,CA,-118.2389519,34.0450986,vietnamese,8.53
+Pho Hanoi 12,"301 S Western Ave #101, Los Angeles, CA 90020, United States",3.6,Los Angeles,CA,-118.3095911,34.0687423,vietnamese,13.99
+Pho Cafe Plus,"705 S Western Ave, Los Angeles, CA 90005, United States",3.2,Los Angeles,CA,-118.3094393,34.059438,vietnamese,16.44
+Nong La Cafe,"145 N La Brea Ave, Los Angeles, CA 90036, United States",4.4,Los Angeles,CA,-118.344238,34.075284,vietnamese,12.8
+O Banh Mi,"1997 Hyperion Ave, Los Angeles, CA 90027, United States",4.5,Los Angeles,CA,-118.274832,34.0982146,vietnamese,13
+Vietnamese Delight,"358 W 38th St Unit 1, Los Angeles, CA 90037, United States",4.2,Los Angeles,CA,-118.2790898,34.0143532,vietnamese,12.13
+Chi Dynasty,"1813 Hillhurst Ave, Los Angeles, CA 90027, United States",4.2,Los Angeles,CA,-118.2877922,34.1041951,chinese,18.73
+Fortune House Chinese Cuisine,"6031 San Vicente Blvd, Los Angeles, CA 90036, United States",4.2,Los Angeles,CA,-118.3626029,34.0583447,chinese,18.41
+King Bowl,"2214 Sunset Blvd, Los Angeles, CA 90026, United States",4.4,Los Angeles,CA,-118.2665808,34.0780999,chinese,13.25
+Golden Dragon Restaurant,"960 N Broadway, Los Angeles, CA 90012, United States",4.1,Los Angeles,CA,-118.2363889,34.0655556,chinese,7.07
+East Garden Restaurant,"750 N Hill St F, Los Angeles, CA 90012, United States",4,Los Angeles,CA,-118.2394567,34.0617124,chinese,17.35
+The Dragon Restaurant,"966 Vermont Ave, Los Angeles, CA 90006, United States",4.1,Los Angeles,CA,-118.291304,34.0534909,chinese,23.6
+Full Moon House,"960 N Hill St, Los Angeles, CA 90012, United States",4.3,Los Angeles,CA,-118.2376414,34.0660293,chinese,11.7
+Le Oriental Bistro,"1710 N Highland Ave, Los Angeles, CA 90028, United States",4,Los Angeles,CA,-118.3385425,34.1020698,chinese,15.92
+Guelaguetza Restaurant,"3014 W Olympic Blvd, Los Angeles, CA 90006, United States",4.3,Los Angeles,CA,-118.3006681,34.0524074,mexican,16.88
+The Mexican Village Restaurant,"3668 Beverly Blvd, Los Angeles, CA 90004, United States",4.4,Los Angeles,CA,-118.2884963,34.0760629,mexican,12.08
+Guisados,"1261 Sunset Blvd, Los Angeles, CA 90026, United States",4.7,Los Angeles,CA,-118.2502873,34.0702213,mexican,3.45
+El Parian Restaurant,"1528 W Pico Blvd, Los Angeles, CA 90015, United States",4.4,Los Angeles,CA,-118.2758231,34.0438962,mexican,12.94
+Guisados,"2100 E Cesar E Chavez Ave, Los Angeles, CA 90033, United States",4.5,Los Angeles,CA,-118.2114953,34.0482719,mexican,3.45
+Sol Agave LA LIVE,"800 W Olympic Blvd, Los Angeles, CA 90015, United States",4.6,Los Angeles,CA,-118.2649805,34.0449976,mexican,22.04
+El Rancho Grande,"17 Olvera St Suite E, Los Angeles, CA 90012, United States",4.4,Los Angeles,CA,-118.237961,34.057745,mexican,6.62
+El Cholo,"1037 Flower St, Los Angeles, CA 90015, United States",4.3,Los Angeles,CA,-118.263763,34.0436005,mexican,27.55
+Guisados,"541 S Spring St #101, Los Angeles, CA 90013, United States",4.6,Los Angeles,CA,-118.2505986,34.0465738,mexican,3.45
+BurgerShop,"724 S Spring St, Los Angeles, CA 90014, United States",4.7,Los Angeles,CA,-118.2526098,34.0438329,comfort food,12.28
+Smashburger,"1011 S Figueroa St Suite B 101, Los Angeles, CA 90015, United States",3.8,Los Angeles,CA,-118.2653717,34.0441603,comfort food,11.89
+Cassell's Hamburgers DTLA,"421 W 8th St, Los Angeles, CA 90014, United States",4.5,Los Angeles,CA,-118.256369,34.0449662,comfort food,12.9
+Burger She Wrote,"7454 1/2 Beverly Blvd, Los Angeles, CA 90036, United States",4.4,Los Angeles,CA,-118.3524869,34.0760059,comfort food,11.36
+The Best Burger,"3533 S Western Ave, Los Angeles, CA 90018, United States",4.2,Los Angeles,CA,-118.3090531,34.0239259,comfort food,4.51
+The Best Burger,"7730 S Western Ave, Los Angeles, CA 90047, United States",4.2,Los Angeles,CA,-118.3087858,33.9692242,comfort food,4.51
+Hollywood Burger,"6250 Hollywood Blvd, Los Angeles, CA 90028, United States",4.5,Los Angeles,CA,-118.3260125,34.1014556,comfort food,5.06
+D-Town Burger Bar,"216 W 6th St, Los Angeles, CA 90014, United States",4.3,Los Angeles,CA,-118.2515572,34.0462074,comfort food,11
+Hawkins House of Burgers,"11603 Slater St, Los Angeles, CA 90059, United States",4.5,Los Angeles,CA,-118.2522851,33.9292554,comfort food,14.73
+Carney's Restaurant,"8351 Sunset Blvd, Los Angeles, CA 90069, United States",4.6,Los Angeles,CA,-118.3718981,34.0959335,comfort food,5.62
+Blue Bird Burgers,"3601 W 3rd St, Los Angeles, CA 90020, United States",4.7,Los Angeles,CA,-118.29429,34.0691839,comfort food,11.43
+Tacos Y Birria La Unica,"2840 E Olympic Blvd, Los Angeles, CA 90023, United States",4.7,Los Angeles,CA,-118.2166149,34.0225263,comfort food,6.8
+Tacos El Veneno,"541 S Indiana St, Los Angeles, CA 90063, United States",4.2,Los Angeles,CA,-118.192477,34.0287853,comfort food,19.84
+Tacos Baja,"5385 Whittier Blvd, Los Angeles, CA 90022, United States",4.5,Los Angeles,CA,-118.1543961,34.0199928,comfort food,4.55
+El Tepeyac Cafe,"812 N Evergreen Ave, Los Angeles, CA 90033, United States",4.5,Los Angeles,CA,-118.1975776,34.0477383,comfort food,12.57
+Restaurante El Gordo,"1182 S Lorena St, Los Angeles, CA 90023, United States",4.5,Los Angeles,CA,-118.2044211,34.0217978,comfort food,12.1
+Langer's Delicatessen-Restaurant,"704 S Alvarado St, Los Angeles, CA 90057, United States",4.6,Los Angeles,CA,-118.2767993,34.0561783,comfort food,18.87
+Factor's Famous Deli,"9420 W Pico Blvd, Los Angeles, CA 90035, United States",4.2,Los Angeles,CA,-118.3946306,34.0550485,comfort food,16.71
+Canter's Deli,"417 N Fairfax Ave, Los Angeles, CA 90036, United States",4.4,Los Angeles,CA,-118.3617992,34.0787673,comfort food,15.89
+Charlie's Kosher Delicatessen,"9124 W Pico Blvd, Los Angeles, CA 90035, United States",4.8,Los Angeles,CA,-118.3907727,34.0551041,comfort food,1.38
+Phil's Deli & Grill,"6333 W 3rd St #540, Los Angeles, CA 90036, United States",4.2,Los Angeles,CA,-118.3599661,34.0717147,comfort food,12.2
+Canter's Deli,"12109 Santa Monica Blvd, Los Angeles, CA 90025, United States",3.8,Los Angeles,CA,-118.463986,34.040669,comfort food,15.89
+The Heights Deli & Bottle Shop,"2927 N Broadway, Los Angeles, CA 90031, United States",4.6,Los Angeles,CA,-118.2107899,34.0738841,comfort food,17.24
+Eastside Italian Deli Los Feliz,"1761 N Vermont Ave, Los Angeles, CA 90027, United States",4.8,Los Angeles,CA,-118.2920705,34.1031093,comfort food,19.24
+Five Guys,"5550 Wilshire Blvd Suite 101D, Los Angeles, CA 90036, United States",4.3,Los Angeles,CA,-118.349904,34.062179,american,8.78
+Wendy's,"7135 Sunset Blvd, Los Angeles, CA 90046, United States",4,Los Angeles,CA,-118.3453282,34.0982115,american,9.46
+Five Guys,"735 S Figueroa St #120, Los Angeles, CA 90017, United States",4.2,Los Angeles,CA,-118.2608507,34.0491696,american,8.78
+Taco Bell,"990 N Western Ave, Los Angeles, CA 90029, United States",3.9,Los Angeles,CA,-118.3088689,34.088328,american,7.03
+Wendy's,"1305 N Vermont Ave, Los Angeles, CA 90027, United States",4,Los Angeles,CA,-118.2921629,34.0958832,american,9.46
+Farmer Boys,"726 S Alameda St, Los Angeles, CA 90021, United States",4.3,Los Angeles,CA,-118.2383731,34.0320672,american,10.87
+Philippe The Original,"1001 N Alameda St, Los Angeles, CA 90012, United States",4.6,Los Angeles,CA,-118.2370588,34.0596429,american,12.36
+Lokal Sandwich Shop,"10433 National Blvd #1A, Los Angeles, CA 90034, United States",4.7,Los Angeles,CA,-118.4118234,34.0290626,american,11.49
+Earl of Sandwich,"350 S Grand Ave # D5, Los Angeles, CA 90071, United States",4.4,Los Angeles,CA,-118.2515466,34.0514283,american,10.48
+Ike's Love & Sandwiches,"1517 Vine St unit 107, Los Angeles, CA 90028, United States",4.1,Los Angeles,CA,-118.3268778,34.0986348,american,19.75
+Lokal sandwich shop,"458 S Main St, Los Angeles, CA 90013, United States",4.9,Los Angeles,CA,-118.2482302,34.0468251,american,11.49
+LA Sandwich Bar,"8360 Melrose Ave #107, Los Angeles, CA 90069, United States",4.7,Los Angeles,CA,-118.3726291,34.0834872,american,10.73
+Potato Chips Deli Beverly Grove,"308 N Stanley Ave, Los Angeles, CA 90036, United States",4.7,Los Angeles,CA,-118.3562584,34.0764543,american,14.18
+Hygge Bakery & Cafe,"1106 S Hope St, Los Angeles, CA 90015, United States",4.5,Los Angeles,CA,-118.2631472,34.0419559,bakery,8.07
+Corner Bakery,"801 S Figueroa St Ste 150, Los Angeles, CA 90017, United States",4.2,Los Angeles,CA,-118.261785,34.0479422,bakery,9.73
+La Mascota Bakery,"2715 Whittier Blvd A, Los Angeles, CA 90023, United States",4.4,Los Angeles,CA,-118.2113293,34.0325592,bakery,3.83
+Guatemalteca Bakery,"4770 Santa Monica Blvd, Los Angeles, CA 90029, United States",4.2,Los Angeles,CA,-118.2935611,34.0907,bakery,4.19
+Boba Me,"4730 Hollywood Blvd, Los Angeles, CA 90027, United States",4.5,Los Angeles,CA,-118.2929091,34.1013973,boba,6.84
+Boba Zzing,"954 N Western Ave, Los Angeles, CA 90029, United States",4.4,Los Angeles,CA,-118.3086579,34.0877678,boba,6.75
+It's Boba Time Vermont,"701 S Vermont Ave, Los Angeles, CA 90005, United States",4.5,Los Angeles,CA,-118.292184,34.059611,boba,6.53
+Boba Bear,"414 S Western Ave, Los Angeles, CA 90020, United States",4.1,Los Angeles,CA,-118.3086758,34.0666523,boba,9
+Dana Cafe Boba,"4270 S Vermont Ave A, Los Angeles, CA 90037, United States",4.5,Los Angeles,CA,-118.2913759,34.0057889,boba,5
+BOBA HIVE,"268 S Rampart Blvd, Los Angeles, CA 90057, United States",4.4,Los Angeles,CA,-118.2783647,34.0664189,boba,4.68
+Just Boba Tea House,"952 Gayley Ave, Los Angeles, CA 90024, United States",4.2,Los Angeles,CA,-118.4481509,34.0629199,boba,6.48
+Nickel Diner,"524 S Main St, Los Angeles, CA 90013, United States",4.5,Los Angeles,CA,-118.2489875,34.0460216,diner,13.08
+Dinah's Family Restaurant,"6521 S Sepulveda Blvd, Los Angeles, CA 90045, United States",4.1,Los Angeles,CA,-118.3948905,33.9803129,diner,16.46
+Ronnie's Diner,"12740 Culver Blvd, Los Angeles, CA 90066, United States",4.5,Los Angeles,CA,-118.4250782,33.9853975,diner,7.99
+Cafe 50's,"11623 Santa Monica Blvd, Los Angeles, CA 90025, United States",4.3,Los Angeles,CA,-118.454859,34.0445533,diner,9.64
+Swingers Diner,"8020 Beverly Blvd, Los Angeles, CA 90048, United States",4.3,Los Angeles,CA,-118.3646573,34.0759307,diner,8.84
+Fred 62,"1850 N Vermont Ave, Los Angeles, CA 90027, United States",4.3,Los Angeles,CA,-118.2915368,34.104636,diner,15.68
+Astro Family Restaurant,"2300 Fletcher Dr, Los Angeles, CA 90039, United States",4.2,Los Angeles,CA,-118.2585902,34.1044797,diner,32.9
+Uncle John's Cafe,"834 S Grand Ave, Los Angeles, CA 90017, United States",4.4,Los Angeles,CA,-118.258651,34.0448954,diner,18.73
+ATTITUDE CAFE,"6009 W 3rd St, Los Angeles, CA 90036, United States",4.8,Los Angeles,CA,-118.3517065,34.0702213,american,18.58
+Monte Carlo Cafe,"109 E 5th St, Los Angeles, CA 90013, United States",4.5,Los Angeles,CA,-118.2481327,34.046572,american,8.66
+Basil & Cheese Cafe,"757 S Main St, Los Angeles, CA 90014, United States",4.9,Los Angeles,CA,-118.2530944,34.0429548,american,14.05
+Blu Jam Cafe,"541 S Spring St #110, Los Angeles, CA 90013, United States",4.3,Los Angeles,CA,-118.2515174,34.0470014,american,16.36
+Cafe de alley,"310 E Pico Blvd, Los Angeles, CA 90015, United States",4.7,Los Angeles,CA,-118.2579881,34.0348668,american,3.27
+Rene Cafe,"1123 W 7th St, Los Angeles, CA 90017, United States",4.6,Los Angeles,CA,-118.2647534,34.0512425,american,8.38
+The Dolly Llama,"611 S Spring St, Los Angeles, CA 90014, United States",4.4,Los Angeles,CA,-118.251387,34.0457169,ice cream and frozen,8.32
+B Sweet Dessert Bar,"2005 Sawtelle Blvd, Los Angeles, CA 90025, United States",4.4,Los Angeles,CA,-118.4435865,34.0406607,ice cream and frozen,7.16
+The Dolly Llama,"273 S Western Ave, Los Angeles, CA 90020, United States",4.3,Los Angeles,CA,-118.3093023,34.0690956,ice cream and frozen,8.32
+The Pie Hole,"714 Traction Ave, Los Angeles, CA 90013, United States",4.4,Los Angeles,CA,-118.2363191,34.0453212,ice cream and frozen,18.96
+Cre8 Crepes,"6654 Hollywood Blvd, Los Angeles, CA 90028, United States",4.5,Los Angeles,CA,-118.3353891,34.1014261,ice cream and frozen,9.24
+Chocolate Bash,"10897 W Pico Blvd #2114, Los Angeles, CA 90064, United States",4,Los Angeles,CA,-118.4295493,34.0399057,ice cream and frozen,15.93
+Paradis Ice Cream DTLA,"737 S Spring St #101, Los Angeles, CA 90014, United States",4.8,Los Angeles,CA,-118.2533113,34.0437335,ice cream and frozen,8.45
+Macchiato,"418 W Pico Blvd, Los Angeles, CA 90015, United States",4,Los Angeles,CA,-118.2650705,34.0391066,ice cream and frozen,7.61
+Desert Rose,"1700 Hillhurst Ave, Los Angeles, CA 90027, United States",4.3,Los Angeles,CA,-118.2870695,34.1019664,ice cream and frozen,16.92
+Tsubaki,"1356 Allison Ave, Los Angeles, CA 90026, United States",4.5,Los Angeles,CA,-118.251525,34.0727806,japanese,16.19
+Izakaya Osen,"2903 Sunset Blvd, Los Angeles, CA 90026, United States",4.4,Los Angeles,CA,-118.2732155,34.083305,japanese,42.81
+Mesa Thai Cuisine,"820 N Western Ave #101, Los Angeles, CA 90029, United States",4.5,Los Angeles,CA,-118.3089866,34.085119,thai,10.9
+Palms Thai Restaurant,"5900 Hollywood Blvd b, Los Angeles, CA 90028, United States",4.4,Los Angeles,CA,-118.3183675,34.1015202,thai,7.39
+Ayara Thai,"6245 W 87th St, Los Angeles, CA 90045, United States",4.3,Los Angeles,CA,-118.394498,33.9587418,thai,24.41
+Pailin Thai Cuisine,"5621 Hollywood Blvd, Los Angeles, CA 90028, United States",4.6,Los Angeles,CA,-118.3120789,34.1018555,thai,13.28
+Boran Thai Restaurant,"5401 Hollywood Blvd #3405, Los Angeles, CA 90027, United States",4.5,Los Angeles,CA,-118.3073596,34.1019623,thai,11.35
+Northern Thai Food Club,"5301 Sunset Blvd #11, Los Angeles, CA 90027, United States",4.7,Los Angeles,CA,-118.3061455,34.0982664,thai,11.12
+Luv2eat Thai Bistro,"6660 Sunset Blvd, Los Angeles, CA 90028, United States",4.5,Los Angeles,CA,-118.3358733,34.0977251,thai,14.36
+Isaan Station Thai Street Food,"125 N Western Ave unit 111, Los Angeles, CA 90004, United States",4.2,Los Angeles,CA,-118.3094452,34.0740972,thai,12.47
+Thai by Trio,"2700 S Figueroa St #101, Los Angeles, CA 90007, United States",4.4,Los Angeles,CA,-118.2765517,34.0269339,thai,13.7
+Pattaya Bay Thai Restaurant,"1727 N Vermont Ave UNIT 105, Los Angeles, CA 90027, United States",4,Los Angeles,CA,-118.2921205,34.1025984,thai,15.27
+Natalee Thai,"998 S Robertson Blvd, Los Angeles, CA 90035, United States",4.2,Los Angeles,CA,-118.3834359,34.059745,thai,15.31
+Pizza Sociale,"448 W Olympic Blvd, Los Angeles, CA 90015, United States",4.5,Los Angeles,CA,-118.2603411,34.0425276,pizza,14.97
+Pizzeria Mozza,"641 N Highland Ave, Los Angeles, CA 90036, United States",4.5,Los Angeles,CA,-118.3388378,34.0831171,pizza,20.92
+Prime Pizza,"446 N Fairfax Ave, Los Angeles, CA 90036, United States",4.2,Los Angeles,CA,-118.3613273,34.0795061,pizza,12.8
+Superfine Pizza,"1101 San Pedro St unit f, Los Angeles, CA 90015, United States",4.4,Los Angeles,CA,-118.2526209,34.0353218,pizza,22
+Prime Pizza,"141 S Central Ave, Los Angeles, CA 90012, United States",4.4,Los Angeles,CA,-118.2394677,34.0481813,pizza,12.8
+Olio Wood Fired Pizzeria GCM,"317 S Broadway, Los Angeles, CA 90013, United States",4.5,Los Angeles,CA,-118.2487585,34.0506963,pizza,9.7
+Joe's Pizza,"613 S Spring St, Los Angeles, CA 90014, United States",4.1,Los Angeles,CA,-118.251462,34.0457128,pizza,13.14
+Heirloom Pizzeria,"7368 Melrose Ave, Los Angeles, CA 90046, United States",4.9,Los Angeles,CA,-118.3505094,34.0833209,pizza,19.18
+PI LA Pizza,"124 4th St, Los Angeles, CA 90013, United States",5,Los Angeles,CA,-118.248051,34.0482485,pizza,14.38
+Corleone Pizza,"310 W 7th St, Los Angeles, CA 90014, United States",4.3,Los Angeles,CA,-118.2538564,34.045373,pizza,9.67
+Apollonia's Pizzeria,"5176 Wilshire Blvd, Los Angeles, CA 90036, United States",4.5,Los Angeles,CA,-118.3427113,34.0617749,pizza,16.58
+Chi Spacca,"6610 Melrose Ave, Los Angeles, CA 90038, United States",4.7,Los Angeles,CA,-118.339087,34.0833306,italian,45.61
+Antico Nuovo,"4653 Beverly Blvd, Los Angeles, CA 90004, United States",4.6,Los Angeles,CA,-118.3109803,34.0765597,italian,13.57
+Palermo Italian Restaurant,"1858 N Vermont Ave, Los Angeles, CA 90027, United States",4.6,Los Angeles,CA,-118.291468,34.1048299,italian,14.85
+Maccheroni Republic,"332 S Broadway, Los Angeles, CA 90013, United States",4.6,Los Angeles,CA,-118.2486328,34.0500838,italian,12.68
+The Factory Kitchen,"1300 Factory Pl, Los Angeles, CA 90013, United States",4.5,Los Angeles,CA,-118.2358783,34.0389831,italian,22.18
+Bestia,"2121 E 7th Pl, Los Angeles, CA 90021, United States",4.6,Los Angeles,CA,-118.2292434,34.0336488,italian,25.61
+Vespaio,"225 S Grand Ave, Los Angeles, CA 90012, United States",4.2,Los Angeles,CA,-118.2508013,34.0538862,italian,25.57
+Alimento,"1710 Silver Lake Blvd, Los Angeles, CA 90026, United States",4.2,Los Angeles,CA,-118.2681178,34.0894364,italian,16.05
+Miceli's,"1646 N Las Palmas Ave, Los Angeles, CA 90028, United States",4.2,Los Angeles,CA,-118.3360586,34.1013399,italian,25.83
+BRERA Ristorante,"1331 E 6th St, Los Angeles, CA 90021, United States",4.4,Los Angeles,CA,-118.2347398,34.0384646,italian,24.15
+Saikai Ramen Bar,"209 N Western Ave # B, Los Angeles, CA 90004, United States",4.8,Los Angeles,CA,-118.3096289,34.0750294,japanese,13.66
+DTLA Ramen,"952 S Broadway, Los Angeles, CA 90015, United States",4.4,Los Angeles,CA,-118.2570309,34.04106,japanese,8.71
+California Ramen Factory,"4010 W 3rd St, Los Angeles, CA 90020, United States",4.4,Los Angeles,CA,-118.3009386,34.0688906,japanese,7.38
+Kai Ramen West Hollywood,"349 N La Cienega Blvd, Los Angeles, CA 90048, United States",4.4,Los Angeles,CA,-118.3769191,34.0775774,japanese,13.41
+IKI RAMEN,"740 S Western Ave #115, Los Angeles, CA 90005, United States",4.7,Los Angeles,CA,-118.3087792,34.05841,japanese,15.31
+KOTOYA JAPANESE RAMEN,"10422 National Blvd, Los Angeles, CA 90034, United States",4.6,Los Angeles,CA,-118.4112756,34.0287762,japanese,15
+My Ramen Bar,"321 1/2 1st St, Los Angeles, CA 90012, United States",4.4,Los Angeles,CA,-118.2402148,34.0501338,japanese,13.19
+Uli's Gelato,"541 S Spring St #104, Los Angeles, CA 90013, United States",4.7,Los Angeles,CA,-118.2506798,34.0464862,ice cream and frozen,21.45
+Jeni's Splendid Ice Creams,"1954 Hillhurst Ave, Los Angeles, CA 90027, United States",4.7,Los Angeles,CA,-118.2872984,34.1069529,ice cream and frozen,12.68
+Holy Roly Ice Cream,"3450 W 6th St Suite 109A, Los Angeles, CA 90020, United States",4.5,Los Angeles,CA,-118.2970991,34.0632426,ice cream and frozen,10
+Whipp'd LA,"1429 N Highland Ave, Los Angeles, CA 90028, United States",3.9,Los Angeles,CA,-118.3388605,34.097066,ice cream and frozen,6.75
+Bumsan Organic Milk Bar,"534 S Western Ave, Los Angeles, CA 90020, United States",4.6,Los Angeles,CA,-118.308962,34.0643225,ice cream and frozen,8.05
+The Gray Zebra,"5101 Sunset Blvd, Los Angeles, CA 90027, United States",4.9,Los Angeles,CA,-118.3006681,34.0983309,healthy,12.79
+LA Vegan,"4507 S Centinela Ave, Los Angeles, CA 90066, United States",4.5,Los Angeles,CA,-118.4231733,33.9926255,healthy,12.52
+My Vegan Gold,"4319 Sunset Blvd, Los Angeles, CA 90029, United States",4.5,Los Angeles,CA,-118.283107,34.0951843,healthy,13.16
+The Grain Cafe,"4222 W Pico Blvd, Los Angeles, CA 90019, United States",4.6,Los Angeles,CA,-118.327614,34.047626,healthy,15.6
+Sage Plant Based Bistro & Brewery,"1700 Sunset Blvd, Los Angeles, CA 90026, United States",4.5,Los Angeles,CA,-118.258714,34.0771568,healthy,19.71
+Cafe Gratitude,"300 S Santa Fe Ave, Los Angeles, CA 90012, United States",4.5,Los Angeles,CA,-118.232518,34.045779,healthy,14.11
+Veggie Grill,"110 S Fairfax Ave, Los Angeles, CA 90036, United States",4.5,Los Angeles,CA,-118.3606801,34.0736364,healthy,12.29
+Shojin,"333 S Alameda St Suite310, Los Angeles, CA 90013, United States",4.6,Los Angeles,CA,-118.2386432,34.0451592,healthy,22.72
+Bulan Thai Vegetarian Kitchen,"4114 Santa Monica Blvd, Los Angeles, CA 90029, United States",4.7,Los Angeles,CA,-118.2820355,34.0918992,healthy,7.6
+9 Noodle House,"9 Hillcrest Blvd, Millbrae, CA 94030, United States",4.3,Millbrae,CA,-122.3921148,37.6018102,vietnamese,4.25
+wonderful,"270 Broadway, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.3913755,37.6007045,vietnamese,19.24
+HS Cafe,"328 Broadway, Millbrae, CA 94030, United States",3.7,Millbrae,CA,-122.3918088,37.601228,vietnamese,12.07
+Ipoh Garden Malaysian Cuisine,"100 El Camino Real, Millbrae, CA 94030, United States",4.5,Millbrae,CA,-122.3878813,37.5993067,vietnamese,17.03
+Thai Stick Restaurant,"301 El Camino Real, Millbrae, CA 94030, United States",3.7,Millbrae,CA,-122.3911897,37.6014265,vietnamese,13.78
+Boiling Szechuan Hotpot,"103 S El Camino Real, Millbrae, CA 94030, United States",4.1,Millbrae,CA,-122.38887,37.5993521,vietnamese,9
+Porridge & Things,"235 Broadway, Millbrae, CA 94030, United States",4.1,Millbrae,CA,-122.3911965,37.6001028,vietnamese,25.2
+Yummy Szechuan,"1661 El Camino Real, Millbrae, CA 94030, United States",4.3,Millbrae,CA,-122.40466,37.6132564,chinese,15.68
+Cheung Hing Restaurant,"245 El Camino Real, Millbrae, CA 94030, United States",3.9,Millbrae,CA,-122.3904512,37.6008074,chinese,14.56
+Hubei Restaurant,"1055 El Camino Real, Millbrae, CA 94030, United States",4.2,Millbrae,CA,-122.3977679,37.6061001,chinese,7.35
+The Kitchen,"279 El Camino Real, Millbrae, CA 94030, United States",3.8,Millbrae,CA,-122.3908917,37.6010306,chinese,132.5
+Earl Spicy,"1711 El Camino Real, Millbrae, CA 94030, United States",4.2,Millbrae,CA,-122.4055318,37.6140933,chinese,26.8
+El Super Burrito,"780 El Camino Real, Millbrae, CA 94030, United States",4.2,Millbrae,CA,-122.3944794,37.6046183,mexican,5.49
+Taco Bell,"210 El Camino Real, Millbrae, CA 94030, United States",3.7,Millbrae,CA,-122.3899322,37.6011921,mexican,6.84
+Sugandh Indian Restaurant & Bar,"333 Broadway, Millbrae, CA 94030, United States",4.1,Millbrae,CA,-122.3923242,37.6009736,mexican,13.22
+Millbrae Pancake House,"1301 El Camino Real, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.4003129,37.6084271,mexican,9.95
+The Habit Burger Grill,"143 S El Camino Real, Millbrae, CA 94030, United States",4.2,Millbrae,CA,-122.3864528,37.5964145,comfort food,11.5
+McDonald's,"1101 El Camino Real, Millbrae, CA 94030, United States",4,Millbrae,CA,-122.3984371,37.6065483,comfort food,3.17
+Zorba's Pizza & Pasta,"1567 El Camino Real, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.4029578,37.6115578,comfort food,14.71
+Sixteen Mile House,"448 Broadway, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.3931866,37.6022058,comfort food,21.24
+Millbrae Kebabs & Gyros,"675 Broadway, Millbrae, CA 94030, United States",4.2,Millbrae,CA,-122.3955448,37.6036575,comfort food,19.63
+Bagel Street Cafe Millbrae,"537 Broadway, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.3948426,37.6029419,comfort food,6.53
+Panera Bread,"320 Adrian Rd, Millbrae, CA 94030, United States",4.1,Millbrae,CA,-122.381849,37.600589,comfort food,7.69
+Lucky,"45 Murchison Dr, Millbrae, CA 94030, United States",4,Millbrae,CA,-122.38755,37.596405,comfort food,10.08
+La Collina Italian Restaurant,"355 El Camino Real, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.391663,37.601635,comfort food,20.29
+Falafio Mediterranean Cuisine,"360 Adrian Rd, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.381656,37.6003751,american,14.27
+Naked Fish Millbrae,"979 Broadway STE 100, Millbrae, CA 94030, United States",4.2,Millbrae,CA,-122.3968873,37.6045511,bar,15.36
+One Piece Sushi,"108 Park Pl, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.405425,37.6137094,bar,4.03
+Paris Baguette,"655 Broadway, Millbrae, CA 94030, United States",4.1,Millbrae,CA,-122.3954868,37.6034846,bakery,12.81
+Uni Souffle,"405 Broadway, Millbrae, CA 94030, United States",4.4,Millbrae,CA,-122.3929597,37.6015646,bakery,7.08
+T4,"315 Broadway, Millbrae, CA 94032, United States",4.1,Millbrae,CA,-122.392111,37.6009976,boba,4.63
+TeaEver,"153 El Camino Real, Millbrae, CA 94030, United States",3.9,Millbrae,CA,-122.3894478,37.59989,boba,6.19
+WanPo Tea Shop,"1069 El Camino Real, Millbrae, CA 94030, United States",4.8,Millbrae,CA,-122.3978774,37.6061843,boba,6.08
+Grapeholic,"102 S El Camino Real, Millbrae, CA 94030, United States",4.5,Millbrae,CA,-122.3865025,37.5979912,boba,6.99
+Round Table Pizza,"414 Broadway, Millbrae, CA 94030, United States",4,Millbrae,CA,-122.3927919,37.6018854,pizza,9.19
+Pho Grand,"277C Grand St, New York, NY 10002, United States",4.2,New York,NY,-73.9927822,40.7176857,vietnamese,11.8
+Pho Shop,"1716 1st Ave., New York, NY 10128, United States",4.2,New York,NY,-73.9477886,40.7785117,vietnamese,15.48
+The Pho 2,"273 8th Ave, New York, NY 10011, United States",4.2,New York,NY,-73.9983625,40.7457819,vietnamese,9.78
+Madame Vo,"212 E 10th St, New York, NY 10003, United States",4.5,New York,NY,-73.9860978,40.7292643,vietnamese,15.31
+PHO' Seng,"174 2nd Ave #5751, New York, NY 10003, United States",3.9,New York,NY,-73.9861057,40.7304096,vietnamese,8.72
+Pho Shop,"141 W 72nd St, New York, NY 10023, United States",4,New York,NY,-73.980098,40.778275,vietnamese,15.48
+Thai Son,"89 Baxter St, New York, NY 10013, United States",4.3,New York,NY,-73.9996312,40.7168378,vietnamese,7.25
+Just Pho You,"2656 Broadway, New York, NY 10025, United States",4.7,New York,NY,-73.9692723,40.79761,vietnamese,16.41
+Non La,"128 E 4th St, New York, NY 10003, United States",4.7,New York,NY,-73.9875679,40.7252729,vietnamese,16.42
+Hello Saigon,"180 Bleecker St, New York, NY 10012, United States",4.4,New York,NY,-74.000977,40.728907,vietnamese,15.14
+Van Da,"234 E 4th St, New York, NY 10009, United States",4.5,New York,NY,-73.9831653,40.7234293,vietnamese,14.41
+Nha Trang One,"87 Baxter St, New York, NY 10013, United States",4.4,New York,NY,-73.9996982,40.716763,vietnamese,12.98
+An'nam,"234 W 48th St, New York, NY 10036, United States",4.2,New York,NY,-73.9864374,40.7606211,vietnamese,16.41
+Shanghai 21,"21 Mott St, New York, NY 10013, United States",4.5,New York,NY,-73.9988929,40.7144645,chinese,15.96
+Dim Sum Palace,"334 W 46th St, New York, NY 10036, United States",4.4,New York,NY,-73.9893445,40.7601962,chinese,11.62
+Chinese Tuxedo,"5 Doyers St, New York, NY 10013, United States",4.4,New York,NY,-73.9980357,40.7143302,chinese,19
+Hwa Yuan Szechuan,"42 E Broadway, New York, NY 10002, United States",4.3,New York,NY,-73.9959972,40.713707,chinese,32.49
+Cafe China,"59 W 37th St, New York, NY 10018, United States",4.3,New York,NY,-73.9857422,40.7516966,chinese,17.37
+China Xiang,"360 W 42nd St, New York, NY 10036, United States",4.1,New York,NY,-73.9923142,40.7580962,chinese,17.32
+Hop Kee,"21 Mott St, New York, NY 10013, United States",4.3,New York,NY,-73.9990389,40.7144549,chinese,8.95
+Pig Heaven,"1420 3rd Ave, New York, NY 10028, United States",4.4,New York,NY,-73.9567287,40.7753802,chinese,16.95
+Peking Duck House,"28 Mott St A, New York, NY 10013, United States",4.1,New York,NY,-73.998722,40.7146516,chinese,23.12
+Big Wong,"67 Mott St, New York, NY 10013, United States",4.1,New York,NY,-73.998375,40.716244,chinese,18.53
+Grand Sichuan,"229 9th Ave, New York, NY 10001, United States",4.2,New York,NY,-74.0009424,40.747329,chinese,9.17
+Kahlo,"525 W 29th St, New York, NY 10001, United States",4.4,New York,NY,-74.0026804,40.7521599,mexican,23.8
+Cosme,"35 E 21st St, New York, NY 10010, United States",4.3,New York,NY,-73.9883564,40.7395952,mexican,22.71
+La Esquina,"114 Kenmare St, New York, NY 10012, United States",4.2,New York,NY,-73.9975945,40.7213987,mexican,5.07
+Arriba Arriba,"762 9th Ave, New York, NY 10019, United States",4.2,New York,NY,-73.9882204,40.7641337,mexican,13.8
+Rosa Mexicano,"9 E 18th St, New York, NY 10003, United States",4.2,New York,NY,-73.9908146,40.7383066,mexican,17.64
+Kuxe,"205 Thompson St, New York, NY 10012, United States",4.3,New York,NY,-73.9995646,40.7287147,mexican,18.68
+El Parador Cafe,"325 E 34th St, New York, NY 10016, United States",4.5,New York,NY,-73.9746939,40.7445058,mexican,20.72
+La Contenta Oeste,"78 W 11th St, New York, NY 10011, United States",4.5,New York,NY,-73.9981588,40.7352051,mexican,17.5
+El Cantinero,"86 University Pl, New York, NY 10003, United States",4.2,New York,NY,-73.9932981,40.7336716,mexican,10.96
+Mi Nidito,"818 10th Ave, New York, NY 10019, United States",4.3,New York,NY,-73.9894926,40.767381,mexican,17.93
+Black Iron Burger,"245 W 38th St, New York, NY 10018, United States",4.5,New York,NY,-73.990352,40.754282,comfort food,10.4
+Paul's Da Burger Joint,"131 2nd Ave, New York, NY 10003, United States",4.3,New York,NY,-73.9879867,40.7285195,comfort food,10.49
+Jackson Hole Burgers,"521 3rd Ave, New York, NY 10016, United States",4.4,New York,NY,-73.9775096,40.7461701,comfort food,10.67
+FARM TO BURGER,"310 W 40th St, New York, NY 10018, United States",4,New York,NY,-73.9917574,40.7562588,comfort food,18.68
+Burger & Lobster Flatiron,"39 W 19th St, New York, NY 10011, United States",4.4,New York,NY,-73.9934044,40.7400897,comfort food,21.84
+The Counter,"7 Times Sq, New York, NY 10036, United States",4.3,New York,NY,-73.9869055,40.7554585,comfort food,13.12
+Minetta Tavern,"113 MacDougal St, New York, NY 10012, United States",4.5,New York,NY,-74.0006736,40.730021,comfort food,26.85
+Black Iron Burger,"250 W 54th St, New York, NY 10019, United States",4.7,New York,NY,-73.983522,40.7642452,comfort food,10.4
+Taqueria Gramercy,"218 3rd Ave, New York, NY 10003, United States",4.5,New York,NY,-73.9852449,40.7362561,comfort food,8.53
+The Taco Shop,"166 West 4th Street, New York, NY 10014, United States",4.2,New York,NY,-74.0015608,40.7319387,comfort food,12.85
+Empellon Taqueria,"230 West 4th Street, New York, NY 10014, United States",4.3,New York,NY,-74.0030683,40.734142,comfort food,12.74
+Casa Taqueria,"40 Gold St, New York, NY 10038, United States",4.4,New York,NY,-74.0057516,40.7087293,comfort food,11.76
+Taqueria 86,"210 W 94th St, New York, NY 10025, United States",4.7,New York,NY,-73.9721533,40.7930099,comfort food,13.89
+Tacos Guey,"37 W 19th St, New York, NY 10011, United States",4.4,New York,NY,-73.9932257,40.7399836,comfort food,13.58
+Ben's Kosher Delicatessen Restaurant & Caterers,"209 W 38th St, New York, NY 10018, United States",4.2,New York,NY,-73.9892345,40.7539654,comfort food,41.95
+Katz's Delicatessen,"205 E Houston St, New York, NY 10002, United States",4.5,New York,NY,-73.9874092,40.7222472,comfort food,12.53
+810 Deli & Cafe,"810 7th Ave, New York, NY 10019, United States",3.8,New York,NY,-73.982401,40.7627351,comfort food,15.92
+2nd Ave Deli,"162 E 33rd St, New York, NY 10016, United States",4.4,New York,NY,-73.9791777,40.7452021,comfort food,22.38
+Pastrami Queen,"1125 Lexington Ave # 2, New York, NY 10075, United States",4.1,New York,NY,-73.9591792,40.7743944,comfort food,27.4
+Elim Deli Cafe,"851 Lexington Ave, New York, NY 10065, United States",4.3,New York,NY,-73.9655677,40.7655955,comfort food,9.95
+DELIS 48,"48 W 48th St, New York, NY 10036, United States",3.3,New York,NY,-73.9804146,40.7579954,comfort food,3.25
+Metro Deli Cafe,"37 W 43rd St Cc953, New York, NY 10036, United States",4.2,New York,NY,-73.9820936,40.7551445,comfort food,5.63
+NY GRILL AND DELI,"882 1st Ave., New York, NY 10022, United States",4.4,New York,NY,-73.9661688,40.7535721,comfort food,10.16
+The Corner Deli,"106 Kenmare St, New York, NY 10012, United States",3.8,New York,NY,-73.9976033,40.721406,comfort food,5.07
+Eisenberg's Sandwich Shop,"174 5th Ave, New York, NY 10010, United States",4.4,New York,NY,-73.9902168,40.7411911,comfort food,10.32
+Five Guys,"36 W 48th St, New York, NY 10036, United States",4.3,New York,NY,-73.979967,40.75781,american,7.83
+Five Guys,"43 W 55th St, New York, NY 10019, United States",4.3,New York,NY,-73.976704,40.762546,american,7.83
+Five Guys,"316 W 34th St., New York, NY 10001, United States",4.2,New York,NY,-73.9947352,40.75253,american,7.83
+Five Guys,"343 7th Ave, New York, NY 10001, United States",4.3,New York,NY,-73.9926029,40.7479506,american,7.83
+Sandwicherie of New York,"202 E 42nd St, New York, NY 10017, United States",4.1,New York,NY,-73.9740958,40.7504672,american,52.77
+LENWICH,"16 W 23rd St, New York, NY 10010, United States",4.1,New York,NY,-73.990456,40.741602,american,12.91
+Sandwich House,"17 Ann St #1, New York, NY 10038, United States",4.4,New York,NY,-74.0078112,40.7109128,american,11.96
+Alidoro,"18 E 39th St, New York, NY 10016, United States",4.5,New York,NY,-73.9813123,40.7509872,american,10.38
+Chipilo,"48 Mulberry St, New York, NY 10013, United States",4.7,New York,NY,-73.9995254,40.7151542,american,12.89
+LENWICH,"120 University Pl, New York, NY 10003, United States",4.1,New York,NY,-73.9923558,40.7347098,american,12.91
+Cheeky Sandwiches,"119 Essex St, New York, NY 10002, United States",4.6,New York,NY,-73.9878992,40.7196137,american,8.92
+Xe May Sandwich Shop,"96 St Marks Pl, New York, NY 10009, United States",4.6,New York,NY,-73.9849232,40.7272078,american,22.62
+Alidoro,"105 Sullivan St, New York, NY 10016, United States",4.5,New York,NY,-74.0028869,40.7257183,american,10.38
+d Elici,"71 Nassau St, New York, NY 10038, United States",4.4,New York,NY,-74.0083821,40.7096856,american,8.09
+LENWICH,"10 Hanover Square, New York, NY 10005, United States",4.2,New York,NY,-74.0088201,40.7048093,american,12.91
+LENWICH,"25 Park Pl, New York, NY 10007, United States",4.3,New York,NY,-74.0088289,40.7133176,american,12.91
+The Bar Room,"117 E 60th St, New York, NY 10022, United States",4.3,New York,NY,-73.9685205,40.7633007,bar,22.1
+Buddha-Bar Restaurant New York,"62 Thomas St, New York, NY 10013, United States",3.8,New York,NY,-74.0074789,40.7167626,bar,32.62
+Bar Centrale,"324 W 46th St, New York, NY 10036, United States",4.4,New York,NY,-73.9890125,40.7601044,bar,16.32
+The Bar Room,"9 W 53rd St, New York, NY 10019, United States",4.5,New York,NY,-73.9768318,40.7609475,bar,22.1
+The Bar Downstairs and Kitchen,"485 5th Ave, New York, NY 10017, United States",4.4,New York,NY,-73.9809406,40.7528537,bar,16.25
+Trinity Place,"115 Broadway, New York, NY 10006, United States",4.4,New York,NY,-74.0114326,40.708882,bar,20.53
+Barfly,"244 3rd Ave, New York, NY 10010, United States",4.2,New York,NY,-73.9846214,40.737118,bar,12.89
+Sean's Bar & Kitchen,"42 W 48th St, New York, NY 10036, United States",4.4,New York,NY,-73.9801252,40.7579118,bar,15.64
+Xing Fu Tang,"133 2nd Ave, New York, NY 10003, United States",4.5,New York,NY,-73.9878503,40.7288305,boba,7.08
+MooMooChaa,"227 E 14th St, New York, NY 10003, United States",4.5,New York,NY,-73.985903,40.733038,boba,6.54
+ViVi Bubble Tea,"607 9th Ave, New York, NY 10036, United States",4.2,New York,NY,-73.992272,40.7593474,boba,7.08
+ViVi Bubble Tea,"49 Bayard St, New York, NY 10013, United States",4.1,New York,NY,-73.9974917,40.715193,boba,7.08
+ViVi Bubble Tea,"1324 2nd Ave, New York, NY 10021, United States",4.4,New York,NY,-73.9592554,40.7672532,boba,7.08
+Panda Bubble Tea,"1000 8th Ave #29, New York, NY 10019, United States",3.8,New York,NY,-73.9828196,40.7670937,boba,5.29
+Moge Tee Midtown,"302 W 39th St, New York, NY 10018, United States",4,New York,NY,-73.9916963,40.7554242,boba,7.14
+Ho Ho Te,"805 8th Ave, New York, NY 10019, United States",4.2,New York,NY,-73.9869958,40.7615413,boba,5.99
+BIAO Sugar,"1271 Broadway, New York, NY 10001, United States",4.1,New York,NY,-73.9884574,40.7482806,boba,7.02
+ViVi Bubble Tea,"170 W 23rd St, New York, NY 10011, United States",4.3,New York,NY,-73.9954779,40.743773,boba,7.08
+FIFTYLAN Union Square,"32 Union Square E, New York, NY 10003, United States",4.4,New York,NY,-73.9892836,40.7356853,boba,8.14
+Modern Tea Shop,"300 W 49th St, New York, NY 10019, United States",4.3,New York,NY,-73.9871574,40.7616987,boba,6.81
+Union Square Cafe,"101 E 19th St, New York, NY 10003, United States",4.6,New York,NY,-73.9878767,40.7377702,american,33.47
+Cafe Luxembourg,"200 W 70th St, New York, NY 10023, United States",4.4,New York,NY,-73.9831418,40.7774232,american,23.44
+Cafe Manhattan,"35 W 45th St # A, New York, NY 10036, United States",4.2,New York,NY,-73.9809498,40.7562507,american,7.33
+Victor's Cafe,"236 W 52nd St, New York, NY 10019, United States",4.4,New York,NY,-73.9841351,40.7628851,american,17.75
+Cafe Select,"212 Lafayette St, New York, NY 10012, United States",4.1,New York,NY,-73.9978025,40.7217849,american,10.83
+Hard Rock Cafe,"1501 Broadway, New York, NY 10036, United States",4.4,New York,NY,-73.9866112,40.7570352,american,24.12
+Beloved Cafe & Restaurant,"198 Allen St, New York, NY 10002, United States",4.5,New York,NY,-73.9885349,40.7223387,american,14.91
+Fiat Cafe,"203 Mott St, New York, NY 10012, United States",4.4,New York,NY,-73.9956551,40.7214311,american,13.84
+Good Thanks Cafe,"131a Orchard St, New York, NY 10002, United States",4.7,New York,NY,-73.989565,40.71976,american,13.75
+Banc Cafe,"431 3rd Ave, New York, NY 10016, United States",4.3,New York,NY,-73.9796728,40.7432182,american,14.45
+Spot Dessert Bar,"13 St Marks Pl, New York, NY 10003, United States",4.5,New York,NY,-73.988927,40.7293975,ice cream and frozen,14.45
+75 Degrees Cafe and Dessert,"93 1/2 E 7th St, New York, NY 10009, United States",4.7,New York,NY,-73.9852758,40.7269542,ice cream and frozen,5.72
+Sweet Rehab,"135 Sullivan St, New York, NY 10012, United States",4.4,New York,NY,-74.0020075,40.726788,ice cream and frozen,46.91
+Sweet House Drinks and Desserts,"67 Bayard St, New York, NY 10013, United States",3.8,New York,NY,-73.9982787,40.7153643,ice cream and frozen,8.59
+Mango Mango Dessert,"63 Bayard St, New York, NY 10013, United States",4.5,New York,NY,-73.9980262,40.7153881,ice cream and frozen,10.19
+Rice To Riches,"37 Spring St, New York, NY 10012, United States",4.6,New York,NY,-73.9958005,40.7218591,ice cream and frozen,13.21
+Mango Mango Artisan Lab,"23 St Marks Pl, New York, NY 10003, United States",4.1,New York,NY,-73.9886257,40.7292093,ice cream and frozen,10.2
+Chocolate DIP,"177 Orchard St, New York, NY 10002, United States",4.5,New York,NY,-73.9885813,40.7218205,ice cream and frozen,10.53
+Beard Papa's,"11 St Marks Pl, New York, NY 10003, United States",4.3,New York,NY,-73.9890681,40.7293226,ice cream and frozen,3.77
+Patisserie Chanson,"20 W 23rd St, New York, NY 10010, United States",4.4,New York,NY,-73.9905759,40.7416882,ice cream and frozen,11.28
+Jell and Chill,"110 E 7th St, New York, NY 10009, United States",4.6,New York,NY,-73.9847324,40.7264095,ice cream and frozen,9.94
+ANDO patisserie,"214 E 10th St, New York, NY 10003, United States",4.2,New York,NY,-73.9859631,40.7293258,ice cream and frozen,18.2
+Taiyaki NYC,"119 Baxter St, New York, NY 10013, United States",4.6,New York,NY,-73.9988653,40.7179112,ice cream and frozen,6.44
+Zuma New York,"261 Madison Ave, New York, NY 10016, United States",4.3,New York,NY,-73.9807471,40.7504559,japanese,29.8
+SenYa,"109 1st Ave., New York, NY 10003, United States",4.4,New York,NY,-73.9860649,40.7268816,japanese,21.59
+Restaurant Nippon,"155 E 52nd St, New York, NY 10022, United States",4.4,New York,NY,-73.9704717,40.7574462,japanese,25.44
+EN Japanese Brasserie,"435 Hudson St, New York, NY 10014, United States",4.4,New York,NY,-74.0070023,40.7304801,japanese,24.61
+The Izakaya NYC,"326 E 6th St, New York, NY 10003, United States",4.3,New York,NY,-73.98734,40.7267145,japanese,12.54
+Natsumi,"226 W 50th St, New York, NY 10019, United States",4.2,New York,NY,-73.9851809,40.7616634,japanese,22.81
+Juku,"32 Mulberry St, New York, NY 10013, United States",4.6,New York,NY,-73.9995258,40.7146081,japanese,31.2
+Kaoru,"306 E 46th St, New York, NY 10017, United States",4.6,New York,NY,-73.9699042,40.752021,japanese,23.86
+Ootoya Chelsea,"8 W 18th St, New York, NY 10011, United States",4.4,New York,NY,-73.9927793,40.7387488,japanese,19.19
+Momokawa,"1466 1st Ave., New York, NY 10075, United States",4.3,New York,NY,-73.953707,40.7704803,japanese,9.95
+Thai Villa,"5 E 19th St, New York, NY 10003, United States",4.6,New York,NY,-73.9906704,40.7390045,thai,15.82
+Up Thai,"1411 2nd Ave, New York, NY 10021, United States",4.6,New York,NY,-73.9578638,40.769951,thai,16.49
+Pongsri Thai Restaurant,"244 W 48th St, New York, NY 10036, United States",4.3,New York,NY,-73.9865143,40.760728,thai,8.65
+Aiyara Thai,"480 9th Ave, New York, NY 10018, United States",4.3,New York,NY,-73.9947727,40.7550696,thai,14.56
+Somtum Der,"85 Avenue A, New York, NY 10009, United States",4.5,New York,NY,-73.984342,40.7252385,thai,14.74
+Topaz Thai Authentic,"127 W 56th St, New York, NY 10019, United States",4.2,New York,NY,-73.978911,40.764421,thai,17.08
+Mitr Thai Restaurant,"37 W 46th St, New York, NY 10036, United States",4.9,New York,NY,-73.9804147,40.7568769,thai,20.39
+At Nine Restaurant & Bar,"592 9th Ave, New York, NY 10036, United States",4.4,New York,NY,-73.9920916,40.758709,thai,23.85
+Wondee Siam,"792 9th Ave, New York, NY 10019, United States",4.6,New York,NY,-73.9875,40.765,thai,17.43
+Soothr,"204 E 13th St, New York, NY 10003, United States",4.6,New York,NY,-73.9873417,40.7323017,thai,16.93
+The Sabieng Thai,"71 1st Ave., New York, NY 10003, United States",4.4,New York,NY,-73.9870975,40.7254815,thai,11.8
+Thai Diner,"186 Mott St, New York, NY 10012, United States",4.4,New York,NY,-73.9956628,40.7207424,thai,13.55
+Glur Thai,"144 W 19th St, New York, NY 10011, United States",4.5,New York,NY,-73.996698,40.7412358,thai,15.11
+Chai Thai Kitchen,"930 8th Ave, New York, NY 10019, United States",4.1,New York,NY,-73.9835089,40.7654188,thai,11.32
+Zoob Zib Thai Authentic Noodle Bar,"460 9th Ave, New York, NY 10018, United States",4.6,New York,NY,-73.9952854,40.754356,thai,14.75
+Capizzi,"547 9th Ave, New York, NY 10018, United States",4.5,New York,NY,-73.9935769,40.7574496,pizza,19.88
+NY Pizza Suprema,"413 8th Ave, New York, NY 10001, United States",4.6,New York,NY,-73.9952496,40.7501501,pizza,29.36
+Patzeria Perfect Pizza,"231 W 46th St, New York, NY 10036, United States",4.4,New York,NY,-73.986756,40.759458,pizza,25.78
+99 Cent Fresh Pizza,"473 Lexington Ave, New York, NY 10017, United States",4.5,New York,NY,-73.9741918,40.7537324,pizza,2.25
+PizzArte,"69 W 55th St, New York, NY 10019, United States",4.4,New York,NY,-73.9774359,40.7629224,pizza,21.22
+Keste Pizza & Vino,"77 Fulton St, New York, NY 10038, United States",4.6,New York,NY,-74.0048247,40.7093711,pizza,20.53
+Bleecker Street Pizza,"69 7th Ave S, New York, NY 10014, United States",4.5,New York,NY,-74.0034014,40.732198,pizza,24.74
+Little Italy Pizza,"55 W 45th St, New York, NY 10036, United States",4.4,New York,NY,-73.9814849,40.7564807,pizza,34.11
+Chazz Palminteri Italian Restaurant,"30 W 46th St, New York, NY 10036, United States",4.5,New York,NY,-73.980563,40.7564645,italian,36.91
+IL Punto,"507 9th Ave, New York, NY 10018, United States",4.5,New York,NY,-73.9946239,40.756175,italian,18.07
+Rezdora,"27 E 20th St, New York, NY 10003, United States",4.4,New York,NY,-73.9890247,40.7391033,italian,18.71
+Altro Paradiso,"234 Spring St, New York, NY 10013, United States",4.5,New York,NY,-74.0046926,40.7254266,italian,11
+Il Buco Alimentari & Vineria,"53 Great Jones St, New York, NY 10012, United States",4.5,New York,NY,-73.9925303,40.7264786,italian,26.01
+Via Della Pace,"87 E 4th St, New York, NY 10003, United States",4.5,New York,NY,-73.9897689,40.72651,italian,16.3
+Toscana 49,"143 E 49th St, New York, NY 10017, United States",4.5,New York,NY,-73.972182,40.7557113,italian,26.26
+Patsy's,"236 W 56th St, New York, NY 10019, United States",4.3,New York,NY,-73.9827171,40.7656714,italian,17.5
+Monte's Trattoria,"97 MacDougal St, New York, NY 10012, United States",4.4,New York,NY,-74.0010066,40.7295418,italian,18.37
+Il Tinello,"16 W 56th St, New York, NY 10019, United States",4.5,New York,NY,-73.9756204,40.7626757,italian,26.18
+Lupa,"170 Thompson St, New York, NY 10012, United States",4.4,New York,NY,-74.0002058,40.7276467,italian,38
+Tony's Di Napoli,"147 W 43rd St, New York, NY 10036, United States",4.6,New York,NY,-73.9854417,40.7564,italian,24.9
+Jun-Men Ramen Bar,"249 9th Ave, New York, NY 10001, United States",4.5,New York,NY,-74.0004227,40.7481411,japanese,15.55
+Minca,"536 E 5th St, New York, NY 10009, United States",4.5,New York,NY,-73.982949,40.723998,japanese,12.15
+Nakamura,"172 Delancey St, New York, NY 10002, United States",4.4,New York,NY,-73.9851731,40.7178702,japanese,18.81
+Ramen Misoya,"129 2nd Ave, New York, NY 10003, United States",4.5,New York,NY,-73.9880656,40.7284037,japanese,12.56
+Shinka Ramen & Sake Bar,"93 Bowery, New York, NY 10002, United States",4.4,New York,NY,-73.9952966,40.7171549,japanese,13.68
+Hide-Chan Ramen Midtown East,"248 E 52nd St #2Fl, New York, NY 10022, United States",4.4,New York,NY,-73.9682501,40.7560715,japanese,14.19
+Ichiran,"132 W 31st St, New York, NY 10001, United States",4.5,New York,NY,-73.990714,40.748267,japanese,16.88
+Naruto Ramen,"1596 3rd Ave, New York, NY 10128, United States",4.4,New York,NY,-73.95253,40.7811952,japanese,11.35
+Gorin Ramen,"351 E 14th St, New York, NY 10003, United States",4.2,New York,NY,-73.9827783,40.7316746,japanese,20
+Kuu Ramen,"1275 1st Ave., New York, NY 10065, United States",4.4,New York,NY,-73.9577598,40.7657667,japanese,19
+Menkoi Sato,"7 Cornelia St, New York, NY 10014, United States",4.6,New York,NY,-74.001573,40.7316996,japanese,21.88
+Ben & Jerry's,"200 W 44th St, New York, NY 10036, United States",4.1,New York,NY,-73.9867106,40.7574529,ice cream and frozen,21.16
+Penguin Ice Cream,"196 Canal St, New York, NY 10013, United States",4.6,New York,NY,-73.9982271,40.7168142,ice cream and frozen,7.92
+Emack & Bolio's,"1564 1st Ave., New York, NY 10028, United States",4.6,New York,NY,-73.9514039,40.7737518,ice cream and frozen,13.28
+Morgenstern's Finest Ice Cream,"88 W Houston St, New York, NY 10012, United States",4.2,New York,NY,-73.9998678,40.7272498,ice cream and frozen,9.16
+A La Mode Shoppe,"360 E 55th St, New York, NY 10022, United States",4.9,New York,NY,-73.9643233,40.7570411,ice cream and frozen,7.26
+Downtown Yogurt & Ice Cream,"303 Greenwich St, New York, NY 10013, United States",4.3,New York,NY,-74.0107106,40.7164656,ice cream and frozen,9.2
+il laboratorio del gelato,"188 Ludlow St, New York, NY 10002, United States",4.6,New York,NY,-73.9871478,40.7221684,ice cream and frozen,14.5
+Minus Celsius Ice Cream,"302 Grand St ste.D, New York, NY 10002, United States",4.5,New York,NY,-73.9915781,40.7176718,ice cream and frozen,10.17
+Urban Vegan Kitchen,"41 Carmine St, New York, NY 10014, United States",4.5,New York,NY,-74.003617,40.7301476,healthy,14.45
+Avant Garden,"130 E 7th St, New York, NY 10009, United States",4.6,New York,NY,-73.9839584,40.7261182,healthy,20.71
+Caravan Of Dreams,"405 E 6th St, New York, NY 10009, United States",4.4,New York,NY,-73.9856524,40.7263767,healthy,16.51
+Ladybird,"111 E 7th St, New York, NY 10009, United States",4.5,New York,NY,-73.9845333,40.7266801,healthy,19
+Franchia Vegan Cafe,"12 Park Ave, New York, NY 10016, United States",4.5,New York,NY,-73.9812702,40.747576,healthy,14.8
+Le Botaniste,"833 Lexington Ave, New York, NY 10065, United States",4.7,New York,NY,-73.9659616,40.7650061,healthy,18.75
+Organic Grill,"133 W 3rd St, New York, NY 10012, United States",4.6,New York,NY,-74.0007966,40.7308722,healthy,5.33
+Vegan Ginger Root,"1164 1st Ave., New York, NY 10065, United States",4.6,New York,NY,-73.9595604,40.7624834,healthy,13.42
+abcV,"38 E 19th St, New York, NY 10003, United States",4.5,New York,NY,-73.9892841,40.7379803,healthy,37.08
+Vegan On The Fly,"24 W 45th St, New York, NY 10036, United States",4.9,New York,NY,-73.9808335,40.755764,healthy,21.38
+Dirt Candy,"86 Allen St, New York, NY 10002, United States",4.6,New York,NY,-73.9907054,40.7178611,healthy,13.31
+Red Bamboo,"140 West 4th Street, New York, NY 10012, United States",4.5,New York,NY,-74.0003287,40.7312747,healthy,14.09
+Divya's Kitchen,"25 1st Ave., New York, NY 10003, United States",4.6,New York,NY,-73.9884906,40.7237699,healthy,12.05
+Little Vietnamese Bistro,"422 San Mateo Ave, San Bruno, CA 94066, United States",4,San Bruno,CA,-122.4111672,37.6220576,vietnamese,14.22
+Pho de Nguyen,"586-A San Mateo Ave, San Bruno, CA 94066, United States",4.3,San Bruno,CA,-122.4110437,37.6261573,vietnamese,11.53
+Celia's Mexican Restaurant,"201 El Camino Real, San Bruno, CA 94066, United States",4.1,San Bruno,CA,-122.409128,37.617761,mexican,19.58
+Taqueria Leon,"551 San Mateo Ave, San Bruno, CA 94066, United States",4.3,San Bruno,CA,-122.4115828,37.625301,mexican,11.84
+La Paloma,"699 San Mateo Ave, San Bruno, CA 94066, United States",4.5,San Bruno,CA,-122.4115214,37.6282585,mexican,9.23
+Taqueria Angelica's,"1199 El Camino Real, San Bruno, CA 94066, United States",4.1,San Bruno,CA,-122.4214088,37.636384,comfort food,3
+Hana's Cafe & Deli,"1111 Bayhill Dr, San Bruno, CA 94066, United States",0,San Bruno,CA,-122.4204205,37.6286804,comfort food,9.17
+Kiss My Boba,"221 El Camino Real, San Bruno, CA 94066, United States",4.5,San Bruno,CA,-122.409612,37.6183466,boba,5.72
+Societea Tea House & Eatery,"446 San Mateo Ave, San Bruno, CA 94066, United States",4.6,San Bruno,CA,-122.41114,37.622882,boba,9.74
+Quickly,"1212 El Camino Real suite A, San Bruno, CA 94066, United States",3.8,San Bruno,CA,-122.421122,37.6389453,boba,7.38
+Amami Sushi Bistro,"312 El Camino Real, San Bruno, CA 94066, United States",4.4,San Bruno,CA,-122.4102587,37.6201641,japanese,12.38
+Amami Sushi,"1789 El Camino Real, San Bruno, CA 94066, United States",4.2,San Bruno,CA,-122.4063677,37.6149778,japanese,12.87
+Ichiban Sushi,"352 El Camino Real, San Bruno, CA 94066, United States",3.9,San Bruno,CA,-122.4105082,37.6203682,japanese,11.01
+Aji Ichi Japanese Restaurant,"695 San Mateo Ave #3611, San Bruno, CA 94066, United States",4.3,San Bruno,CA,-122.4114361,37.6281679,japanese,16.81
+Toto's Pizzeria & Restaurant,"1690 El Camino Real, San Bruno, CA 94066, United States",4.5,San Bruno,CA,-122.4044976,37.6138362,pizza,25.03
+Atlas Pizza Parlor,"637 San Mateo Ave, San Bruno, CA 94066, United States",4.3,San Bruno,CA,-122.4114433,37.6272086,pizza,16.18
+West Coast Cafe,"466 San Mateo Ave, San Bruno, CA 94066, United States",4.5,San Bruno,CA,-122.4109994,37.6234851,italian,14.08
+Pho Vinh,"1065 Holly St #A, San Carlos, CA 94070, United States",4.2,San Carlos,CA,-122.2607405,37.5091401,vietnamese,21.96
+Pho Fifth Avenue,"3807 Fifth Ave, San Diego, CA 92103, United States",4.4,San Diego,CA,-117.1601591,32.7472976,vietnamese,14.65
+PHO XPRESS,"1125 Sixth Ave, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1591337,32.7171954,vietnamese,12.03
+PB Pho & Grill,"1007 Garnet Ave, San Diego, CA 92109, United States",4.5,San Diego,CA,-117.2514806,32.7973361,vietnamese,12.36
+Pho Van Restaurant,"4233 El Cajon Blvd, San Diego, CA 92105, United States",4.6,San Diego,CA,-117.1044846,32.7549058,vietnamese,13.16
+Pho Ca Dao Restaurant,"5223 El Cajon Blvd, San Diego, CA 92115, United States",4.4,San Diego,CA,-117.08335,32.7570404,vietnamese,12.56
+Pho Ca Dao Restaurant,"8373 Mira Mesa Blvd, San Diego, CA 92126, United States",4.1,San Diego,CA,-117.1431113,32.9124284,vietnamese,12.56
+Phuong Trang,"4170 Convoy St, San Diego, CA 92111, United States",4.3,San Diego,CA,-117.1556151,32.8177885,vietnamese,14.54
+Pho Bo,"1900 Newton Ave #1134, San Diego, CA 92113, United States",4.5,San Diego,CA,-117.1454027,32.6998456,vietnamese,15.29
+Pho Ha Noi Asian Cuisine,"6904 Miramar Rd #215, San Diego, CA 92121, United States",4,San Diego,CA,-117.1669336,32.8792274,vietnamese,15.33
+Banh Mi Hoi An,"3145 Rosecrans St A, San Diego, CA 92110, United States",4.4,San Diego,CA,-117.2105282,32.7459623,vietnamese,13.21
+Pho Fusion,"8038 Clairemont Mesa Blvd, San Diego, CA 92111, United States",4.7,San Diego,CA,-117.1496868,32.8334373,vietnamese,9.82
+Emerald Chinese Cuisine,"3709 Convoy St, San Diego, CA 92111, United States",3.7,San Diego,CA,-117.1525821,32.8112898,chinese,21.91
+Shan Xi Magic Kitchen,"4344 Convoy St, San Diego, CA 92111, United States",4.1,San Diego,CA,-117.1559043,32.8192424,chinese,13.8
+Golden City Restaurant,"5375 Kearny Villa Rd, San Diego, CA 92123, United States",4,San Diego,CA,-117.1386233,32.8307282,chinese,15.68
+City Dragon,"2885 El Cajon Blvd, San Diego, CA 92104, United States",4.1,San Diego,CA,-117.1316762,32.7549267,chinese,12.95
+Wei Wei Asian Express,"6465 University Ave, San Diego, CA 92115, United States",4.6,San Diego,CA,-117.056511,32.754525,chinese,7.81
+Dumplings N More,"3865 Fifth Ave, San Diego, CA 92103, United States",4.2,San Diego,CA,-117.1601622,32.7479713,chinese,12.08
+Golden House,"4370 Palm Ave Ste N, San Diego, CA 92154, United States",4.4,San Diego,CA,-117.0390387,32.5847194,chinese,6.83
+El Indio Mexican Restaurant and Catering,"3695 India St, San Diego, CA 92103, United States",4.5,San Diego,CA,-117.1801998,32.7423266,mexican,16.05
+Ponce's Mexican Restaurant,"4050 Adams Ave, San Diego, CA 92116, United States",4.5,San Diego,CA,-117.1082665,32.7634729,mexican,11.4
+El Agave Restaurant & Tequileria,"2304 San Diego Ave # B, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.1921775,32.7496746,mexican,15.95
+Valentine's Mexican Food,"1157 Sixth Ave, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1591475,32.7175099,mexican,7.42
+Brother's Mexican Restaurant,"4006 30th St, San Diego, CA 92104, United States",4.6,San Diego,CA,-117.1303412,32.7505664,mexican,9.5
+The Blind Burro,"639 J St, San Diego, CA 92101, United States",4.3,San Diego,CA,-117.1584945,32.7092036,mexican,12.04
+El Comal,"3946 Illinois St, San Diego, CA 92104, United States",4.4,San Diego,CA,-117.1279433,32.7493527,mexican,8.48
+Crazee Burger,"3993 30th St, San Diego, CA 92104, United States",4.6,San Diego,CA,-117.1299405,32.7501757,comfort food,5.99
+Hodad's Downtown,"945 Broadway, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1558244,32.7156166,comfort food,5.4
+Hayes Burger,"2060 Logan Ave Ste. A, San Diego, CA 92113, United States",4.7,San Diego,CA,-117.1416294,32.6997788,comfort food,6.81
+The Habit Burger Grill,"845 Camino De La Reina, San Diego, CA 92108, United States",4.5,San Diego,CA,-117.1568579,32.7667621,comfort food,11.61
+Canada Steak Burger,"3604 University Ave, San Diego, CA 92104, United States",4.7,San Diego,CA,-117.1154136,32.7499217,comfort food,8.42
+Boomerang's Gourmet Burger Joint,"4577 Clairemont Dr, San Diego, CA 92117, United States",4.5,San Diego,CA,-117.2057521,32.8270722,comfort food,15.11
+Gaslamp Burger,"738 Fifth Ave, San Diego, CA 92101, United States",4,San Diego,CA,-117.1602662,32.7131195,comfort food,12.9
+Anny's Fine Burger,"5375 Kearny Villa Rd, San Diego, CA 92123, United States",4.5,San Diego,CA,-117.1384869,32.8310669,comfort food,13.26
+Biggie's Burgers,"4631 Mission Blvd, San Diego, CA 92109, United States",4.4,San Diego,CA,-117.2557963,32.7981519,comfort food,12.14
+The Habit Burger Grill,"4175 Genesee Ave, San Diego, CA 92111, United States",4.4,San Diego,CA,-117.181292,32.818662,comfort food,11.61
+El Rey Moro Taco Shop,"4471 Clairemont Mesa Blvd, San Diego, CA 92117, United States",4.2,San Diego,CA,-117.1953819,32.8338049,comfort food,10.57
+La Palapa Authentic Mexican Food,"4386 Moraga Ave, San Diego, CA 92117, United States",4.5,San Diego,CA,-117.2142122,32.8232832,comfort food,5.33
+Senor Taquero,"435 Broadway, San Diego, CA 92101, United States",4.5,San Diego,CA,-117.1605556,32.7155556,comfort food,11.73
+Lolita's Mexican Food,"7305 Clairemont Mesa Blvd, San Diego, CA 92111, United States",4.4,San Diego,CA,-117.1604585,32.832367,comfort food,3.05
+La Perla De Michoacan,"745 Emerald St, San Diego, CA 92109, United States",4.4,San Diego,CA,-117.2563881,32.7982445,comfort food,24.65
+Caliente Mexican Food,"11815 Sorrento Valley Rd, San Diego, CA 92121, United States",4.5,San Diego,CA,-117.2367386,32.916175,comfort food,5.38
+Taqueria Los Chuchys,"543 Fourth Ave, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1608363,32.710977,comfort food,24.77
+El Tianguis Rolled Taquitos,"2810 El Cajon Blvd, San Diego, CA 92104, United States",4.8,San Diego,CA,-117.1333278,32.7557,comfort food,8.34
+El Rey Moro Taco Shop,"2710 Garnet Ave, San Diego, CA 92109, United States",4.2,San Diego,CA,-117.2212479,32.8059473,comfort food,10.57
+La Taqueria Tijuana,"406 W University Ave Unit B, San Diego, CA 92103, United States",4.4,San Diego,CA,-117.1612706,32.7483828,comfort food,11.79
+Primos Mexican Food & Cantina,"7770 Regents Rd #109, San Diego, CA 92122, United States",3.8,San Diego,CA,-117.2242791,32.8627924,comfort food,6.52
+D Z Akin's,"6930 Alvarado Rd, San Diego, CA 92120, United States",4.6,San Diego,CA,-117.0489808,32.7750973,comfort food,16.02
+The Deli Llama,"3702 Fifth Ave, San Diego, CA 92103, United States",4.7,San Diego,CA,-117.1605879,32.7452435,comfort food,12.38
+NY Garden Deli & Cafe,"11065 Vista Sorrento Pkwy, San Diego, CA 92130, United States",4.4,San Diego,CA,-117.2290699,32.9170439,comfort food,11.5
+Hub Market and Deli,"748 Sixth Ave, San Diego, CA 92101, United States",4.8,San Diego,CA,-117.1594151,32.7132702,comfort food,10.46
+Fred's Lunch Bag Deli,"861 Sixth Ave #161, San Diego, CA 92101, United States",4.3,San Diego,CA,-117.159021,32.714388,comfort food,8
+Mission Bell Deli,"3511 Camino del Rio S, San Diego, CA 92108, United States",4.2,San Diego,CA,-117.1177191,32.7770607,comfort food,8.35
+ParAgon Deli Cafe,"2724 Shelter Island Dr, San Diego, CA 92106, United States",5,San Diego,CA,-117.2284501,32.721406,comfort food,11.73
+Chick-fil-A,"3570 Sports Arena Blvd, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.2118297,32.7540697,american,4.57
+Five Guys,"5650 Balboa Ave #101, San Diego, CA 92117, United States",4.2,San Diego,CA,-117.178996,32.8206202,american,7.61
+Jack in the Box,"7170 Linda Vista Rd, San Diego, CA 92111, United States",4,San Diego,CA,-117.1680012,32.7898034,american,7.27
+Chick-fil-A,"5323 Mission Center Rd, San Diego, CA 92108, United States",4.5,San Diego,CA,-117.1543933,32.7710633,american,4.57
+Jack in the Box,"2404 Market St, San Diego, CA 92102, United States",4.1,San Diego,CA,-117.1421716,32.7118478,american,7.27
+Jack in the Box,"2959 Upas St, San Diego, CA 92104, United States",4,San Diego,CA,-117.1301472,32.7408744,american,7.27
+Jack in the Box,"1340 Rosecrans St, San Diego, CA 92106, United States",3.9,San Diego,CA,-117.2298865,32.7243023,american,7.27
+Jack in the Box,"1619 Pacific Hwy, San Diego, CA 92101, United States",3.9,San Diego,CA,-117.1707733,32.7223289,american,7.27
+Jack in the Box,"804 University Ave, San Diego, CA 92103, United States",3.7,San Diego,CA,-117.1572214,32.7486443,american,7.27
+Jack in the Box,"3838 Midway Dr, San Diego, CA 92110, United States",3.8,San Diego,CA,-117.2184871,32.7544845,american,7.27
+Jack in the Box,"6080 Mission Gorge Rd, San Diego, CA 92120, United States",4,San Diego,CA,-117.0980707,32.7846644,american,7.27
+Jack in the Box,"4075 University Ave, San Diego, CA 92105, United States",3.9,San Diego,CA,-117.1074142,32.7494688,american,7.27
+Jack in the Box,"7740 Hazard Center Dr, San Diego, CA 92108, United States",4.2,San Diego,CA,-117.1552379,32.7711269,american,7.27
+Sandwich Emporium,"3054 1/2 Clairemont Dr, San Diego, CA 92117, United States",4.5,San Diego,CA,-117.1937813,32.7958749,american,9.78
+Earl of Sandwich,"690 First Ave., San Diego, CA 92101, United States",4.2,San Diego,CA,-117.1639712,32.7124086,american,10.5
+San Diego Sandwich Co,"3373 Sandrock Rd, San Diego, CA 92123, United States",4.5,San Diego,CA,-117.1396204,32.8039759,american,8.29
+Sandwich Stop Deli,"5640 Kearny Mesa Rd, San Diego, CA 92111, United States",4.8,San Diego,CA,-117.138684,32.8375595,american,9.08
+Grab & Go Subs,"109 W C St # A, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.164051,32.7166095,american,11.54
+Grab & Go Subs,"600 W Broadway #170, San Diego, CA 92101, United States",3.7,San Diego,CA,-117.1687918,32.7163717,american,11.54
+Jersey Mike's Subs,"8590 Rio San Diego Dr Suite #109, San Diego, CA 92108, United States",4.2,San Diego,CA,-117.144565,32.776056,american,10.09
+Level 9 Rooftop Bar,"509 Ninth Ave, San Diego, CA 92101, United States",4.2,San Diego,CA,-117.1562056,32.7106278,bar,14.31
+Dobson's Bar & Restaurant,"956 Broadway Cir, San Diego, CA 92101, United States",4.5,San Diego,CA,-117.1631368,32.715397,bar,14.14
+BAR by RED DOOR,"729 W Washington St, San Diego, CA 92103, United States",4.7,San Diego,CA,-117.1701701,32.7496814,bar,10.4
+Juan Tequila Bar & Restaurant,"535 Fourth Ave, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1607392,32.7109056,bar,10.99
+Garibaldi,"901 Bayfront Ct Suite 1, San Diego, CA 92101, United States",4.2,San Diego,CA,-117.1718707,32.7163183,bar,32.16
+Corner Bakery Cafe,"101 Broadway, San Diego, CA 92101, United States",4.2,San Diego,CA,-117.1636043,32.7154741,bakery,9.73
+Arely French Bakery Cafe,"4961 Clairemont Dr A, San Diego, CA 92117, United States",4.4,San Diego,CA,-117.202648,32.832098,bakery,8.58
+Corner Bakery,"1025 Camino De La Reina Ste 3, San Diego, CA 92108, United States",4.2,San Diego,CA,-117.1528769,32.7680713,bakery,10.66
+Con Pane Rustic Breads & Cafe,"2750 Dewey Rd, San Diego, CA 92106, United States",4.6,San Diego,CA,-117.2125,32.7380556,bakery,8.48
+Nutmeg Bakery & Cafe,"12640 Sabre Springs Pkwy #107, San Diego, CA 92128, United States",4.5,San Diego,CA,-117.0971341,32.9479223,bakery,27.97
+Bread & Cie,"350 University Ave, San Diego, CA 92103, United States",4.6,San Diego,CA,-117.1618758,32.7483755,bakery,11.96
+Nutmeg Bakery & Cafe,"10755 Scripps Poway Pkwy, San Diego, CA 92131, United States",4.1,San Diego,CA,-117.097677,32.93554,bakery,27.97
+Parfait Paris,"555 G St, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.159576,32.712405,bakery,13.83
+Mama's Bakery & Deli,"4237 Alabama St, San Diego, CA 92104, United States",4.4,San Diego,CA,-117.142396,32.7547798,bakery,10.79
+Panchita's Kitchen & Bakery,"3803 32nd St, San Diego, CA 92104, United States",4.4,San Diego,CA,-117.1248261,32.7475145,bakery,6.85
+Parfait Paris,"2820 Historic Decatur Rd #30, San Diego, CA 92106, United States",4.4,San Diego,CA,-117.2111137,32.7402027,bakery,13.83
+The French Gourmet,"960 Turquoise St, San Diego, CA 92109, United States",4.6,San Diego,CA,-117.256379,32.809529,bakery,16.15
+Boba Bar and Desserts,"4619 Convoy St, San Diego, CA 92111, United States",4.6,San Diego,CA,-117.154516,32.824451,boba,8.05
+Poppy Boba Cafe,"16691 Bernardo Center Dr, San Diego, CA 92128, United States",4.2,San Diego,CA,-117.0756395,33.0174149,boba,6.48
+Tan-Cha,"4688 Convoy St #105, San Diego, CA 92111, United States",4.3,San Diego,CA,-117.1551975,32.8263339,boba,7.08
+Vivi Bubble Tea,"3904 Convoy St #116, San Diego, CA 92111, United States",4.7,San Diego,CA,-117.1547679,32.8146674,boba,6.53
+CHAKAA,"4344 Convoy St #L, San Diego, CA 92111, United States",4.6,San Diego,CA,-117.1560112,32.8196545,boba,5.92
+Ding Tea Balboa,"5945 Balboa Ave B, San Diego, CA 92111, United States",4.5,San Diego,CA,-117.1775535,32.8196477,boba,4.99
+Sharetea,"4917 Convoy St, San Diego, CA 92111, United States",4.2,San Diego,CA,-117.1528974,32.8305936,boba,5.99
+Sharetea,"5265 Linda Vista Road Reading / Stacks, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.195905,32.7659223,boba,5.99
+Tan-Cha,"5375 Napa St #108, San Diego, CA 92110, United States",4.3,San Diego,CA,-117.1963781,32.7645916,boba,7.08
+Bei Yuan Tea & Boba,"7315 Clairemont Mesa Blvd, San Diego, CA 92111, United States",4.1,San Diego,CA,-117.1604961,32.8320536,boba,9.87
+Corvette Diner,"2965 Historic Decatur Rd, San Diego, CA 92106, United States",4.4,San Diego,CA,-117.2098733,32.7415944,diner,13.77
+Rudford's Restaurant,"2900 El Cajon Blvd, San Diego, CA 92104, United States",4.4,San Diego,CA,-117.1312289,32.7556177,diner,14.07
+Crest Cafe,"425 Robinson Ave, San Diego, CA 92103, United States",4.3,San Diego,CA,-117.1609461,32.7468247,diner,17.17
+The Waffle Spot,"1333 Hotel Cir S, San Diego, CA 92108, United States",4.4,San Diego,CA,-117.1751885,32.7587396,diner,12.23
+Old Townhouse Restaurant,"4941 Newport Ave, San Diego, CA 92107, United States",4.6,San Diego,CA,-117.250213,32.7461872,diner,4.33
+Hob Nob Hill,"2271 First Ave., San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1637444,32.7290289,diner,7
+Antique Row Cafe,"3002 Adams Ave, San Diego, CA 92116, United States",4.7,San Diego,CA,-117.1300421,32.7630224,diner,9.04
+Maggie's Cafe,"3232 Greyling Dr, San Diego, CA 92123, United States",4.5,San Diego,CA,-117.1404324,32.802071,diner,14.51
+Brothers Family Restaurant,"5150 Waring Rd, San Diego, CA 92120, United States",4.7,San Diego,CA,-117.0821306,32.7917992,diner,12.78
+Lucky's Lunch Counter,"338 7th Ave, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1584267,32.7088552,diner,6.39
+Hash House A Go Go,"3628 Fifth Ave, San Diego, CA 92103, United States",4.6,San Diego,CA,-117.1606972,32.7439003,diner,13.78
+Denny's,"1601 Rosecrans St, San Diego, CA 92106, United States",4.2,San Diego,CA,-117.2265002,32.7273778,diner,11.9
+Cafe 21 University Heights,"2736 Adams Ave, San Diego, CA 92116, United States",4.4,San Diego,CA,-117.1343092,32.7632143,american,9.57
+Kensington Cafe,"4141 Adams Ave, San Diego, CA 92116, United States",4.5,San Diego,CA,-117.1061173,32.7630417,american,8.56
+The Incredible Cafe,"11828 Rancho Bernardo Rd #104, San Diego, CA 92128, United States",4.2,San Diego,CA,-117.0760901,33.02351,american,15.98
+Cafe 222,"222 Island Ave, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1627054,32.7105232,american,13.76
+Cafe de l'Opera,"910 J St, San Diego, CA 92101, United States",4.7,San Diego,CA,-117.15619,32.7095685,american,5.5
+Cafe at Alma,"1047 Fifth Ave, San Diego, CA 92101, United States",5,San Diego,CA,-117.1599708,32.7162489,american,16.24
+Broken Yolk Cafe,"355 Sixth Ave, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1589528,32.7090722,american,17.2
+Operacaffe,"835 Fourth Ave, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1608741,32.7141695,american,17.6
+Figaro Dessert Cafe,"3011 University Ave, San Diego, CA 92104, United States",4.5,San Diego,CA,-117.1296864,32.7482852,ice cream and frozen,18.25
+Cake De Partie,"4685 Convoy Street #110&120, San Diego, CA 92111, United States",4.5,San Diego,CA,-117.1542386,32.8259067,ice cream and frozen,6.83
+Fantastic Desserts,"1088 Garnet Ave, San Diego, CA 92109, United States",1,San Diego,CA,-117.2503475,32.798066,ice cream and frozen,5.81
+Ghirardelli Ice Cream & Chocolate Shop,"643 Fifth Ave, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1600093,32.712178,ice cream and frozen,11.71
+MNGO cafe,"4176 Convoy St, San Diego, CA 92111, United States",4.5,San Diego,CA,-117.1557576,32.8181472,ice cream and frozen,6.95
+1935 Artisan Desserts & Kitchen,"780 Hollister St #14, San Diego, CA 92154, United States",0,San Diego,CA,-117.0845107,32.5822506,ice cream and frozen,4.84
+SOICHI,"2121 Adams Ave, San Diego, CA 92116, United States",4.8,San Diego,CA,-117.1418019,32.7626574,japanese,20.25
+Azuki Sushi Lounge,"2321 Fifth Ave, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1600569,32.7296548,japanese,22.2
+Hinotez,"7947 Balboa Ave, San Diego, CA 92111, United States",4.4,San Diego,CA,-117.1521645,32.8215571,japanese,15.07
+Robataya Oton,"5447 Kearny Villa Rd, San Diego, CA 92123, United States",4.6,San Diego,CA,-117.1382852,32.8326491,japanese,26.14
+Harney Sushi,"3964 Harney St, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.1954947,32.7522648,japanese,15.23
+Wa Dining Okan,"3860 Convoy St, San Diego, CA 92111, United States",4.5,San Diego,CA,-117.1540981,32.8140504,japanese,13.12
+Chaba Thai Kitchen,"8010 Clairemont Mesa Blvd, San Diego, CA 92111, United States",4.3,San Diego,CA,-117.149949,32.833192,thai,14.09
+Koon Thai Kitchen,"3860 Convoy St Suite 102, San Diego, CA 92111, United States",4.3,San Diego,CA,-117.1537718,32.8145712,thai,14.08
+Lotus Thai Cuisine,"906 Market St, San Diego, CA 92101, United States",4.2,San Diego,CA,-117.1563164,32.7116756,thai,24.47
+Thotsakan Thai and Vegetarian Cuisine,"1153 Sixth Ave, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1589918,32.7174576,thai,13.94
+Sab Lai Thai Kitchen,"500 Fifth Ave, San Diego, CA 92101, United States",4.2,San Diego,CA,-117.16041,32.7106,thai,18.27
+Supannee House of Thai Restaurant & Catering,"2907 Shelter Island Dr #110, San Diego, CA 92106, United States",4.5,San Diego,CA,-117.2306049,32.7217259,thai,11.14
+King Of Thai cuisine,"6171 Mission Gorge Rd suite 115, San Diego, CA 92120, United States",4.5,San Diego,CA,-117.0970498,32.7874067,thai,14.01
+Taste of Thai,"527 University Ave, San Diego, CA 92103, United States",4.4,San Diego,CA,-117.1598819,32.7481598,thai,14.89
+Di-Chan Thai Restaurant,"5535 Clairemont Mesa Blvd, San Diego, CA 92117, United States",4.3,San Diego,CA,-117.1730675,32.8334223,thai,12.96
+Mekong Cuisine Lao & Thai,"3904 Convoy St #112, San Diego, CA 92111, United States",4.6,San Diego,CA,-117.1546241,32.8145168,thai,15.44
+Star Anise Thai Cuisine,"8935 Towne Centre Dr Suite 115, San Diego, CA 92122, United States",4.2,San Diego,CA,-117.2058744,32.8677227,thai,11.04
+Caps Pizza & Bar,"1428 First Ave., San Diego, CA 92101, United States",4.3,San Diego,CA,-117.1639851,32.7203122,pizza,13.39
+Pizza Bella Italian Bistro,"2707 Congress St #1p, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.1979312,32.7532361,pizza,17.88
+Venice Pizza House Since 1954,"3333 El Cajon Blvd, San Diego, CA 92104, United States",4.6,San Diego,CA,-117.1216215,32.7550212,pizza,16.35
+Landini's Pizzeria,"1827 India St, San Diego, CA 92101, United States",4.5,San Diego,CA,-117.168338,32.7240427,pizza,18.89
+Pizzeria Luigi,"2121 El Cajon Blvd, San Diego, CA 92104, United States",4.6,San Diego,CA,-117.1420142,32.7550775,pizza,14.66
+Pizzeria Luigi,"1137 25th St, San Diego, CA 92102, United States",4.6,San Diego,CA,-117.1401209,32.7176512,pizza,14.66
+Gaslamp Pizza,"505 Fifth Ave, San Diego, CA 92101, United States",3.8,San Diego,CA,-117.1598549,32.7106137,pizza,54.33
+Sisters Pizza,"3603 Fourth Ave, San Diego, CA 92103, United States",4.6,San Diego,CA,-117.1613423,32.7435408,pizza,19.79
+Hoboken Pizza & Beer Joint,"1459 Garnet Ave, San Diego, CA 92109, United States",4.5,San Diego,CA,-117.2432478,32.7991054,pizza,14.94
+Chicago Bros Pizzeria,"10423 San Diego Mission Rd, San Diego, CA 92108, United States",4.4,San Diego,CA,-117.1115574,32.7848965,pizza,14.22
+Baci Restaurant,"1955 Morena Blvd, San Diego, CA 92110, United States",4.8,San Diego,CA,-117.2070542,32.7813572,italian,14.75
+Piacere Mio,"1947 Fern St, San Diego, CA 92102, United States",4.7,San Diego,CA,-117.1290865,32.7264169,italian,20.37
+Jack & Giulio's Italian Restaurant,"2391 San Diego Ave, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.193496,32.751022,italian,14.67
+CUCINA urbana,"505 Laurel St, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1600979,32.7312374,italian,20.86
+Arrivederci Ristorante,"3845 Fourth Ave, San Diego, CA 92103, United States",4.6,San Diego,CA,-117.1614727,32.7477818,italian,19.73
+Monello,"750 W Fir St, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1690971,32.7244439,italian,12
+Barbusa,"1917 India St, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1686019,32.7247983,italian,13.68
+Asti Ristorante,"728 Fifth Ave, San Diego, CA 92101, United States",4.3,San Diego,CA,-117.1603997,32.7129874,italian,15.7
+Parma Cucina Italiana,"3850 Fifth Ave, San Diego, CA 92103, United States",4.7,San Diego,CA,-117.1606517,32.7478022,italian,17.79
+Davanti Enoteca,"1655 India St, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1681591,32.722758,italian,12.05
+Sardina's Italian Restaurant and Bar,"1129 Morena Blvd, San Diego, CA 92110, United States",4.5,San Diego,CA,-117.2004338,32.7693126,italian,10.56
+RAKIRAKI Ramen & Tsukemen,"4646 Convoy St #102-A, San Diego, CA 92111, United States",4.3,San Diego,CA,-117.1554718,32.8246803,japanese,13.89
+BESHOCK Ramen East Village,"1288 Market St, San Diego, CA 92101, United States",4.4,San Diego,CA,-117.1530393,32.7116865,japanese,14.12
+Nozaru Ramen Bar,"3375 Adams Ave, San Diego, CA 92116, United States",4.4,San Diego,CA,-117.12119,32.7631174,japanese,13.06
+Tajima Ramen College Heights,"6061 El Cajon Blvd Suite 2, San Diego, CA 92115, United States",4.1,San Diego,CA,-117.0674099,32.7604523,japanese,8.09
+Menya Ultra,"8199 Clairemont Mesa Blvd M, San Diego, CA 92111, United States",4.7,San Diego,CA,-117.1475044,32.8322284,japanese,21.19
+Marufuku Ramen,"12841 El Camino Real #204, San Diego, CA 92130, United States",4.3,San Diego,CA,-117.233447,32.9496646,japanese,9.19
+Isshido Ramen,"8250 Mira Mesa Blvd #A, San Diego, CA 92126, United States",4.2,San Diego,CA,-117.1461945,32.9137608,japanese,14.98
+Hammond's Gourmet Ice Cream,"3077 University Ave, San Diego, CA 92104, United States",4.6,San Diego,CA,-117.1275481,32.7483645,ice cream and frozen,9.51
+Hammond's Gourmet Ice Cream,"3740 Sports Arena Blvd #6, San Diego, CA 92110, United States",4.7,San Diego,CA,-117.2153245,32.7553121,ice cream and frozen,9.51
+Afters Ice Cream,"855 Garnet Ave, San Diego, CA 92109, United States",4.5,San Diego,CA,-117.2544969,32.7966235,ice cream and frozen,9.28
+Haagen-Dazs,"7007 Friars Rd, San Diego, CA 92108, United States",3.9,San Diego,CA,-117.1664018,32.767896,ice cream and frozen,7.29
+Stella Jean's Ice Cream Point Loma,"4195 Voltaire St, San Diego, CA 92107, United States",4.6,San Diego,CA,-117.2348216,32.743538,ice cream and frozen,13.08
+Gelato Vero Caffe,"3753 India St, San Diego, CA 92103, United States",4.7,San Diego,CA,-117.1810132,32.7432335,ice cream and frozen,4.86
+Pappalecco,"1602 State St, San Diego, CA 92101, United States",4.6,San Diego,CA,-117.1666641,32.7220703,ice cream and frozen,10.71
+DixiePops,"301 W Washington St, San Diego, CA 92103, United States",4.8,San Diego,CA,-117.1663455,32.7496525,ice cream and frozen,5.01
+Donna Jean,"2949 Fifth Ave, San Diego, CA 92103, United States",4.6,San Diego,CA,-117.1601142,32.7361441,healthy,12.45
+Grains,"2201 Adams Ave, San Diego, CA 92116, United States",4.7,San Diego,CA,-117.1411004,32.7627428,healthy,10.45
+Greenhaus Vegetarian Eatery,"1118 Morena Blvd, San Diego, CA 92110, United States",4.7,San Diego,CA,-117.2004077,32.7687195,healthy,13.33
+Jyoti-Bihanga,"3351 Adams Ave, San Diego, CA 92116, United States",4.7,San Diego,CA,-117.1216075,32.7632418,healthy,9.76
+Veggilish,"1146 7th Ave, San Diego, CA 92101, United States",4.3,San Diego,CA,-117.1585766,32.7173488,healthy,8.76
+EL JARDIN THE VEGAN PARADISE,"2041 University Ave, San Diego, CA 92104, United States",4.1,San Diego,CA,-117.142437,32.748325,healthy,10.96
+Sipz,"3914 30th St, San Diego, CA 92104, United States",4.3,San Diego,CA,-117.1303126,32.7488338,healthy,11.32
+The Village SD,"2611 El Cajon Blvd, San Diego, CA 92104, United States",4.4,San Diego,CA,-117.135902,32.754954,healthy,12.1
+Pho Ha Tien,"1900 Ocean Ave, San Francisco, CA 94127, United States",4.1,San Francisco,CA,-122.4622038,37.725428,vietnamese,16.97
+World Of Noodle,"667 Monterey Blvd, San Francisco, CA 94127, United States",3.9,San Francisco,CA,-122.4504172,37.7312715,vietnamese,12.21
+Pho Dong Huong,"667 Monterey Blvd, San Francisco, CA 94127, United States",3.7,San Francisco,CA,-122.450411,37.7312857,vietnamese,12.58
+Pho Ga,"1310 Noriega St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4778209,37.7543942,vietnamese,12.52
+Bac Lieu Restaurant,"3216 Mission St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4203283,37.7452242,vietnamese,15.55
+Pho 2000,"637 Larkin St, San Francisco, CA 94109, United States",4.7,San Francisco,CA,-122.4177993,37.7838884,vietnamese,7.84
+Perilla,"836 Irving St, San Francisco, CA 94122, United States",4.5,San Francisco,CA,-122.4671146,37.7641251,vietnamese,11.03
+Pho Huynh Sang,"239 Clement St, San Francisco, CA 94118, United States",4.4,San Francisco,CA,-122.461911,37.782938,vietnamese,14.6
+Tanglad,"469 Castro St, San Francisco, CA 94114, United States",4.7,San Francisco,CA,-122.4348082,37.7615065,vietnamese,12.59
+Yummy Yummy,"1015 Irving St, San Francisco, CA 94122, United States",4.6,San Francisco,CA,-122.4688258,37.7637932,vietnamese,16.47
+An Chi Vietnamese Cuisine,"4683 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.435653,37.7233636,vietnamese,12.82
+Ly's Vietnamese Cuisine,"1779 Lombard St, San Francisco, CA 94123, United States",4.5,San Francisco,CA,-122.4306817,37.8003933,vietnamese,11.83
+Viet Quan Vietnamese Noodle House,"1757 Taraval St, San Francisco, CA 94116, United States",4.4,San Francisco,CA,-122.4851333,37.742472,vietnamese,13.3
+PPQ Beef Noodle House,"1816 Irving St, San Francisco, CA 94122, United States",4.3,San Francisco,CA,-122.477591,37.763672,vietnamese,11.93
+Won Kok Restaurant,"700 Monterey Blvd, San Francisco, CA 94127, United States",4.1,San Francisco,CA,-122.4513174,37.7317584,chinese,17.13
+Wang Wah,"1612 Ocean Ave, San Francisco, CA 94112, United States",4.2,San Francisco,CA,-122.4593944,37.7247198,chinese,8.94
+Emmy's Restaurant,"1923 Ocean Ave, San Francisco, CA 94127, United States",3.7,San Francisco,CA,-122.4628837,37.7253412,chinese,15.02
+Orchids Cafe,"1031 Ocean Ave, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4536901,37.7232496,chinese,13.99
+Xiao Loong Restaurant,"250 W Portal Ave, San Francisco, CA 94127, United States",4.2,San Francisco,CA,-122.4687584,37.7384695,chinese,17.22
+Alice's,"1599 Sanchez St, San Francisco, CA 94131, United States",4.4,San Francisco,CA,-122.4287683,37.7436934,chinese,11.11
+Dumpling Home,"298 Gough St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4226361,37.7758205,chinese,13.74
+May Lee Chinese Restaurant,"1256 7th Ave, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4640921,37.7648716,chinese,12.82
+Joyful Kitchen,"1919 Ocean Ave, San Francisco, CA 94127, United States",4,San Francisco,CA,-122.462817,37.725301,chinese,16.2
+Cheung Hing Restaurant,"2339 Noriega St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4889621,37.7535649,chinese,15.98
+Win Garden,"2794 Diamond St, San Francisco, CA 94131, United States",4.6,San Francisco,CA,-122.4339409,37.734686,chinese,15.18
+Mama Ji's,"4416 18th St, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.4387173,37.7607671,chinese,4.15
+San Tung,"1031 Irving St, San Francisco, CA 94122, United States",4.4,San Francisco,CA,-122.4690045,37.7637858,chinese,10.72
+El Buen Comer,"3435 Mission St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4221326,37.7417604,mexican,8.94
+El Toreador,"50 W Portal Ave, San Francisco, CA 94127, United States",4.3,San Francisco,CA,-122.466625,37.7403722,mexican,14.63
+Pancho Villa Taqueria,"3071 16th St, San Francisco, CA 94103, United States",4.3,San Francisco,CA,-122.4211374,37.7648313,mexican,8.33
+Burrito Loco,"850 Ulloa St, San Francisco, CA 94127, United States",4.5,San Francisco,CA,-122.4655902,37.7409158,mexican,8.01
+Nopalito,"306 Broderick St, San Francisco, CA 94117, United States",4.4,San Francisco,CA,-122.4389738,37.7732851,mexican,15.16
+Casa Mexicana,"3917 24th St, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.4301562,37.7513321,mexican,10.06
+Puerto Alegre,"546 Valencia St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4220578,37.7641523,mexican,16.23
+El Castillito,"136 Church St #1111, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.429276,37.7687667,mexican,11.62
+Taqueria El Buen Sabor,"699 Valencia St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4214453,37.7618446,mexican,12.61
+Bullshead Restaurant,"840 Ulloa St, San Francisco, CA 94127, United States",4.4,San Francisco,CA,-122.4655181,37.740877,comfort food,14.51
+Hi-Way Burger & Fry,"3853 24th St, San Francisco, CA 94114, United States",4.5,San Francisco,CA,-122.4286822,37.7515413,comfort food,9.31
+WesBurger n' More,"2240 Mission St, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4195893,37.7611168,comfort food,12.79
+Smashburger,"2300 16th St Suite 293, San Francisco, CA 94103, United States",4,San Francisco,CA,-122.4079519,37.7660343,comfort food,10.62
+Pearl's Deluxe Burgers,"708 Post St, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4136593,37.7878162,comfort food,13.12
+Mission Street Burgers,"2323 Mission St, San Francisco, CA 94110, United States",4.1,San Francisco,CA,-122.4189341,37.7598456,comfort food,5.92
+Bill's Place,"2315 Clement St #1919, San Francisco, CA 94121, United States",4.2,San Francisco,CA,-122.4841715,37.7819387,comfort food,13.92
+Flippin Burger,"1419 Haight St, San Francisco, CA 94117, United States",4.3,San Francisco,CA,-122.4457728,37.7700047,comfort food,9.08
+Tower Burger,"729 Portola Dr, San Francisco, CA 94127, United States",4.3,San Francisco,CA,-122.4535273,37.7440251,comfort food,6.94
+Taqueria San Francisco,"2794 24th St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4080855,37.7529688,comfort food,5.79
+Taqueria Cancun,"2288 Mission St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4194111,37.7604861,comfort food,6.79
+La Corneta Taqueria,"2731 Mission St, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.418405,37.7533183,comfort food,9.14
+La Corneta Taqueria,"2834 Diamond St, San Francisco, CA 94131, United States",4.4,San Francisco,CA,-122.4341455,37.7340878,comfort food,9.14
+Taqueria Cancun,"1003 Market St, San Francisco, CA 94103, United States",4.2,San Francisco,CA,-122.4103381,37.7819859,comfort food,6.79
+El Toro Taqueria,"598 Valencia St, San Francisco, CA 94110, United States",4.2,San Francisco,CA,-122.4219646,37.7634123,comfort food,10.54
+Taqueria Cancun,"3211 Mission St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4199087,37.7453604,comfort food,6.79
+Taqueria Mana,"439 Stockton St, San Francisco, CA 94108, United States",4.4,San Francisco,CA,-122.4072846,37.7901283,comfort food,9.92
+The Deli King,"1143 Taraval St, San Francisco, CA 94116, United States",4.7,San Francisco,CA,-122.4786299,37.7427835,comfort food,7.33
+Roxie Food Center,"1901 San Jose Avenue, San Francisco, CA 94112, United States",4.7,San Francisco,CA,-122.441373,37.7268,comfort food,13.26
+Palermo II Delicatessen,"658 Vallejo St., San Francisco, CA 94133, United States",4.8,San Francisco,CA,-122.4084987,37.7987298,comfort food,13.4
+Pete's Deli & Cafe,"1661 Divisadero St, San Francisco, CA 94115, United States",4.4,San Francisco,CA,-122.4400614,37.7851291,comfort food,10.2
+Grandma's Deli & Cafe,"1551 Mission St, San Francisco, CA 94103, United States",4.5,San Francisco,CA,-122.4180036,37.7733816,comfort food,8.29
+The Deli Lama,"150 Toland St Suite 7, San Francisco, CA 94124, United States",4.5,San Francisco,CA,-122.3968833,37.7465389,comfort food,10.38
+Molinari Delicatessen,"373 Columbus Ave, San Francisco, CA 94133, United States",4.8,San Francisco,CA,-122.4078557,37.7985169,comfort food,11.21
+Sunrise Deli,"2115 Irving St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4807133,37.7632039,comfort food,11.78
+Good Luck Cafe and Deli,"621 Kearny St, San Francisco, CA 94108, United States",4.6,San Francisco,CA,-122.4048698,37.7938456,comfort food,8.49
+Ham & Cheese Deli,"5501 California St, San Francisco, CA 94121, United States",5,San Francisco,CA,-122.4766274,37.7841291,comfort food,9.87
+Lucca food deli & wine shop,"1899 Irving St, San Francisco, CA 94122, United States",4.8,San Francisco,CA,-122.478046,37.7633762,comfort food,8.63
+Angel Cafe & Deli,"700 Geary St, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4149894,37.7866154,comfort food,8.32
+Deli 23,"2449 23rd St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4043412,37.7543198,comfort food,9.02
+Jack in the Box,"400 Geary St, San Francisco, CA 94102, United States",3.7,San Francisco,CA,-122.4101682,37.7872577,american,8.96
+McDonald's,"1201 Ocean Ave, San Francisco, CA 94112, United States",3.4,San Francisco,CA,-122.4554622,37.7235151,american,4.52
+McDonald's,"1100 Fillmore St, San Francisco, CA 94102, United States",3.4,San Francisco,CA,-122.4317172,37.7798713,american,4.52
+Jack in the Box,"4649 Geary Blvd, San Francisco, CA 94118, United States",3.7,San Francisco,CA,-122.4694611,37.7805826,american,8.96
+McDonald's,"302 Potrero Ave, San Francisco, CA 94110, United States",3.6,San Francisco,CA,-122.4079489,37.7654151,american,4.52
+McDonald's,"441 Sutter St, San Francisco, CA 94108, United States",3.8,San Francisco,CA,-122.407641,37.789217,american,4.52
+Jack in the Box,"366 Bayshore Blvd, San Francisco, CA 94124, United States",3.7,San Francisco,CA,-122.4067062,37.7415988,american,8.96
+McDonald's,"255 Winston Dr, San Francisco, CA 94132, United States",3.6,San Francisco,CA,-122.4762351,37.7263623,american,4.52
+Grubbin',"1404 Taraval St, San Francisco, CA 94116, United States",4.5,San Francisco,CA,-122.4813056,37.7429326,american,10.9
+Bite,"912 Sutter St, San Francisco, CA 94109, United States",4.5,San Francisco,CA,-122.4155197,37.7884662,american,13.65
+Lou's Cafe,"1508 Taraval St, San Francisco, CA 94116, United States",4.7,San Francisco,CA,-122.4824415,37.7429869,american,10.68
+The Boys' Deli,"2222 Polk St, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4218073,37.797269,american,13.62
+Submarine Center,"820 Ulloa St, San Francisco, CA 94127, United States",4.7,San Francisco,CA,-122.4653946,37.7408162,american,7.28
+Mr Pickles sandwich shop,"3380 20th St unit 103, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4167346,37.7588849,american,13.05
+Saigon Sandwich,"560 Larkin St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4173768,37.7831232,american,4
+Pop's Sandwich Shop,"737 Portola Dr, San Francisco, CA 94127, United States",4.1,San Francisco,CA,-122.4535961,37.7439718,american,10.22
+Miss Tomato Sandwich Shop,"388 Market St, San Francisco, CA 94111, United States",4.6,San Francisco,CA,-122.3979296,37.7922799,american,10.37
+B,"720 Howard St, San Francisco, CA 94103, United States",4.2,San Francisco,CA,-122.4016667,37.7847222,bar,10.5
+The Snug,"2301 Fillmore St, San Francisco, CA 94115, United States",4.4,San Francisco,CA,-122.4343793,37.7908403,bar,17.27
+The Pawn Shop,"993 Mission St, San Francisco, CA 94103, United States",4.6,San Francisco,CA,-122.4083594,37.7810909,bar,16.38
 Absinthe Brasserie & Bar,"398 Hayes St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4228126,37.7771426,bar,15
-Alice's,"1599 Sanchez St, San Francisco, CA 94131, United States",4.4,San Francisco,CA,-122.4287683,37.7436934,chinese,11
-Al's Super Cafe,"3286 Mission St, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4209255,37.744299,diner,10
-Amami Sushi Bistro SF,"4435 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4326684,37.727131,japanese,12
-An Chi Vietnamese Cuisine,"4683 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.435653,37.7233636,vietnamese,12
-Ananda Fuara,"1298 Market St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4163209,37.7778387,healthy,10
-Andersen Bakery,"1390 Market St suite b, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.417537,37.7770317,bakery,7
-Art's Cafe,"747 Irving St, San Francisco, CA 94122, United States",4.7,San Francisco,CA,-122.4660459,37.7639404,diner,6
-Atlas Cafe,"3049 20th St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4114619,37.7589457,american,9
-B,"720 Howard St, San Francisco, CA 94103, United States",4.2,San Francisco,CA,-122.4016667,37.7847222,bar,10
-Bac Lieu Restaurant,"3216 Mission St, San Francisco, CA 94110, United States",4.6,San Francisco,CA,-122.4203283,37.7452242,vietnamese,14
-Balboa Cafe,"3199 Fillmore St, San Francisco, CA 94123, United States",4.3,San Francisco,CA,-122.4361023,37.7988162,bar,15
-Balboa Ice Cream,"1844 San Jose Avenue, San Francisco, CA 94112, United States",4.7,San Francisco,CA,-122.4408517,37.728191,ice cream and frozen,6
-Barbacco,"220 California St, San Francisco, CA 94111, United States",4.3,San Francisco,CA,-122.3992691,37.7934314,italian,16
-BB Tea,"1314 Noriega St, San Francisco, CA 94122, United States",4.3,San Francisco,CA,-122.4778976,37.7543075,boba,5
-Big Joe's,"717 Monterey Blvd, San Francisco, CA 94127, United States",4.6,San Francisco,CA,-122.4515895,37.731384,diner,12
-Bite,"912 Sutter St, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4155197,37.7884662,american,11
-Boba Gen,"260 5th St, San Francisco, CA 94103, United States",4.1,San Francisco,CA,-122.4041914,37.7806685,boba,7
-Boba Guys,"429 Stockton St, San Francisco, CA 94108, United States",4.4,San Francisco,CA,-122.4072284,37.7899788,boba,3
-BOTTEGA,"1132 Valencia St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4211945,37.7547152,italian,14
-Boudin Bakery Cafe,"3251 20th Ave, San Francisco, CA 94132, United States",4.2,San Francisco,CA,-122.476886,37.728669,bakery,7
-Boudin Bakery Cafe,"Bayshore Fwy, San Francisco, CA 94128, United States",3.3,San Francisco,CA,-122.3876191,37.6198717,bakery,12
-Brew Cha,"3420 18th St #001, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4200267,37.762001,boba,6
-Bullshead Restaurant,"840 Ulloa St, San Francisco, CA 94127, United States",4.4,San Francisco,CA,-122.4654386,37.7409311,comfort food,14
-Burger Joint,"806 S Airport Blvd, San Francisco, CA 94128, United States",3.8,San Francisco,CA,-122.3816145,37.6177257,comfort food,7
-Burrito Loco,"850 Ulloa St, San Francisco, CA 94127, United States",4.5,San Francisco,CA,-122.4655902,37.7409158,mexican,8
-Cafe Bakery & Restaurant,"1365 Noriega St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4782629,37.754049,bakery,7
-Cafe de Casa,"2701 Leavenworth St, San Francisco, CA 94133, United States",4.7,San Francisco,CA,-122.4189176,37.8061425,american,7
-Cafe de Casa,"3985 17th St, San Francisco, CA 94114, United States",4.7,San Francisco,CA,-122.4348101,37.7623385,american,9
-Cafe Tiramisu,"28 Belden Pl, San Francisco, CA 94104, United States",4.3,San Francisco,CA,-122.403641,37.791213,american,1
-Casa Mexicana,"3917 24th St, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.4301562,37.7513321,mexican,10
-Cesario's,"601 Sutter St, San Francisco, CA 94102, United States",4.2,San Francisco,CA,-122.4105083,37.7888853,italian,26
-Chaiya Thai Restaurant,"272 Claremont Blvd, San Francisco, CA 94127, United States",4.3,San Francisco,CA,-122.4651024,37.7410867,thai,14
-Cinderella Bakery & Cafe,"436 Balboa St, San Francisco, CA 94118, United States",4.7,San Francisco,CA,-122.4636784,37.7773724,bakery,15
-Coco's Ramen,"3319 Mission St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.420913,37.7437713,japanese,14
-Crossroad Pizzeria,"1596 Market St, San Francisco, CA 94102, United States",4.6,San Francisco,CA,-122.4206809,37.7744592,pizza,11
-Deli 23,"2449 23rd St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4043412,37.7543198,comfort food,8
-Domo,"511 Laguna St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4262943,37.7758879,japanese,13
-Doppio Zero San Francisco,"395 Hayes St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4227688,37.7767846,italian,18
-Double Rainbow Ice Cream,"415 Castro St, San Francisco, CA 94114, United States",4.8,San Francisco,CA,-122.4350062,37.762276,ice cream and frozen,10
-Dumpling Home,"298 Gough St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4226361,37.7758205,chinese,13
-Pho Ha Tien,"1900 Ocean Ave, San Francisco, CA 94127, United States",4.1,San Francisco,CA,-122.4622038,37.725428,vietnamese,13
+Heritage Restaurant & Bar,"708 Clement St, San Francisco, CA 94118, United States",4.4,San Francisco,CA,-122.4668502,37.7829781,bar,22.15
+Cafe Bakery & Restaurant,"1365 Noriega St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4782629,37.754049,bakery,7.95
+Le Marais Bakery,"498 Sanchez St, San Francisco, CA 94114, United States",4.3,San Francisco,CA,-122.43076,37.7612552,bakery,13.93
+Cinderella Bakery & Cafe,"436 Balboa St, San Francisco, CA 94118, United States",4.7,San Francisco,CA,-122.4636784,37.7773724,bakery,15.82
+Tartine Bakery,"600 Guerrero St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4239653,37.7614598,bakery,10.21
+Boudin Bakery Cafe,"3251 20th Ave, San Francisco, CA 94132, United States",4.2,San Francisco,CA,-122.476886,37.728669,bakery,12.17
+Boudin Bakery,"160 Jefferson St, San Francisco, CA 94133, United States",4.4,San Francisco,CA,-122.4149149,37.8084403,bakery,13.1
+Boudin Bakery Cafe,"4 Embarcadero Ctr, San Francisco, CA 94111, United States",4,San Francisco,CA,-122.3958644,37.7949649,bakery,12.17
+Andersen Bakery,"1390 Market St suite b, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.417537,37.7770317,bakery,7.14
+Boba Guys,"429 Stockton St, San Francisco, CA 94108, United States",4.4,San Francisco,CA,-122.4072277,37.7899791,boba,3.75
+BB Tea,"1314 Noriega St, San Francisco, CA 94122, United States",4.2,San Francisco,CA,-122.4778976,37.7543075,boba,5.28
+My Cup of Tea,"2666 Ocean Ave, San Francisco, CA 94132, United States",4.2,San Francisco,CA,-122.474348,37.7323821,boba,9.93
+Boba Gen,"260 5th St, San Francisco, CA 94103, United States",4.1,San Francisco,CA,-122.4041914,37.7806685,boba,7.12
+TEAZO,"1050 Taraval St, San Francisco, CA 94116, United States",3.8,San Francisco,CA,-122.4776752,37.7431508,boba,5.75
+Plentea,"341 Kearny St, San Francisco, CA 94108, United States",4.4,San Francisco,CA,-122.404346,37.7913914,boba,5.7
+Qualitea,"4023 18th St, San Francisco, CA 94114, United States",4.5,San Francisco,CA,-122.433338,37.7608947,boba,4.87
+Tea Plus Tea Bar,"4482 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4339394,37.726099,boba,5.25
+SimplexiTea,"12 10th St, San Francisco, CA 94103, United States",4.4,San Francisco,CA,-122.4171064,37.7759647,boba,4.83
+Brew Cha,"3420 18th St #001, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4200267,37.762001,boba,6.56
+Local Diner,"1244 Market St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4156924,37.7782439,diner,13.98
+Mel's Drive-In,"801 Mission St, San Francisco, CA 94103, United States",4,San Francisco,CA,-122.4044376,37.7840396,diner,16.99
+Big Joe's,"717 Monterey Blvd, San Francisco, CA 94127, United States",4.6,San Francisco,CA,-122.4515895,37.731384,diner,12.78
+Mel's Drive-In,"2165 Lombard St, San Francisco, CA 94123, United States",4.1,San Francisco,CA,-122.4371151,37.7995872,diner,16.99
+Mel's Drive-In,"3355 Geary Blvd, San Francisco, CA 94118, United States",4.1,San Francisco,CA,-122.4548598,37.7812061,diner,16.99
+Grubstake Diner,"1525 Pine St, San Francisco, CA 94109, United States",4.1,San Francisco,CA,-122.4208507,37.7893701,diner,15.3
+Tennessee Grill,"1128 Taraval St, San Francisco, CA 94116, United States",4.2,San Francisco,CA,-122.4783943,37.7430782,diner,7.37
+Mel's Kitchen,"1050 Van Ness Ave, San Francisco, CA 94109, United States",3.9,San Francisco,CA,-122.4211515,37.7856046,diner,18.94
+Al's Super Cafe,"3286 Mission St, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4209255,37.744299,diner,10.96
+Fog City,"1300 Battery St, San Francisco, CA 94111, United States",4.3,San Francisco,CA,-122.4018398,37.8035212,diner,16.61
+Art's Cafe,"747 Irving St, San Francisco, CA 94122, United States",4.7,San Francisco,CA,-122.4660459,37.7639404,american,6.33
+Atlas Cafe,"3049 20th St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4114619,37.7589457,american,9.23
+Red Cafe,"2894 Mission St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4184842,37.7507443,american,15.09
+Cafe de Casa,"3985 17th St, San Francisco, CA 94114, United States",4.7,San Francisco,CA,-122.4348101,37.7623385,american,10.97
+Cafe de Casa,"2701 Leavenworth St, San Francisco, CA 94133, United States",4.7,San Francisco,CA,-122.4189176,37.8061425,american,10.97
+Roxanne Cafe,"570 Powell St, San Francisco, CA 94108, United States",4.2,San Francisco,CA,-122.408675,37.7900735,american,17.68
+Beyond Cafe,"1010 Bryant St, San Francisco, CA 94103, United States",4.5,San Francisco,CA,-122.4074469,37.7723504,american,14.2
+Na Ya Dessert Cafe,"5338 Geary Blvd, San Francisco, CA 94121, United States",4.4,San Francisco,CA,-122.4768617,37.7806373,ice cream and frozen,13.64
+Na Ya Dessert Cafe,"535 Octavia St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4248817,37.7772306,ice cream and frozen,13.64
+Kowloon Tong Dessert Cafe,"393 7th Ave, San Francisco, CA 94118, United States",4.3,San Francisco,CA,-122.465615,37.7813609,ice cream and frozen,7.63
+Sweet Mango Dessert Cafe,"5217 Geary Blvd, San Francisco, CA 94118, United States",4.2,San Francisco,CA,-122.4754603,37.7803425,ice cream and frozen,7.79
+Sweet Glory,"721 Larkin St, San Francisco, CA 94109, United States",4.9,San Francisco,CA,-122.4179322,37.7845612,ice cream and frozen,7.2
+The Baked Bear,"303 Columbus Ave, San Francisco, CA 94133, United States",4.6,San Francisco,CA,-122.407307,37.798116,ice cream and frozen,8.97
+Ping Yang Thai Grill & Dessert,"955 Larkin St, San Francisco, CA 94109, United States",4.4,San Francisco,CA,-122.4185411,37.7868867,ice cream and frozen,12.27
+Aegean Delights,"545 Castro St, San Francisco, CA 94114, United States",4.4,San Francisco,CA,-122.4347985,37.7601669,ice cream and frozen,6.25
+Sophie's Crepes,"1581 Webster St #275, San Francisco, CA 94115, United States",4.2,San Francisco,CA,-122.4318139,37.784925,ice cream and frozen,7.6
+Matcha Cafe Maiko,"3251 20th Ave Ste 250K, San Francisco, CA 94132, United States",4.5,San Francisco,CA,-122.4768761,37.7277726,ice cream and frozen,5.64
+Wako Japanese Restaurant,"211 Clement St, San Francisco, CA 94118, United States",4.7,San Francisco,CA,-122.4615554,37.7829722,japanese,9.53
+Saru Sushi Bar,"3856 24th St, San Francisco, CA 94114, United States",4.7,San Francisco,CA,-122.4288385,37.7517086,japanese,9.21
+Ryoko's Japanese Restaurant & Bar,"619 Taylor St, San Francisco, CA 94102, United States",4.4,San Francisco,CA,-122.4120379,37.7881959,japanese,10.7
+Eiji,"317 Sanchez St, San Francisco, CA 94114, United States",4.5,San Francisco,CA,-122.4307292,37.7640639,japanese,9.41
+Yuubi Japanese Restaurant,"501 Balboa St, San Francisco, CA 94118, United States",4.5,San Francisco,CA,-122.4642944,37.7771101,japanese,14.73
+Chaiya Thai Restaurant,"272 Claremont Blvd, San Francisco, CA 94127, United States",4.4,San Francisco,CA,-122.4651024,37.7410867,thai,15.45
+Zabb Thai Cuisine,"4440 Mission St, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.433613,37.726594,thai,16.14
+One Waan Thai,"2922 Diamond St, San Francisco, CA 94131, United States",4.2,San Francisco,CA,-122.4344375,37.7331808,thai,16.51
+KRUA Thai,"525 Valencia St, San Francisco, CA 94110, United States",4,San Francisco,CA,-122.421613,37.7644322,thai,13.59
+King of Thai Noodle Cafe,"1541 Taraval St, San Francisco, CA 94116, United States",4.1,San Francisco,CA,-122.4828445,37.7425837,thai,15.8
+Sriracha Thai Cuisine,"1319 9th Ave, San Francisco, CA 94122, United States",4.4,San Francisco,CA,-122.4664831,37.763619,thai,15.1
+Tycoon Thai Restaurant,"620 O'Farrell St, San Francisco, CA 94109, United States",4.5,San Francisco,CA,-122.4151324,37.785644,thai,11.93
+Thai Chef,"4133 18th St, San Francisco, CA 94114, United States",4.3,San Francisco,CA,-122.4357986,37.7607456,thai,13.32
+Sri Thai Cuisine,"4621 Lincoln Way, San Francisco, CA 94122, United States",4.4,San Francisco,CA,-122.5078144,37.7639768,thai,14.08
+Ocean Thai Restaurant,"2545 Ocean Ave, San Francisco, CA 94132, United States",4,San Francisco,CA,-122.4730504,37.7313454,thai,12.02
+Lers Ros Thai,"307 Hayes St, San Francisco, CA 94102, United States",4.2,San Francisco,CA,-122.4217422,37.7769044,thai,16.87
+Sweet Lime Thai Cuisine,"2100 Sutter St, San Francisco, CA 94115, United States",4.3,San Francisco,CA,-122.4351187,37.7860026,thai,15.01
+Jitlada Thai Cuisine,"1826 Buchanan St, San Francisco, CA 94115, United States",4.5,San Francisco,CA,-122.4298429,37.7869423,thai,16.23
+Monza Pizzeria,"1934 Ocean Ave, San Francisco, CA 94127, United States",4.4,San Francisco,CA,-122.4632672,37.7258747,pizza,15.12
+Little Star Pizza Divisadero,"846 Divisadero St, San Francisco, CA 94117, United States",4.6,San Francisco,CA,-122.4380167,37.7775299,pizza,12.9
+Monterey Pizza & Asian Zap,"599 Monterey Blvd, San Francisco, CA 94127, United States",4.6,San Francisco,CA,-122.44876,37.7314022,pizza,14.36
+Sophia's Pizzeria,"1934 Ocean Ave, San Francisco, CA 94127, United States",4.1,San Francisco,CA,-122.4633133,37.7258228,pizza,15.62
+The Pizza Shop,"3104 24th St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4143451,37.7525977,pizza,27.11
+Eagle Pizzeria,"1712 Taraval St, San Francisco, CA 94116, United States",4.4,San Francisco,CA,-122.484582,37.7428649,pizza,22.57
+Pizza Due,"489 Church St, San Francisco, CA 94114, United States",4.5,San Francisco,CA,-122.4284188,37.7631175,pizza,13.69
+La Ciccia,"291 30th St, San Francisco, CA 94131, United States",4.7,San Francisco,CA,-122.4266561,37.7420006,italian,14.78
+Manzoni,"2788 Diamond St, San Francisco, CA 94131, United States",4.6,San Francisco,CA,-122.4339389,37.7347556,italian,21.42
+Lupa Trattoria,"4109 24th St, San Francisco, CA 94114, United States",4.5,San Francisco,CA,-122.434547,37.7511538,italian,16.5
+Ragazza,"311 Divisadero St, San Francisco, CA 94117, United States",4.5,San Francisco,CA,-122.4374639,37.7724494,italian,14.44
+Trattoria da Vittorio,"150 W Portal Ave, San Francisco, CA 94127, United States",4.5,San Francisco,CA,-122.4678332,37.7394014,italian,21.68
+Ristorante Milano,"1448 Pacific Ave, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4190905,37.7954584,italian,16.58
+BOTTEGA,"1132 Valencia St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4211945,37.7547152,italian,14.86
+21 Taste House,"1109 Ocean Ave, San Francisco, CA 94112, United States",4.3,San Francisco,CA,-122.4544376,37.7233872,japanese,10.79
+Coco's Ramen,"3319 Mission St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.420913,37.7437713,japanese,14.95
+Nojo Ramen Tavern,"231 Franklin St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4214764,37.7767268,japanese,12.6
+Mensho Tokyo SF,"672 Geary St, San Francisco, CA 94102, United States",4.5,San Francisco,CA,-122.4143432,37.7867033,japanese,7.48
+Saiwaii Ramen,"2240 Irving St, San Francisco, CA 94122, United States",4.3,San Francisco,CA,-122.4821467,37.7635208,japanese,10.86
+Hinodeya Ramen Bar,"1737 Buchanan St, San Francisco, CA 94115, United States",4.4,San Francisco,CA,-122.430058,37.7862424,japanese,20.28
+Ushi Taro Ramen,"1382 9th Ave, San Francisco, CA 94122, United States",4.5,San Francisco,CA,-122.4660984,37.76255,japanese,13
+Rural Ramen Bar,"1059 Powell St, San Francisco, CA 94108, United States",4.5,San Francisco,CA,-122.4099227,37.7944985,japanese,12.97
+Umai Ramen House,"22 Peace Plaza Suite 560, San Francisco, CA 94115, United States",4.1,San Francisco,CA,-122.4291381,37.7852314,japanese,13.14
+Genki Ramen,"4014 Geary Blvd, San Francisco, CA 94118, United States",3.9,San Francisco,CA,-122.4625799,37.7813949,japanese,7.7
+Swensen's,"1999 Hyde St, San Francisco, CA 94109, United States",4.6,San Francisco,CA,-122.4191958,37.7990352,ice cream and frozen,5.56
+Joe's Ice Cream,"5420 Geary Blvd, San Francisco, CA 94121, United States",4.5,San Francisco,CA,-122.4777297,37.7806048,ice cream and frozen,10.5
+Double Rainbow Ice Cream,"415 Castro St, San Francisco, CA 94114, United States",4.8,San Francisco,CA,-122.4350046,37.7622612,ice cream and frozen,10.25
+Smitten Ice Cream,"904 Valencia St, San Francisco, CA 94110, United States",4.5,San Francisco,CA,-122.4214599,37.7583115,ice cream and frozen,19
+Nieves Cinco De Mayo,"3052 16th St, San Francisco, CA 94103, United States",4.5,San Francisco,CA,-122.4207977,37.7651397,ice cream and frozen,8.27
+Matcha Cafe Maiko,"1581 Webster St # 175, San Francisco, CA 94115, United States",4.7,San Francisco,CA,-122.4317274,37.7849544,ice cream and frozen,5.64
+Enjoy Vegetarian Restaurant,"754 Kirkham St #3619, San Francisco, CA 94122, United States",4.5,San Francisco,CA,-122.4691507,37.7603004,healthy,17.28
+Indochine Vegan,"508 Valencia St, San Francisco, CA 94110, United States",4.3,San Francisco,CA,-122.4221595,37.7646261,healthy,10.36
+Enjoy Vegetarian,"839 Kearny St, San Francisco, CA 94108, United States",4.3,San Francisco,CA,-122.4052367,37.7958626,healthy,9.49
+VeganBurg San Francisco,"1466 Haight St, San Francisco, CA 94117, United States",4.5,San Francisco,CA,-122.4464801,37.7701846,healthy,18.49
+Nourish Cafe,"1030 Hyde St, San Francisco, CA 94109, United States",4.3,San Francisco,CA,-122.4170789,37.7905176,healthy,9.82
+Thai Idea Vegetarian,"710 Polk St, San Francisco, CA 94109, United States",4.5,San Francisco,CA,-122.4191412,37.7834535,healthy,14.71
+The Happy Vegan,"293 Bayshore Blvd, San Francisco, CA 94124, United States",4.5,San Francisco,CA,-122.4048329,37.7431855,healthy,11.4
+Mediterranean Vegan Bowls,"475 6th St, San Francisco, CA 94103, United States",2,San Francisco,CA,-122.4025711,37.7766263,healthy,11.13
+Gracias Madre,"2211 Mission St, San Francisco, CA 94110, United States",4.4,San Francisco,CA,-122.4190976,37.7615527,healthy,18.99
+Gao Viet Kitchen,"313 S San Mateo Dr, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.3237529,37.5640556,vietnamese,16.75
+East Side Banh Mi,"5 S Ellsworth Ave, San Mateo, CA 94401, United States",4.7,San Mateo,CA,-122.3248422,37.5670756,vietnamese,13.01
+Noodles & Things,"79 E 3rd Ave, San Mateo, CA 94401, United States",4,San Mateo,CA,-122.3246288,37.5641422,vietnamese,16.56
+New Thai Elephant,"200 S B St, San Mateo, CA 94401, United States",3.9,San Mateo,CA,-122.3232644,37.566076,vietnamese,14.8
+Charm Thai Eatery,"1428 S El Camino Real, San Mateo, CA 94402, United States",4.4,San Mateo,CA,-122.3161694,37.5538694,vietnamese,16.53
+Street Food Cafe,"2946 S Norfolk St, San Mateo, CA 94403, United States",4,San Mateo,CA,-122.2853594,37.5448289,vietnamese,16.5
+Green Leaf Bistro,"35 E 3rd Ave, San Mateo, CA 94401, United States",4.5,San Mateo,CA,-122.3255362,37.5636488,vietnamese,10.83
+Thonglor Thai Bistro,"173 E 4th Ave, San Mateo, CA 94401, United States",4.1,San Mateo,CA,-122.3228988,37.5641598,vietnamese,16.33
+Hot Wok Bistro,"1012 Howard Ave, San Mateo, CA 94401, United States",4.6,San Mateo,CA,-122.333264,37.585788,chinese,14.19
+Little Hunan Restaurant,"120 De Anza Blvd, San Mateo, CA 94402, United States",4.4,San Mateo,CA,-122.3365337,37.5211704,chinese,14.26
+Oceanic Restaurant,"2507 S El Camino Real, San Mateo, CA 94403, United States",4.2,San Mateo,CA,-122.3051831,37.5443293,chinese,13.47
+Hot Wok Cafe,"2960 S Norfolk St, San Mateo, CA 94403, United States",4,San Mateo,CA,-122.2852061,37.5446634,chinese,14.69
+Little Shanghai Restaurant,"17 E 25th Ave, San Mateo, CA 94403, United States",4.2,San Mateo,CA,-122.305402,37.5449654,chinese,6.88
+Silver Lake Seafood Restaurant,"2291 S El Camino Real, San Mateo, CA 94403, United States",4.4,San Mateo,CA,-122.3067171,37.5456844,chinese,10.4
+Cheung Hing,"40 42nd Ave, San Mateo, CA 94403, United States",3.7,San Mateo,CA,-122.2904079,37.5300043,chinese,15.2
+Chef Sha,"231 S Ellsworth Ave, San Mateo, CA 94401, United States",3.9,San Mateo,CA,-122.3232851,37.5654882,chinese,20.43
+La Fonda de San Mateo,"2310 S El Camino Real, San Mateo, CA 94403, United States",4.4,San Mateo,CA,-122.3067715,37.5452513,mexican,6.46
+Fernando's Mexican Restaurant,"63 37th Ave, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.2956476,37.5336503,mexican,17.36
+Pancho Villa Taqueria,"365 S B St, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.3216043,37.5650382,mexican,8.32
+Tacos El Flamingo,"168 E 4th Ave, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.3223772,37.5637672,mexican,8.79
+Suavecito Birria & Tacos,"1100 S Amphlett Blvd, San Mateo, CA 94402, United States",4.7,San Mateo,CA,-122.3072601,37.5641515,mexican,8.32
+Guadalajara Grill,"19 Laurie Meadows Dr, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.2874288,37.5310074,mexican,6.83
+Taqueria El Nayarita,"660 E 3rd Ave, San Mateo, CA 94401, United States",3.9,San Mateo,CA,-122.3194309,37.5672177,mexican,7.44
+The Habit Burger Grill,"1100 Park Pl Bldg. 2 Suite 20, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.291058,37.5448523,comfort food,11.5
+Roam Artisan Burgers,"3081 S Delaware St, San Mateo, CA 94403, United States",4,San Mateo,CA,-122.297827,37.5405383,comfort food,16.3
+Sal's Burgers,"3158 Campus Dr, San Mateo, CA 94403, United States",4.6,San Mateo,CA,-122.3285659,37.5339434,comfort food,15.51
+Jack's Restaurant and Bar,"1750 S El Camino Real, San Mateo, CA 94402, United States",4.4,San Mateo,CA,-122.3134637,37.551087,comfort food,16.78
+Shake Shack Hillsdale,"33 W Sailer Dr, San Mateo, CA 94403, United States",3.9,San Mateo,CA,-122.3015053,37.5385157,comfort food,12.49
+The Burger Den,"2920 S Norfolk St, San Mateo, CA 94403, United States",1,San Mateo,CA,-122.2853038,37.5454989,comfort food,13.24
+Apple Fritter,"1901 S Norfolk St, San Mateo, CA 94403, United States",4.5,San Mateo,CA,-122.290874,37.5536159,comfort food,11.64
+Lazy Dog Restaurant & Bar,"2208 Bridgepointe Pkwy, San Mateo, CA 94404, United States",4.3,San Mateo,CA,-122.283111,37.560525,comfort food,15.9
+BJ's Restaurant & Brewhouse,"2206 Bridgepointe Pkwy, San Mateo, CA 94404, United States",3.9,San Mateo,CA,-122.282872,37.5608612,comfort food,15.76
+Heidi's Pies Restaurant,"1941 S El Camino Real, San Mateo, CA 94403, United States",4.2,San Mateo,CA,-122.3102857,37.5489646,comfort food,10.75
+Jack in the Box,"555 E 3rd Ave, San Mateo, CA 94401, United States",3.6,San Mateo,CA,-122.3205288,37.5670879,comfort food,7.32
+Winner Winner Chicken,"84 Hillsdale Shopping Center, San Mateo, CA 94403, United States",4,San Mateo,CA,-122.3014998,37.5382725,comfort food,11.24
+Ay Caray Taqueria,"478 S Norfolk St, San Mateo, CA 94401, United States",4.1,San Mateo,CA,-122.3104666,37.5713475,comfort food,13.57
+Del Oro Taqueria Mexican Grill,"127 W 25th Ave, San Mateo, CA 94403, United States",4.5,San Mateo,CA,-122.3077137,37.5435056,comfort food,8.74
+Beach Hut Deli,"1798 S Delaware St, San Mateo, CA 94402, United States",4.5,San Mateo,CA,-122.3066124,37.5544939,comfort food,11.6
+Ike's Place,"680 E 3rd Ave, San Mateo, CA 94401, United States",4.6,San Mateo,CA,-122.3193179,37.5674555,comfort food,11.31
+Ravioli House,"505 S B St, San Mateo, CA 94401, United States",4.6,San Mateo,CA,-122.3205754,37.5639897,comfort food,8.18
+Mr Pickle's Sandwich Shop,"1420 S El Camino Real, San Mateo, CA 94402, United States",4.3,San Mateo,CA,-122.3163764,37.5539264,comfort food,11.49
+Cafe 2k,"2000 Alameda de las Pulgas, San Mateo, CA 94403, United States",4.6,San Mateo,CA,-122.3213032,37.544614,comfort food,9.99
+Jersey Mike's Subs,"2925 S El Camino Real, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.3008713,37.5403822,comfort food,9.82
+Ben's Fast Food,"66 21st Ave, San Mateo, CA 94403, United States",3.7,San Mateo,CA,-122.3083157,37.5477207,american,9.17
+The Barrel Bistro and Wine Bar,"246 S B St, San Mateo, CA 94401, United States",4.5,San Mateo,CA,-122.3228736,37.5657726,bar,23.63
+Mortar & Pestle Bar,"130 S B St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3239193,37.5666587,bar,13.79
+B Street & Vine,"320 S B St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.322333,37.565168,bar,20.99
+Cha Express,"212 E 3rd Ave, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3228174,37.5651052,boba,6.45
+Bobabia,"271 Baldwin Ave, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3254694,37.5671917,boba,3.62
+Urban Ritual,"140 S B St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3237254,37.5665398,boba,5.85
+Nightcap Tea,"66 21st Ave, San Mateo, CA 94403, United States",0,San Mateo,CA,-122.3083157,37.5477207,boba,5.86
+Yifang Taiwan Fruit Tea,"110 S B St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3240251,37.5668226,boba,6.74
+Denny's,"2920 S Norfolk St, San Mateo, CA 94403, United States",3.5,San Mateo,CA,-122.2853038,37.5454989,diner,11.6
+Neal's Coffee Shop,"114 De Anza Blvd, San Mateo, CA 94402, United States",4.3,San Mateo,CA,-122.336832,37.5213907,diner,15.88
+Avenida Restaurant,"201 E 3rd Ave, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.3231196,37.565175,diner,19.25
+Central Park Bistro,"181 E 4th Ave, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3228201,37.5642295,diner,21.04
+Patio Coffee Shop,"25 W 25th Ave, San Mateo, CA 94403, United States",4.5,San Mateo,CA,-122.3063113,37.5439046,american,11.59
+Philz Coffee,"113 S B St, San Mateo, CA 94401, United States",4.6,San Mateo,CA,-122.3237087,37.5669754,american,5.5
+Dessert Republic,"138 Main St, San Mateo, CA 94401, United States",4.1,San Mateo,CA,-122.3233401,37.5669537,ice cream and frozen,12.77
+Icicles,"222 E 3rd Ave, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.322643,37.5652245,ice cream and frozen,14.21
+Sweet Moment,"137 E 3rd Ave, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.324049,37.5646476,ice cream and frozen,7.51
+Cold Stone Creamery,"375 2nd Ave, San Mateo, CA 94401, United States",4,San Mateo,CA,-122.3228142,37.5667859,ice cream and frozen,16.33
+Old Town Sushi,"100 S B St, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.3240944,37.5668968,japanese,13.76
+Sushi Sam's Edomata,"218 E 3rd Ave, San Mateo, CA 94401, United States",4.6,San Mateo,CA,-122.3227667,37.5651366,japanese,23.29
+Noma Sushi,"152 South Blvd, San Mateo, CA 94402, United States",4.4,San Mateo,CA,-122.3110328,37.5547052,japanese,16.27
+Joy Sushi,"30 S B St, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.3244785,37.5672459,japanese,16.02
+Kaori Sushi and Sake Bar,"123 W 25th Ave, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.3076589,37.5435384,japanese,19.6
+Izakaya Mai,"212 2nd Ave, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.3234899,37.5659546,japanese,14.03
+Gyu-Kaku Japanese BBQ,"329 S Ellsworth Ave, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3224938,37.5645472,japanese,6.35
+Aldo's Pizza,"600 S Norfolk St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3092081,37.5709114,pizza,11.41
+Amici's East Coast Pizzeria,"69 E 3rd Ave, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.3248565,37.5640816,pizza,6.72
+Rise Woodfire San Mateo,"2 N B St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3241065,37.5680359,pizza,22.02
+Mr Pizza Man San Mateo,"201 E 4th Ave, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.322313,37.56445,pizza,26.56
+Pizza My Heart,"140 E 4th Ave, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.3227003,37.5637701,pizza,5.75
+Round Table Pizza,"844 N Delaware St, San Mateo, CA 94401, United States",4,San Mateo,CA,-122.3332886,37.5798697,pizza,27.2
+Round Table Pizza,"1852 S Norfolk St, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.2939806,37.5543785,pizza,27.2
+Round Table Pizza,"61 43rd Ave Ste 1001, San Mateo, CA 94403, United States",4.3,San Mateo,CA,-122.2895521,37.5287857,pizza,27.2
+Round Table Pizza,"1304 W Hillsdale Blvd, San Mateo, CA 94403, United States",4.1,San Mateo,CA,-122.3269665,37.5340041,pizza,27.2
+Round Table Pizza,"430 S Norfolk St, San Mateo, CA 94401, United States",4,San Mateo,CA,-122.3109077,37.5716089,pizza,27.2
+Tomatina,"401 S B St, San Mateo, CA 94401, United States",4.2,San Mateo,CA,-122.3213592,37.5647568,pizza,15.61
+Vespucci Ristorante Italiano,"147 E 3rd Ave, San Mateo, CA 94401, United States",4.7,San Mateo,CA,-122.3238832,37.564624,italian,18.43
+La Lanterna,"180 W 25th Ave, San Mateo, CA 94403, United States",4.4,San Mateo,CA,-122.3087981,37.5434922,italian,23.16
+Sapore Express,"125 E 4th Ave, San Mateo, CA 94401, United States",4.7,San Mateo,CA,-122.3229865,37.5639682,italian,16.96
+Taishoken Ramen,"47 E 4th Ave, San Mateo, CA 94401, United States",4.5,San Mateo,CA,-122.3241043,37.5633138,japanese,14.67
+Zen Noodle Bar,"668 E 3rd Ave, San Mateo, CA 94401, United States",4.1,San Mateo,CA,-122.3193943,37.567476,japanese,12.88
+Taichi Shabu Shabu,"38 E 4th Ave, San Mateo, CA 94401, United States",4.1,San Mateo,CA,-122.324269,37.562693,japanese,16.41
+Snacks Antojitos Mexicanos,"31 N B St, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.3254897,37.5683306,ice cream and frozen,13.51
+sweetgreen,"1 E 3rd Ave, San Mateo, CA 94401, United States",4.3,San Mateo,CA,-122.3259359,37.563364,healthy,9.59
+Urban Momo,"254 S B St, San Mateo, CA 94401, United States",4.4,San Mateo,CA,-122.3227619,37.5656687,healthy,12.5
+Tannourine Restaurant,"120 W 25th Ave, San Mateo, CA 94403, United States",4.4,San Mateo,CA,-122.3074614,37.5438436,healthy,13.14
+Umami Express,"66 21st Ave, San Mateo, CA 94403, United States",0,San Mateo,CA,-122.3083157,37.5477207,healthy,12.25
+Clay Oven Cuisine of India,"78 E 3rd Ave, San Mateo, CA 94401, United States",3.4,San Mateo,CA,-122.3245107,37.5638832,healthy,12.51
+Pho Ba,"415 7th Ave S, Seattle, WA 98104, United States",4.6,Seattle,WA,-122.3239002,47.598736,vietnamese,5.4
+Pho Bac Restaurant,"3300 Rainier Ave S #6034, Seattle, WA 98144, United States",4.2,Seattle,WA,-122.2945432,47.5739097,vietnamese,5.4
+i5 Pho Seattle,"213 1st Ave S, Seattle, WA 98104, United States",4.3,Seattle,WA,-122.3343916,47.6003552,vietnamese,13.24
+Hot As PHO,"1414 2nd Ave, Seattle, WA 98101, United States",4.2,Seattle,WA,-122.338131,47.608847,vietnamese,7.88
+Pho 25,"1525 3rd Ave, Seattle, WA 98101, United States",4.2,Seattle,WA,-122.3387582,47.6102795,vietnamese,12.67
+Local Pho,"2230 3rd Ave, Seattle, WA 98121, United States",4.3,Seattle,WA,-122.3443918,47.6147071,vietnamese,13.49
+PHO 4 YOU,"1201 Pine St, Seattle, WA 98101, United States",4.6,Seattle,WA,-122.3284771,47.614842,vietnamese,11.68
+Lucky's Pho,"3414 Fremont Ave N, Seattle, WA 98103, United States",4.7,Seattle,WA,-122.3495878,47.6500795,vietnamese,8.48
+Pho 99 Vietnamese Noodle House,"9828 15th Ave SW, Seattle, WA 98106, United States",4.3,Seattle,WA,-122.3530611,47.5146536,vietnamese,5.5
+Pho Vietnam,"7040 15th Ave NW, Seattle, WA 98117, United States",4.5,Seattle,WA,-122.3765775,47.6807577,vietnamese,2
+Huong Binh Restaurant,"1207 S Jackson St #104, Seattle, WA 98144, United States",4.4,Seattle,WA,-122.3163755,47.5988709,vietnamese,9.39
+Tamarind Tree,"1036 S Jackson St, Seattle, WA 98104, United States",4.4,Seattle,WA,-122.3178232,47.5998349,vietnamese,18.54
+Mekong Village,"12020 Aurora Ave N, Seattle, WA 98133, United States",4.4,Seattle,WA,-122.3445412,47.7166944,vietnamese,13.21
+Monsoon Seattle,"615 19th Ave E, Seattle, WA 98112, United States",4.5,Seattle,WA,-122.3076417,47.6248608,vietnamese,18.69
+Tai Tung Restaurant,"655 S King St, Seattle, WA 98104, United States",4.5,Seattle,WA,-122.3247683,47.5982228,chinese,8.22
+Foo Lam Chinese Restaurant,"7101 Martin Luther King Jr Way S, Seattle, WA 98118, United States",3.8,Seattle,WA,-122.283136,47.5384229,chinese,14.53
+Bamboo Village Restaurant,"4900 Stone Way N, Seattle, WA 98103, United States",4.2,Seattle,WA,-122.3403133,47.6645498,chinese,16.06
+Pike Place Chinese Cuisine,"1533 Pike Pl, Seattle, WA 98101, United States",3.1,Seattle,WA,-122.3416667,47.6091667,chinese,13.33
+New Star Seafood Restaurant,"516 S Jackson St, Seattle, WA 98104, United States",4.2,Seattle,WA,-122.326783,47.599401,chinese,17.82
+Honey Court Seafood Restaurant,"516 Maynard Ave S, Seattle, WA 98104, United States",4.2,Seattle,WA,-122.3249305,47.5978186,chinese,18.84
+Fortune Garden,"424 Maynard Ave S, Seattle, WA 98104, United States",4.3,Seattle,WA,-122.324868,47.5984975,chinese,17.85
+Genghis Khan Restaurant,"82 Stewart St, Seattle, WA 98101, United States",3.4,Seattle,WA,-122.3420987,47.6099412,chinese,14.8
+El Farol Mexican Restaurant,"1467 E Republican St, Seattle, WA 98112, United States",4.4,Seattle,WA,-122.3128931,47.6229974,mexican,16.25
+D' La Santa,"2359 10th Ave E, Seattle, WA 98102, United States",4.7,Seattle,WA,-122.320328,47.641242,mexican,42.89
+El Quetzal,"3211 Beacon Ave S, Seattle, WA 98144, United States",4.5,Seattle,WA,-122.3093118,47.5746683,mexican,9.54
+Casco Antiguo,"2102 7th Ave, Seattle, WA 98121, United States",4.3,Seattle,WA,-122.3386504,47.6162114,mexican,10.52
+El Moose,"5242 Leary Ave NW, Seattle, WA 98107, United States",4.6,Seattle,WA,-122.3817888,47.6665839,mexican,17
+Maria Sabina Mexican Restaurant & Bar,"711 Westlake Ave N, Seattle, WA 98109, United States",4.7,Seattle,WA,-122.3391079,47.626102,mexican,20.6
+El Grito Taqueria,"234 Fairview Ave N, Seattle, WA 98109, United States",4.3,Seattle,WA,-122.3339881,47.6206914,mexican,9.89
+Luna Azul,"8552 Greenwood Ave N, Seattle, WA 98103, United States",4.6,Seattle,WA,-122.3550206,47.691454,mexican,15.12
+8oz Burger & Co,"1401 Broadway, Seattle, WA 98122, United States",4.4,Seattle,WA,-122.3209648,47.6131153,comfort food,12.49
+206 Burger Company,"1000 Madison St, Seattle, WA 98104, United States",4.3,Seattle,WA,-122.3262078,47.6090671,comfort food,6.66
+Uneeda Burger,"4302 Fremont Ave N, Seattle, WA 98103, United States",4.6,Seattle,WA,-122.3497411,47.6595106,comfort food,12.4
+Burger Madness Seattle,"4117 4th Ave S, Seattle, WA 98134, United States",4.3,Seattle,WA,-122.3299532,47.5666806,comfort food,11.44
+Katsu Burger,"6538 4th Ave S, Seattle, WA 98108, United States",4.6,Seattle,WA,-122.3291367,47.5442436,comfort food,9.66
+206 Burger Company,"101 Nickerson St Suite 100, Seattle, WA 98109, United States",4.6,Seattle,WA,-122.3552798,47.6484956,comfort food,6.66
+Big Max Burger Co,"1935 Queen Anne Ave N, Seattle, WA 98109, United States",4.4,Seattle,WA,-122.3571914,47.6370363,comfort food,17.54
+Great State Burger,"2041 7th Ave, Seattle, WA 98121, United States",4.1,Seattle,WA,-122.3385154,47.6154726,comfort food,3
+Two Doors Down,"2332 E Madison St, Seattle, WA 98112, United States",4.5,Seattle,WA,-122.3016103,47.6200109,comfort food,8.33
+Rain City Burgers,"6501 Roosevelt Way NE, Seattle, WA 98115, United States",4.5,Seattle,WA,-122.3176081,47.675951,comfort food,7
+Scooter's Burgers,"5802 24th Ave NW, Seattle, WA 98107, United States",4.4,Seattle,WA,-122.3873163,47.6710517,comfort food,13.78
+Li'l Woody's,"1211 Pine St, Seattle, WA 98101, United States",4.4,Seattle,WA,-122.328183,47.614961,comfort food,7.85
+Taqueria Cantina,"89 University St, Seattle, WA 98101, United States",4.1,Seattle,WA,-122.3389026,47.6064092,comfort food,12.85
+Dos Chamucos Taqueria,"550 Queen Anne Ave N, Seattle, WA 98109, United States",4.4,Seattle,WA,-122.3565657,47.6244077,comfort food,10
+Taqueria La Fondita,"8953 Aurora Ave N, Seattle, WA 98103, United States",4.5,Seattle,WA,-122.3450217,47.6939887,comfort food,13.38
+Taqueria El Rincon Express,"8709 14th Ave S, Seattle, WA 98108, United States",4.4,Seattle,WA,-122.3150712,47.5252347,comfort food,11.88
+Taqueria La Jarochita,"5600 Delridge Way SW, Seattle, WA 98106, United States",4.7,Seattle,WA,-122.3627582,47.5517862,comfort food,10.78
+Taqueria Tehuacan,"7219 Rainier Ave S, Seattle, WA 98118, United States",4.3,Seattle,WA,-122.2709682,47.5379041,comfort food,9.84
+Metropolitan Cafe and Deli,"2312 3rd Ave #101, Seattle, WA 98121, United States",4.1,Seattle,WA,-122.3454206,47.6153742,comfort food,8.24
+Deli Shez Cafe,"318 Blanchard St, Seattle, WA 98121, United States",4,Seattle,WA,-122.3430862,47.6144399,comfort food,22.46
+DeliNoMore,"1118 5th Ave, Seattle, WA 98101, United States",4.4,Seattle,WA,-122.3328079,47.6080001,comfort food,8.12
+Metropolitan Cafe & Deli,"404-420 Dexter Ave N, Seattle, WA 98109, United States",3.8,Seattle,WA,-122.3426365,47.6225668,comfort food,8.24
+Metropolitan Cafe & Deli,"1255 Republican St, Seattle, WA 98109, United States",3.9,Seattle,WA,-122.3315417,47.6230095,comfort food,8.24
+PICK-QUICK Drive In,"2990 4th Ave S, Seattle, WA 98134, United States",4.3,Seattle,WA,-122.3288031,47.5759095,american,3.78
+Burgermaster,"9820 Aurora Ave N, Seattle, WA 98103, United States",4.4,Seattle,WA,-122.3442645,47.7010847,american,5.55
+Five Guys,"1500 NW Market St, Seattle, WA 98107, United States",4.2,Seattle,WA,-122.3764653,47.6688644,american,8.53
+Jack in the Box,"1907 4th Ave S, Seattle, WA 98134, United States",3.5,Seattle,WA,-122.3295022,47.5856861,american,8.9
+Matt's Famous Chili Dogs,"6615 E Marginal Way S, Seattle, WA 98108, United States",4.5,Seattle,WA,-122.3301157,47.543889,american,4.6
+Jack in the Box,"4749 University Way NE, Seattle, WA 98105, United States",3.3,Seattle,WA,-122.3133552,47.6647578,american,8.9
+Jack in the Box,"999 NW Leary Way, Seattle, WA 98107, United States",3.2,Seattle,WA,-122.3701346,47.6631007,american,8.9
+Potbelly,"1429 4th Ave, Seattle, WA 98101, United States",4.2,Seattle,WA,-122.3366792,47.6099157,american,6.67
+Potbelly,"2030 6th Ave, Seattle, WA 98121, United States",4.1,Seattle,WA,-122.3388351,47.6148885,american,6.67
+Pane Pane Sandwiches,"304 Union St, Seattle, WA 98101, United States",4.6,Seattle,WA,-122.3367435,47.6089573,american,10.84
+Potbelly,"1111 3rd Ave, Seattle, WA 98101, United States",4.2,Seattle,WA,-122.3354202,47.6066958,american,6.67
+Potbelly,"1208 Madison St #121, Seattle, WA 98104, United States",4.2,Seattle,WA,-122.3236671,47.610113,american,6.67
+Other Coast Cafe,"5315 Ballard Ave NW, Seattle, WA 98107, United States",4.5,Seattle,WA,-122.3837898,47.6667291,american,7.25
+Royal Grinders,"3526 Fremont Pl N B, Seattle, WA 98103, United States",4.8,Seattle,WA,-122.3507817,47.651288,american,11.68
+Mammoth,"5239 Ballard Ave NW, Seattle, WA 98107, United States",4.5,Seattle,WA,-122.3832224,47.6662531,american,11.58
+Boat Bar,"1060 E Union St, Seattle, WA 98109, United States",4.5,Seattle,WA,-122.3183912,47.613048,bar,10.76
+Yard House,"1501 4th Ave, Seattle, WA 98101, United States",4.4,Seattle,WA,-122.3374019,47.6105225,bar,17.24
+Radiator Whiskey,"94 Pike St #30, Seattle, WA 98101, United States",4.7,Seattle,WA,-122.3405592,47.608994,bar,16.18
+Patrick's Cafe & Bakery,"10003 15th Ave SW, Seattle, WA 98146, United States",4.8,Seattle,WA,-122.3541986,47.5135829,bakery,6.4
+Sugar Bakery & Cafe,"1014 Madison St, Seattle, WA 98104, United States",4.4,Seattle,WA,-122.3258204,47.6091848,bakery,10.68
+Regent Bakery & Cafe,"1404 E Pine St, Seattle, WA 98122, United States",4.3,Seattle,WA,-122.3139929,47.6154457,bakery,17.29
+Dahlia Bakery,"2001 4th Ave, Seattle, WA 98121, United States",4.6,Seattle,WA,-122.3404564,47.6131299,bakery,10.72
+The Moo Bar,"2124 Westlake Ave, Seattle, WA 98121, United States",4,Seattle,WA,-122.3380571,47.6173819,boba,7.8
+Luu's Cafe,"8507 35th Ave NE, Seattle, WA 98115, United States",4.7,Seattle,WA,-122.2911516,47.6903055,boba,5.4
+Dont Yell At Me,"4511 University Way NE, Seattle, WA 98105, United States",4.5,Seattle,WA,-122.31332,47.6617051,boba,4.9
+Drip Tea,"1416 10th Ave, Seattle, WA 98122, United States",4.4,Seattle,WA,-122.3192997,47.6133218,boba,7.78
+Ding Tea Seattle,"4725 University Way NE, Seattle, WA 98105, United States",4.4,Seattle,WA,-122.3134613,47.6638514,boba,7.04
+Meraki Tea Bar,"4701 Brooklyn Ave NE, Seattle, WA 98105, United States",4.5,Seattle,WA,-122.3144933,47.6632455,boba,6.08
+Hi Tea Cafe,"202 Broadway E, Seattle, WA 98102, United States",4.4,Seattle,WA,-122.3207068,47.6200998,boba,5.13
+Market Diner,"1514 Pike Pl, Seattle, WA 98101, United States",4.3,Seattle,WA,-122.3409761,47.6091676,diner,14.26
+Roxy's Diner,"462 N 36th St, Seattle, WA 98103, United States",4.3,Seattle,WA,-122.3527398,47.6521474,diner,15.13
+Great American Diner and Bar,"4752 California Ave SW, Seattle, WA 98116, United States",4.3,Seattle,WA,-122.3865447,47.559508,diner,14.55
+North Star Diner,"8580 Greenwood Ave N, Seattle, WA 98103, United States",4.4,Seattle,WA,-122.3551454,47.692278,diner,12.38
+Mecca Cafe,"526 Queen Anne Ave N, Seattle, WA 98109, United States",4.3,Seattle,WA,-122.3564403,47.6241008,diner,11.48
+Lowell's Restaurant,"1519 Pike Pl, Seattle, WA 98101, United States",4.4,Seattle,WA,-122.3415694,47.6090542,diner,14.98
+Hudson,"5000 E Marginal Way S, Seattle, WA 98134, United States",4.5,Seattle,WA,-122.3384273,47.5572438,diner,11.38
+Chelan Cafe,"3527 Chelan Ave SW, Seattle, WA 98106, United States",4.3,Seattle,WA,-122.3615459,47.5718578,diner,9.25
+Voula's Offshore Cafe,"658 NE Northlake Way, Seattle, WA 98105, United States",4.6,Seattle,WA,-122.3215395,47.654658,diner,3
+The Dish Cafe,"4358 Leary Wy NW, Seattle, WA 98107, United States",4.6,Seattle,WA,-122.3658031,47.6603293,diner,11.44
+Tilikum Place Cafe,"407 Cedar St, Seattle, WA 98121, United States",4.6,Seattle,WA,-122.3476806,47.6179441,american,17.36
+Miss Cafe,"1523 1st Ave, Seattle, WA 98101, United States",4.6,Seattle,WA,-122.3407592,47.6093636,american,16.15
+Cheeky Cafe,"1700 S Jackson St, Seattle, WA 98144, United States",4.5,Seattle,WA,-122.3101224,47.5993548,american,11.47
+Wild Mountain Cafe,"1408 NW 85th St, Seattle, WA 98117, United States",4.6,Seattle,WA,-122.374559,47.6908023,american,14.23
+Hard Rock Cafe,"116 Pike St, Seattle, WA 98101, United States",3.9,Seattle,WA,-122.3394821,47.6092349,american,18.2
+Cafe O Dessert,"4727 University Way NE, Seattle, WA 98105, United States",4.3,Seattle,WA,-122.313449,47.6638125,ice cream and frozen,6.53
+Che Dessert,"7101 Martin Luther King Jr Way S #102, Seattle, WA 98118, United States",4.5,Seattle,WA,-122.2823515,47.5384393,ice cream and frozen,8.23
+Bambu Desserts & Drinks,"516 7th Ave S unit A, Seattle, WA 98104, United States",4.4,Seattle,WA,-122.3235855,47.5978775,ice cream and frozen,7.95
+Gelatiamo,"1400 3rd Ave, Seattle, WA 98101, United States",4.6,Seattle,WA,-122.3368075,47.6089194,ice cream and frozen,13.11
+Nana's Green Tea,"1007 Stewart St #103, Seattle, WA 98101, United States",4.4,Seattle,WA,-122.3329204,47.6160523,ice cream and frozen,8.21
+Maneki Restaurant,"304 6th Ave S, Seattle, WA 98104, United States",4.6,Seattle,WA,-122.3261688,47.5996596,japanese,6.92
+Sushi Kashiba,"86 Pine St Suite #1, Seattle, WA 98101, United States",4.7,Seattle,WA,-122.3415365,47.6099177,japanese,23.25
+Japonessa Sushi Cocina,"1400 1st Ave, Seattle, WA 98101, United States",4.5,Seattle,WA,-122.338974,47.6080322,japanese,17.05
+Wasabi Sushi & Izakaya,"2311 2nd Ave, Seattle, WA 98121, United States",4.4,Seattle,WA,-122.3461889,47.6141611,japanese,61.88
+Shiro's Sushi,"2401 2nd Ave, Seattle, WA 98121, United States",4.6,Seattle,WA,-122.3474324,47.6147775,japanese,17.82
+Fuji Sushi,"520 South Main St, Seattle, WA 98104, United States",4.4,Seattle,WA,-122.3269433,47.6001269,japanese,17.64
+Moontree Sushi And Tapas,"516 1st Ave N, Seattle, WA 98109, United States",4.7,Seattle,WA,-122.3552546,47.623931,japanese,12.14
+Bahn Thai Restaurant,"409 Roy St, Seattle, WA 98109, United States",4.3,Seattle,WA,-122.3483769,47.6253115,thai,16.34
+Cashew Thai Cuisine,"517 Queen Anne Ave N, Seattle, WA 98109, United States",4.5,Seattle,WA,-122.3570002,47.6238396,thai,23.12
+Pestle Rock,"2305 NW Market St, Seattle, WA 98107, United States",4.5,Seattle,WA,-122.3865153,47.6685369,thai,10.53
+Little Thai Restaurant,"4142 Brooklyn Ave NE #105, Seattle, WA 98105, United States",4.3,Seattle,WA,-122.3138873,47.6582127,thai,12.17
+Kaosamai Thai Restaurant,"404 N 36th St, Seattle, WA 98103, United States",4.5,Seattle,WA,-122.3541595,47.6523902,thai,17.48
+Jai Thai Restaurant,"3423 Fremont Ave N, Seattle, WA 98103, United States",4.2,Seattle,WA,-122.3501382,47.6503668,thai,15.1
+Pop Pop Thai Street Food,"13242 Aurora Ave N #104, Seattle, WA 98133, United States",4.4,Seattle,WA,-122.3445023,47.7260613,thai,13.16
+Thai Tom,"4543 University Way NE, Seattle, WA 98105, United States",4.3,Seattle,WA,-122.3132553,47.662572,thai,8.83
+Jamjuree Thai Cuisine,"509 15th Ave E, Seattle, WA 98112, United States",4.3,Seattle,WA,-122.3127951,47.6234661,thai,14.27
+Rom Mai Thai Restaurant,"613 Broadway E, Seattle, WA 98102, United States",4.4,Seattle,WA,-122.3211519,47.6247436,thai,12.51
+Smile Thai Cuisine,"6411 Latona Ave NE, Seattle, WA 98115, United States",4.5,Seattle,WA,-122.3256197,47.6755678,thai,9.73
+Kin Dee,"2301 E Madison St, Seattle, WA 98112, United States",4.5,Seattle,WA,-122.3023688,47.6191114,thai,16.51
+Delancey,"1415 NW 70th St, Seattle, WA 98117, United States",4.6,Seattle,WA,-122.3748137,47.6794475,pizza,12.33
+BAMBINOS PIZZERIA,"401 Cedar St, Seattle, WA 98121, United States",4.5,Seattle,WA,-122.3477825,47.6178543,pizza,10.23
+Nine Pies Pizzeria,"3861 1st Ave S, Seattle, WA 98134, United States",4.7,Seattle,WA,-122.3352653,47.5679478,pizza,16.32
+Pizzeria Pulcinella,"10003 Rainier Ave S, Seattle, WA 98178, United States",4.7,Seattle,WA,-122.248222,47.5112177,pizza,14.71
+Zeeks Pizza,"419 Denny Way, Seattle, WA 98109, United States",4.3,Seattle,WA,-122.3478625,47.6184655,pizza,22.03
+The Independent Pizzeria,"4235 E Madison St, Seattle, WA 98112, United States",4.7,Seattle,WA,-122.277327,47.6360705,pizza,11.5
+Cornelly,"601 Summit Ave E #103, Seattle, WA 98102, United States",4.8,Seattle,WA,-122.3255826,47.6245064,pizza,18.91
+Lupo,"4303 Fremont Ave N, Seattle, WA 98103, United States",4.6,Seattle,WA,-122.3502094,47.6591431,pizza,14.09
+Big Mario's Pizza,"815 5th Ave N, Seattle, WA 98109, United States",4.4,Seattle,WA,-122.3477133,47.626816,pizza,7.5
+Ristorante Machiavelli,"1215 Pine St, Seattle, WA 98101, United States",4.5,Seattle,WA,-122.3280631,47.615013,italian,18.85
+Vendemmia,"1126 34th Ave, Seattle, WA 98122, United States",4.6,Seattle,WA,-122.2891796,47.6124713,italian,16.17
+Ristorante Picolinos,"6415 32nd Ave NW, Seattle, WA 98107, United States",4.5,Seattle,WA,-122.3985501,47.6754873,italian,14.77
+Buca di Beppo Italian Restaurant,"701 Westlake Ave N, Seattle, WA 98109, United States",4.1,Seattle,WA,-122.3390615,47.6259415,italian,25.71
+La Vita E Bella,"2411 2nd Ave, Seattle, WA 98121, United States",4.3,Seattle,WA,-122.3474313,47.614881,italian,14.96
+Brunello Ristorante Italiano,"7115 Roosevelt Way NE, Seattle, WA 98115, United States",4.5,Seattle,WA,-122.3177436,47.6806274,italian,15.14
+Kizuki Ramen & Izakaya,"320 E Pine St, Seattle, WA 98122, United States",4.3,Seattle,WA,-122.3271498,47.615382,japanese,15.83
+Nuna Ramen,"501 N 36th St, Seattle, WA 98103, United States",4.3,Seattle,WA,-122.3522681,47.6516076,japanese,16.42
+Samurai Noodle,"606 5th Ave S, Seattle, WA 98104, United States",4.4,Seattle,WA,-122.3273238,47.5968447,japanese,12.24
+Menya Musashi Tsukemen & Ramen,"1510 Belmont Ave, Seattle, WA 98122, United States",4.4,Seattle,WA,-122.3243037,47.6143892,japanese,20.49
+Kizuki Ramen & Izakaya,"4203 SW Alaska St, Seattle, WA 98116, United States",4.4,Seattle,WA,-122.3857622,47.5609313,japanese,15.83
+Yoroshiku,"1913 N 45th St, Seattle, WA 98103, United States",4.4,Seattle,WA,-122.3344797,47.6612087,japanese,12.82
+Kizuki Ramen & Izakaya,"319 NE Thornton Pl, Seattle, WA 98125, United States",4.5,Seattle,WA,-122.3246766,47.7023941,japanese,15.83
+Betsutenjin Ramen,"954 E Union St #102, Seattle, WA 98122, United States",4.4,Seattle,WA,-122.3196115,47.613394,japanese,14
+Samurai Noodle,"4138 University Way NE, Seattle, WA 98105, United States",4.1,Seattle,WA,-122.3130778,47.657989,japanese,12.24
+King Noodle,"615 S King St, Seattle, WA 98104, United States",4.2,Seattle,WA,-122.3256501,47.5982361,japanese,14.49
+Sweet Alchemy Ice Creamery,"4301 University Way NE, Seattle, WA 98105, United States",4.5,Seattle,WA,-122.3133762,47.6599166,ice cream and frozen,11.88
+Scoop Du Jour Ice Creamery,"4029 E Madison St, Seattle, WA 98112, United States",4.3,Seattle,WA,-122.2802812,47.6340649,ice cream and frozen,5.05
+Creamy Cone Cafe,"9433 Rainier Ave S, Seattle, WA 98118, United States",5,Seattle,WA,-122.263654,47.5198271,ice cream and frozen,9.29
+Plum Bistro,"1429 12th Ave, Seattle, WA 98122, United States",4.4,Seattle,WA,-122.3171866,47.6138243,healthy,14.47
+Seattle Lotus Vegetarian Restaurant,"10439 16th Ave SW, Seattle, WA 98146, United States",4.4,Seattle,WA,-122.3555922,47.5087808,healthy,11.04
+Sunlight Cafe,"6404 9th Ave NE Suite 100, Seattle, WA 98115, United States",4.6,Seattle,WA,-122.3184099,47.6751974,healthy,14.25
+Ba Bar Green,"500 Terry Ave N, Seattle, WA 98109, United States",4.6,Seattle,WA,-122.3369207,47.6233692,healthy,13.18
+Araya's Place,"5240 University Way NE, Seattle, WA 98105, United States",4.5,Seattle,WA,-122.3127421,47.6675611,healthy,8.95
+El Borracho Pike Place Market,"1521 1st Ave, Seattle, WA 98101, United States",4.2,Seattle,WA,-122.3407153,47.6093214,healthy,6
+Vegan Bowls For All,"2681 NE University Village St, Seattle, WA 98105, United States",5,Seattle,WA,-122.2983954,47.6625205,healthy,12.33
+Eggs and Plants,"2229 5th Ave, Seattle, WA 98121, United States",4.2,Seattle,WA,-122.3429484,47.615669,healthy,8.14
+Chicago Deli & Restaurant,"34390 Aurora Rd, Solon, OH 44139, United States",4.5,Solon,OH,-81.4351612,41.3841903,comfort food,9.35
+City Cafe,"513 College Ave, South Houston, TX 77587, United States",4.6,South Houston,TX,-95.2365828,29.6625606,american,7.56
+NORMS Restaurant,"470 N La Cienega Blvd, West Hollywood, CA 90048, United States",4.3,West Hollywood,CA,-118.3763015,34.0798956,diner,14.9
+Mels Drive-In,"8585 Sunset Blvd, West Hollywood, CA 90069, United States",4.4,West Hollywood,CA,-118.3788927,34.0929663,diner,11.91

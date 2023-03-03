@@ -4,9 +4,11 @@ import SortModal from './SortModal'
 import RatingModal from './RatingModal'
 import PriceRangeModal from './PriceRangeModal'
 
+
 const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterOptions, setFilterOptions}) => {
   const {filterType,modal, activeModal,  modalOverlay, modalMenuContent} = styleOptions();
   
+
   if (sortModal) document.body.classList.add(activeModal)
   else document.body.classList.remove(activeModal)
 
