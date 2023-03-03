@@ -8,8 +8,6 @@ const OptionsGrid = ({restaurants}) => {
         {restaurants.map((restaurant, idx) =>
           <OptionsGridItem restaurant={restaurant} key={idx}/>
         )}
-
-      
     </div>
   )
 
