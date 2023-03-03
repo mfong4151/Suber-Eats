@@ -32,6 +32,7 @@ class Restaurant < ApplicationRecord
         Restaurant.select('*')
         .where('SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= .026', 
         *[user_loc.latitude, user_loc.longitude] )
+        .limit(40)
 
     end
   

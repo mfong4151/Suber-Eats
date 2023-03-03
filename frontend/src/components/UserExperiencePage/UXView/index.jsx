@@ -26,7 +26,7 @@ const UXView = () => {
     
   const mapState = {mapCenter, setMapCenter};
   const filterState = {filterOptions, setFilterOptions};
-  const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions)).slice(0, 30);
+  const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions)).slice(0, 25);
   const sessionUserId = useSelector(getSessionUserId);
   const userLocation = useSelector(checkUserLoc(sessionUserId))
   const dispatch = useDispatch()
