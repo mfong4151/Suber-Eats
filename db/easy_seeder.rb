@@ -53,15 +53,16 @@ class EasySeeds
 
     end
 
-    def self.images_only
-      Dir.pwd + '/db/seed_image_files'
-    end
 
     #Attaches images
 
-    def self.attach_images(class_image_names, seed_folder='../seed_image_files')
+    def self.attach_images(class_image_names)
 
-      Dir.chdir(seed_folder)
+      begin
+        Dir.chdir('../seed_image_files')
+      rescue
+        Dir.chdir(Dir.pwd + '/db/seed_image_files')
+      end
 
       Dir.glob("*").each_with_index do |seed_file, i|
         headers, data = EasySeeds.unpack_csvs(seed_file)
@@ -76,7 +77,7 @@ class EasySeeds
             begin
               class_instance.image.attach(io: URI.open(url), filename: filename)
               puts "Attached to #{filename}"
-              
+
             rescue OpenURI::HTTPError
               puts('Waiting 30 seconds before seeding the next row of data, please be patient')
               sleep(30.second)
