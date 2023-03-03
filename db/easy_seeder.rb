@@ -27,7 +27,11 @@ class EasySeeds
         ApplicationRecord.connection.reset_pk_sequence!(table_string)
         puts "Creating #{table_string} seed data..."   
         
-        table.each {|row| class_name.create!(**row)}
+        table.each_with_index do |row, i| 
+          puts "Finished Seeding the #{i.to_s}th #{table_string} item" if i % 100 >= 1
+          class_name.create!(**row)
+
+        end
             
         puts "DONE WITH #{table_string.upcase}, #{table_string.upcase} SEEDING SUCCESSFUL"
         
