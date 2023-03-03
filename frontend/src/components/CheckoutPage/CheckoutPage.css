@@ -180,6 +180,11 @@
     color: var(--color-grey-text);
 }
 
+#checkout-header{
+    display: flex;
+    justify-content: space-between;
+    min-width: 218px;
+}
 
 .checkout-subtext{
 

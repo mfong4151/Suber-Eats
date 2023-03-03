@@ -179,7 +179,7 @@
 
 
 /* for the logo "suberEats" */
-#logo-holder{
+.logo-holder{
     min-width:160px;
     height:2.5rem;
     padding-right: 1.5rem;

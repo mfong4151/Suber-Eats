@@ -27,7 +27,7 @@ const UXHeader = ({modalStates}) => {
                 <MenuIcon/>
               </button>
       
-              <div id='logo-holder' onClick={()=> history.push('/')}>
+              <div className='logo-holder' onClick={()=> history.push('/')}>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
               <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>

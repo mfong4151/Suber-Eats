@@ -35,13 +35,6 @@
     left:150px;
 }
 
-.city-modal-body{
-    width:380px;
-    height:300px;
-    left:300px;
-    overflow: auto;
-    overflow-y: auto;
-}
 
 .rating-modal{
     left: 300px;
@@ -66,6 +59,13 @@
     height:36px;
 }
 
+.city-modal-btn{
+    font-family: var(--font-family-UMM);
+    width:100px;
+    height:30px;
+
+}
+
 .city-modal-overlay{
     background-color: transparent;
 }
@@ -73,14 +73,34 @@
 
 /* styles for other cities modal */
 
+.city-modal-body{
+    width:380px;
+    height:300px;
+    left:300px;
+   
+}
+
+
 #city-modal-header{
     display: flex;
     justify-content: center;
+    padding-top: 1rem;
+    padding-bottom:1rem;
+    font-size: 26px;
+}
+
+#city-options{
+    overflow: auto;
+    overflow-y: auto;
+    height:180px;
 }
 
 .city-option{
     display: flex;
     justify-content: space-between;
     align-items:center;
+    height:45px;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
 
 }
