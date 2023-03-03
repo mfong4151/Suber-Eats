@@ -4,13 +4,13 @@ import OptionsDropdowns from './OptionsDropdowns';
 import OptionsGrid from './OptionsGrid';
 import '../Pickup.css'
 
-const Options = ({restaurants, filterOptions, setFilterOptions}) => {
+const Options = ({restaurants, filterState, mapState}) => {
   
   return (
     <div className='univ-padding' id="options-dimensions">
       <h1 className="subheader">Delivery nearby</h1>
-      <OptionsDropdowns filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>
-      <OptionsCarousel filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>
+      <OptionsDropdowns filterState={filterState} mapState={mapState}/>
+      <OptionsCarousel filterState={filterState}/>
       <OptionsGrid restaurants={restaurants}/>
     </div>
   )

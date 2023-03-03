@@ -12,8 +12,8 @@ import { fetchRestaurants } from '../../../store/restaurant';
 
 const UXView = () => {
 
-  const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}) //this just refers to a default center
-  const mapState = {mapCenter, setMapCenter}
+  const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}); //this just refers to a default center
+
   const [filterOptions, setFilterOptions] = useState(
     {
       'score': 0,
@@ -22,8 +22,10 @@ const UXView = () => {
       'rating':false,
       'priceRange':0,
       'cuisineType':'',
-    })
-  
+    });
+    
+  const mapState = {mapCenter, setMapCenter};
+  const filterState = {filterOptions, setFilterOptions};
   const restaurantsHeap = useSelector(getRestaurantHeap(filterOptions)).slice(0, 30);
   const sessionUserId = useSelector(getSessionUserId);
   const userLocation = useSelector(checkUserLoc(sessionUserId))
@@ -43,7 +45,7 @@ const UXView = () => {
   return (
     <div className='pickup-cols'>
       
-      <Options restaurants={restaurantsHeap} filterOptions={filterOptions} setFilterOptions={setFilterOptions} mapState={mapState}/>
+      <Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/>
       <Map restaurants={restaurantsHeap} mapState={mapState} /> 
 
     </div>

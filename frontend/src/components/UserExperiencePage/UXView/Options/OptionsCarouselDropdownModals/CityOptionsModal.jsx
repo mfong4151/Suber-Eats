@@ -6,9 +6,9 @@ import { getSessionUserId } from '../../../../../store/session'
 import { checkUserLoc, updateLocation } from '../../../../../store/location'
 import { fetchRestaurants } from '../../../../../store/restaurant'
 
-const CityOptionsModal = ({cityModal, setCityModal}) => {
+const CityOptionsModal = ({cityModal, setCityModal, mapState}) => {
   const [selectedButton, setSelectedButton] = useState('')
-
+  const {mapCenter, setMapCenter} = mapState;
   const dispatch = useDispatch()
   const sessionUserId = useSelector(getSessionUserId)
   const userLocObj = useSelector(checkUserLoc(sessionUserId))
@@ -23,20 +23,21 @@ const CityOptionsModal = ({cityModal, setCityModal}) => {
     e.stopPropagation()
     setSelectedButton(prev => city)
     const latLng = suberCities[city]
+    const {lat, lng} = latLng;
+
+    setMapCenter({lat, lng})
 
     if(userLocObj){
       dispatch(updateLocation(
           {location:{
-            latitude: latLng.lat,
-            longitude:  latLng.lng,
+            latitude: lat,
+            longitude: lng,
             userId: sessionUserId
  
            }}, userLocObj.id
           ))
       .then(()=> dispatch(fetchRestaurants()))
     }
-
-
 
   }
 

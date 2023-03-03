@@ -5,7 +5,9 @@ import RatingModal from './RatingModal'
 import PriceRangeModal from './PriceRangeModal'
 
 
-const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterOptions, setFilterOptions}) => {
+const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterState}) => {
+
+  const {filterOptions, setFilterOptions} = filterState;
   const {filterType,modal, activeModal,  modalOverlay, modalMenuContent} = styleOptions();
   
 

@@ -6,11 +6,10 @@ import { useState } from 'react'
 import { sortModalStyles, priceModalStyles, ratingModalStyles, cityModalStyles } from './OptionsCarouselDropdownModals/modalStyles'
 import CityOptionsModal from './OptionsCarouselDropdownModals/CityOptionsModal'
 
-const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
+const OptionsDropdowns = ({filterState, mapState}) => {
   const [ sortModal,setSortModal] = useState(false)
   const [ priceModal,setPriceModal] = useState(false)
   const [cityModal, setCityModal] = useState(false)
-  // const [ ratingModal,setRatingModal] = useState(false)
 
 
   const toggleSortOptions =  e =>{
@@ -60,9 +59,9 @@ const OptionsDropdowns = ({filterOptions, setFilterOptions}) => {
         <ChevronDown toggleOptions={toggleCityOptions}/>
       </button>
 
-      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
-      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles} filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}
-      {cityModal && <CityOptionsModal cityModal={cityModal} setCityModal={setCityModal}/>}
+      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterState={filterState}/>}
+      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}  filterState={filterState}/>}
+      {cityModal && <CityOptionsModal cityModal={cityModal} setCityModal={setCityModal} mapState={mapState}/>}
       
       {/* below commented out code is in the pipeline */}
       {/* <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >

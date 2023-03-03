@@ -5,10 +5,10 @@ import ButtonLeft from '../SVGs/ButtonLeft'
 import ButtonRight from '../SVGs/ButtonRight'
 import { useState } from 'react'
 
-const OptionsCarousel = ({filterOptions, setFilterOptions}) => {
+const OptionsCarousel = ({filterState}) => {
   //The .slice is a temporary measure to keep my sanity only
   // const icons = carouselLoader().slice(0, 9)  
-
+  const {filterOptions, setFilterOptions} = filterState;
   const icons = carouselLoader()
   const [window, setWindow] = useState([0, 7])
 
