@@ -50,14 +50,14 @@ const CityOptionsModal = ({cityModal, setCityModal, mapState}) => {
                 <h1 id='city-modal-header'>Take a look at other cities!</h1>
                 <div id='city-options'>
                     {Object.keys(suberCities).map((city, idx) =>
-                    <div key={idx} className="city-option">
-                        <h1>
-                            {city}
-                        </h1>
-                        <button className={`btn-round-two grey-button city-modal-btn udc ${selectedButton === city && 'black-button'}`} onClick={e => handleChangeCity(e, city)}>
-                            Look Here!
-                        </button>
-                    </div>
+                      <div key={idx} className="city-option">
+                          <h1>
+                              {city}
+                          </h1>
+                          <button className={`btn-round-two grey-button city-modal-btn udc ${selectedButton === city && 'black-button'}`} onClick={e => handleChangeCity(e, city)}>
+                              Look Here!
+                          </button>
+                      </div>
                     )}
 
                 </div>

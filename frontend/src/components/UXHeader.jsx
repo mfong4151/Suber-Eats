@@ -30,8 +30,11 @@ const UXHeader = ({modalStates}) => {
               <div className='logo-holder' onClick={()=> history.push('/')}>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
-              <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}><LocationIcon/>
-                  <span className="map-location-text">{' How to use map interface'}
+              
+              <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}>
+                  <LocationIcon/>
+                  <span className="map-location-text">
+                    How to use map interface
                   </span>
               </button>
 
