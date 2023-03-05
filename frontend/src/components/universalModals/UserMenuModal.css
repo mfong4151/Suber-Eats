@@ -49,12 +49,15 @@ profile
     padding-left: 2rem;
 }
 
+.menu-modal-icon{
+    min-width:52px;
+    padding-right:2rem;
+}
+
 .github-linkedin{
     height:19px;
 }
-.a-link-spacing{
-    padding-left: 1.3rem;
-}
+
 
 
 .modal-menu-text-options{

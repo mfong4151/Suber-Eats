@@ -42,19 +42,44 @@ const UserMenuModal = ({modalStates}) => {
     <div className="modal">
         <div className='modal-overlay' onClick={()=> setMenuModal(!menuModal)}>
           <div className="modal-menu-content">
-              {!onMain() && <div className="modal-item-univ modal-menu-button"><NavLink to={'/yourorders'}><OrdersIcon/>Orders</NavLink></div>}
+              {!onMain() && 
+                  <NavLink to={'/yourorders'} className="modal-item-univ modal-menu-button">
+                    <div className='menu-modal-icon'>
+                      <OrdersIcon/>
+
+                    </div>
+                    Orders
+                </NavLink>
+              }
               {/* <div className="modal-item-univ modal-menu-button"><FavoritesIcon/>Favorites</div> */}
-              <div className="modal-item-univ modal-menu-button"><WalletIcon/>Contact me</div>
               <div className="modal-item-univ modal-menu-button">
-                <img src={linkedin} className='github-linkedin'/>
-                <a href="https://www.linkedin.com/in/mfong415/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My Linkedin</a>
+                <div className='menu-modal-icon'>
+                  <WalletIcon/>
+                </div>
+                Contact me
               </div>
               <div className="modal-item-univ modal-menu-button">
-                <img src={gitHubBlack} className='github-linkedin'/>
+                <div className='menu-modal-icon'>
+                  <img src={linkedin} className='github-linkedin'/>
+                </div>
+                <a href="https://www.linkedin.com/in/mfong415/" target="_blank" onClick={e=> {e.stopPropagation()}}>My Linkedin</a>
+              </div>
+
+              <div className="modal-item-univ modal-menu-button">
+                <div className='menu-modal-icon'>
+                  <img src={gitHubBlack} className='github-linkedin'/>
+                </div>
+
                 <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My github</a>
               </div>
               
-              <div className="modal-item-univ modal-menu-button"><HelpIcon/>My personal site</div>
+              <div className="modal-item-univ modal-menu-button">
+                <div className='menu-modal-icon'>
+
+                  <HelpIcon/>                
+                  </div>
+                  My personal site
+              </div>
               {/* <div className="modal-item-univ modal-menu-button"><Promotions/>Promotions</div> */}
               {/* <div className="modal-item-univ modal-menu-button"><InviteFriendsIcon/>Invite friends</div> */}
               {onMain() && <button className='modal-menu-button sign-out' onClick={signIn}><span>Sign In</span></button>}
