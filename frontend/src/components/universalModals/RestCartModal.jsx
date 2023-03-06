@@ -12,7 +12,7 @@ import RestCartItem from './RestCartItem';
 const RestCartModal = ({cart, modalStates}) => {
   const dispatch = useDispatch()
   const history = useHistory()
-  const {restCartModal, setRestCartModal} =modalStates;
+  const {restCartModal, setRestCartModal} = modalStates;
   const {restaurantId} = useParams()
   const restCartItems = useSelector(getCartItems)
   
