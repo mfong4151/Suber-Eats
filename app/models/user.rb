@@ -70,8 +70,10 @@ class User < ApplicationRecord
   end
 
   def self.find_by_credentials(credential, password)
-    if credential
-      if credential.include?('@') 
+      
+      user = nil
+  
+      if credential && credential.include?('@') 
         user = User.find_by(email: credential )
     
       elsif credential.count('-') == 2
@@ -81,8 +83,6 @@ class User < ApplicationRecord
 
       return user if user && user.authenticate(password)
 
-    end
-    nil 
   end 
 
   def reset_session_token! 

@@ -26,15 +26,12 @@ const RestCartModal = ({cart, modalStates}) => {
 
     //The main difference between these two lines is the else condition is more optimized
     //And it corresponds to the case where we are actually on the page
-    if(Number(restaurantId) === cart.restaurantId){
-      for(const cartItem of restCartItems) dispatch(deleteCartItem(cartItem.id))
-      .then(()=>setRestCartModal(!restCartModal))
-
-    } else{
-      dispatch(deleteCart(cart.id))
-      .then(()=>setRestCartModal(!restCartModal))
+    if(Number(restaurantId) === cart.restaurantId)
+      for(const cartItem of restCartItems) dispatch(deleteCartItem(cartItem.id)).then(()=>setRestCartModal(!restCartModal))
     
-    }
+    else dispatch(deleteCart(cart.id)).then(()=>setRestCartModal(!restCartModal))
+    
+    
   }
 
   const handleAddClick = e =>{
