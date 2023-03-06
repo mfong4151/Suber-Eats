@@ -22,9 +22,8 @@ const UserMenuModal = ({modalStates}) => {
   if (menuModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
   
-  const onMain = () =>(
-    location.pathname === '/'
-  )
+  const onMain = location.pathname === '/'
+
 
   const signOut = (e) => {
     e.preventDefault();
@@ -42,7 +41,7 @@ const UserMenuModal = ({modalStates}) => {
     <div className="modal">
         <div className='modal-overlay' onClick={()=> setMenuModal(!menuModal)}>
           <div className="modal-menu-content">
-              {!onMain() && 
+              {!onMain && 
                   <NavLink to={'/yourorders'} className="modal-item-univ modal-menu-button">
                     <div className='menu-modal-icon'>
                       <OrdersIcon/>
@@ -82,8 +81,8 @@ const UserMenuModal = ({modalStates}) => {
               </div>
               {/* <div className="modal-item-univ modal-menu-button"><Promotions/>Promotions</div> */}
               {/* <div className="modal-item-univ modal-menu-button"><InviteFriendsIcon/>Invite friends</div> */}
-              {onMain() && <button className='modal-menu-button sign-out' onClick={signIn}><span>Sign In</span></button>}
-              {!onMain() && <button className='modal-menu-button sign-out' onClick={signOut}><span>Sign Out</span></button>}
+              {onMain && <button className='modal-menu-button sign-out' onClick={signIn}><span>Sign In</span></button>}
+              {!onMain && <button className='modal-menu-button sign-out' onClick={signOut}><span>Sign Out</span></button>}
               
               <hr className="divider-slim"/>
               {/* <div className="modal-item-univ modal-menu-text-options">Create a business account</div>
