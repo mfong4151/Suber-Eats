@@ -34,19 +34,12 @@ class Restaurant < ApplicationRecord
         *[user_loc.latitude, user_loc.longitude] )
         # .limit(1)
         .limit(30)
-
     end
   
     def self.get_dist_from_user(user_loc, restaurant)
-      
      (1000 *Math.sqrt((user_loc.longitude - restaurant.longitude) ** 2 + (user_loc.latitude - restaurant.latitude) ** 2)).to_i
     end
 
-    def avg_dish_price
-      menu_items = self.menu_items
-      return 7 if menu_items.length == 0
-      (menu_items.sum{|item| item.price}/menu_items.length).to_i
-    end
     
     has_one :menu,
     foreign_key: :restaurant_id,

@@ -82,7 +82,7 @@ profile
 .loc-pickup-details{
     font-family: var(--font-family-UMB), var(--font-family);
     font-size: 30px;
-    margin-left:3%;
+    padding-left:2rem;
 }
 
 .exit:hover{
