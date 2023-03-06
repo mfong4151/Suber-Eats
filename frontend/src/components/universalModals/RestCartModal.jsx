@@ -56,7 +56,7 @@ const RestCartModal = ({cart, modalStates}) => {
           <div className="modal-content sub-menu grey-border-for-white">
               <div className='sub-header-pos'>
                 <h1 className="sub-menu-header">{cart.restName}</h1>
-                <span className="sub-menu-text">Pickup at {cart.address}</span>
+                <span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
                 <div className="sub-menu-buttons">
                     <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
                       <span>+</span>
