@@ -226,19 +226,22 @@ profile
 
 .cart-modal-text-holder{
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width:200px;
 }
 
 .cart-modal-header{
     font-family: var(--font-family-UMM);
-
+    padding-bottom:.3rem;
 }
 
 .cart-modal-text{
     font-family: var(--font-family);
     font-size:14px;
     color: var(--color-grey-text);
+    padding-bottom:.2rem;
+
 }
 
 .num-items-num{
