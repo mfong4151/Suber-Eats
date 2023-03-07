@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import ExitButton from './SVGs/ExitButton.jsx'
 

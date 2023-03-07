@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import ChevronRight from './SVGs/ChevronRight';
-import { useState } from 'react';
 
 const CartBody = ({cart, modalStates, activeCartState}) => {
 

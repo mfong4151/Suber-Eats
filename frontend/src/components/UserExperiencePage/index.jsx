@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import UXHeader from '../UXHeader.jsx';
-import UXView from './UXView';
 import { fetchCart } from '../../store/cart.jsx';
 import { fetchRestaurants } from '../../store/restaurant';
-import BundleModals from '../universalModals/BundleModals.jsx';
 import { fetchLocations } from '../../store/location';
+import BundleModals from '../universalModals/BundleModals.jsx';
+import UXHeader from '../UXHeader.jsx';
+import UXView from './UXView';
 import Footer from '../generalDesignComponents/Footer/index.jsx';
-import useWindowSize from '../customHooks/useWindowSize.jsx';
 
 
 const UserExperiencePage = () => {

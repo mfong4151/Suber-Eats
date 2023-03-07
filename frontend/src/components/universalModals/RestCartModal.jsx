@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import { useContext } from 'react';
-import { UXContext } from '../UXContext';
 import {useHistory, NavLink, useParams} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
@@ -39,12 +37,7 @@ const RestCartModal = ({cart, modalStates}) => {
     history.push(`/restaurantListing/${cart.restaurantId}`)
   }
   
-  const handleCheckout = e =>{
-    e.preventDefault();
-    e.stopPropagation();
-    history.push(`/checkout`)
-    setRestCartModal(!restCartModal)  
-  }
+
 
   useEffect(()=>{
     dispatch(fetchCartItems(cart.id))
@@ -59,8 +52,7 @@ const RestCartModal = ({cart, modalStates}) => {
                 <span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
                 <div className="sub-menu-buttons">
                     <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
-                      <span>+</span>
-                      <span>Add items</span>
+                      <span>+ Add items</span>
                     </button>
                 
                 </div>
