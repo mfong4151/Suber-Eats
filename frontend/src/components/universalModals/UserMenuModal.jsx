@@ -41,7 +41,8 @@ const UserMenuModal = ({modalStates}) => {
     <div className="modal">
         <div className='modal-overlay' onClick={()=> setMenuModal(!menuModal)}>
           <div className="modal-menu-content">
-              {!onMain && 
+              {
+                !onMain && 
                   <NavLink to={'/yourorders'} className="modal-item-univ modal-menu-button">
                     <div className='menu-modal-icon'>
                       <OrdersIcon/>
@@ -50,7 +51,6 @@ const UserMenuModal = ({modalStates}) => {
                     Orders
                 </NavLink>
               }
-              {/* <div className="modal-item-univ modal-menu-button"><FavoritesIcon/>Favorites</div> */}
               <div className="modal-item-univ modal-menu-button">
                 <div className='menu-modal-icon'>
                   <WalletIcon/>
@@ -79,20 +79,13 @@ const UserMenuModal = ({modalStates}) => {
                   </div>
                   My personal site
               </div>
-              {/* <div className="modal-item-univ modal-menu-button"><Promotions/>Promotions</div> */}
-              {/* <div className="modal-item-univ modal-menu-button"><InviteFriendsIcon/>Invite friends</div> */}
+              
               {onMain && <button className='modal-menu-button sign-out' onClick={signIn}><span>Sign In</span></button>}
               {!onMain && <button className='modal-menu-button sign-out' onClick={signOut}><span>Sign Out</span></button>}
               
               <hr className="divider-slim"/>
-              {/* <div className="modal-item-univ modal-menu-text-options">Create a business account</div>
-              <div className="modal-item-univ modal-menu-text-options">Add your restaurant</div>
-              <div className="modal-item-univ modal-menu-text-options">Sign up to deliver</div>
-
-              <div className='phone-buttons'>
-                <button className="btn-round ux-buttons">iPhone</button>
-                <button className="btn-round ux-buttons">Android</button>
-              </div> */}
+             
+             
           </div>
 
         </div>
