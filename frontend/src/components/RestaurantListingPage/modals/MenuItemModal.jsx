@@ -25,7 +25,6 @@ const MenuItemModal = ({ menuItem, menuItemModal, toggleItemModal}) => {
 
                   </div>
                   <MenuItemForm/>
-
               </div>
           </div>
         </div>
