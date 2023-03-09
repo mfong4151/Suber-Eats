@@ -4,14 +4,12 @@ import SearchIcon from './UserExperiencePage/UXView/SVGs/SearchIcon';
 import './Header.css';
 import MenuIcon from './SVGs/MenuIcon';
 import { useHistory,  } from 'react-router-dom';
-import useWindowSize from './customHooks/useWindowSize';
 import { useLocation } from 'react-router-dom';
-import { fetchCart, getCartSizeFromWildcard } from '../store/cart';
-import {useSelector, useDispatch} from 'react-redux'
+import { getCartSizeFromWildcard } from '../store/cart';
+import {useSelector} from 'react-redux'
 
 const UXHeader = ({modalStates}) => {
-  const {menuModal, setMenuModal, cartModal, setCartModal, restCartModal, setRestCartModal, locationModal, setLocationModal} = modalStates;
-  const sessionUser = useSelector(state => state.session.user)
+  const {menuModal, setMenuModal, cartModal, setCartModal, locationModal, setLocationModal} = modalStates;
 
   let {pathname} = useLocation();
   const [_, path, wildCard] = pathname.split('/');

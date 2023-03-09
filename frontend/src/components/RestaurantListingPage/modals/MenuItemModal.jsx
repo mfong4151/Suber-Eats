@@ -1,16 +1,11 @@
 import React from 'react'
-import { useContext } from 'react';
-import { UXContext } from '../../UXContext';
-import { useDispatch } from 'react-redux';
+
 import './RestaurantModals.css'
 import MenuItemForm from './MenuItemModalForm';
 
 const MenuItemModal = ({ menuItem, menuItemModal, toggleItemModal}) => {
 
-  //grab the context variable that makes sense from here
-  const {} = useContext(UXContext)
-  //use dispatch if necessary
-  const dispatch = useDispatch()
+
 
   //controlling overflow
   if (menuItemModal) document.body.classList.add('active-modal')

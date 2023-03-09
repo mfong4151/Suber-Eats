@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import { useContext } from 'react';
-import { UXContext } from './../UXContext';
 import './UserMenuModal.css'
 import { useDispatch, useSelector } from 'react-redux';
 import CartBody from './CartBody';
