@@ -15,10 +15,6 @@ class Api::CartItemsController < ApplicationController
     end
 
     def create
-        #WIP, the commented out line is an attempt to create a new cart via the backend
-        #The issue is that every time you query the backend for a cart item, you are effectively querying the backend 4 times.
-
-        # @user_id, @restaurant_id = current_user.id,  MenuItem.find_by_id(id: params[:menu_item_id]).parent_restaurant.id
 
         @cart_item = CartItem.new(cart_item_params)
         
@@ -34,8 +30,6 @@ class Api::CartItemsController < ApplicationController
 
     def update
         @cart_item = CartItem.find_by_id(params[:id])
-        puts 'fuck fuck fuck fuck fuck'
-        puts(@cart_item)
         if @cart_item.update(cart_item_params)
             render :show
         else
