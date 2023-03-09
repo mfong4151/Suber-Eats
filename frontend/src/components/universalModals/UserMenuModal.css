@@ -277,6 +277,10 @@ profile
 }
 
 /* secondary menu modal for specific restaurant */
+#rest-modal{ 
+    height:100%;
+    overflow:hidden;
+}
 
 .sub-menu{
     display: flex;
@@ -290,11 +294,11 @@ profile
     height:100%;
     right:0px;
     border: left 2px;
+    
 }
 
 .sub-header-pos{    
     padding-left: 1.5rem;
-
     padding-top: 1rem;
 
 }
@@ -302,6 +306,7 @@ profile
 .sub-menu-header{
     font-family:var(--font-family-UMB);
     font-size: 34px;
+    padding-bottom: .5rem;
 
 
 }
@@ -309,10 +314,12 @@ profile
 .sub-menu-text{
     font-family: var(--font-family);
     font-size:16px;
-    color:var(--color-grey-text)
+    color:var(--color-grey-text);
+
 }
 
 .sub-menu-buttons{
+    padding-top: .5rem;
     display: flex;
     justify-content: start;
 }
@@ -328,6 +335,11 @@ profile
 }
 
 
+.sub-menu-choices{
+    overflow-y: auto;
+    overflow-x:hidden;
+    max-height:70vh; 
+}
 
 .clear-cart{
     color: var(--color-red-text);   

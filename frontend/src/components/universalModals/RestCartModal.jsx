@@ -46,7 +46,7 @@ const RestCartModal = ({cart, modalStates}) => {
   return (
     <div className="modal">
         <div className='modal-overlay cart-overlay' onClick={()=>(setRestCartModal(!restCartModal))}>
-          <div className="modal-content sub-menu grey-border-for-white">
+          <div className="modal-content sub-menu grey-border-for-white" id='rest-modal'>
               <div className='sub-header-pos'>
                 <h1 className="sub-menu-header">{cart.restName}</h1>
                 <span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
@@ -70,7 +70,6 @@ const RestCartModal = ({cart, modalStates}) => {
               </div>
 
               
-
               <div className='udc sub-header-accent'>
                 <NavLink className="udc btn-sq btn-rounded-corners go-checkout" to={`/checkout/${cart.id}`}>
                   Go to checkout 
