@@ -7,15 +7,8 @@ const MenuItemModal = ({ menuItem, menuItemModal, toggleItemModal}) => {
 
 
 
-  //controlling overflow
   if (menuItemModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
-
-
-  //css classes for our modals:
-  //modal
-  //modal-overlay
-  //modal-item-univ modal-button
 
   return (
     <div className="modal">
