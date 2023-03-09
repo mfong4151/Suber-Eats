@@ -5,10 +5,6 @@ import CartModal from './CartModal';
 import RestCartModal from './RestCartModal';
 import { useState } from 'react';
 
-// const [menuModal, setMenuModal ] = useState(false)
-// const [locationModal, setLocationModal] = useState(false)
-// const [cartModal, setCartModal] = useState(false);
-// const [restCartModal, setRestCartModal] = useState(false);  
 
 
 const BundleModals = ({modalStates}) => {
