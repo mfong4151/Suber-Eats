@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import UserMenuModal from './UserMenuModal';
 import LocationModal from './LocationModal';
-import { UXContext } from '../UXContext';
 import CartModal from './CartModal';
 import RestCartModal from './RestCartModal';
 import { useState } from 'react';
