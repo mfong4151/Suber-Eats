@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import '../SplashPage.css'
 
 import { operatingCities } from '../utils/operating_cities';
