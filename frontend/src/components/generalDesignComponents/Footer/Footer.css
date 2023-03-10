@@ -33,6 +33,7 @@
 
 .footer-text:hover{
     text-decoration-line: underline;
+    cursor: pointer;
 }
 
 .subfooter-holder{

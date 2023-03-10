@@ -4,19 +4,16 @@ import ListingsBlock from './ListingsBlock'
 import { useState } from 'react'
 import MenuItemModal from './modals/MenuItemModal'
 import { useDispatch, useSelector } from 'react-redux'
-import { getMenuItems, getMenuItemsSorted } from '../../store/menu'
+import { getMenuItemsSorted } from '../../store/menu'
 
 import { useEffect } from 'react'
-import { getCartsRestIdKeys } from '../../store/cart'
-import { useParams } from 'react-router-dom'
+
 
 //bring in intersection observer here, have it change based class whats clicked
 
 const MenuListings = () => {
     const [menuItemModal, setMenuItemModal] = useState(false);  
     const [seeYourCart, setSeeYourCart] = useState(-1)
-
-    const [menuItem, setMenuItem] = useState('')
     const menuItems = useSelector(getMenuItemsSorted);
 
     const dispatch = useDispatch()
