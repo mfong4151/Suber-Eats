@@ -5,8 +5,7 @@ import { useState } from 'react'
 import MenuItemModal from './modals/MenuItemModal'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMenuItems, getMenuItemsSorted } from '../../store/menu'
-import { fetchCartItems } from '../../store/cartItems'
-import { sortMenus } from './utils/menuUtils'
+
 import { useEffect } from 'react'
 import { getCartsRestIdKeys } from '../../store/cart'
 import { useParams } from 'react-router-dom'
@@ -19,8 +18,7 @@ const MenuListings = () => {
 
     const [menuItem, setMenuItem] = useState('')
     const menuItems = useSelector(getMenuItemsSorted);
-    const usersCarts = useSelector(getCartsRestIdKeys)
-    const {restaurantId} = useParams()
+
     const dispatch = useDispatch()
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)

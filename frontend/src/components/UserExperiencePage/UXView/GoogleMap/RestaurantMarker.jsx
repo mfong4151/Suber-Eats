@@ -1,6 +1,5 @@
 import React from 'react'
-import { Marker, InfoBox} from "@react-google-maps/api";
-import { useState } from 'react';
+import { Marker} from "@react-google-maps/api";
 import {useHistory } from 'react-router-dom'
 
 // https://react-google-maps-api-docs.netlify.app/#marker
