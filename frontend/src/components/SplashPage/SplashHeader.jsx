@@ -1,7 +1,7 @@
 import React from 'react'
-import "../SplashPage.css"
+import "./SplashPage.css"
 import {useHistory} from 'react-router-dom'
-import MenuIcon from '../../SVGs/MenuIcon'
+import MenuIcon from '../SVGs/MenuIcon'
 const SplashHeader = ({menuModal, setMenuModal}) => {
   const history = useHistory();
 

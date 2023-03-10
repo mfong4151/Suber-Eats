@@ -1,6 +1,6 @@
 import React from 'react';
-import { operatingCountries } from '../utils/operating_countries';
-import '../SplashPage.css'
+import { operatingCountries } from './utils/operating_countries';
+import './SplashPage.css'
 
 const SplashCountries = () => {
   const countries = operatingCountries()

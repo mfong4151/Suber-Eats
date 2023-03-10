@@ -1,7 +1,7 @@
 import React from 'react';
-import '../SplashPage.css'
+import './SplashPage.css'
 
-import { operatingCities } from '../utils/operating_cities';
+import { operatingCities } from './utils/operating_cities';
 
 const SplashCities = () => {
   const cities = Object.values(operatingCities('USA'));
