@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import EditReviewModal from './modals/EditReviewModal'
 import DeleteReviewModal from './modals/DeleteReviewModal'

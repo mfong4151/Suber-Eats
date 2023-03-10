@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/session";
 import { Redirect, Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import GoogleLogo from "./SVGs/GoogleLogo";
 import './LoginFormPage.css'
 import AppleLogo from "./SVGs/AppleLogo";
 import FacebookLogo from "./SVGs/FacebookLogo";
-import { UsernameContext } from "./UsernameContext";
 import { handlePhoneNumberErrors, handleEmailErrors } from "./utils/handleErrors";
 const LoginForm = ({credential, setCredential, setValidCredential}) => {
     const dispatch = useDispatch();

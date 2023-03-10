@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Review from './Review';
-import { fetchMenu, getMenuReviews } from '../../store/menu';
+import { getMenuReviews } from '../../store/menu';
 import { useState } from 'react';
 
 const Reviews = ({sessionUserId}) => {

@@ -1,9 +1,9 @@
 import React from 'react'
-import SplashHeader from './SplashHeader';
+import SplashHeader from './SplashHeader.jsx';
 import SplashBodySearch from './SplashBodySearch';
 import SplashOptions from './SplashOptions';
-import SplashCities from './SplashCitites';
-import SplashCountries from './SplashCountries'
+import SplashCities from './SplashCities.jsx';
+import SplashCountries from './SplashCountries.jsx'
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Footer from '../generalDesignComponents/Footer';
