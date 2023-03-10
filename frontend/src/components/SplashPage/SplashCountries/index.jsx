@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { operatingCountries } from '../utils/operating_countries';
 import '../SplashPage.css'
+
 const SplashCountries = () => {
   const countries = operatingCountries()
 
