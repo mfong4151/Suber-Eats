@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchTransactions, getTransactions } from '../../store/transaction'
 import Transaction from './Transaction'
 import './PastOrders.css'
-import { getSessionUserId } from '../../store/session'
 import Footer from '../generalDesignComponents/Footer'
 import { Redirect } from 'react-router'
+
 const PastOrders = () => {
   const [menuModal, setMenuModal ] = useState(false);
   const [locationModal, setLocationModal] = useState(false);
@@ -22,6 +22,7 @@ const PastOrders = () => {
   useEffect(() => {
     dispatch(fetchTransactions())
   }, [])
+  
   if(!sessionUser) return <Redirect to='/login'/>
 
   return (

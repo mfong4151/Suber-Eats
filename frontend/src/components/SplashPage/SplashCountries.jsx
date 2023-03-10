@@ -11,15 +11,7 @@ const SplashCountries = () => {
             <h1 className='splash-title'>Countries with Suber<span> Eats</span></h1>
         </div>
         
-        <div className='geo-location'>
-
-          {
-          countries.map((country, idx) =>(
-                <div key={idx}>{country}</div>
-              ))
-          }
-
-        </div>
+        <div className='geo-location'>{countries.map((country, idx) =>( <div key={idx}>{country}</div>))} </div>
     </div>
   )
 }
