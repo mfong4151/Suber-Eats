@@ -45,7 +45,7 @@ const RestCartItem = ({restCartItem}) => {
             </div>
             <div className='item-info'>
                     <h3 className='cart-item-name'>{restCartItem.name}</h3>
-                    <p className='cart-item-sum'>${Math.round(restCartItem.adjPrice *100)/100}</p>
+                    <p className='cart-item-sum'>${restCartItem.adjPrice.toFixed(2)}</p>
             </div>
             <div>
                 {/* add the photo here if it exists  */}
