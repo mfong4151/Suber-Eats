@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ChevronRight from './SVGs/ChevronRight';
 
-const CartBody = ({cart, modalStates, activeCartState}) => {
+const CartModalItem = ({cart, modalStates, activeCartState}) => {
 
     const {cartModal, setCartModal, restCartModal, setRestCartModal} = modalStates;
     const {setActiveCart} = activeCartState;
@@ -31,7 +31,7 @@ const CartBody = ({cart, modalStates, activeCartState}) => {
             <div className='cart-modal-text-holder'>
                 <span className='cart-modal-header'>{cart.restName}</span>
                 <span className='cart-modal-text'>Delivery from {cart.address.split(',').slice(0,2).join(', ')}</span>
-                <span className='cart-modal-text'>Subtotal: ${Math.round(cart.cartItemsSum *100)/100}</span>
+                <span className='cart-modal-text'>Subtotal: ${cart.cartItemsSum.toFixed(2)}</span>
             </div>
 
             <div className='num-items'>
@@ -44,4 +44,4 @@ const CartBody = ({cart, modalStates, activeCartState}) => {
     )
 }
 
-export default CartBody;
+export default CartModalItem;

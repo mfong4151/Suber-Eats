@@ -2,7 +2,9 @@ import React from 'react'
 import "./SplashPage.css"
 import {useHistory} from 'react-router-dom'
 import MenuIcon from '../SVGs/MenuIcon'
-const SplashHeader = ({menuModal, setMenuModal}) => {
+const SplashHeader = ({modalStates}) => {
+  console.log(modalStates)
+  const {menuModal, setMenuModal} = modalStates;
   const history = useHistory();
 
   const goToLogin = ()=>{
