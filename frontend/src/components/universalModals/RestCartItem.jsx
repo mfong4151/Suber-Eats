@@ -7,12 +7,12 @@ import { deleteCartItem } from '../../store/cartItems'
 const RestCartItem = ({restCartItem}) => {
     const dispatch = useDispatch();
 
-    const currentCartItem = (cartQuantity) =>{
-        return {   menuItemId: restCartItem.menuItemId,
+    const currentCartItem = (cartQuantity) =>(
+         {   menuItemId: restCartItem.menuItemId,
             cartId: restCartItem.cartId,
-            quantity: cartQuantity,}
-        
-        }
+            quantity: cartQuantity,}   
+    )
+
     const addQuantity= e=>{
         e.preventDefault();
         e.stopPropagation();
@@ -25,9 +25,7 @@ const RestCartItem = ({restCartItem}) => {
         e.preventDefault();
         e.stopPropagation();
         dispatch(updateCartItem({cartItem:currentCartItem(restCartItem.quantity- 1)},restCartItem.id))
-        .then(()=>{
-            if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))
-        })
+        .then(()=>{if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))})
         
     }
 
