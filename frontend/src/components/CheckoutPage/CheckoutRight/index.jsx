@@ -21,7 +21,7 @@ const CheckoutRight = ({checkoutCart}) => {
     {transaction:{
       user_id:sessionUserId,
       restaurant_id:checkoutCart.restaurantId,
-      transaction_sum: Math.ceil((taxAndFees.totalAmt + tip) * 100)/100
+      transaction_sum: (taxAndFees.totalAmt + tip).toFixed(2)
     }}
   )
 
