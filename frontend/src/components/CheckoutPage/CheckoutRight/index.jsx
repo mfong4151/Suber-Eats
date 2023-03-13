@@ -49,18 +49,18 @@ const CheckoutRight = ({checkoutCart}) => {
 
         <div className='checkout-array'>
             <p className="checkout-text">Subtotal</p>
-            <p className="checkout-text">${subtotal}</p>
+            <p className="checkout-text">${subtotal.toFixed(2)}</p>
         </div>
         <div className='checkout-array page-spacing'>
             
               <p className="checkout-text">Delivery Fee</p>
-              <p className="checkout-text">${taxAndFees.deliveryFee}</p>
+              <p className="checkout-text">${taxAndFees.deliveryFee.toFixed(2)}</p>
             
         </div>
         <div className='checkout-array page-spacing'>
             
             <p className="checkout-text">Taxes & Other Fees</p>
-             <p className="checkout-text">${Math.ceil(taxAndFees.tax + taxAndFees.californiaFees *100)/100}</p>
+             <p className="checkout-text">${(taxAndFees.tax + taxAndFees.californiaFees *100).toFixed(2)}</p>
             
         </div>
         <div id='add-tip' className='checkout-array'>
@@ -79,10 +79,10 @@ const CheckoutRight = ({checkoutCart}) => {
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.25}>25%</button>
 
         </div>
-          <div className='checkout-array checkout-subtext'>100% of your tip goes to your courier. Tips are based on your order total of {`$${subtotal}`} before any discounts or promotions.</div>
+          <div className='checkout-array checkout-subtext'>100% of your tip goes to your courier. Tips are based on your order total of {`$${subtotal.toFixed(2)}`} before any discounts or promotions.</div>
           <div id='total' className='checkout-array page-spacing'>
           <h3 className="total-text">Total</h3>
-          <h3 className='total-text'>${Math.ceil((taxAndFees.totalAmt + tip) * 100)/100}</h3>
+          <h3 className='total-text'>${(taxAndFees.totalAmt + tip).toFixed(2)}</h3>
         </div>
 
         <div className='place-order-holder udc'>
