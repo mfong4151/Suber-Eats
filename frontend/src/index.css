@@ -151,6 +151,15 @@
     background-color: var(--color-grey);
     color: var(--color-black);
 }
+.grey-button-no-shad:hover{
+    background-color: var(--color-hover-grey);
+    cursor:pointer;
+}
+
+.grey-button-no-shad:active{
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
 
 .black-button{
     color: var(--color-white);

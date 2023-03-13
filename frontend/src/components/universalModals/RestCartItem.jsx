@@ -33,11 +33,11 @@ const RestCartItem = ({restCartItem}) => {
     return (
       <li className='item-qty-form'>  
             <div className="udc item-qty-form">
-                    <button className="udc qty-btn grey-button qty" id="qty-left" onClick={subQuantity}>
+                    <button className="udc qty-btn grey-button-no-shad qty" id="qty-left" onClick={subQuantity}>
                         -
                     </button>
                     <span className='qty-form udc qty'>{restCartItem.quantity}</span>
-                    <button className="udc qty-btn grey-button qty" id="qty-right" onClick={addQuantity}>
+                    <button className="udc qty-btn grey-button-no-shad qty" id="qty-right" onClick={addQuantity}>
                         +
                     </button>
             </div>
