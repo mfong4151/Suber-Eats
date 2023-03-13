@@ -206,7 +206,6 @@
 }
 
 
-/* header for suber eats */
 
 
 /* for the logo "suberEats" */
@@ -214,6 +213,9 @@
     min-width:160px;
     height:2.5rem;
     padding-right: 1.5rem;
+}
+.logo-holder:hover{
+    cursor: pointer;
 }
 
 .logo{
