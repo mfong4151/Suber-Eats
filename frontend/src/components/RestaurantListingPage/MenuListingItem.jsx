@@ -60,7 +60,7 @@ const MenuListingItem = ({ menuItem, toggleItemModal, seeYourCart, setSeeYourCar
     return (
         <li className='item-menuItem'  onClick={menuModalMethods}>
                 <h4 className='item-name' >{menuItem.itemName}</h4>
-                <p className='item-price'>{`$${menuItem.price}`}</p>
+                <p className='item-price'>{`$${menuItem.price.toFixed(2)}`}</p>
                 <p className='item-description'>{menuItem?.description}</p>
                 
                 <button className='udc add-to-cart' onClick={addCartItem}>{usersCartItems[menuItem.id]?.quantity ? usersCartItems[menuItem.id]?.quantity : '+'}</button>

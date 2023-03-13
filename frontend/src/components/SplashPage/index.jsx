@@ -18,14 +18,14 @@ const SplashPage= () => {
   
   return (
     <>
-        <SplashHeader menuModal={menuModal} setMenuModal={setMenuModal}/>
+        <SplashHeader modalStates={modalStates}/>
         <SplashBodySearch/>
         <SplashOptions />
         <SplashCities />
         <SplashCountries/>
         {/* <SplashSubFooter/> */}
         <Footer/>
-        {menuModal && <UserMenuModal  modalStates={modalStates}/>}
+        {menuModal && <UserMenuModal modalStates={modalStates} />}
     </>
   )
 }

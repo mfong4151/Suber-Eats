@@ -29,7 +29,7 @@ const UXHeader = ({modalStates}) => {
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
               
-              <button className='btn-round ux-buttons minimal-header-padding' onClick={()=> setLocationModal(!locationModal)}>
+              <button className='btn-round ux-buttons minimal-header-padding grey-button-no-shad' onClick={()=> setLocationModal(!locationModal)}>
                   <LocationIcon/>
                   <span className="map-location-text">
                     How to use map interface
@@ -48,7 +48,7 @@ const UXHeader = ({modalStates}) => {
           
         <div className='header-button-spacing'>
 
-          <button id='cart-button' className='btn-round ux-buttons' onClick={()=> setCartModal(!cartModal)}>
+          <button id='cart-button' className='btn-round ux-buttons black-button' onClick={()=> setCartModal(!cartModal)}>
             <span className='embedded-icon-padding'>
                 <SearchIcon/>
             </span>

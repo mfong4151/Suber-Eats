@@ -7,13 +7,14 @@ import YourItems from './YourItems'
 
 import GeneralMap from '../../generalDesignComponents/GeneralMap/index.jsx'
 const CheckoutLeft = ({checkoutCart}) => {
-  const [usersAddress, setUsersAddress] = useState('')
-  let [street, city, state, country] = checkoutCart.address.split(',')
+
+  const [street, city, state, country] = checkoutCart.address.split(',')
+  
   return (
       <>
       <div className="checkout-lr">
           <h1 className='rest-title'>{checkoutCart.restName}</h1>
-          <div className="mp checkout-deliv-pickup grey-button">
+          <div className="mp checkout-deliv-pickup" id='grey-banner'>
               <span>Delivery</span>
           </div>
 

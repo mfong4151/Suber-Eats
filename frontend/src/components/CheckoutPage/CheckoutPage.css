@@ -226,6 +226,11 @@
     margin-top:1%
 }
 
+#grey-banner{
+    background-color: var(--color-grey);
+    color: var(--color-black);
+}
+
 
 /* google map style */
 

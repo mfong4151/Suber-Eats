@@ -7,12 +7,12 @@ import { deleteCartItem } from '../../store/cartItems'
 const RestCartItem = ({restCartItem}) => {
     const dispatch = useDispatch();
 
-    const currentCartItem = (cartQuantity) =>{
-        return {   menuItemId: restCartItem.menuItemId,
+    const currentCartItem = (cartQuantity) =>(
+         {   menuItemId: restCartItem.menuItemId,
             cartId: restCartItem.cartId,
-            quantity: cartQuantity,}
-        
-        }
+            quantity: cartQuantity,}   
+    )
+
     const addQuantity= e=>{
         e.preventDefault();
         e.stopPropagation();
@@ -25,9 +25,7 @@ const RestCartItem = ({restCartItem}) => {
         e.preventDefault();
         e.stopPropagation();
         dispatch(updateCartItem({cartItem:currentCartItem(restCartItem.quantity- 1)},restCartItem.id))
-        .then(()=>{
-            if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))
-        })
+        .then(()=>{if(restCartItem.quantity === 1) dispatch(deleteCartItem(restCartItem.id))})
         
     }
 
@@ -35,17 +33,17 @@ const RestCartItem = ({restCartItem}) => {
     return (
       <li className='item-qty-form'>  
             <div className="udc item-qty-form">
-                    <button className="udc qty-btn grey-button qty" id="qty-left" onClick={subQuantity}>
+                    <button className="udc qty-btn grey-button-no-shad qty" id="qty-left" onClick={subQuantity}>
                         -
                     </button>
                     <span className='qty-form udc qty'>{restCartItem.quantity}</span>
-                    <button className="udc qty-btn grey-button qty" id="qty-right" onClick={addQuantity}>
+                    <button className="udc qty-btn grey-button-no-shad qty" id="qty-right" onClick={addQuantity}>
                         +
                     </button>
             </div>
             <div className='item-info'>
                     <h3 className='cart-item-name'>{restCartItem.name}</h3>
-                    <p className='cart-item-sum'>${Math.round(restCartItem.adjPrice *100)/100}</p>
+                    <p className='cart-item-sum'>${restCartItem.adjPrice.toFixed(2)}</p>
             </div>
             <div>
                 {/* add the photo here if it exists  */}

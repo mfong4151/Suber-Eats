@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './UserMenuModal.css'
 import { useDispatch, useSelector } from 'react-redux';
-import CartBody from './CartBody';
+import CartModalItem from './CartModalItem';
 import { deleteCart, fetchCart} from '../../store/cart';
 import { getSessionUserId } from '../../store/session';
 import { getCarts } from '../../store/cart';
@@ -31,7 +31,6 @@ const CartModal = ({modalStates, activeCartState}) => {
     },[])
 
     
-    // if (userCarts.length > 0)
         return (
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={()=> setCartModal(!cartModal)}>
@@ -39,7 +38,7 @@ const CartModal = ({modalStates, activeCartState}) => {
                 <div className="cart-modal-content">
                     {userCarts?.map((cart, idx)=>
                     <>
-                        {cart.cartItems > 0 && <CartBody cart={cart} key={idx} modalStates ={modalStates} activeCartState={activeCartState}/>}
+                        {cart.cartItems > 0 && <CartModalItem cart={cart} key={idx} modalStates ={modalStates} activeCartState={activeCartState}/>}
                     </>
                     )}
 

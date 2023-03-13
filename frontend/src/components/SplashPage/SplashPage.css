@@ -96,20 +96,12 @@ input{
 }
 
 
-#log-in{
-    /*we should try to pick a better color for bg color at some point */
-    background-color: var(--color-grey);
-    color: var(--color-black);
-}
 
 #sign-in{
     text-decoration: underline;
 }
 
-#sign-up{
-    background-color: var(--color-black);
-    color: var(--color-white)
-}
+
 
 
 select{

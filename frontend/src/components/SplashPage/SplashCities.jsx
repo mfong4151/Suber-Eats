@@ -13,12 +13,10 @@ const SplashCities = () => {
             <h1 className='splash-title'>Suber Eats cities Near Me</h1>
         </div>
         
-        <h2></h2>
-
         <div className='geo-location'>
 
           {
-          cities.map((city, idx) =>(
+            cities.map((city, idx) =>(
                 <div key={idx}>{city}</div>
               ))
           }
