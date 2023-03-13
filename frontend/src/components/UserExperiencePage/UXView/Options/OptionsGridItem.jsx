@@ -17,7 +17,7 @@ const OptionsGridItem = ({restaurant}) => {
              <h3 className='restaurant-name' id="rest-name">{restaurant.name}</h3>
               <div className='listing-time-distance'>{timeDistance}</div>
               </div>
-          <span className='grey-button rating-button udc'>{restaurant.rating}</span>
+          <span className='grey-button-no-shad rating-button udc'>{restaurant.rating}</span>
         </div>
       </div>
       </NavLink>

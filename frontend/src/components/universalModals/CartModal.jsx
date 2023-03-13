@@ -31,7 +31,6 @@ const CartModal = ({modalStates, activeCartState}) => {
     },[])
 
     
-    // if (userCarts.length > 0)
         return (
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={()=> setCartModal(!cartModal)}>
