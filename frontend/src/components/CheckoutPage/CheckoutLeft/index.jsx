@@ -13,7 +13,7 @@ const CheckoutLeft = ({checkoutCart}) => {
       <>
       <div className="checkout-lr">
           <h1 className='rest-title'>{checkoutCart.restName}</h1>
-          <div className="mp checkout-deliv-pickup grey-button">
+          <div className="mp checkout-deliv-pickup" id='grey-banner'>
               <span>Delivery</span>
           </div>
 
