@@ -2,10 +2,10 @@ import React from 'react'
 import MenuListingItem from './MenuListingItem'
 import './RestaurantListingPage.css'
 
-const ListingsBlock = ({header, menuItems, toggleItemModal, seeYourCart, setSeeYourCart}) => {
-   
+const ListingsBlock = ({header, menuItems, toggleItemModal, seeYourCart, setSeeYourCart, id}) => {
+    console.log(id)
     return (
-        <div className='listings-block'>
+        <div className='listings-block' id={'block-' + id}>
             <div className='header-holder'>
                 <h2 className='listing-header'>{header}</h2>
             </div>
