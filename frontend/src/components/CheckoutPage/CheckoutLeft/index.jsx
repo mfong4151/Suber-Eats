@@ -43,7 +43,7 @@ const CheckoutLeft = ({checkoutCart}) => {
           <div className="delivery-options">
             
                 <div className='loc-left'>
-                  <LocationIcon/>
+                  <div className='icon-spacing'> <LocationIcon/></div>
                   <div className="delivery-options-text">
                     <form id="delivery-form">
                       <input type='text' name='users-address' placeholder='Your address here' id='delivery-input'/>
