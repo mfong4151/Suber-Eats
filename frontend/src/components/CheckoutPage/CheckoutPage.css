@@ -42,12 +42,18 @@
     margin-bottom:1rem;
 }
 
+
+
 .loc-left{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:150px;
+    width:auto;
     
+}
+
+.icon-spacing{
+    padding-right:1rem;
 }
 
 .delivery-options{
@@ -104,6 +110,9 @@
     font-size: 16px;
 }
 
+#delivery-text-top{
+    width:100%
+}
 
 
 .delivery-text-bottom{

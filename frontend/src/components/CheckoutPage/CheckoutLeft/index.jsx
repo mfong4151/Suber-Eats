@@ -26,9 +26,11 @@ const CheckoutLeft = ({checkoutCart}) => {
           <div className="delivery-options">
 
                 <div className='loc-left'>
-                  <LocationIcon/>
+                  <div className='icon-spacing'>
+                    <LocationIcon/>
+                  </div>
                   <div className="delivery-options-text">
-                     <h4 className="delivery-text-top">{street}</h4>
+                     <h4 id="delivery-text-top">{street}</h4>
                      <p className="delivery-text-bottom">{city}</p>
                   </div>
                 </div>
