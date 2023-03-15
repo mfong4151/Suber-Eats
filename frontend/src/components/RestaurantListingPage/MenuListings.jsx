@@ -26,8 +26,8 @@ const MenuListings = () => {
     }
 
     const observer = new IntersectionObserver(entries => {
-        console.log(entries)
-        console.log(entries[0].target)
+        // console.log(entries)
+        // console.log(entries[0].target)
         },
         {
 
