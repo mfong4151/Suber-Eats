@@ -6,7 +6,7 @@ const RestaurantInfo = ({restaurant, reviewRef}) => {
   return (
     <div className="listing-info">
       <div className='univ-padding'>
-        <h1 className='restaurant-name '>{restaurant?.name}</h1>
+        <h1 className='restaurant-listing-name'>{restaurant?.name}</h1>
       </div>
       <div className='restaurant-info univ-padding'>
         <div className='menu-row-1'>

@@ -187,7 +187,7 @@
 
 .restaurant-name{
     padding-left: .75rem;
-    font-family: var(--font-family), var(--font-family-UMM);
+    font-family:var(--font-family-UMM), var(--font-family);
     font-weight:100;
     padding-bottom: .4rem;
 }
