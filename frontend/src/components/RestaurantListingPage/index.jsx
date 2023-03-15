@@ -34,18 +34,20 @@ const RestaurantListing = () => {
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
   const reviewSection = useRef();
+  const sections = document.querySelectorAll('.listings-block')
 
-  
-  //for later implementation post greenlighting
-  // const observer = new IntersectionObserver((entries)=>{
-  //   entries.forEach((entry) =>{ 
+//   const observer = new IntersectionObserver(entries => {
+//     // console.log(entries)
+//     // console.log(entries[0].target)
+//     },
+//     {
 
-  //       if(entry.isIntersecting) entry.target.classList.add('show');
+//     }
+// )
+// sections.forEach(section=>{
+//     observer.observe(section)
+// })
 
-  //       else entry.target.classList.remove('show')  
-
-  //   });
-  // });
 
   const cartFact = () =>(
     {
