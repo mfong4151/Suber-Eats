@@ -195,7 +195,6 @@
     padding: 0.8rem 1rem;
     border: 0;
     font-family: var(--font-family-UMB),var(--font-family);
-   
     letter-spacing: 0.6px;
 }
 
@@ -206,7 +205,6 @@
 }
 
 
-/* header for suber eats */
 
 
 /* for the logo "suberEats" */
@@ -214,6 +212,9 @@
     min-width:160px;
     height:2.5rem;
     padding-right: 1.5rem;
+}
+.logo-holder:hover{
+    cursor: pointer;
 }
 
 .logo{

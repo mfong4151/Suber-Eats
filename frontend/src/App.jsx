@@ -15,7 +15,6 @@ function App() {
   return (
     <>
           <Switch>
-
             <Route exact path="/login" component={LoginFormPage}/>
             <Route exact path="/deliverypickup" component={UserExperiencePage}/>
             <Route exact path="/restaurantListing/:restaurantId" component={RestaurantListing}/>

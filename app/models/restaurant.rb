@@ -23,8 +23,7 @@ class Restaurant < ApplicationRecord
     validates :longitude, presence:true
     validates :latitude, presence:true
     validates :cuisine_type, presence:true
-    
-  
+
 
     def self.restaurants_in_proximity(user_id)
         user_loc = User.find_by_id(user_id).location

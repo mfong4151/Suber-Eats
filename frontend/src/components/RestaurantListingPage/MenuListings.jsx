@@ -2,11 +2,8 @@ import React from 'react'
 import './RestaurantListingPage.css'
 import ListingsBlock from './ListingsBlock'
 import { useState } from 'react'
-import MenuItemModal from './modals/MenuItemModal'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { getMenuItemsSorted } from '../../store/menu'
-
-import { useEffect } from 'react'
 
 
 //bring in intersection observer here, have it change based class whats clicked
@@ -16,21 +13,24 @@ const MenuListings = () => {
     const [seeYourCart, setSeeYourCart] = useState(-1)
     const menuItems = useSelector(getMenuItemsSorted);
 
-    const dispatch = useDispatch()
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
     }
 
-    useEffect(()=>{
-    }, [dispatch])
+    const handleIndexClick = (e, idx) =>{
+        e.preventDefault();
+        const blockId = `block-${idx}`
+        document.getElementById(blockId).scrollIntoView({behavior:'smooth'})
+    }
 
+  
     return (
     <div className='listings-main'>
         
         <div className='table-of-contents'>
             {Object.keys(menuItems).map((header, idx)=>(
-                    <div className='toc-index'>
-                        <span className='' key={idx}>{header}</span>
+                    <div className='toc-index' onClick={e=> handleIndexClick(e, idx)}> 
+                        <span key={idx}>{header}</span>
                     </div>
             ))}
         </div>
@@ -40,7 +40,7 @@ const MenuListings = () => {
                 <ListingsBlock 
                     header={header} 
                     menuItems={menuItems[header]} 
-                    key={idx}
+                    id={idx}
                     menuItemModal={menuItemModal} 
                     toggleItemModal={toggleItemModal}
                     seeYourCart={seeYourCart}

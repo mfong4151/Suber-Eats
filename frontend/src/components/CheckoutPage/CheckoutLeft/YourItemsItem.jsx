@@ -3,9 +3,9 @@ import React from 'react'
 const YourItemsItem = ({item}) => {
   return (
     <div className='your-items-item'>
-        <p>${item.adjPrice}</p>
+        <p>${item.adjPrice.toFixed(2)}</p>
         <div>
-            <p>{`${item.name} x${item.quantity}`}</p>
+            <p>{`${item.name} x ${item.quantity}`}</p>
         </div>
     </div>
   )

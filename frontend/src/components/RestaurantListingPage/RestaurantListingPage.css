@@ -67,6 +67,11 @@
     height:auto;
 }
 
+.toc-index:hover{
+    cursor:pointer;
+}
+
+
 
 /* 2. ListingsBlock */
 .header-holder{
