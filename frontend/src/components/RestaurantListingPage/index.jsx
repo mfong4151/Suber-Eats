@@ -24,7 +24,6 @@ const RestaurantListing = () => {
   const [cartModal, setCartModal] = useState(false);
   const [restCartModal, setRestCartModal] = useState(false); 
   const modalStates = {menuModal, setMenuModal, locationModal, setLocationModal, cartModal, setCartModal, restCartModal, setRestCartModal}
-  
   const [firstReviews, setFirstReviews] = useState(true)
   const sessionUser = useSelector(state => state.session.user)
   const dispatch = useDispatch();
