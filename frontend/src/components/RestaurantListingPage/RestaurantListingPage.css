@@ -107,9 +107,7 @@
     width:100%;
 }
 
-.item-listing-div-i-guess{
 
-}
 .item-listing:hover{
     border-color:var(--color-grey-shadow);
     border-style: solid;

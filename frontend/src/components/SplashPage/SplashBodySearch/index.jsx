@@ -10,7 +10,7 @@ const SplashBodySearch = () => {
         <img src={splashRamen} alt='ramen'/>
           
           <div id='splash-main' className ="univ-padding">
-              <h1 id='order-food-banner'>Order food to Your Door</h1>
+              <h1 id='order-food-banner'>Order Food to Your Door</h1>
 
               {/* <div id='search-options'>
                 <form id='search-form'>  
