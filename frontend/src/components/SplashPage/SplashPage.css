@@ -76,14 +76,6 @@ form{
     background-color: #EEEEEE;
 }
 
-input{
-    padding-left: 1.5rem;
-    font-size: 16px;
-    font-weight: 300;
-    height: 44px;
-    width:700px;
-    color:#6B6B6B;
-}
 
 
 
@@ -102,12 +94,6 @@ input{
 }
 
 
-
-
-select{
-    padding-top: 0.75rem;
-    padding-left: 1rem;
-}
 
 /* color for login on hover #CCCCCC */
 /* color for sign up hover #333333 */
