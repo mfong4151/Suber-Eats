@@ -1,9 +1,23 @@
 
 
-.pickup-cols{
-    display:flex;
-    justify-content: flex-start;
+@media screen and (max-width:600px){
+    .pickup-cols{
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    
+    
 }
+@media screen and (min-width:601px){
+    .pickup-cols{
+        display:flex;
+        justify-content: flex-start;
+    }
+    
+
+}
+
 
 #options-dimensions{
     overflow-y: auto;
