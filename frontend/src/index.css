@@ -283,7 +283,7 @@
 }
 
 
-@media screen and (min-width: 600px){
+@media screen and (max-width: 600px){
     .geo-location{
         margin-top: 1rem;
         display:grid;
@@ -292,7 +292,7 @@
     }
 }
 
-@media screen and (max-width: 601px){
+@media screen and (min-width: 601px){
     .geo-location{
         margin-top: 1rem;
         display:grid;
