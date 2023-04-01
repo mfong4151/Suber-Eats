@@ -7,9 +7,11 @@
 }
 
 
+
+
 #search-component{
 
-    position: relative;
+  position: relative;
   text-align: left;
   color: var=(--color-black);
   font-family: var(--font-family)
@@ -20,8 +22,8 @@
 }
 
 #splash-main{
-        position: absolute;
-        top: 40%;
+    position: absolute;
+    top: 40%;
 
 }
 #search-options{
@@ -63,17 +65,10 @@ p{
 
 }
 
-.splash-subheader{
-    display: flex;
-    justify-content: space-between;
-}
 
 
 #splash-bottom{
     padding-bottom: 5rem;
-}
-form{
-    background-color: #EEEEEE;
 }
 
 
@@ -81,8 +76,6 @@ form{
 
 
 #user-auth-buttons{
-    display: flex;
-    justify-content: space-evenly;
     width:250px;
     padding-bottom: 1rem;
 }
@@ -115,12 +108,6 @@ hr.divider-thick{
     gap: 30px 300px;
  }
  
- #sub-footer{
-    display:flex;    
-    justify-content: space-between;
- 
- 
- }
 
 
  
@@ -173,8 +160,6 @@ hr.divider-thick{
 }
 
 .header-left{
-    display: flex;
-    justify-content: space-between;
     width: 200px;
 }
 

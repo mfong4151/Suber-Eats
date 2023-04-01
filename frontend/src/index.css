@@ -75,6 +75,11 @@
     justify-content: space-between;
 }
 
+.se{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .univ-padding{
     padding-left: 3rem;
     padding-right: 3rem;
