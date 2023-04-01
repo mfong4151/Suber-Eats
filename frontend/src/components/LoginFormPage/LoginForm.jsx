@@ -38,11 +38,9 @@ const LoginForm = ({credential, setCredential, setValidCredential}) => {
         
     } 
 
-    useEffect(
-        ()=>{
-            setErrors([])
-        },[credential]
-    )
+    useEffect(()=>{
+        setErrors([])
+    },[credential])
       
 
     const handleDemoUser = e => {

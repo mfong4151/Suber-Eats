@@ -12,10 +12,13 @@ const SplashHeader = ({modalStates}) => {
 
   
   return (
-     <header id="splash-header" className="univ-padding">
+     <header id="splash-header" className="univ-padding sb">
 
         <div className="logo header-left" id='splash-header-left'>
-              <button className='menu-modal minimal-header-padding' onClick={()=> setMenuModal(!menuModal)}>
+              <button 
+                className='menu-modal minimal-header-padding' 
+                onClick={()=> setMenuModal(!menuModal)}
+              >
                 <MenuIcon/>
               </button>
       

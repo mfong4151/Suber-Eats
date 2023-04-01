@@ -5,7 +5,7 @@ import { fetchCart } from '../../store/cart.jsx';
 import { fetchRestaurants } from '../../store/restaurant';
 import { fetchLocations } from '../../store/location';
 import BundleModals from '../universalModals/BundleModals.jsx';
-import UXHeader from '../UXHeader.jsx';
+import UXHeader from '../UXHeader';
 import UXView from './UXView';
 import Footer from '../generalDesignComponents/Footer/index.jsx';
 

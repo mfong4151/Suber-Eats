@@ -24,6 +24,7 @@
     --color-greyButtonBG: #EEEEEE;
     --color-grey-shadow: #E2E2E2;
     --color-hover-grey: #E2E2E2;
+    --color-header-white: #FFFFFF;
     --color-black: #000000;
     --color-black-boxshadow:#5E5E5C;
     --color-hover-black: #333333;
@@ -57,9 +58,21 @@
     justify-content: end;
     align-items: center;
 }
-.univ-font{
-    font-family: var(--font-family);
 
+
+.fdr{
+    display: flex;
+    flex-direction: row;
+}
+
+.fdc{
+    display: flex;
+    flex-direction: column;
+}
+
+.sb{
+    display: flex;
+    justify-content: space-between;
 }
 
 .univ-padding{

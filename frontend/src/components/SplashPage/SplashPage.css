@@ -54,11 +54,11 @@ p{
 
 
 #splash-header{
-    background-color: #FFFFFF;
-    padding-top: 2rem;
+
+    background-color: var(--color-header-white);
+    padding-top: 1.5rem;
     padding-bottom: 4rem;
-    display: flex;
-    justify-content: space-between;
+
     width: 100%;
 
 }
