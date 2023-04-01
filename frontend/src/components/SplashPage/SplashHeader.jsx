@@ -22,8 +22,10 @@ const SplashHeader = ({modalStates}) => {
               <div id='logo-holder'>
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
+
         </div>
         
+
 
         <div id="user-auth-buttons">
             <button className="btn-round header-btn-round grey-button" onClick={goToLogin}>

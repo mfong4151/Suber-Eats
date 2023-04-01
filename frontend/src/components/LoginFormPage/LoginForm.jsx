@@ -72,15 +72,16 @@ const LoginForm = ({credential, setCredential, setValidCredential}) => {
         <div className="sign-in-main">
 
             <h1 className="head-text">What's your phone number or email?</h1>
-            <div className="username-email">
-                <form className='login-form'> 
+            <div id="username-email">
+                <form className='login-form '> 
                     <input className='form-contents' type='text' name='location' placeholder='Enter your email or phone number' onChange={e => setCredential(e.target.value)}/> 
-               
                 </form>
             </div>
-            <div className="errors-segment">
-                <span className="errors-text">{errors.length ? errors[0] : ''}</span>
-            </div>
+            {errors.length > 0 
+                ? <div className="errors-segment udc"> <span className="errors-text">{errors.length ? errors[0] : ''}</span></div> 
+                :<div className="errors-segment udc"/>
+            }
+
             <button htmlFor='submit-username' className='button-sq login-button' id="button-continue" onClick={handleSubmit}>Continue</button>
             <hr className="divider-thin"/>
 
@@ -96,11 +97,8 @@ const LoginForm = ({credential, setCredential, setValidCredential}) => {
             </div>
             <div>
                 <p className="terms-cond">
-
                     This site is protected by reCAPTCHA and the Google <Link className='apply-underline' to="/">Privacy Policy</Link> and <Link className='apply-underline'to="/">Terms of Service</Link> apply.
-
                 </p>
-
             </div>
             
         </div>
