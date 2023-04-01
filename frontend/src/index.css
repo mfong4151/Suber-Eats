@@ -282,12 +282,27 @@
     font-weight: 500;
 }
 
-.geo-location{
-    margin-top: 1rem;
-    display:grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 20px 20px;
+
+@media screen and (min-width: 600px){
+    .geo-location{
+        margin-top: 1rem;
+        display:grid;
+        grid-template-columns: auto auto;
+        gap: 20px 20px;
+    }
 }
+
+@media screen and (max-width: 601px){
+    .geo-location{
+        margin-top: 1rem;
+        display:grid;
+        grid-template-columns: auto auto auto auto;
+
+        gap: 20px 20px;
+    }
+}
+
+
 
 
 .apply-underline{
