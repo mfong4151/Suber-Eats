@@ -9,7 +9,7 @@ const Footer = () => {
     <>
     <hr className="footer-divider"/>
 
-    <div className="univ-padding univ-font" id='sub-footer'>
+    <div className="univ-padding univ-font sb" id='sub-footer'>
 
         
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import LocationIcon from './SVGs/LocationIcon';
-import SearchIcon from './UserExperiencePage/UXView/SVGs/SearchIcon';
+import LocationIcon from '../SVGs/LocationIcon';
+import SearchIcon from '../UserExperiencePage/UXView/SVGs/SearchIcon';
 import './Header.css';
-import MenuIcon from './SVGs/MenuIcon';
+import MenuIcon from '../SVGs/MenuIcon';
 import { useHistory,  } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { getCartSizeFromWildcard } from '../store/cart';
+import { getCartSizeFromWildcard } from '../../store/cart';
 import {useSelector} from 'react-redux'
 
 const UXHeader = ({modalStates}) => {
