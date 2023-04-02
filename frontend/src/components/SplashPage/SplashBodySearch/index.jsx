@@ -7,7 +7,7 @@ const SplashBodySearch = () => {
 
   return (
     <div id='search-component'>
-        <img src={splashRamen} alt='ramen'/>
+        <img id='ramen' src={splashRamen} alt='ramen'/>
           
           <div id='splash-main' className ="univ-padding">
               <h1 id='order-food-banner'>Order Food to Your Door</h1>

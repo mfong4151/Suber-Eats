@@ -283,16 +283,19 @@
 }
 
 
+
 @media screen and (max-width: 600px){
     .geo-location{
         margin-top: 1rem;
         display:grid;
         grid-template-columns: auto auto;
-        gap: 20px 20px;
+        gap: 10px
     }
 }
 
-@media screen and (min-width: 601px){
+
+
+@media screen and (min-width: 600px){
     .geo-location{
         margin-top: 1rem;
         display:grid;
