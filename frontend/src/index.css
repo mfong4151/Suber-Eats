@@ -70,6 +70,12 @@
     flex-direction: column;
 }
 
+.aic{
+    display: flex;
+    align-items: center;
+}
+
+
 .sb{
     display: flex;
     justify-content: space-between;
@@ -80,15 +86,19 @@
     justify-content: space-evenly;
 }
 
-.univ-padding{
-    padding-left: 3rem;
-    padding-right: 3rem;
+@media screen and (min-width:600px){
+    .univ-padding{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    .univ-padding-y{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 }
 
-.univ-padding-y{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
+
 
 
 .embedded-icon-padding{
@@ -98,8 +108,9 @@
 /* button styles */
 
 .btn-round{
+    text-align: center; 
+    
     margin: auto;
-    padding: 0.8rem 1rem;
     border-radius: 30px;
     border: 0;
     font-family: var(--font-family);
@@ -217,11 +228,6 @@
 }
 
 
-.header-btn-round{
-    display: flex;
-    text-align: center; 
-}
-
 
 
 
@@ -264,12 +270,6 @@
     margin-top: 5rem;
 }
 
-.splash-header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 92px;
-}
 
 .splash-title{
     font-size: 34px;  
@@ -443,4 +443,49 @@ h2{
 
 .errors{
     color: var(--color-red-text)
+}
+
+
+/* header styling */
+
+
+
+@media screen and (max-width:600px) {
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 7rem;
+        padding-bottom:1rem;
+    }
+
+
+    .header-btn-round{
+        min-width:7rem;
+        height:3rem;
+    }
+}
+@media screen and (min-width:600px) {
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        min-height:5rem;
+    }
+
+        
+    .header-left{
+        width: 200px;
+
+    }
+    
+    #splash-hamburger:hover{
+        cursor: pointer;
+        }
+
+    
+    .header-btn-round{
+        min-width:7rem;
+        height:3rem;
+    }
 }

@@ -10,7 +10,7 @@ import {NavLink} from 'react-router-dom'
 const SplashOptions = () => {
   return (
         <div className="listings-grid univ-padding">
-            <div className="listings-grid-ele">
+            <section className="listings-grid-ele">
                 <div className="listing">
                     <img className="listings-image" src={biking} alt="biking-splash"/>
                 </div>
@@ -22,9 +22,9 @@ const SplashOptions = () => {
                         </NavLink>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className="listings-grid-ele">
+            <section className="listings-grid-ele">
                 <div className="listing">
                     <img className="listings-image" src={cooking} alt="cooking-splash"/>
                 </div>
@@ -37,9 +37,9 @@ const SplashOptions = () => {
                         </NavLink>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className="listings-grid-ele">
+            <section className="listings-grid-ele">
                 <div className="listing">
                     <img className="listings-image" src={typing} alt="typing-splash"/>
                 </div>
@@ -51,7 +51,7 @@ const SplashOptions = () => {
                         </NavLink>
                     </div>
                 </div>
-            </div>
+            </section>
         </div> 
   )
 }

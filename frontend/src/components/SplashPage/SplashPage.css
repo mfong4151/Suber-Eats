@@ -1,32 +1,31 @@
-#splash-hamburger:hover{
-    cursor: pointer;
-}
-
-#splash-header-left{
-    height:3rem;
-}
 
 #ramen{
     width:100%;
 }
 
 @media screen and (max-width: 600px){
+    #search-component{
+    
+        position: relative;
+        text-align: left;
+        color: var=(--color-black);
+        font-family: var(--font-family)
+      }
+    #splash-main{
+        display: flex;
+        flex-wrap:wrap;
+    }
 
     #ramen{
         width:100%;
         height:500px;
     }
     #order-food-banner{
+       
         font-size: 50px;
         font-weight: 600;
     }
-    #search-component{
-
-        position: relative;
-        text-align: left;
-        color: var=(--color-black);
-        font-family: var(--font-family)
-      }
+  
 }
 
 @media screen and (min-width: 601px){
@@ -83,15 +82,6 @@ p{
 }
 
 
-#splash-header{
-
-    background-color: var(--color-header-white);
-    padding-top: 1.5rem;
-    padding-bottom: 4rem;
-
-    width: 100%;
-
-}
 
 
 
@@ -100,12 +90,8 @@ p{
 }
 
 
-
-
-
 #user-auth-buttons{
-    width:250px;
-    padding-bottom: 1rem;
+    min-width:250px;
 }
 
 
@@ -163,6 +149,11 @@ hr.divider-thick{
 }
 
 @media screen and (max-width:600px){
+    .splash-div{
+        display: flex;
+        align-items: center;
+    }
+
     .listings-image{
         object-fit: contain;
 
@@ -199,12 +190,17 @@ hr.divider-thick{
 
 }
 
-.header-left{
-    width: 200px;
-}
+
 
 .button-icon{
 
     height: 20px;
     padding-right: .5rem;
+}
+
+
+#splash-header{
+    background-color: var(--color-header-white);
+    width: 100%;
+
 }
