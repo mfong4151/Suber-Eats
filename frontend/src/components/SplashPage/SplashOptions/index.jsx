@@ -11,7 +11,7 @@ const SplashOptions = () => {
   return (
         <div className="listings-grid univ-padding">
             <section className="listings-grid-ele">
-                <div className="listing">
+                <div className="listing-img-holder">
                     <img className="listings-image" src={biking} alt="biking-splash"/>
                 </div>
                 <div className="listings-cont">
@@ -25,7 +25,7 @@ const SplashOptions = () => {
             </section>
 
             <section className="listings-grid-ele">
-                <div className="listing">
+                <div className="listing-img-holder">
                     <img className="listings-image" src={cooking} alt="cooking-splash"/>
                 </div>
                 <div className="listings-cont">
@@ -40,7 +40,7 @@ const SplashOptions = () => {
             </section>
 
             <section className="listings-grid-ele">
-                <div className="listing">
+                <div className="listing-img-holder">
                     <img className="listings-image" src={typing} alt="typing-splash"/>
                 </div>
                 <div className="listings-cont">

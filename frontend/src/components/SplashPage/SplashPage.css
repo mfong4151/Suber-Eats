@@ -122,31 +122,49 @@ hr.divider-thick{
     gap: 30px 300px;
  }
  
-
-
- 
-.listings-grid{
+ .listings-grid{
 
     display: flex;
     
 }
-
-
 .listings-grid-ele{
-    width: 33%;
-    margin-top:2rem;
-    padding-right:20px;
+    min-width: 33%;
 }
 
-.listing{
+
+@media screen and (max-width:600px) {
+    .listings-grid{
+        flex-direction: column;
+    }
+    .listings-grid-ele{
+        margin-top:2rem;
+        padding:0rem 1rem;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    .listings-grid-ele{
+        margin-top:2rem;
+        padding-right:20px;
+    }
+}
+ 
+
+
+
+
+.listings-img{
     height:240px;
     overflow: hidden;
 }
+
 .listings-image{
     
     width: 100%;
     height: 100%;   
 }
+
 
 @media screen and (max-width:600px){
     .splash-div{
