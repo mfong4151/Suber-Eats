@@ -134,6 +134,11 @@
         justify-content: space-evenly;
     }
 
+    .univ-padding-mobile{
+        margin-left:1.5rem;
+        margin-right:1.5rem;
+    }
+
     
 }
 

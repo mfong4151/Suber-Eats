@@ -6,7 +6,7 @@ const SplashCountries = () => {
   const countries = operatingCountries()
 
   return (
-    <div className="univ-padding splash-comps" id='splash-bottom'>
+    <div className="univ-padding univ-padding-mobile splash-comps udc-mobile sb-mobile" id='splash-bottom'>
         <div className='splash-subheader'>
             <h1 className='splash-title'>Countries with Suber Eats</h1>
         </div>
