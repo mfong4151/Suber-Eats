@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import LocationIcon from '../SVGs/LocationIcon';
 import SearchIcon from '../UserExperiencePage/UXView/SVGs/SearchIcon';
-import './Header.css';
+import './UXHeader.css';
 import MenuIcon from '../SVGs/MenuIcon';
 import { useHistory,  } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -29,9 +29,9 @@ const UXHeader = ({modalStates}) => {
                     <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
               </div>
               
-              <button className='btn-round ux-buttons minimal-header-padding grey-button-no-shad' onClick={()=> setLocationModal(!locationModal)}>
+              <button id="how-to-map" className='btn-round ux-buttons grey-button-no-shad header-button udc' onClick={()=> setLocationModal(!locationModal)}>
                   <LocationIcon/>
-                  <span className="map-location-text">
+                  <span className="map-location-text udc">
                     How to use map interface
                   </span>
               </button>
@@ -48,12 +48,13 @@ const UXHeader = ({modalStates}) => {
           
         <div className='header-button-spacing'>
 
-          <button id='cart-button' className='btn-round ux-buttons black-button' onClick={()=> setCartModal(!cartModal)}>
-            <span className='embedded-icon-padding'>
-                <SearchIcon/>
-            </span>
-            {path !== 'restaurantListing' && `Carts`} 
-            {path === 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : `0`}`} 
+          <button id='cart-button' className='btn-round ux-buttons black-button header-button udc' onClick={()=> setCartModal(!cartModal)}>
+            <SearchIcon/>
+            <div id='carts-text-holder' className='udc'>
+              {path !== 'restaurantListing' && `Carts`} 
+              {path === 'restaurantListing' && `See your cart: ${cartQuant ? cartQuant : `0`}`} 
+
+            </div>
           </button>
         </div>
 

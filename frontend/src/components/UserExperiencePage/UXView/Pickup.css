@@ -228,3 +228,17 @@
     width:30px;
     border-radius: 3rem;
 }
+#sort-button{
+    width:4.5rem;
+}
+
+#price-range-button{
+    width:9rem;
+}
+
+
+#change-cities-button{
+    width:9rem;
+
+    
+}

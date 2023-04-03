@@ -203,11 +203,9 @@
 .ux-buttons{
     display:flex;
     align-items: center;
-    padding-bottom:1rem;
     font-family: var(--font-family);
     font-size: 15px;
     font-weight: 400;
-    height: 3rem;
 }
 
 .ux-buttons:hover{

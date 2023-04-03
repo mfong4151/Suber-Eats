@@ -16,13 +16,26 @@
 #cart-button{
     background-color: var(--color-black);
     color: var(--color-white);
-    float:right;
+    min-width:5.5rem;
+    
 }
 
 #cart-button:hover{
     background-color: var(--color-hover-black);
 }
 
+.header-button{
+    min-height:3rem;
+
+}
+
+#how-to-map{
+    min-width: 250px;
+}
+
+#carts-text-holder{
+    margin-left: 3px;
+}
 
 
 .map-location-text{

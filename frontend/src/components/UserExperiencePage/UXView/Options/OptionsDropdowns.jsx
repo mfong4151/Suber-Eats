@@ -41,20 +41,20 @@ const OptionsDropdowns = ({filterState, mapState}) => {
   
   return (
     <div className='pickup-btns'>
-      <button className={`btn-round ux-buttons ux-sort-buttons grey-button ${sortModal && `black-button`}`} onClick={toggleSortOptions}>
+      <button id='sort-button' className={`btn-round ux-buttons udc ux-sort-buttons grey-button ${sortModal && `black-button`}`} onClick={toggleSortOptions}>
         <span className='udc' onClick={toggleSortOptions}>
           Sort
         </span>
         <ChevronDown toggleOptions={toggleSortOptions}/>
       </button>
 
-      <button className={`btn-round ux-buttons ux-sort-buttons grey-button ${priceModal && `black-button`}`} onClick={togglePriceOptions} value="price" >
+      <button id='price-range-button' className={`btn-round ux-buttons  udc ux-sort-buttons grey-button ${priceModal && `black-button`}`} onClick={togglePriceOptions} value="price" >
         <span onClick={togglePriceOptions}>Price range</span>
         <ChevronDown toggleOptions={togglePriceOptions}/>
       </button>
 
 
-      <button className={`btn-round ux-buttons ux-sort-buttons grey-button ${cityModal && `black-button`}`} onClick={toggleCityOptions}>
+      <button id='change-cities-button' className={`btn-round ux-buttons udc ux-sort-buttons grey-button ${cityModal && `black-button`}`} onClick={toggleCityOptions}>
         <span onClick={toggleCityOptions}>Change Cities</span>
         <ChevronDown toggleOptions={toggleCityOptions}/>
       </button>
