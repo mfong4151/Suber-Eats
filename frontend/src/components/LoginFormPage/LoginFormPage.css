@@ -1,31 +1,54 @@
 header{
     height: 64px;
 }
-
-.login-logo{
-    position: relative;
-    left: 70px;
-    top: 25%
-}
-
 #login-suber-eats{
     color: white;
     background-color: var(--color-black);
 
 }
 
-
+.login-logo{
+    display: flex;
+    align-items: center;
+    padding-left:3rem
+}
 
 .sign-in-main{
     
     display: flex;
     flex-direction: column;
-    
     font-family: var(--font-family);
     margin:auto;
-    padding-top: 12rem;
-    width:338px;
 }
+
+@media screen and (max-width: 600px){
+    #login-suber-eats{
+        display: flex;
+        align-items: center;
+    }
+
+    .login-logo{
+      padding-left: 0rem;
+    }
+
+    .sign-in-main{
+        margin:4rem 5rem;
+ 
+    }
+
+}
+
+@media screen and (min-width:601px){
+    .sign-in-main{
+        
+       
+        padding-top: 12rem;
+        width:338px;
+    }
+    
+
+}
+
 
 
 

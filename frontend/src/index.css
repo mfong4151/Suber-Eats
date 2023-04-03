@@ -503,6 +503,10 @@ h2{
         min-width:7rem;
         height:3rem;
     }
+
+    .header-text{
+        font-size: 60px;
+    }
 }
 @media screen and (min-width:600px) {
     header{
