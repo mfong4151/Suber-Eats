@@ -266,24 +266,6 @@
 
 
 
-.splash-comps{
-    margin-top: 5rem;
-}
-
-
-.splash-title{
-    font-size: 34px;  
-    font-weight: 600
-}
-
-.splash-links{
-    text-decoration: underline;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-
-
 @media screen and (max-width: 600px){
     .geo-location{
         margin-top: 1rem;

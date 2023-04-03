@@ -14,6 +14,8 @@
     #splash-main{
         display: flex;
         flex-wrap:wrap;
+        max-width:50%;
+        margin-left:2rem
     }
 
     #ramen{
@@ -21,10 +23,12 @@
         height:500px;
     }
     #order-food-banner{
-       
+      
         font-size: 50px;
         font-weight: 600;
     }
+    /* text for "Order Food To Your Door" */
+  
   
 }
 
@@ -80,6 +84,24 @@ p{
 .apply-underline{
     text-decoration: underline;
 }
+
+
+.splash-comps{
+    margin-top: 5rem;
+}
+
+
+.splash-title{
+    font-size: 34px;  
+    font-weight: 600
+}
+
+.splash-links{
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 
 
 
