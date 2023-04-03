@@ -3,8 +3,8 @@ import LoginForm from './LoginForm.jsx';
 import LoginHeader from './LoginHeader.jsx';
 import LoginSignupHandler from './LoginSignupHandler.jsx';
 import {useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchUsers, getUsers } from '../../store/user.js';
+import { useDispatch } from 'react-redux';
+import { fetchUsers} from '../../store/user.js';
 
 const LoginFormPage = () => {
 
