@@ -8,7 +8,7 @@ const SplashCities = () => {
 
 
   return (
-    <div className="univ-padding splash-comps">
+    <div className="univ-padding splash-comps udc-mobile">
         <div className='splash-subheader'>
             <h1 className='splash-title'>Suber Eats cities Near Me</h1>
         </div>

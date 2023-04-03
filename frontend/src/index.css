@@ -86,7 +86,58 @@
     justify-content: space-evenly;
 }
 
-@media screen and (min-width:600px){
+
+@media screen and (max-width:600px){
+
+    .udc-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .udc-l-mobile{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .udc-r-mobile{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    
+    .fdr-mobile{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .fdc-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .aic-mobile{
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .sb-mobile{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .se-mobile{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    
+}
+
+@media screen and (min-width:600px) {
     .univ-padding{
         padding-left: 3rem;
         padding-right: 3rem;
