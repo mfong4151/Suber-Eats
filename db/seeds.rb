@@ -1,14 +1,14 @@
-require_relative 'easy_seeder'
+require_relative 'db/easy_seeds/easy_seeds'
 require "open-uri"
 
-class_names = [User, Restaurant, Menu, MenuItem, Review, Cart, CartItem,Transaction, Location]
+class_names = [User, Restaurant, Menu, MenuItem, Review, Cart, CartItem, Transaction, Location]
 table_strings = ['users', 'restaurants', 'menus', 'menu_items', 'reviews', 'carts', 'cart_items', 'transactions', 'locations']
 
-EasySeeds.destroy_tables(class_names, table_strings)
+EasySeeds::Destroy.destroy_tables(class_names, table_strings)
 
 puts 'Creating easy seeds data'
 class_names.delete_at(-1)
-EasySeeds.create_easy_seed_data(class_names)
+EasySeeds::Seeder.create_easy_seed_data(class_names)
 
 class_image_names = [Restaurant]
-EasySeeds.attach_images(class_image_names)
+EasySeeds::Images.attach_images(class_image_names)
