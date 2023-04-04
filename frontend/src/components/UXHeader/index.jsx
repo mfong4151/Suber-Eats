@@ -39,8 +39,8 @@ const UXHeader = ({modalStates}) => {
         </div>
         
 
-        
-          {/* <form className="form-bg minimal-header-padding">
+{/*         
+          <form className="form-bg minimal-header-padding">
             <SearchIcon/>
             <input id='search-form' type='text' name='location' placeholder='What are you craving?'/> 
 

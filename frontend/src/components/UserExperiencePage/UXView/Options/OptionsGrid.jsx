@@ -12,14 +12,14 @@ const OptionsGrid = ({restaurants}) => {
   )
 
   else return( 
-    <div>
+    <div id='options-grid'>
       <h2 id='options-null'>
         Sorry!
       </h2>
       <h3 id='null-text'>
         There don't seem to be any restaurants that meet your requirements!
       </h3>
-      <h6>
+      <h6 id="click-defaults-text">
         Click "Defaults" under sort to try again.
       </h6>
 

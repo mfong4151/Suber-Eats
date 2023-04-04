@@ -13,7 +13,8 @@
 #  cuisine_type :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#
+
+
 class Restaurant < ApplicationRecord
     validates :name, presence:true
     validates :rating, presence:true
@@ -27,7 +28,6 @@ class Restaurant < ApplicationRecord
 
     def self.restaurants_in_proximity(user_id)
         user_loc = User.find_by_id(user_id).location
-
         Restaurant.select('*')
         .where('SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= .026', 
         *[user_loc.latitude, user_loc.longitude] )
@@ -66,4 +66,5 @@ class Restaurant < ApplicationRecord
 
 
     has_one_attached :image
+    
 end

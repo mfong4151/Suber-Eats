@@ -1,11 +1,37 @@
 
-#ux-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 92px;
-    padding-right:2rem;
+
+#cart-button{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    
 }
+
+@media screen and (max-width:600px) {
+    #ux-header{
+        
+        padding:2rem 0rem;
+        height:auto
+    }
+
+    #cart-button{
+        min-width:300px;
+    }
+}
+
+@media screen and (min-width:601px) {
+    #ux-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 92px;
+        padding:0rem 2rem;
+    }
+
+    #cart-button{
+        min-width:5.5rem;
+    }
+}
+
 
 
 .minimal-header-padding{
@@ -13,12 +39,7 @@
   
 }
 
-#cart-button{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    min-width:5.5rem;
-    
-}
+
 
 #cart-button:hover{
     background-color: var(--color-hover-black);

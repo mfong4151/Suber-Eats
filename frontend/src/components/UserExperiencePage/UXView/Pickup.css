@@ -1,32 +1,91 @@
-
+#options-dimensions{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 @media screen and (max-width:600px){
+    #options-dimensions{
+       
+        min-height:800px;
+        width: auto;
+        
+    }
     .pickup-cols{
         display:flex;
         justify-content: flex-start;
         flex-direction: column;
     }
+   
+     /* Subheader for main screen         */
+     .subheader{
+        font-size: 30px;
+        font-weight: 600;
     
+        }
+    #options-grid{
+        width:auto;
+    }
+
+    /* for no results screen */
+    #options-null{
+        font-size: 150px;
+    }      
+
+    #null-text{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size:40px;
+        margin-bottom:2rem;
+    }      
+
+    #click-defaults-text{
+        
+    }
+
     
 }
 @media screen and (min-width:601px){
+
+    
+    #options-dimensions{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height:1260px;
+        min-width: 700px;
+        width: 45%;
+        
+    }
+
     .pickup-cols{
         display:flex;
         justify-content: flex-start;
     }
+     
+    /* Subheader for main screen         */
+    .subheader{
+        font-size: 30px;
+        font-weight: 600;
+
+    }
+
+    /* For no results screen */
     
+    #options-null{
+        font-size: 150px;
+    }      
+
+    #null-text{
+        font-size:40px;
+        margin-bottom:2rem;
+    }      
+
+    #click-defaults-text{
+        
+    }
 
 }
 
-
-#options-dimensions{
-    overflow-y: auto;
-    overflow-x: hidden;
-    height:1260px;
-    min-width: 700px;
-    width: 45%;
-    
-}
 
 #options-carousel{
     height:160px;
@@ -144,24 +203,12 @@
     gap: 2px
 }
 
-.options-listing{
-    width:100%
-}
+
 
 #rest-null{
     flex-direction: column;
 }
 
-#options-null{
-    font-size: 150px;
-}
-
-#null-text{
-    font-size:40px;
-    margin-bottom:2rem;
-}
-
-#nu
 
 .options_listing{
     height:190px;
@@ -187,12 +234,9 @@
     padding-left: .75rem;
     padding-right: .75rem;
     padding-bottom: 1rem;
-    /* height: 140px;
-    width: 370px; */
     object-fit: cover;
     width: 280px;
     height: 140px;
-    /* clip-path:inset(10%, 10%, 10%, 10%); */
 
 }
 .options-image:hover{

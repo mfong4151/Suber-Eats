@@ -7,7 +7,7 @@ import '../Pickup.css'
 const Options = ({restaurants, filterState, mapState}) => {
   
   return (
-    <div className='univ-padding' id="options-dimensions">
+    <div className='univ-padding univ-padding-mobile' id="options-dimensions">
       <h1 className="subheader">Delivery nearby</h1>
       <OptionsDropdowns filterState={filterState} mapState={mapState}/>
       <OptionsCarousel filterState={filterState}/>
