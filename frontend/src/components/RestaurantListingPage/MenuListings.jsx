@@ -25,7 +25,7 @@ const MenuListings = () => {
 
   
     return (
-    <div className='listings-main'>
+    <div className='listings-main fdc-mobile'>
         
         <div className='table-of-contents'>
             {Object.keys(menuItems).map((header, idx)=>(
@@ -35,7 +35,7 @@ const MenuListings = () => {
             ))}
         </div>
 
-        <div className='univ-padding'>
+        <div className='univ-padding univ-padding-mobile'>
             {Object.keys(menuItems).map((header, idx)=>(
                 <ListingsBlock 
                     header={header} 
