@@ -48,7 +48,9 @@ const UXHeader = ({modalStates}) => {
           
         <div className='header-button-spacing'>
 
-          <button id='cart-button' className='btn-round ux-buttons black-button header-button udc' onClick={()=> setCartModal(!cartModal)}>
+          <button id={`${path === 'restaurantListing' ? 'cart-button-rest-page': 'cart-button'}`} 
+            className='btn-round ux-buttons black-button header-button udc'
+            onClick={()=> setCartModal(!cartModal)}>
             <SearchIcon/>
             <div id='carts-text-holder' className='udc'>
               {path !== 'restaurantListing' && `Carts`} 

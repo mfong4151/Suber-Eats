@@ -55,22 +55,42 @@
 }
 
 @media screen and (min-width: 601px){
+
+    .toc-holder{
+        min-width:360px;
+        position:relative;
+    }
+
     .table-of-contents{
         display: flex;
         justify-content: start;
         align-items: left;
         flex-direction: column;
-        width:360px;
+        min-width:360px ;
         padding-right: 10rem;
         padding-left: 3rem;
     }
     
+    .toc-pos{
+        position: fixed;
+        top:20px;
+        overflow-x: auto;
+
+    }
+
+    .toc-inner{
+        min-width: 300px; /* set a fixed width for the inner div */
+        overflow-x: auto; /* apply overflow-x: auto to the inner div */
+    }
 }
 
 
 
 
 .toc-index{
+    display: flex;
+    flex-wrap: wrap;
+
     padding-top: 1rem;
     height:auto;
 }

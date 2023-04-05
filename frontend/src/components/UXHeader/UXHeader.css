@@ -16,6 +16,13 @@
     #cart-button{
         min-width:300px;
     }
+    #cart-button-rest-page{
+        min-width:300px;
+    }
+
+    
+ 
+
 }
 
 @media screen and (min-width:601px) {
@@ -30,9 +37,12 @@
     #cart-button{
         min-width:5.5rem;
     }
+
+    #cart-button-rest-page{
+        min-width: 165px;
+    }
+
 }
-
-
 
 .minimal-header-padding{
     padding-right:2rem;

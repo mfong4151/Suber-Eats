@@ -33,20 +33,7 @@ const RestaurantListing = () => {
   const usersCarts = useSelector(getCartsRestIdKeys)
   const {state} = useLocation()
   const reviewSection = useRef();
-  const sections = document.querySelectorAll('.listings-block')
-
-//   const observer = new IntersectionObserver(entries => {
-//     // console.log(entries)
-//     // console.log(entries[0].target)
-//     },
-//     {
-
-//     }
-// )
-// sections.forEach(section=>{
-//     observer.observe(section)
-// })
-
+ 
 
   const cartFact = () =>(
     {
@@ -88,7 +75,7 @@ const RestaurantListing = () => {
       <UXHeader modalStates={modalStates}/>
       <GeneralMap coords={coords} mapStyle={'checkout-container'}/>
       <RestaurantInfo restaurant={restaurant} reviewRef={reviewSection}/>
-      <MenuListings restaurantId={restaurantId} usersCarts={usersCarts}/>
+      <MenuListings reviewSection={reviewSection}/>
       <div id="review-section" ref={reviewSection}>
         <Reviews sessionUserId={sessionUser.id}/>
       </div>
