@@ -24,12 +24,12 @@ const Transaction = ({transaction}) => {
   }
 
   return (
-    <div className='transaction-block'>
+    <div className='transaction-block sb fdc-mobile'>
 
-        <div className="transaction-section univ-padding">
+        <div className="transaction-section univ-padding univ-padding-mobile ">
           <div className="rest-photo">
             <img className='options-image' src={transaction.imageUrl} />
-         </div>
+          </div>
 
           <div className="transact-info">
             <h4 className="transac-rest-name">
@@ -42,15 +42,14 @@ const Transaction = ({transaction}) => {
                   {dateObj.toLocaleDateString().concat(' ').concat(dateObj.toLocaleTimeString())}
                 </span>
             </div>
-            
+
 
           </div>
 
         </div>
 
-        {showReviewModal && <ReviewModal pastTransaction={transaction} showReviewModal={showReviewModal} setShowReviewModal={setShowReviewModal} goToRest={goToRest} sessionUserId/>}
 
-        <div className="transact-buttons">
+        <div className="transact-buttons udc-mobile">
             <button className="transact-page-btn udc black-button btn-rounded-corners" id='view-store' onClick={goToRest}>
                   <span className='transac-btn-text'>View store</span>
             </button>
@@ -59,6 +58,7 @@ const Transaction = ({transaction}) => {
             </button>
 
         </div>
+        {showReviewModal && <ReviewModal pastTransaction={transaction} showReviewModal={showReviewModal} setShowReviewModal={setShowReviewModal} goToRest={goToRest} sessionUserId/>}
 
 
     </div>

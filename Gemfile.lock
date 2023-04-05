@@ -195,7 +195,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
-  easy_seeds (~> 1.0.3)
+  easy_seeds
   faker
   jbuilder
   pg (~> 1.1)

@@ -28,13 +28,17 @@ const PastOrders = () => {
   return (
     <>
       <UXHeader modalStates={modalStates}/>
-      <div className="udc-left past-orders-holder">
+      <div className="udc-left udc-mobile past-orders-holder">
         <h1 className='univ-padding orders-header'>Past Orders</h1>
       </div>
+
        {Object.values(transactions).reverse().map((transaction,idx) => (
         <Transaction 
-          transaction={transaction} sessionUserId={sessionUser.id} key={idx}
-          />))}
+          transaction={transaction} 
+          sessionUserId={sessionUser.id} 
+          key={idx}
+
+        />))}
       <Footer/>
       <BundleModals modalStates={modalStates}/>
     </>

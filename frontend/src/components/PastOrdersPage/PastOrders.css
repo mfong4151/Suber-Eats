@@ -1,4 +1,72 @@
 
+
+
+
+
+@media screen and (max-width:600px) {
+    .transaction-block{
+        width:100%;
+        margin-bottom:1rem;
+    }
+
+    .rest-photo{
+        width:100%
+    }
+
+    .transact-buttons{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .transact-page-btn{
+        width:90%;
+        height:50px;
+        margin-bottom:1rem;
+    }
+
+    .transaction-section{
+        margin-bottom:1rem;
+    }
+    
+}
+
+@media screen and (min-width:601px) {
+
+    .transaction-block{
+        height:200px;
+        width:100%;
+        
+    }
+
+    .transaction-section{
+        display: flex;
+        justify-content: flex-start;
+        width:30%;
+    }
+
+    
+        .rest-photo{
+            padding-right: 2rem;
+            width:100%
+        }
+        .transact-buttons{
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+            padding-right:3rem;
+            
+        }
+        
+        .transact-page-btn{
+            width:320px;
+            height:50px;
+            margin-bottom:1rem;
+        }
+        
+}
+
+
 .orders-header{
     font-family: var(--font-family-UMB);
     font-size: 48px;
@@ -7,23 +75,8 @@
 
 
 
-.transaction-section{
-    display: flex;
-    justify-content: flex-start;
-    width:30%;
-}
 
 
-.rest-photo{
-    padding-right: 2rem;
-    width:100%
-}
-.transaction-block{
-    height:200px;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-}
 
 .transac-rest-name{
     font-family: var(--font-family-UMB),var(--font-family);
@@ -41,19 +94,7 @@
     flex-direction: column;
 }
 
-.transact-buttons{
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    padding-right:3rem;
-    
-}
 
-.transact-page-btn{
-    width:320px;
-    height:50px;
-    margin-bottom:1rem;
-}
 
 
 #view-store{
