@@ -1,5 +1,6 @@
 
 
+
 #left{
     width:100%
 }
@@ -17,14 +18,31 @@
 /* left side items  */
 
 
-.checkout-lr{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height:55vh;
-    padding-left: 7rem;
-    padding-right:7rem;
+@media screen and (max-width:600px) {
+    .checkout-lr{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height:55vh;
+        padding-left: 3rem;
+        padding-right:3rem;
+    }
+
 }
+
+@media screen and (min-width:601px) {
+    .checkout-lr{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height:55vh;
+        padding-left: 7rem;
+        padding-right:7rem;
+    }
+
+}
+
+
 
 .rest-title{
     font-family: var(--font-family-UMB), var(--font-family);
