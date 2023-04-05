@@ -72,7 +72,7 @@ const CheckoutRight = ({checkoutCart}) => {
 
         <div id='tip-choice'  className='checkout-array'>
 
-            <button className="btn-round black-button tip-button udc" onClick={handleTip} value={0}>None</button>
+            <button id='no-tip' className="btn-round black-button tip-button udc" onClick={handleTip} value={0}>None</button>
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.10}>10%</button>
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.15}>15%</button>
             <button className="btn-round black-button tip-button udc" onClick={handleTip} value={.20}>20%</button>
@@ -86,7 +86,7 @@ const CheckoutRight = ({checkoutCart}) => {
         </div>
 
         <div className='place-order-holder udc'>
-          <button className="place-order udc" onClick={handlePlaceOrder}><span>Place order</span></button>
+          <button id="place-order" className="udc" onClick={handlePlaceOrder}><span>Place order</span></button>
         </div>
     </div>
   )

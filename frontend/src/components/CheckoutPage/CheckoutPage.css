@@ -147,7 +147,7 @@
 
 .checkout-right{
     width:100vw;
-    height:40vh;
+    height:auto;
     background-color: var(--color-grey);
     display: flex;
     justify-content: baseline;
@@ -162,14 +162,14 @@
     width:100%
 }
 
-.place-order{
+#place-order{
     width:80%;
     height: 80px;
     font-size: 30px;
     background-color: var(--color-green);
     color: var(--color-white);
     border-radius: 1rem;
-    
+    margin-bottom:1rem;   
 }
 
 .place-order:hover{
@@ -222,9 +222,14 @@
     padding-bottom: 1rem;
 }
 
+#no-tip{
+    min-width:70px;
+}
+
 .tip-button{
     color: var(--color-greyButtonBG);
     height: 34px;
+    min-width:60px;
 }
 
 .mp{
