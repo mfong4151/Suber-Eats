@@ -1,5 +1,13 @@
 /* Key: menu listings */
 
+@media screen and (max-width: 600px){
+ 
+}
+
+@media screen and (max-width: 600px){
+ 
+}
+
 .listing-info{
     padding-top:1.5rem
 }
@@ -55,12 +63,6 @@
     padding-left: 3rem;
 }
 
-
-.index-heading{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
 
 .toc-index{
     padding-top: 1rem;

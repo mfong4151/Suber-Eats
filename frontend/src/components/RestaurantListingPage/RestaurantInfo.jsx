@@ -5,10 +5,10 @@ const RestaurantInfo = ({restaurant, reviewRef}) => {
 
   return (
     <div className="listing-info">
-      <div className='univ-padding'>
+      <div className='univ-padding udc-mobile'>
         <h1 className='restaurant-listing-name'>{restaurant?.name}</h1>
       </div>
-      <div className='restaurant-info univ-padding'>
+      <div className='restaurant-info univ-padding udc-mobile fdc-mobile'>
         <div className='menu-row-1'>
           <img src={star} alt='star' className="star listing-text-spacing"/>
           <span className='listing-text-spacing'>{restaurant?.rating}</span>
