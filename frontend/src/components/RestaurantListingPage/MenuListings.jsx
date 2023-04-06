@@ -28,18 +28,7 @@ const MenuListings = ({reviewSection}) => {
         document.getElementById(`block-${idx}`).scrollIntoView({behavior:'smooth'})
     }
 
-    const sections = document.querySelectorAll('.listings-block')
-  
 
-    const observer = new IntersectionObserver(entries => {
-       
-        // console.log(entries)
-        },{  }
-    )
-    sections.forEach(section=>{
-        observer.observe(section)
-    })
-   
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,7 +48,6 @@ const MenuListings = ({reviewSection}) => {
         <div className='toc-holder' ref={tocRef}>
 
             <div className={`table-of-contents ${scrollPosition > tocTop && scrollPosition + innerTocHeight + TOC_POS < reviewSectionHeight  && 'toc-pos'}`} ref={innerTocRef}>
-            {/* <div className={`table-of-contents`}> */}
                 <div className='toc-inner'>
 
                 {Object.keys(menuItems).map((header, idx)=>(
