@@ -1,7 +1,5 @@
-
-
-export const operatingCities = country =>{ 
-    const citiesByCountry = {
+export const operatingCities = (country: string): string[] => { 
+    const citiesByCountry: {[key: string]: string[]} = {
         'USA':[
            'Akron',
            'Albuquerque',
@@ -28,8 +26,7 @@ export const operatingCities = country =>{
            'Tucson',
            'West Hollywood'
         ]
-    
-            }
+    };
         
-    return citiesByCountry[country]
-}
+    return citiesByCountry[country] || [];
+};
