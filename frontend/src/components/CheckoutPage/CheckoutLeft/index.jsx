@@ -1,6 +1,6 @@
 import React from 'react'
 import CheckoutHeader from '../CheckoutHeader'
-import LocationIcon from '../../SVGs/LocationIcon.jsx'
+import LocationIcon from '../../SVGs/LocationIcon'
 import '../CheckoutPage.css'
 import { useState } from 'react'
 import YourItems from './YourItems'
