@@ -47,6 +47,10 @@
 @media screen and (max-width: 600px){
     .table-of-contents{
         margin: 1rem 2rem;
+       
+    }
+
+    .toc-inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -75,6 +79,7 @@
         position: fixed;
         top:20px;
         overflow-x: auto;
+        z-index: 1;
 
     }
 
@@ -208,6 +213,7 @@
 .review-section{
     margin-top: 100px;
     margin-bottom:5rem;
+    z-index:2
 }
 
 @media screen and (max-width:600px) {

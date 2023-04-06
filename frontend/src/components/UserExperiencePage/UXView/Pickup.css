@@ -22,8 +22,15 @@
         font-weight: 600;
     
         }
+    #options-array{
+        width:100%;
+        max-height:500px;
+        overflow-y: auto;
+    }
+    
     #options-grid{
-        width:auto;
+        width: auto;
+       
     }
 
     /* for no results screen */
@@ -90,7 +97,11 @@
     
 }
 @media screen and (min-width:601px){
-
+    #options-array{
+        display:grid;
+        grid-template-columns: auto auto;
+        gap: 2px
+    }
     
     #options-dimensions{
         overflow-y: auto;
@@ -129,11 +140,7 @@
         background-color:  var(--color-white);
         width:300px;
     }
-    #options-array{
-        display:grid;
-        grid-template-columns: auto auto;
-        gap: 2px
-    }
+
     
     .info-container{
         display: flex;

@@ -7,15 +7,18 @@ import { useRef } from 'react'
 
 //bring in intersection observer here, have it change based class whats clicked
 
+const TOC_POS = 20;
+
 const MenuListings = ({reviewSection}) => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [menuItemModal, setMenuItemModal] = useState(false);  
     const [seeYourCart, setSeeYourCart] = useState(-1)
     const menuItems = useSelector(getMenuItemsSorted);
     const tocRef = useRef(null)
-    const defaultTocTop = tocRef?.current?.offsetTop;
+    const innerTocRef = useRef(null)
     const tocTop = tocRef?.current?.offsetTop;
-
+    const innerTocHeight = innerTocRef?.current?.offsetHeight
+    const reviewSectionHeight = reviewSection?.current?.offsetTop
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
     }
@@ -26,27 +29,23 @@ const MenuListings = ({reviewSection}) => {
     }
 
     const sections = document.querySelectorAll('.listings-block')
+  
 
-    // const observer = new IntersectionObserver(entries => {
-    //     console.log(entries)
-    //     console.log(entries[0].target)
-    //     },
-    //     {
-    
-    //     }
-    // )
-    // sections.forEach(section=>{
-    //     observer.observe(section)
-    // })
-    
-    // console.log(reviewSection.current.offsetTop)
-    // console.log(defaultTocTop)
+    const observer = new IntersectionObserver(entries => {
+       
+        // console.log(entries)
+        },{  }
+    )
+    sections.forEach(section=>{
+        observer.observe(section)
+    })
+   
 
     useEffect(() => {
         const handleScroll = () => {
           setScrollPosition(window.pageYOffset);
         };
-    
+
         window.addEventListener('scroll', handleScroll);
     
         return () => {
@@ -54,14 +53,13 @@ const MenuListings = ({reviewSection}) => {
         };
       }, []);
 
-    console.log(tocTop)
 
     return (
     <div className='listings-main fdc-mobile'>
         <div className='toc-holder' ref={tocRef}>
 
-            {/* <div className={`table-of-contents ${scrollPosition > tocTop && 'toc-pos'}`}> */}
-            <div className={`table-of-contents`}>
+            <div className={`table-of-contents ${scrollPosition > tocTop && scrollPosition + innerTocHeight + TOC_POS < reviewSectionHeight  && 'toc-pos'}`} ref={innerTocRef}>
+            {/* <div className={`table-of-contents`}> */}
                 <div className='toc-inner'>
 
                 {Object.keys(menuItems).map((header, idx)=>(
