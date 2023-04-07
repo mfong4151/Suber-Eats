@@ -43,7 +43,7 @@ const Footer = () => {
 
         <div className="footer-options">
             {/* <p>About me: My Site</p> */}
-            <div className="footer-text">
+            <div className="plain-footer-text">
 
                 <p>Email me: mfong415@gmail.com</p>
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
     <hr className="footer-divider"/>
     <div id='footer-bottom' className='univ-padding univ-padding-mobile fdc'>
        
-            <div className='footer-text sb-mobile'>
+            <div className='sb-mobile'>
                 <p >
                 Original design concept and copyright owned by ©2023 Uber Technologies
                 </p>
