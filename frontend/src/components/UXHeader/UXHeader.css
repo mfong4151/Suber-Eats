@@ -16,6 +16,10 @@
     #cart-button{
         min-width:300px;
     }
+
+    #how-to-map{
+        min-width:300px;
+    }
     #cart-button-rest-page{
         min-width:300px;
     }
@@ -42,6 +46,13 @@
         min-width: 165px;
     }
 
+    #how-to-map{
+        min-width: 250px;
+    }
+    .header-button-spacing{
+        padding-left:1rem;
+    }
+    
 }
 
 .minimal-header-padding{
@@ -60,9 +71,7 @@
 
 }
 
-#how-to-map{
-    min-width: 250px;
-}
+
 
 #carts-text-holder{
     margin-left: 3px;
@@ -80,9 +89,6 @@
     font-family: var(--font-family-UMB);
 }
 
-.header-button-spacing{
-    padding-left:1rem;
-}
 
 #header-form-spacing{
     padding-left:1rem

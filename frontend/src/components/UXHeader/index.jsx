@@ -20,13 +20,16 @@ const UXHeader = ({modalStates}) => {
   return (
     <header className="univ-padding" id="ux-header">
 
-        <div className="logo header-left">
-              <button className='menu-modal minimal-header-padding' onClick={()=> setMenuModal(!menuModal)}>
-                <MenuIcon/>
-              </button>
-      
-              <div className='logo-holder' onClick={()=> history.push('/')}>
-                    <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
+        <div className="logo header-left fdc-mobile">
+              <div className='udc'>
+
+                <button className='menu-modal minimal-header-padding' onClick={()=> setMenuModal(!menuModal)}>
+                  <MenuIcon/>
+                </button>
+        
+                <div className='logo-holder' onClick={()=> history.push('/')}>
+                      <h1 className='suber'>Suber <span className="eats">Eats</span></h1>
+                </div>
               </div>
               
               <button id="how-to-map" className='btn-round ux-buttons grey-button-no-shad header-button udc' onClick={()=> setLocationModal(!locationModal)}>
