@@ -113,12 +113,50 @@
     height:110px;
 }
 
+.your-items-price{
+    display: flex;
+    align-items: center;
+}
+
 .your-items-item{
     display: flex;
     justify-content: space-between; 
     padding-left: 5%;
     padding-right: 5%;
 }
+
+.your-items-quantity{
+    display:flex;
+    justify-content: flex-end;
+    margin:0px;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .your-items-quantity{
+        max-width:150px;
+    }
+
+    .your-items-name{
+        display: flex;
+        flex-wrap: wrap;
+        max-width:150px;
+        padding-right:.5rem;
+    }
+    
+    .item-quant{
+        min-width:35px;
+    }
+}
+
+@media screen and (min-width:601px) {
+    .your-items-name{
+        padding-right:.5rem;
+    }
+}
+
+
 
 .delivery-edit{
     height:35px;
