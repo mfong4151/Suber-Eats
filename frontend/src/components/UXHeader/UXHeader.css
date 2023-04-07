@@ -8,9 +8,10 @@
 
 @media screen and (max-width:600px) {
     #ux-header{
-        
+        display: flex;
+        justify-content: space-evenly;
         padding:2rem 0rem;
-        height:auto
+        height:230px;
     }
 
     #cart-button{
