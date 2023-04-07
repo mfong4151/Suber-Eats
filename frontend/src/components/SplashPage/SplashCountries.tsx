@@ -1,19 +1,24 @@
 import React from 'react';
-import { operatingCountries } from './utils/operating_countries';
-import './SplashPage.css'
+import './SplashPage.css';
 
-const SplashCountries = () => {
-  const countries = operatingCountries()
+import { operatingCities } from './utils/operating_cities';
+
+const SplashCities: React.FC= ()=> {
+  const cities: string[] | undefined = operatingCities('USA') || [];
 
   return (
-    <div className="univ-padding univ-padding-mobile splash-comps udc-mobile sb-mobile" id='splash-bottom'>
-        <div className='splash-subheader'>
-            <h1 className='splash-title'>Countries with Suber Eats</h1>
-        </div>
+    <div className="univ-padding univ-padding-mobile splash-comps udc-mobile sb-mobile">
+      <div className='splash-subheader'>
+        <h1 className='splash-title'>Suber Eats cities Near Me</h1>
+      </div>
         
-        <div className='geo-location'>{countries.map((country, idx) =>( <div key={idx}>{country}</div>))} </div>
+      <div className='geo-location'>
+        {cities.map((city: string, idx: number) => (
+          <div key={idx}>{city}</div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default SplashCountries;
+export default SplashCities;

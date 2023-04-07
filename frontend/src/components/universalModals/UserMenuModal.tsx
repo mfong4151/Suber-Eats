@@ -2,36 +2,41 @@ import React from 'react'
 import { NavLink, useHistory } from 'react-router-dom';
 import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
-import { logout } from './../../store/session';
+import { logout } from '../../store/session';
 import { useLocation } from 'react-router-dom';
-import FavoritesIcon from './SVGs/FavoritesIcon';
+import { IUnivPhotos } from '../assets/photoExport';
 import OrdersIcon from './SVGs/OrdersIcon';
 import WalletIcon from './SVGs/WalletIcon';
 import HelpIcon from './SVGs/HelpIcon';
-import Promotions from './SVGs/Promotions';
-import InviteFriendsIcon from './SVGs/InviteFriendsIcon';
 import univPhotos from '../assets/photoExport'
 
-const UserMenuModal = ({modalStates}) => {
+interface Props {
+  modalStates: {
+    menuModal: boolean;
+    setMenuModal: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+}
+
+const UserMenuModal: React.FC<Props> = ({modalStates}) => {
   const {menuModal, setMenuModal} = modalStates;
   const dispatch = useDispatch()
   const location = useLocation()
   const history = useHistory()
-  const {linkedin, gitHubBlack} = univPhotos()
+  const {linkedin, gitHubBlack} = univPhotos as IUnivPhotos
   
   if (menuModal) document.body.classList.add('active-modal')
   else document.body.classList.remove('active-modal')
   
-  const onMain = location.pathname === '/'
+  const onMain: boolean = location.pathname === '/'
 
 
-  const signOut = (e) => {
+  const signOut = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     dispatch(logout());
 
   };
 
-  const signIn = e =>{
+  const signIn = (e: React.MouseEvent<HTMLButtonElement>) =>{
     e.preventDefault();
     history.push('/login')
     
@@ -94,3 +99,4 @@ const UserMenuModal = ({modalStates}) => {
 }
 
 export default UserMenuModal
+
