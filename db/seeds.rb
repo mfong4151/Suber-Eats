@@ -5,7 +5,7 @@ table_strings = ['users', 'restaurants', 'menus', 'menu_items', 'reviews', 'cart
 
 EasySeeds::Destroy.destroy_tables(class_names, table_strings)
 
-class_names.delete_at(-1)
+class_names.delete_at(-1) 
 EasySeeds::Seeder.create_easy_seed_data(class_names)
 
 class_image_names = [Restaurant]
