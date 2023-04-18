@@ -74,10 +74,17 @@
     padding-right:1rem;
 }
 
+.delivery-section{
+    min-height:85px;
+
+}
+
+
 .delivery-options{
     display: flex;
     justify-content: space-between;
-    width:auto
+    width:auto;
+    min-height:50px;
 }
 
 
@@ -86,7 +93,7 @@
 }
 
 #delivery-form{
-    height:30px;
+    height:16px;
     width:100px;
     background-color: transparent;
     display: flex;
@@ -172,6 +179,7 @@
 
 
 .delivery-text-bottom{
+    margin:0;
     font-size: 12px;
     color: var(--color-grey-text);
 }
@@ -182,6 +190,15 @@
 
 }
 
+
+.delivery-options-text {
+    display: flex;
+    min-height: 45px
+}
+
+.delivery-options-text > *{
+    min-height:40%;
+}
 .deliv-est-btn{
     border:solid;
     border-radius: 1rem;

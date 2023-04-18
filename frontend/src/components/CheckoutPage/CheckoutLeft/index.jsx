@@ -19,28 +19,35 @@ const CheckoutLeft = ({checkoutCart}) => {
           </div>
 
           <GeneralMap coords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}} mapStyle={"checkout-container"}/>
-          <div className='delivery-options delivery-header-holder fdc'>
+          <div className='delivery-section delivery-header-holder fdc sb'>
             <h4 className='delivery-header'> Delivery from</h4>
             <div className="delivery-options">
                 <div className='loc-left'>
-                  <LocationIcon/>
-                  <div className="delivery-options-text">
+                  <div className='icon-spacing'>
+
+                    <LocationIcon/>
+                  </div>
+                  <div className="delivery-options-text fdc sb">
                      <h4 id="delivery-text-top">{street}</h4>
                      <p className="delivery-text-bottom">{city}</p>
                   </div>
                 </div>
-          </div>
+            </div>
 
           </div>
 
          
-          <div className='delivery-options delivery-header-holder fdc'>
+          <div className='delivery-section delivery-header-holder fdc sb'>
             <h4 className='delivery-header'> Delivery to</h4>
             <div className="delivery-options">
                   
               <div className='loc-left'>
-                 <LocationIcon/>
-                <div className="delivery-options-text">
+                <div className='icon-spacing'>
+
+                  <LocationIcon/>
+                </div>            
+
+                <div className="delivery-options-text fdc sb">
                   <form id="delivery-form">
                     <input type='text' name='users-address' placeholder='Your address here' id='delivery-input'/>
                   </form>
