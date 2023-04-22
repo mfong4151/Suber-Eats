@@ -9,7 +9,7 @@ import PastOrders from './components/PastOrdersPage';
 import CheckoutPage from './components/CheckoutPage';
 
 
-function App() {
+const App = ()=> {
   
   
   return (
