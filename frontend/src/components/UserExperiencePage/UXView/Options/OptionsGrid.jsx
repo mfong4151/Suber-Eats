@@ -1,8 +1,9 @@
 import React,{ lazy } from 'react'
 import OptionsGridItem from './OptionsGridItem'
 
-const OptionsGrid = ({restaurants}) => {
-  return (restaurants.length > 0) 
+const OptionsGrid = ({restaurants}) => (
+
+(restaurants.length > 0) 
   ?(
 
     <div id='options-array'>
@@ -26,6 +27,6 @@ const OptionsGrid = ({restaurants}) => {
 
     </div>
   )
-}
+)
 
 export default OptionsGrid

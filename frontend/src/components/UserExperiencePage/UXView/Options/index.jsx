@@ -3,6 +3,7 @@ import OptionsCarousel from './OptionsCarousel';
 import OptionsDropdowns from './OptionsDropdowns';
 // import OptionsGrid from './OptionsGrid';
 import '../Pickup.css'
+import Loading from '../../../generalDesignComponents/Loading';
 
 const OptionsGrid = lazy(() => import('./OptionsGrid'));
 
@@ -13,10 +14,11 @@ const Options = ({restaurants, filterState, mapState}) => {
       <h1 className="subheader">Delivery nearby</h1>
       <OptionsDropdowns filterState={filterState} mapState={mapState}/>
       <OptionsCarousel filterState={filterState}/>
-      <Suspense fallback={<div>Loading ...</div>}>
+      <Suspense fallback={<Loading/>}>
 
           <OptionsGrid restaurants={restaurants}/>
       </Suspense>
+   
     </div>
   )
 }
