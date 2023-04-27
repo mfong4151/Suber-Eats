@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Suspense, lazy} from 'react';
 import OptionsCarousel from './OptionsCarousel';
 import OptionsDropdowns from './OptionsDropdowns';
-import OptionsGrid from './OptionsGrid';
+// import OptionsGrid from './OptionsGrid';
 import '../Pickup.css'
+
+const OptionsGrid = lazy(() => import('./OptionsGrid'));
 
 const Options = ({restaurants, filterState, mapState}) => {
   
@@ -11,7 +13,10 @@ const Options = ({restaurants, filterState, mapState}) => {
       <h1 className="subheader">Delivery nearby</h1>
       <OptionsDropdowns filterState={filterState} mapState={mapState}/>
       <OptionsCarousel filterState={filterState}/>
-      <OptionsGrid restaurants={restaurants}/>
+      <Suspense fallback={<div>Loading ...</div>}>
+
+          <OptionsGrid restaurants={restaurants}/>
+      </Suspense>
     </div>
   )
 }

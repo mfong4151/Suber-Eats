@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{ lazy } from 'react'
 import OptionsGridItem from './OptionsGridItem'
 
 const OptionsGrid = ({restaurants}) => {
-  if (restaurants.length > 0) return (
+  return (restaurants.length > 0) 
+  ?(
 
     <div id='options-array'>
         {restaurants.map((restaurant, idx) =>
@@ -11,7 +12,7 @@ const OptionsGrid = ({restaurants}) => {
     </div>
   )
 
-  else return( 
+  :( 
     <div id='options-grid'>
       <h2 id='options-null'>
         Sorry!
