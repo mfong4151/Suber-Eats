@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import {motion} from "framer-motion";
 import {useHistory, NavLink, useParams} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
@@ -39,56 +40,85 @@ const RestCartModal = ({cart, modalStates}) => {
     history.push(`/restaurantListing/${cart.restaurantId}`)
   }
   
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
+  const modalVariants = {
+    hidden: { x: "100%" },
+    visible: { x: "0%" },
+  };
 
   useEffect(()=>{
     dispatch(fetchCartItems(cart.id))
 }, [dispatch])
   
-  return (
-    <div className="modal">
-        <div className='modal-overlay cart-overlay' onClick={()=>(setRestCartModal(!restCartModal))}>
-          <div className="modal-content sub-menu grey-border-for-white" id='rest-modal'>
-              <div className='sub-header-pos'>
-                <div className='udc-right' >
-                  <button id='exit-button'>
-                    <ExitButton/>
+return (
+  <motion.div
+    className="modal"
+    initial="hidden"
+    animate={restCartModal ? "visible" : "hidden"}
+  >
+    <motion.div
+      className="modal-overlay cart-overlay"
+      variants={overlayVariants}
+      initial="hidden"
+      animate={restCartModal ? "visible" : "hidden"}
+      exit="hidden"
+      onClick={() => setRestCartModal(false)}
+    >
+      <motion.div
+        className="modal-content sub-menu grey-border-for-white"
+        id="rest-modal"
+        variants={modalVariants}
+        initial="hidden"
+        animate={restCartModal ? "visible" : "hidden"}
+        exit="hidden"
+      >
+      
+<div className='sub-header-pos'>
+<div className='udc-right' >
+  <button id='exit-button'>
+    <ExitButton/>
 
-                  </button>
+  </button>
 
-                </div>
-                <h1 className="sub-menu-header">{cart.restName}</h1>
-                <span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
-                <div className="sub-menu-buttons">
-                    <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
-                      <span>+ Add items</span>
-                    </button>
-                
-                </div>
-                <ul className='sub-menu-choices'>
-                    {restCartItems.map((restCartItem, idx)=>(
-                      <> 
-                        {!!restCartItem.quantity && <RestCartItem cartId ={cart.id} restCartItem={restCartItem} key={idx}/>}
-                      </>
-                    ))}
-                </ul>
-                <div className="sub-menu-note"></div>
-                <div className='udc clear-cart-holder'>
-                    {!!restCartItems && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
-                </div>
-              </div>
+</div>
+<h1 className="sub-menu-header">{cart.restName}</h1>
+<span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
+<div className="sub-menu-buttons">
+    <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
+      <span>+ Add items</span>
+    </button>
 
-              
-              <div className='udc sub-header-accent'>
-                <NavLink className="udc btn-sq btn-rounded-corners go-checkout" to={`/checkout/${cart.id}`}>
-                  Go to checkout 
-                </NavLink>
-              </div>
-          </div>
+</div>
+<ul className='sub-menu-choices'>
+    {restCartItems.map((restCartItem, idx)=>(
+      <> 
+        {!!restCartItem.quantity && <RestCartItem cartId ={cart.id} restCartItem={restCartItem} key={idx}/>}
+      </>
+    ))}
+</ul>
+<div className="sub-menu-note"></div>
+<div className='udc clear-cart-holder'>
+    {!!restCartItems && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
+</div>
+</div>
 
-        </div>
-    </div>
-  )
+
+<div className='udc sub-header-accent'>
+<NavLink className="udc btn-sq btn-rounded-corners go-checkout" to={`/checkout/${cart.id}`}>
+  Go to checkout 
+</NavLink>
+</div>
+
+      </motion.div>
+    </motion.div>
+  </motion.div>
+);
 }
 
+
 export default RestCartModal
+

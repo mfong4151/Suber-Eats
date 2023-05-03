@@ -1,12 +1,16 @@
 import React from 'react'
+import {motion} from "framer-motion"
 import { NavLink, useHistory } from 'react-router-dom';
 import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
 import { logout } from './../../store/session';
 import { useLocation } from 'react-router-dom';
+import FavoritesIcon from './SVGs/FavoritesIcon';
 import OrdersIcon from './SVGs/OrdersIcon';
 import WalletIcon from './SVGs/WalletIcon';
 import HelpIcon from './SVGs/HelpIcon';
+import Promotions from './SVGs/Promotions';
+import InviteFriendsIcon from './SVGs/InviteFriendsIcon';
 import univPhotos from '../assets/photoExport'
 
 const UserMenuModal = ({modalStates}) => {
@@ -34,10 +38,38 @@ const UserMenuModal = ({modalStates}) => {
     
   }
 
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const modalVariants = {
+    hidden: { x: "-100%" },
+    visible: { x: "0%" },
+  };
+  
+
   return (
-    <div className="modal">
-        <div className='modal-overlay' onClick={()=> setMenuModal(!menuModal)}>
-          <div className="modal-menu-content">
+    <motion.div
+      className="modal"
+      initial="hidden"
+      animate={menuModal ? "visible" : "hidden"}
+    >
+      <motion.div
+        className="modal-overlay"
+        variants={overlayVariants}
+        initial="hidden"
+        animate={menuModal ? "visible" : "hidden"}
+        exit="hidden"
+        onClick={() => setMenuModal(false)}
+      >
+      <motion.div
+        className="modal-menu-content"
+        variants={modalVariants}
+        initial="hidden"
+        animate={menuModal ? "visible" : "hidden"}
+        exit="hidden"
+      >
               {
                 !onMain && 
                   <NavLink to={'/yourorders'} className="modal-item-univ modal-menu-button">
@@ -88,10 +120,10 @@ const UserMenuModal = ({modalStates}) => {
               <hr className="divider-slim"/>
              
              
-          </div>
+          </motion.div>
 
-        </div>
-    </div>
+        </motion.div>
+    </motion.div>
   )
 }
 
