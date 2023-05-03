@@ -25,6 +25,13 @@ const UserMenuModal = ({modalStates}) => {
   
   const onMain = location.pathname === '/'
 
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  
+    navigator.clipboard.writeText('mfong415@gmail.com');
+    alert(`Link copied to clipboard: ${'mfong415@gmail.com'}`);
+  };
 
   const signOut = (e) => {
     e.preventDefault();
@@ -81,7 +88,7 @@ const UserMenuModal = ({modalStates}) => {
                 </NavLink>
               }
 
-              <div className="modal-item-univ modal-menu-button">
+              <div className="modal-item-univ modal-menu-button" onClick={handleOnClick}>
                 <div className='menu-modal-icon'>
                   <WalletIcon/>
                 </div>
