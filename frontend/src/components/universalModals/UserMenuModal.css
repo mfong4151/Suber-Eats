@@ -450,3 +450,13 @@ profile
     height: 100%;
     width: auto;
 }
+
+
+#modal-close-cont{
+    max-width:80%;
+}
+#modal-close-button{
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+}
