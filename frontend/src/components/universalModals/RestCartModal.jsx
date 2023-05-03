@@ -3,9 +3,11 @@ import {useHistory, NavLink, useParams} from 'react-router-dom';
 import { deleteCart } from '../../store/cart';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import './UserMenuModal.css'
+import './UserMenuModal.css';
 import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cartItems';
 import RestCartItem from './RestCartItem';
+import ExitButton from './SVGs/ExitButton';
+import './RestCartModal.css';
 
 const RestCartModal = ({cart, modalStates}) => {
   const dispatch = useDispatch()
@@ -48,6 +50,13 @@ const RestCartModal = ({cart, modalStates}) => {
         <div className='modal-overlay cart-overlay' onClick={()=>(setRestCartModal(!restCartModal))}>
           <div className="modal-content sub-menu grey-border-for-white" id='rest-modal'>
               <div className='sub-header-pos'>
+                <div className='udc-right' >
+                  <button id='exit-button'>
+                    <ExitButton/>
+
+                  </button>
+
+                </div>
                 <h1 className="sub-menu-header">{cart.restName}</h1>
                 <span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
                 <div className="sub-menu-buttons">
