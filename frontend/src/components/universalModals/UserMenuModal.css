@@ -295,7 +295,7 @@ profile
     height:100%;
     right:0px;
     border: left 2px;
-    
+    transition: transform .2s ease-in-out;
 }
 
 .sub-header-pos{    

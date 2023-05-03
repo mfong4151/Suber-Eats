@@ -98,7 +98,7 @@ const UserMenuModal = ({modalStates}) => {
                   <img src={gitHubBlack} className='github-linkedin'/>
                 </div>
 
-                <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My github</a>
+                <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My Github</a>
               </div>
               
               <div className="modal-item-univ modal-menu-button">
@@ -106,7 +106,15 @@ const UserMenuModal = ({modalStates}) => {
 
                   <HelpIcon/>                
                   </div>
-                  My personal site
+                  <a  
+                      href="https://maxfongdev.com/" 
+                      target="_blank" 
+                      className='a-link-spacing'
+                      onClick={e=> {e.stopPropagation()}}
+                    >
+                    My personal site
+                  </a>
+
               </div>
               
               {onMain && <button className='modal-menu-button sign-out' onClick={signIn}><span>Sign In</span></button>}
