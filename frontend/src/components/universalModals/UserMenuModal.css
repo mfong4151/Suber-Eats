@@ -43,11 +43,14 @@ profile
 }
 
 .modal-menu-button{
-    
     height: 50px;
     font-size: 16px;
     cursor: pointer;
     padding-left: 2rem;
+}
+.modal-menu-button > p{
+    padding: 0px 0px;
+    margin: 0px 0px;
 }
 
 .menu-modal-icon{

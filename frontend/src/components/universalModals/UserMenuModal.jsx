@@ -80,12 +80,17 @@ const UserMenuModal = ({modalStates}) => {
                     Orders
                 </NavLink>
               }
+
               <div className="modal-item-univ modal-menu-button">
                 <div className='menu-modal-icon'>
                   <WalletIcon/>
                 </div>
-                Contact me
+                <p className='udc'>
+                  Contact me
+
+                </p>
               </div>
+
               <div className="modal-item-univ modal-menu-button">
                 <div className='menu-modal-icon'>
                   <img src={linkedin} className='github-linkedin'/>
@@ -98,20 +103,20 @@ const UserMenuModal = ({modalStates}) => {
                   <img src={gitHubBlack} className='github-linkedin'/>
                 </div>
 
-                <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My Github</a>
+                <a  href="https://www.github.com/mfong4151/" target="_blank" className='a-link-spacing' onClick={e=> {e.stopPropagation()}}>My github</a>
               </div>
               
               <div className="modal-item-univ modal-menu-button">
-                <div className='menu-modal-icon'>
+                  <div className='menu-modal-icon'>
 
-                  <HelpIcon/>                
+                    <HelpIcon/>                
                   </div>
                   <a  
-                      href="https://maxfongdev.com/" 
+                      href="https://www.github.com/mfong4151/" 
                       target="_blank" 
-                      className='a-link-spacing'
+                      className='a-link-spacing' 
                       onClick={e=> {e.stopPropagation()}}
-                    >
+                      >
                     My personal site
                   </a>
 
