@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/mfong4151/Suber-Eats#readme",
   "dependencies": {
+    "framer-motion": "^10.12.7",
     "heap-js": "^2.2.0"
   }
 }
