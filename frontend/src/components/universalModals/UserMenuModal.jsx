@@ -30,7 +30,7 @@ const UserMenuModal = ({modalStates}) => {
     e.stopPropagation();
   
     navigator.clipboard.writeText('mfong415@gmail.com');
-    alert(`Link copied to clipboard: ${'mfong415@gmail.com'}`);
+    alert(`Email copied to clipboard: mfong415@gmail.com`);
   };
 
   const signOut = (e) => {
