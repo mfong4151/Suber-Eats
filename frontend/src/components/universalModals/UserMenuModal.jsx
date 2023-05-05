@@ -5,12 +5,9 @@ import './UserMenuModal.css'
 import { useDispatch } from 'react-redux';
 import { logout } from './../../store/session';
 import { useLocation } from 'react-router-dom';
-import FavoritesIcon from './SVGs/FavoritesIcon';
 import OrdersIcon from './SVGs/OrdersIcon';
 import WalletIcon from './SVGs/WalletIcon';
 import HelpIcon from './SVGs/HelpIcon';
-import Promotions from './SVGs/Promotions';
-import InviteFriendsIcon from './SVGs/InviteFriendsIcon';
 import univPhotos from '../assets/photoExport'
 
 const UserMenuModal = ({modalStates}) => {
