@@ -77,41 +77,41 @@ return (
         exit="hidden"
       >
       
-<div className='sub-header-pos'>
-<div className='udc-right' >
-  <button id='exit-button'>
-    <ExitButton/>
+          <div className='sub-header-pos'>
+          <div className='udc-right' >
+            <button id='exit-button'>
+              <ExitButton/>
 
-  </button>
+            </button>
 
-</div>
-<h1 className="sub-menu-header">{cart.restName}</h1>
-<span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
-<div className="sub-menu-buttons">
-    <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
-      <span>+ Add items</span>
-    </button>
+          </div>
+          <h1 className="sub-menu-header">{cart.restName}</h1>
+          <span className="sub-menu-text">Pickup at {cart.address.split(',').slice(0,2).join(', ')}</span>
+          <div className="sub-menu-buttons">
+              <button className="btn-round-simple sub-menu-button grey-button" onClick={handleAddClick}>
+                <span>+ Add items</span>
+              </button>
 
-</div>
-<ul className='sub-menu-choices'>
-    {restCartItems.map((restCartItem, idx)=>(
-      <> 
-        {!!restCartItem.quantity && <RestCartItem cartId ={cart.id} restCartItem={restCartItem} key={idx}/>}
-      </>
-    ))}
-</ul>
-<div className="sub-menu-note"></div>
-<div className='udc clear-cart-holder'>
-    {!!restCartItems && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
-</div>
-</div>
+          </div>
+          <ul className='sub-menu-choices'>
+              {restCartItems.map((restCartItem, idx)=>(
+                <> 
+                  {!!restCartItem.quantity && <RestCartItem cartId ={cart.id} restCartItem={restCartItem} key={idx}/>}
+                </>
+              ))}
+          </ul>
+          <div className="sub-menu-note"></div>
+          <div className='udc clear-cart-holder'>
+              {!!restCartItems && <button className="udc clear-cart" onClick={clearCart}>Clear Cart</button>}
+          </div>
+          </div>
 
 
-<div className='udc sub-header-accent'>
-<NavLink className="udc btn-sq btn-rounded-corners go-checkout" to={`/checkout/${cart.id}`}>
-  Go to checkout 
-</NavLink>
-</div>
+          <div className='udc sub-header-accent'>
+          <NavLink className="udc btn-sq btn-rounded-corners go-checkout" to={`/checkout/${cart.id}`}>
+            Go to checkout 
+          </NavLink>
+          </div>
 
       </motion.div>
     </motion.div>
