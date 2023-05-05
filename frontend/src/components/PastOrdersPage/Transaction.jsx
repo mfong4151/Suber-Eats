@@ -48,8 +48,16 @@ const Transaction = ({transaction}) => {
 
         </div>
 
+        {showReviewModal && <ReviewModal 
+          pastTransaction={transaction} 
+          showReviewModal={showReviewModal} 
+          setShowReviewModal={setShowReviewModal} 
+          goToRest={goToRest} 
+          />}
+
 
         <div className="transact-buttons udc-mobile">
+
             <button className="transact-page-btn udc black-button btn-rounded-corners" id='view-store' onClick={goToRest}>
                   <span className='transac-btn-text'>View store</span>
             </button>
@@ -58,7 +66,7 @@ const Transaction = ({transaction}) => {
             </button>
 
         </div>
-        {showReviewModal && <ReviewModal pastTransaction={transaction} showReviewModal={showReviewModal} setShowReviewModal={setShowReviewModal} goToRest={goToRest} sessionUserId/>}
+      
 
 
     </div>

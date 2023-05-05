@@ -15,8 +15,9 @@
 
     .transact-buttons{
         display: flex;
+        justify-content: flex-end;
         flex-direction: column;
-        
+        position:relative;
     }
 
     .transact-page-btn{

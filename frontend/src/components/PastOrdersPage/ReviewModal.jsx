@@ -5,11 +5,11 @@ import { updateTransaction } from '../../store/transaction';
 import { createReview } from '../../store/review';
 import './PastOrders.css';
 
-const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransaction, sessionUserId}) => {
+const ReviewModal = ({showReviewModal, setShowReviewModal, goToRest, pastTransaction}) => {
     const [reviewBody, setReviewBody] = useState('')
     const [errors, setErrors] = useState([])
     const dispatch = useDispatch()
-
+    const sessionUserId = useSelector(state => state.session.user.id)
     if (showReviewModal) document.body.classList.add('active-modal')
     else document.body.classList.remove('active-modal')
     const handleForm = e =>{

@@ -526,3 +526,10 @@ h2{
         height:3rem;
     }
 }
+
+
+/* For any cursor events */
+
+.cursor-events:hover{
+    cursor:pointer;
+}
