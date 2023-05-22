@@ -55,12 +55,8 @@ const UserMenuModal = ({modalStates}) => {
 
   return (
 
-      <motion.div
+      <div
         className="modal-overlay"
-        variants={overlayVariants}
-        initial="hidden"
-        animate={menuModal ? "visible" : "hidden"}
-        exit="hidden"
         onClick={() => setMenuModal(false)}
       >
       <motion.div
@@ -132,7 +128,7 @@ const UserMenuModal = ({modalStates}) => {
              
           </motion.div>
 
-        </motion.div>
+        </div>
   )
 }
 
