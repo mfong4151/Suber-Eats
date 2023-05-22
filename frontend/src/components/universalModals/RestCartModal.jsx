@@ -55,7 +55,6 @@ const RestCartModal = ({cart, modalStates}) => {
 }, [dispatch])
   
 return (
-  <div className="modal">
     <motion.div
       className="modal-overlay cart-overlay"
       variants={overlayVariants}
@@ -111,7 +110,6 @@ return (
 
       </motion.div>
     </motion.div>
-  </div>
 );
 }
 

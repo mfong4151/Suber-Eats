@@ -54,10 +54,7 @@ const UserMenuModal = ({modalStates}) => {
   
 
   return (
-    <div
-      className="modal"
-     
-    >
+
       <motion.div
         className="modal-overlay"
         variants={overlayVariants}
@@ -136,7 +133,6 @@ const UserMenuModal = ({modalStates}) => {
           </motion.div>
 
         </motion.div>
-    </div>
   )
 }
 
