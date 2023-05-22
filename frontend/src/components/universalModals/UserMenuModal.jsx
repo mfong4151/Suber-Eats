@@ -54,10 +54,9 @@ const UserMenuModal = ({modalStates}) => {
   
 
   return (
-    <motion.div
+    <div
       className="modal"
-      initial="hidden"
-      animate={menuModal ? "visible" : "hidden"}
+     
     >
       <motion.div
         className="modal-overlay"
@@ -89,10 +88,7 @@ const UserMenuModal = ({modalStates}) => {
                 <div className='menu-modal-icon'>
                   <WalletIcon/>
                 </div>
-                <p className='udc'>
-                  Contact me
-
-                </p>
+                <p className='udc'> Contact me</p>
               </div>
 
               <div className="modal-item-univ modal-menu-button">
@@ -140,7 +136,7 @@ const UserMenuModal = ({modalStates}) => {
           </motion.div>
 
         </motion.div>
-    </motion.div>
+    </div>
   )
 }
 

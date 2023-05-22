@@ -55,11 +55,7 @@ const RestCartModal = ({cart, modalStates}) => {
 }, [dispatch])
   
 return (
-  <motion.div
-    className="modal"
-    initial="hidden"
-    animate={restCartModal ? "visible" : "hidden"}
-  >
+  <div className="modal">
     <motion.div
       className="modal-overlay cart-overlay"
       variants={overlayVariants}
@@ -115,7 +111,7 @@ return (
 
       </motion.div>
     </motion.div>
-  </motion.div>
+  </div>
 );
 }
 
