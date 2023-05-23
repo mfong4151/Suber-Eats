@@ -124,7 +124,11 @@ const UserMenuModal = ({modalStates}) => {
 
               </div>
               <hr className="divider-slim"/>
-             
+              
+              <div className="udc">
+
+                <img src={myQR} alt=" qr code to my website" />
+              </div>
             </div>
 
         </motion.div>
