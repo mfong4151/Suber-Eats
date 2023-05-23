@@ -8,7 +8,8 @@ import { useLocation } from 'react-router-dom';
 import OrdersIcon from './SVGs/OrdersIcon';
 import WalletIcon from './SVGs/WalletIcon';
 import HelpIcon from './SVGs/HelpIcon';
-import univPhotos from '../assets/photoExport'
+import univPhotos from '../assets/photoExport';
+import myQR from '../assets/frame.png';
 
 const UserMenuModal = ({modalStates}) => {
   const {menuModal, setMenuModal} = modalStates;
@@ -55,10 +56,7 @@ const UserMenuModal = ({modalStates}) => {
 
   return (
 
-      <div
-        className="modal-overlay"
-        onClick={() => setMenuModal(false)}
-      >
+      <div className="modal-overlay" onClick={() => setMenuModal(false)}>
       <motion.div
         className="modal-menu-content"
         variants={modalVariants}
@@ -66,6 +64,8 @@ const UserMenuModal = ({modalStates}) => {
         animate={menuModal ? "visible" : "hidden"}
         exit="hidden"
       >
+          <div id='menu-spacing'>
+
               {
                 !onMain && 
                   <NavLink to={'/yourorders'} className="modal-item-univ modal-menu-button">
@@ -125,10 +125,11 @@ const UserMenuModal = ({modalStates}) => {
               </div>
               <hr className="divider-slim"/>
              
-             
-          </motion.div>
+            </div>
 
-        </div>
+        </motion.div>
+
+      </div>
   )
 }
 

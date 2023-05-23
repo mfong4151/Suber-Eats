@@ -30,11 +30,30 @@ profile
     
     position: absolute;
     background-color: var(--color-white);
-    width:300px;
     height:100%;
     transition: transform .05s ease-in-out;
    
 }
+
+
+@media screen and (max-width:599px) {
+    .modal-menu-content{
+        width:100vw;
+    }
+
+}
+@media screen and (min-width:600px) {
+    .modal-menu-content{
+        width:300px;
+
+    }
+
+}
+
+#menu-spacing{
+    margin-top:1.5rem;
+}
+
 .modal-item-univ{
     display:flex;
     justify-content: flex-start;
