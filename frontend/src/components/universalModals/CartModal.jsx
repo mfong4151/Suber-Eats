@@ -35,7 +35,7 @@ const CartModal = ({modalStates, activeCartState}) => {
         <div className="modal">
             <div className='modal-overlay cart-overlay' onClick={()=> setCartModal(!cartModal)}>
               {userCarts.length > 0 && 
-                <div className="cart-modal-content">
+                <div id="cart-modal-content">
                     {userCarts?.map((cart, idx)=>
                     <>
                         {cart.cartItems > 0 && <CartModalItem cart={cart} key={idx} modalStates ={modalStates} activeCartState={activeCartState}/>}

@@ -40,10 +40,6 @@ const RestCartModal = ({cart, modalStates}) => {
     history.push(`/restaurantListing/${cart.restaurantId}`)
   }
   
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
 
   const modalVariants = {
     hidden: { x: "100%" },

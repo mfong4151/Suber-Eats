@@ -34,11 +34,12 @@
     border-bottom:transparent;
 }
 
-.cart-modal-content{
+
+
+#cart-modal-content{
     position: absolute;
     top:6%;
     right:3%;
-    width:420px;
 
     /* change this to height auto after we get our thunk working */
     height:auto;
@@ -46,6 +47,22 @@
     border-radius: 30px;
     border:1px solid var(--color-grey-shadow);
 }
+
+@media screen and (max-width:599px) {
+    #cart-modal-content{
+        width:100vw;
+
+    }  
+   
+}
+
+@media screen and (min-width:600px) {
+    #cart-modal-content{
+        width:420px;
+
+    }
+}
+
 
 #no-carts-content{
     height:100px;
