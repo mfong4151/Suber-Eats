@@ -10,15 +10,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     position: fixed;
     overflow-y: auto;
-    margin:atuo;
+    margin:auto;
     background-color: var(--color-white);
-    width:450px;
     height:100%;
     right:0px;
     border: left 2px;
     transition: transform .05s ease-in-out;
+}
+
+@media screen and (max-width:599px){
+    .sub-menu{
+        width:100vw;
+        
+    }
+}
+@media screen and (min-width:600px){
+    .sub-menu{
+        width:450px;
+
+    }
+
 }
 
 .sub-header-pos{    

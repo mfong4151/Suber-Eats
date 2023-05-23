@@ -65,9 +65,9 @@ return (
       >
       
           <div className='sub-header-pos'>
-          <div className='udc-right' >
-            <button id='exit-button'>
-              <ExitButton/>
+            <div className='udc-right' >
+              <button id='exit-button'>
+                <ExitButton/>
 
             </button>
 
