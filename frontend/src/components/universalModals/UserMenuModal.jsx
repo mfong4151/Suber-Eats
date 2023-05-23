@@ -127,7 +127,7 @@ const UserMenuModal = ({modalStates}) => {
               
               <div className="udc">
 
-                <img src={myQR} alt=" qr code to my website" />
+                <img id='my-qr' src={myQR} alt=" qr code to my website" />
               </div>
             </div>
 
