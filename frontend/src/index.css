@@ -88,6 +88,16 @@
 
 
 @media screen and (max-width:600px){
+    
+    .ux-sort-buttons{
+        margin-left:1rem;
+        margin-right: .5rem;
+        display:flex;
+        align-items: center;
+        height: 40px;
+        
+    }
+
 
     .udc-mobile{
         display: flex;
@@ -151,6 +161,14 @@
     .univ-padding-y{
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+
+    .ux-sort-buttons{
+        margin-left:0rem;
+        margin-right: .5rem;
+        display:flex;
+        align-items: center;
+        height: 40px;
     }
 }
 
@@ -260,13 +278,6 @@
 }
 
 
-.ux-sort-buttons{
-    margin-left:0rem;
-    margin-right: .5rem;
-    display:flex;
-    align-items: center;
-    height: 40px;
-}
 
 .btn-rounded-corners{
     border-radius: 7px;

@@ -45,7 +45,7 @@ profile
 @media screen and (min-width:600px) {
     .modal-menu-content{
         width:300px;
-
+        overflow-y:auto;
     }
 
 }
