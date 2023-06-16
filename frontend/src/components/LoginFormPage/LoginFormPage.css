@@ -35,6 +35,17 @@ header{
         margin:4rem 5rem;
  
     }
+    .login-text{
+        display: flex;
+        justify-content: flex-end;
+        padding-left: .5rem;
+        font-size: 14px;
+        background-color: var(--color-grey);
+    }
+    .form-contents{
+        padding-left:1rem;
+        
+    }
 
 }
 
@@ -45,7 +56,10 @@ header{
         padding-top: 12rem;
         width:338px;
     }
-    
+    .login-text{
+        padding-left: .5rem;
+        background-color: var(--color-grey);
+    }    
 
 }
 
