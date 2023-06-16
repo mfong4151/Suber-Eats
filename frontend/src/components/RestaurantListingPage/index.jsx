@@ -81,7 +81,7 @@ const RestaurantListing = () => {
       </div>
       <Footer/>
       <BundleModals modalStates={modalStates}/>      
-
+   
     </>
   )
 }

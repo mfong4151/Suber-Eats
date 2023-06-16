@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { getMenuItemsSorted } from '../../store/menu'
 import { useRef } from 'react'
+import handleIndexClick from './utils/handleIndexClick'
 
 //bring in intersection observer here, have it change based class whats clicked
 
@@ -19,13 +20,9 @@ const MenuListings = ({reviewSection}) => {
     const tocTop = tocRef?.current?.offsetTop;
     const innerTocHeight = innerTocRef?.current?.offsetHeight
     const reviewSectionHeight = reviewSection?.current?.offsetTop
+    const tocBtnRef = useRef(null)
     const toggleItemModal = () =>{
       setMenuItemModal(!menuItemModal)
-    }
-
-    const handleIndexClick = (e, idx) =>{
-        e.preventDefault();
-        document.getElementById(`block-${idx}`).scrollIntoView({behavior:'smooth'})
     }
 
 
@@ -45,13 +42,14 @@ const MenuListings = ({reviewSection}) => {
 
     return (
     <div className='listings-main fdc-mobile'>
-        <div className='toc-holder' ref={tocRef}>
+
+          <div className='toc-holder' ref={tocRef}>
 
             <div className={`table-of-contents ${scrollPosition > tocTop && scrollPosition + innerTocHeight + TOC_POS < reviewSectionHeight  && 'toc-pos'}`} ref={innerTocRef}>
                 <div className='toc-inner'>
 
                 {Object.keys(menuItems).map((header, idx)=>(
-                    <div id={`toc-label-${idx}`} className='toc-index' onClick={e=> handleIndexClick(e, idx)}> 
+                  <div id={`toc-label-${idx}`} className='toc-index' onClick={e=> handleIndexClick(e, idx)}> 
                             <span key={idx}>{header}</span>
                         </div>
                 ))}
@@ -59,6 +57,8 @@ const MenuListings = ({reviewSection}) => {
             </div>
 
         </div>
+
+  
 
         <div className='univ-padding univ-padding-mobile'>
             {Object.keys(menuItems).map((header, idx)=>(
