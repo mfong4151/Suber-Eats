@@ -9,11 +9,13 @@ import { getSessionUserId } from '../../../store/session';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
+import useWindowSize from '../../customHooks/useWindowSize';
 
 const UXView = () => {
 
+  const windowDim = useWindowSize()
   const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}); //this just refers to a default center
-
+  const [toggleMapMob, setToggleMapMob ] = useState(false)
   const [filterOptions, setFilterOptions] = useState(
     {
       'score': 0,
@@ -44,9 +46,24 @@ const UXView = () => {
  
   return (
     <div className='pickup-cols'>
+      {windowDim.width > 600 ?
+      <>
+        <Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/>
+        <Map restaurants={restaurantsHeap} mapState={mapState} /> 
+      </>
+
+      : 
+      <>
+        <button onClick={() => setToggleMapMob(!toggleMapMob)}>Toggle Map</button>
+
+        {toggleMapMob 
+            ? <Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/> 
+        
+             : <Map restaurants={restaurantsHeap} mapState={mapState} /> 
+      }
       
-      <Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/>
-      <Map restaurants={restaurantsHeap} mapState={mapState} /> 
+      </>
+      }
 
     </div>
   )
