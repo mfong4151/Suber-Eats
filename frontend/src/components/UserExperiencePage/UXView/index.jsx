@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import Options from './Options';
-import Map from './GoogleMap';
 import './Pickup.css'
 import { useSelector } from 'react-redux';
 import { getRestaurantHeap } from '../../../store/restaurant';
@@ -10,12 +8,13 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
 import useWindowSize from '../../customHooks/useWindowSize';
+import ViewBrowser from './ViewBrowser';
+import ViewMobile from './ViewMobile';
 
 const UXView = () => {
 
   const windowDim = useWindowSize()
   const [mapCenter, setMapCenter]  =useState({lat: 37.747401957356246, lng: -122.4456108834198}); //this just refers to a default center
-  const [toggleMapMob, setToggleMapMob ] = useState(false)
   const [filterOptions, setFilterOptions] = useState(
     {
       'score': 0,
@@ -46,23 +45,12 @@ const UXView = () => {
  
   return (
     <div className='pickup-cols'>
-      {windowDim.width > 600 ?
-      <>
-        <Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/>
-        <Map restaurants={restaurantsHeap} mapState={mapState} /> 
-      </>
 
-      : 
-      <>
-        <button onClick={() => setToggleMapMob(!toggleMapMob)}>Toggle Map</button>
-
-        {toggleMapMob 
-            ? <Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/> 
-        
-             : <Map restaurants={restaurantsHeap} mapState={mapState} /> 
-      }
       
-      </>
+      {windowDim.width > 600 
+        ?<ViewBrowser restaurantsHeap={restaurantsHeap} filterState={filterState} mapState={mapState}/>
+        :<ViewMobile restaurantsHeap={restaurantsHeap} filterState={filterState} mapState={mapState}/>
+    
       }
 
     </div>

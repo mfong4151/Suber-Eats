@@ -9,7 +9,8 @@ import { fetchRestaurants } from '../../../../store/restaurant';
 
 // https://react-google-maps-api-docs.netlify.app/#googlemap
 
-const Map = ({restaurants, mapState}) => {
+const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
+  
   const dispatch = useDispatch()
   const sessionUserId = useSelector(getSessionUserId);
   const {mapCenter, setMapCenter} = mapState;
@@ -43,6 +44,8 @@ const Map = ({restaurants, mapState}) => {
     }
 
     setMapCenter({lat, lng})
+    if(toggleMap) setToggleMap(prev => !prev)
+    
   }
   
 
