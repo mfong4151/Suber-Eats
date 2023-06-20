@@ -22,7 +22,7 @@ const Options = ({restaurants, filterState, mapState}) => {
           
     }
       <Suspense fallback={<Loading/>}>
-
+          <div  id='mobile-spacing'/>
           <OptionsGrid restaurants={restaurants}/>
       </Suspense>
    

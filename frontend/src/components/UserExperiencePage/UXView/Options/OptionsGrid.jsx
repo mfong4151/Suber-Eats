@@ -3,7 +3,7 @@ import OptionsGridItem from './OptionsGridItem'
 
 const OptionsGrid = ({restaurants}) => (
 
-(restaurants.length > 0) 
+restaurants.length > 0
   ?(
 
     <div id='options-array'>
