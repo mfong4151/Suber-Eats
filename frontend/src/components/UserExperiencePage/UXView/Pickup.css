@@ -105,6 +105,12 @@
         width:30px;
         border-radius: 3rem;
     }
+
+    #map-cont-holder{
+
+        width:'100vw';
+        height:800px;
+    }
     
 }
 @media screen and (min-width:601px){

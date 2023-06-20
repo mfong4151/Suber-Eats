@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import Options from './Options'
 import Map from './GoogleMap'
+import './Pickup.css'
 
 const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
 
@@ -26,7 +27,7 @@ const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
             {
             toggleMap
                 ? 
-                <div style={{minWidth: '100vw', height:800}}>
+                <div id='map-cont-holder'>
                     <Map restaurants={restaurantsHeap} mapState={mapState} toggleMap ={toggleMap} setToggleMap={setToggleMap}/> 
                 </div>
                 :<Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/> 
