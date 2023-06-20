@@ -12,10 +12,7 @@ const OptionsDropdowns = ({filterState, mapState}) => {
   const sortRef = useRef(null) ;
   const priceRef = useRef(null);
   const citiesRef = useRef(null);
-  if (sortRef.current)  
-  console.log(
-     extractOffsets(sortRef.current)
-    )
+
 
   const toggleSortOptions =  e =>{
     e.preventDefault()
@@ -53,20 +50,20 @@ const OptionsDropdowns = ({filterState, mapState}) => {
         <ChevronDown toggleOptions={toggleSortOptions}/>
       </button>
 
-      <button id='price-range-button' className={`btn-round-two ux-buttons udc  grey-button ${priceModal && `black-button`} ux-sort-buttons`} onClick={togglePriceOptions} value="price"  ref={priceRef}>
+      <button id='price-range-button' className={`btn-round-two ux-buttons udc grey-button ${priceModal && `black-button`} ux-sort-buttons`} onClick={togglePriceOptions} value="price"  ref={priceRef}>
         <span onClick={togglePriceOptions}>Price range</span>
         <ChevronDown toggleOptions={togglePriceOptions}/>
       </button>
 
 
-      <button id='change-cities-button' className={`btn-round-two ux-buttons udc  grey-button ${cityModal && `black-button`} ux-sort-buttons`} onClick={toggleCityOptions}  ref={citiesRef}>
+      <button id='change-cities-button' className={`btn-round-two ux-buttons udc grey-button ${cityModal && `black-button`} ux-sort-buttons`} onClick={toggleCityOptions}  ref={citiesRef}>
         <span onClick={toggleCityOptions}>Change Cities</span>
         <ChevronDown toggleOptions={toggleCityOptions}/>
       </button>
 
-      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterState={filterState}/>}
-      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}  filterState={filterState}/>}
-      {cityModal && <CityOptionsModal cityModal={cityModal} setCityModal={setCityModal} mapState={mapState}/>}
+      {sortModal  && <SortOptionsModal sortModal={sortModal} setSortModal={setSortModal} styleOptions={sortModalStyles} filterState={filterState} btnParent={sortRef.current}/>}
+      {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}  filterState={filterState} btnParent={priceRef.current}/>}
+      {cityModal && <CityOptionsModal cityModal={cityModal} setCityModal={setCityModal} mapState={mapState} btnParent={citiesRef.current}/>}
       
      
     </div>

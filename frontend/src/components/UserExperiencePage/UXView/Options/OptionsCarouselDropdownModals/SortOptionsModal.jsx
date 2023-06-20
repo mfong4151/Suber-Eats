@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import './OptionsModals.css'
 import SortModal from './SortModal'
-import RatingModal from './RatingModal'
 import PriceRangeModal from './PriceRangeModal'
+import extractOffsets, {mobilePosition} from '../utils/extractOffsets'
+import useWindowSize from '../../../../customHooks/useWindowSize'
 
-
-const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterState}) => {
-
+const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterState, btnParent}) => {
+  const {width} = useWindowSize()
+  const {x, y}  = extractOffsets(btnParent)
+  const position = {top: y, left: x}
+  
+  
   const {filterOptions, setFilterOptions} = filterState;
   const {filterType,modal, activeModal,  modalOverlay, modalMenuContent} = styleOptions();
   
@@ -17,8 +21,12 @@ const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterState}) 
 
   return (
     <div className={modal}>
-        <div className={modalOverlay} onClick={()=>setSortModal(!sortModal)}>
-          <div className={modalMenuContent}>
+        <div className={modalOverlay} onClick={()=>setSortModal(!sortModal)}
+        
+        >
+          <div className='univ-options-body price-modal price-rating-modal udc'
+            style={position}
+          >
               {filterType === 'sort' && <SortModal filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}             
               {filterType === 'price' && <PriceRangeModal filterOptions={filterOptions} setFilterOptions={setFilterOptions}/>}            
               {/* {filterType === 'rating' && <RatingModal/>} */}

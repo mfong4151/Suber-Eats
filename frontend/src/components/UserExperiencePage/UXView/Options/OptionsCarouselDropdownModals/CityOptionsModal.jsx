@@ -5,8 +5,13 @@ import {useDispatch, useSelector } from 'react-redux'
 import { getSessionUserId } from '../../../../../store/session'
 import { checkUserLoc, updateLocation } from '../../../../../store/location'
 import { fetchRestaurants } from '../../../../../store/restaurant'
+import extractOffsets from '../utils/extractOffsets'
+import useWindowSize from '../../../../customHooks/useWindowSize'
 
-const CityOptionsModal = ({cityModal, setCityModal, mapState}) => {
+const CityOptionsModal = ({cityModal, setCityModal, mapState, btnParent }) => {
+  const {x, y} = extractOffsets(btnParent)
+  const {width} = useWindowSize()
+
   const [selectedButton, setSelectedButton] = useState('')
   const {setMapCenter} = mapState;
   const dispatch = useDispatch()
@@ -46,7 +51,12 @@ const CityOptionsModal = ({cityModal, setCityModal, mapState}) => {
   return (
     <div className='modal'>
         <div className='modal-overlay city-modal-overlay' onClick={()=>setCityModal(!cityModal)}>
-          <div className='univ-options-body city-modal-body'>
+          <div className='univ-options-body city-modal-body'
+              style={{top: y,
+                      left: width > 600 ?  x : 30
+                    }}
+          
+          >
                 <h1 id='city-modal-header'>Take a look at other cities!</h1>
                 <div id='city-options'>
                     {Object.keys(suberCities).map((city, idx) =>

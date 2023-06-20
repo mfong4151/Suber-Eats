@@ -15,39 +15,59 @@
     position: absolute;
     background-color: var(--color-white);
     border:1px solid var(--color-grey-shadow);
-    top:210px;
 
 }
 
 .sort-modal{
 
     width:380px;
-    left:50px;
 }
 
-.price-rating-modal{
-    width:380px;
-    height:60px;
+
+@media screen and (max-width: 599px) {
+    .price-rating-modal{
+        height:200px;
+        max-width:160px;
+    }
+
+    .sort-modal-radio{
+        display: flex;
+        flex-direction: column;
+        height:100%;
+        width:100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+
+}
+
+@media screen and (min-width: 600px) {
+    .price-rating-modal{
+        width:380px;
+        height:60px;
+    }
+
+    .sort-modal-radio{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width:100%;
+        height:60px;
+        z-index: 69420;
+    }
+    
+
 }
 
 .price-modal{
     width:380px;
-    left:150px;
 }
 
 
-.rating-modal{
-    left: 300px;
-}
 
-.sort-modal-radio{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width:100%;
-    height:60px;
-    z-index: 69420;
-}
+
+
 
 
 .sort-modal-btn{
@@ -64,7 +84,7 @@
     width:100px;
     height:30px;
 
-}
+}  
 
 .city-modal-overlay{
     background-color: transparent;
@@ -73,11 +93,30 @@
 
 /* styles for other cities modal */
 
-.city-modal-body{
-    width:380px;
-    height:300px;
-    left:300px;
-   
+@media screen and (max-width:599px) {
+    
+    .city-modal-body{
+        width:250px;;
+        height:300px;
+        left:300px;
+       
+    }
+    #city-modal-header{
+        padding-left:2rem;
+    }
+    
+}
+
+@media screen and (min-width:600px) {
+    
+    .city-modal-body{
+        width:380px;
+        height:300px;
+        left:300px;
+       
+    }
+
+  
 }
 
 
