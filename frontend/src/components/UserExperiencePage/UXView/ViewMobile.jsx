@@ -17,7 +17,7 @@ const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
                         className="btn-round-two ux-buttons black-button header-button udc"
                         >
                         
-                         {toggleMap ? 'Restaurants' : 'Map'}
+                            {toggleMap ? 'Restaurants' : 'Map'}
 
                 
                     </button>
@@ -25,7 +25,10 @@ const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
             </div>
             {
             toggleMap
-                ? <Map restaurants={restaurantsHeap} mapState={mapState} toggleMap ={toggleMap} setToggleMap={setToggleMap}/> 
+                ? 
+                <div style={{minWidth: '100vw', height:800}}>
+                    <Map restaurants={restaurantsHeap} mapState={mapState} toggleMap ={toggleMap} setToggleMap={setToggleMap}/> 
+                </div>
                 :<Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/> 
             }
 
