@@ -1,16 +1,21 @@
-import React from 'react'
+import React,  { useState, useRef } from 'react'
 import ChevronDown from '../SVGs/ChevronDown'
 import '../Pickup.css'
 import SortOptionsModal from './OptionsCarouselDropdownModals/SortOptionsModal'
-import { useState } from 'react'
 import { sortModalStyles, priceModalStyles, ratingModalStyles, cityModalStyles } from './OptionsCarouselDropdownModals/modalStyles'
 import CityOptionsModal from './OptionsCarouselDropdownModals/CityOptionsModal'
-
+import extractOffsets from './utils/extractOffsets'
 const OptionsDropdowns = ({filterState, mapState}) => {
   const [ sortModal,setSortModal] = useState(false)
   const [ priceModal,setPriceModal] = useState(false)
   const [cityModal, setCityModal] = useState(false)
-
+  const sortRef = useRef(null) ;
+  const priceRef = useRef(null);
+  const citiesRef = useRef(null);
+  if (sortRef.current)  
+  console.log(
+     extractOffsets(sortRef.current)
+    )
 
   const toggleSortOptions =  e =>{
     e.preventDefault()
@@ -41,20 +46,20 @@ const OptionsDropdowns = ({filterState, mapState}) => {
   
   return (
     <div className='pickup-btns'>
-      <button id='sort-button' className={`btn-round ux-buttons udc ux-sort-buttons grey-button ${sortModal && `black-button`}`} onClick={toggleSortOptions}>
+      <button id='sort-button' className={`btn-round-two ux-buttons udc grey-button ${sortModal && `black-button`} ux-sort-buttons`} onClick={toggleSortOptions} ref={sortRef}>
         <span className='udc' onClick={toggleSortOptions}>
           Sort
         </span>
         <ChevronDown toggleOptions={toggleSortOptions}/>
       </button>
 
-      <button id='price-range-button' className={`btn-round ux-buttons  udc ux-sort-buttons grey-button ${priceModal && `black-button`}`} onClick={togglePriceOptions} value="price" >
+      <button id='price-range-button' className={`btn-round-two ux-buttons udc  grey-button ${priceModal && `black-button`} ux-sort-buttons`} onClick={togglePriceOptions} value="price"  ref={priceRef}>
         <span onClick={togglePriceOptions}>Price range</span>
         <ChevronDown toggleOptions={togglePriceOptions}/>
       </button>
 
 
-      <button id='change-cities-button' className={`btn-round ux-buttons udc ux-sort-buttons grey-button ${cityModal && `black-button`}`} onClick={toggleCityOptions}>
+      <button id='change-cities-button' className={`btn-round-two ux-buttons udc  grey-button ${cityModal && `black-button`} ux-sort-buttons`} onClick={toggleCityOptions}  ref={citiesRef}>
         <span onClick={toggleCityOptions}>Change Cities</span>
         <ChevronDown toggleOptions={toggleCityOptions}/>
       </button>
@@ -63,15 +68,7 @@ const OptionsDropdowns = ({filterState, mapState}) => {
       {priceModal  && <SortOptionsModal sortModal={priceModal} setSortModal={setPriceModal} styleOptions={priceModalStyles}  filterState={filterState}/>}
       {cityModal && <CityOptionsModal cityModal={cityModal} setCityModal={setCityModal} mapState={mapState}/>}
       
-      {/* below commented out code is in the pipeline */}
-      {/* <button className="btn-round ux-buttons ux-sort-buttons" onClick={toggleRatingOptions} value="rating" >
-        <span onClick={toggleRatingOptions}>Rating</span>
-        <ChevronDown toggleOptions={toggleRatingOptions}
-        />
-      </button> */}
-      {/* <button className="btn-round ux-buttons ux-sort-buttons"><span>From Suber Eats</span><ChevronDown/></button> */}
      
-      {/* {ratingModal && <SortOptionsModal sortModal={ratingModal} setSortModal={setRatingModal} styleOptions={ratingModalStyles}/>} */}
     </div>
   )
 }

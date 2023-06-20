@@ -26,7 +26,7 @@ const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
             {
             toggleMap
                 ? <Map restaurants={restaurantsHeap} mapState={mapState} toggleMap ={toggleMap} setToggleMap={setToggleMap}/> 
-                :<Options restaurants={restaurantsHeap} filterState={filterState}/> 
+                :<Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/> 
             }
 
         </>

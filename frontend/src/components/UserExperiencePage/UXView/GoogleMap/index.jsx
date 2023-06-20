@@ -44,7 +44,7 @@ const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
     }
 
     setMapCenter({lat, lng})
-    if(toggleMap) setToggleMap(prev => !prev)
+    if(toggleMap) setTimeout(() => setToggleMap(prev => !prev), 1000) 
     
   }
   

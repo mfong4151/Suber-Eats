@@ -90,10 +90,9 @@
 @media screen and (max-width:600px){
     
     .ux-sort-buttons{
-        margin-left:1rem;
-        margin-right: .5rem;
+        margin-right:3px;
         display:flex;
-        align-items: center;
+        text-align: center;
         height: 40px;
         
     }
@@ -164,10 +163,9 @@
     }
 
     .ux-sort-buttons{
-        margin-left:0rem;
-        margin-right: .5rem;
+        margin-right:3px;
         display:flex;
-        align-items: center;
+        text-align: center;
         height: 40px;
     }
 }
