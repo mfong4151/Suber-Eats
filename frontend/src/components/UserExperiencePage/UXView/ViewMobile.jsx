@@ -17,7 +17,7 @@ const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
                         className="btn-round-two ux-buttons black-button header-button udc"
                         >
                         
-                            Show {toggleMap ? 'Restaurants' : 'Map'}
+                         {toggleMap ? 'Restaurants' : 'Map'}
 
                 
                     </button>
