@@ -21,8 +21,9 @@ const LoginFormPage = () => {
     return (
         <>
                 <LoginHeader/> 
-                {!validCredential && <LoginForm credential={credential} setCredential={setCredential} setValidCredential={setValidCredential}/>}
-                {validCredential && <LoginSignupHandler credential={credential}/>}
+                    {!validCredential && <LoginForm credential={credential} setCredential={setCredential} setValidCredential={setValidCredential}/>}
+                    {validCredential && <LoginSignupHandler credential={credential}/>}
+
         </>
     )
     
