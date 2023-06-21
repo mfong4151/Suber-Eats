@@ -31,8 +31,8 @@ class Restaurant < ApplicationRecord
         Restaurant.select('*')
         .where('SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= .026', 
         *[user_loc.latitude, user_loc.longitude] )
-      .limit(1) #comment in for working on page, AWS is expensive ;-;
-        #   .limit(30)
+    #   .limit(1) #comment in for working on page, AWS is expensive ;-;
+          .limit(30)
     end
   
     def self.get_dist_from_user(user_loc, restaurant)
