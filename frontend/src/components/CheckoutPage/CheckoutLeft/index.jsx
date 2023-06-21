@@ -13,9 +13,7 @@ const CheckoutLeft = ({checkoutCart}) => {
       <>
       <div className="checkout-lr">
           <h1 className='rest-title'>{checkoutCart.restName}</h1>
-          <div className="mp checkout-deliv-pickup" id='grey-banner'>
-              <span>Delivery</span>
-          </div>
+          
 
           <GeneralMap coords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}} mapStyle={"checkout-container"}/>
 
