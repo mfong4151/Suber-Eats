@@ -77,8 +77,8 @@
         flex-direction: column;
         width: 50vw;
         height:auto;
-        padding-left: 7rem;
-        padding-right:7rem;
+        padding-left: 3rem;
+        padding-right:3rem;
     }
 
     
@@ -188,7 +188,6 @@
     display: flex;
     justify-content: space-between; 
     padding-left: 5%;
-    padding-right: 5%;
 }
 
 .your-items-quantity{
