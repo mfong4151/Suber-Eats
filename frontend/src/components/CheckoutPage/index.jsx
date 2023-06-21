@@ -10,6 +10,9 @@ import { useParams } from 'react-router-dom'
 import { fetchCartItems } from '../../store/cartItems'
 import { Redirect } from 'react-router-dom'
 import Footer from '../generalDesignComponents/Footer'
+import useWindowSize from '../customHooks/useWindowSize'
+import CheckoutMobile from './CheckoutLeft/CheckoutMobile'
+import CheckoutDesktop from './CheckoutLeft/CheckoutDesktop'
 
 const CheckoutPage = () => {
   
@@ -19,6 +22,7 @@ const CheckoutPage = () => {
         const sessionUser = useSelector(state => state.session.user)
         const checkoutCart = useSelector(getCart(cartId))
         const dispatch = useDispatch();
+        const {width} = useWindowSize()
         
         useEffect(()=>{
           dispatch(fetchCart(sessionUser.id))
@@ -31,13 +35,12 @@ const CheckoutPage = () => {
           <div className='checkout-page' >
             <CheckoutHeader modalStates={modalStates}/>
 
-            <div id='left'>
-                <CheckoutLeft checkoutCart={checkoutCart}/>
-            </div>
-            <div id='right'>
-              <CheckoutRight checkoutCart={checkoutCart}/>
+            {width > 600  
+            ? <CheckoutDesktop checkoutCart={checkoutCart}/> 
+            : <CheckoutMobile checkoutCart={checkoutCart}/>
+            }
 
-            </div>
+           
             {menuModal && <UserMenuModal modalStates={modalStates}/>}
             <Footer/>
           </div>

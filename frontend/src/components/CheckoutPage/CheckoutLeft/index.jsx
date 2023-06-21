@@ -18,7 +18,7 @@ const CheckoutLeft = ({checkoutCart}) => {
           <GeneralMap coords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}} mapStyle={"checkout-container"}/>
 
 
-          <div id='checkout-details' className="fdr">
+          <div id='checkout-details' className="fdr fdc-mobile">
           
             <div className='checkout-section fdc'>
               <DeliveryFrom checkoutCart={checkoutCart}/>
