@@ -13,8 +13,8 @@ const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
   
   const dispatch = useDispatch()
   const sessionUserId = useSelector(getSessionUserId);
-  const {mapCenter, setMapCenter} = mapState;
   const userLocObj = useSelector(checkUserLoc(sessionUserId))
+  const {mapCenter, setMapCenter} = mapState;
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY ? process.env.REACT_APP_MAPS_API_KEY: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
 
   if(!isLoaded) return(<h1>loading...</h1>)

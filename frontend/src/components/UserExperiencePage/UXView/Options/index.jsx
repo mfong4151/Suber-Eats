@@ -5,7 +5,7 @@ import OptionsDropdowns from './OptionsDropdowns';
 import useWindowSize from '../../../customHooks/useWindowSize';
 import '../Pickup.css'
 import Loading from '../../../generalDesignComponents/Loading';
-
+import NearMe from '../NearMe';
 const OptionsGrid = lazy(() => import('./OptionsGrid'));
 
 const Options = ({restaurants, filterState, mapState}) => {

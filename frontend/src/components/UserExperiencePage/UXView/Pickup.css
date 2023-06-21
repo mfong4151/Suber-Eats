@@ -27,7 +27,7 @@
         }
     #options-array{
         width:100%;
-        max-height:500px;
+        max-height:550px;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -371,3 +371,14 @@
     width:30%
 }
 
+#near-me-holder{
+    display: flex;
+    justify-content: flex-end;
+    height:4rem;
+}
+
+#near-me{
+    margin-right:2rem;
+    height:3rem;
+    width:30%
+}

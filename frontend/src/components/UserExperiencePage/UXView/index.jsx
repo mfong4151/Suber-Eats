@@ -32,6 +32,8 @@ const UXView = () => {
   const userLocation = useSelector(checkUserLoc(sessionUserId))
   const dispatch = useDispatch()
 
+
+
   useEffect(()=>{
     dispatch(fetchRestaurants())
   },[dispatch, filterOptions])

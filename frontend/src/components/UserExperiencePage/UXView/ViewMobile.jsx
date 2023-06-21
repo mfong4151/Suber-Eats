@@ -2,26 +2,17 @@ import React, {useState} from "react"
 import Options from './Options'
 import Map from './GoogleMap'
 import './Pickup.css'
+import NearMe from "./NearMe"
 
 const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
 
     const [toggleMap, setToggleMap ] = useState(false)
-
+   
     return (
       <>   
 
             <div id="toggle-holder">
 
-                    <button
-                        id='toggle-btn'
-                        onClick={() => setToggleMap(!toggleMap)}
-                        className="btn-round-two ux-buttons black-button header-button udc"
-                        >
-                        
-                            {toggleMap ? 'Restaurants' : 'Map'}
-
-                
-                    </button>
 
             </div>
             {
@@ -32,6 +23,10 @@ const ViewMobile = ({restaurantsHeap, filterState, mapState}) => {
                 </div>
                 :<Options restaurants={restaurantsHeap} filterState={filterState} mapState={mapState}/> 
             }
+            <div id="near-me-holder">
+                    <NearMe/>
+
+            </div>
 
         </>
     )
