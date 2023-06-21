@@ -1,4 +1,5 @@
 .checkout-container{
-    height: 100vh;
+    min-height:100px;
+    margin-bottom:2rem;
 }
 

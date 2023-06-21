@@ -4,9 +4,10 @@ import '../CheckoutPage.css'
 import YourItems from './YourItems'
 
 import GeneralMap from '../../generalDesignComponents/GeneralMap/index.jsx'
+import DeliveryTo from './DeliveryTo.jsx'
+import DeliveryFrom from './DeliveryFrom.jsx'
 const CheckoutLeft = ({checkoutCart}) => {
 
-  const [street, city, state, country] = checkoutCart.address.split(',')
   
   return (
       <>
@@ -17,46 +18,21 @@ const CheckoutLeft = ({checkoutCart}) => {
           </div>
 
           <GeneralMap coords={{lat: checkoutCart.restLat, lng: checkoutCart.restLng}} mapStyle={"checkout-container"}/>
-          <div className='delivery-section delivery-header-holder fdc sb'>
-            <h4 className='delivery-header'> Delivery from</h4>
-            <div className="delivery-options">
-                <div className='loc-left'>
-                  <div className='icon-spacing'>
 
-                    <LocationIcon/>
-                  </div>
-                  <div className="delivery-options-text fdc sb">
-                     <h4 id="delivery-text-top">{street}</h4>
-                     <p className="delivery-text-bottom">{city}</p>
-                  </div>
-                </div>
+
+          <div id='checkout-details' className="fdr">
+          
+            <div className='checkout-section fdc'>
+              <DeliveryFrom checkoutCart={checkoutCart}/>
+              <DeliveryTo/>         
+
             </div>
+          
+            <div className='checkout-section'>
+              <YourItems/>
 
-          </div>
-
-         
-          <div className='delivery-section delivery-header-holder fdc sb'>
-            <h4 className='delivery-header'> Delivery to</h4>
-            <div className="delivery-options">
-                  
-              <div className='loc-left'>
-                <div className='icon-spacing'>
-
-                  <LocationIcon/>
-                </div>            
-
-                <div className="delivery-options-text fdc sb">
-                  <form id="delivery-form">
-                    <input type='text' name='users-address' placeholder='Your address here' id='delivery-input'/>
-                  </form>
-                  <p className="delivery-text-bottom">Your delivery address</p>
-                </div>
-              </div>
             </div>
           </div>
-
-         
-          <YourItems/>
       </div>
         
    
