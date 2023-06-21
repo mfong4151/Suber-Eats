@@ -126,7 +126,7 @@
     #options-dimensions{
         overflow-y: auto;
         overflow-x: hidden;
-        height:1260px;
+        height:80vh;
         min-width: 700px;
         width: 45%;
         
