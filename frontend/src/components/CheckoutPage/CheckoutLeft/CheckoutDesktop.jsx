@@ -4,15 +4,15 @@ import CheckoutRight from '../CheckoutRight'
 
 const CheckoutDesktop = ({checkoutCart}) => {
   return (
-    <>
-    <div id='left'>
-   <CheckoutLeft checkoutCart={checkoutCart}/>
-    </div>
-<div id='right'>
-<CheckoutRight checkoutCart={checkoutCart}/>
-
+    <div id='checkout-divide'>
+        <div id='left'>
+            <CheckoutLeft checkoutCart={checkoutCart}/>
+        </div>
+         <div id='right'>
+            <CheckoutRight checkoutCart={checkoutCart}/>
+        </div>
 </div>
-</>
+
   )
 }
 

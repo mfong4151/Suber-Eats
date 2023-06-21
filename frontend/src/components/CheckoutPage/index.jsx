@@ -35,10 +35,10 @@ const CheckoutPage = () => {
           <div className='checkout-page' >
             <CheckoutHeader modalStates={modalStates}/>
 
-            {width > 600  
-            ? <CheckoutDesktop checkoutCart={checkoutCart}/> 
-            : <CheckoutMobile checkoutCart={checkoutCart}/>
-            }
+
+
+            <CheckoutDesktop checkoutCart={checkoutCart}/> 
+          
 
            
             {menuModal && <UserMenuModal modalStates={modalStates}/>}
