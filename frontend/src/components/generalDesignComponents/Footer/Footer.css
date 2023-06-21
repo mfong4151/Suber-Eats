@@ -2,12 +2,18 @@
 #sub-footer{
     padding-top:3rem;
     padding-bottom:5rem;
+    height:180px;
 }
 
 .footer-divider{
     border: none;
     height: 2px;
     background: var(--color-grey);
+}
+
+.footer-options{
+    display: flex;
+    flex-direction: column;
 }
 
 #footer-bottom{
@@ -27,14 +33,12 @@
     display: flex;
     justify-content: flex-end;
     text-align: end;
-    height:50px
 }
 
 .footer-text{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height:50px
 }
 
 .footer-text:hover{
@@ -43,11 +47,11 @@
 }
 
 .subfooter-holder{
-    padding-top:5rem;
+    padding-top:2rem;
     display: flex;
     justify-content: space-around;
 }
 
 .github-linkedin-footer{
-    height:60px;
+    height:30px;
 }
