@@ -3,7 +3,7 @@ import LocationIcon from '../../SVGs/LocationIcon.jsx'
 import '../CheckoutPage.css'
 import YourItems from './YourItems'
 
-import GeneralMap from '../../generalDesignComponents/GeneralMap/index.jsx'
+import GeneralMap from '../../GeneralMap/index.jsx'
 import DeliveryTo from './DeliveryTo.jsx'
 import DeliveryFrom from './DeliveryFrom.jsx'
 const CheckoutLeft = ({checkoutCart}) => {

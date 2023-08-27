@@ -6,7 +6,7 @@ import { getSessionUserId } from '../../../../../store/session'
 import { checkUserLoc, updateLocation } from '../../../../../store/location'
 import { fetchRestaurants } from '../../../../../store/restaurant'
 import extractOffsets from '../utils/extractOffsets'
-import useWindowSize from '../../../../customHooks/useWindowSize'
+import useWindowSize from '../../../../../hooks/useWindowSize'
 
 const CityOptionsModal = ({cityModal, setCityModal, mapState, btnParent }) => {
   const {x, y} = extractOffsets(btnParent)

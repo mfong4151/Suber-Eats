@@ -3,7 +3,7 @@ import './OptionsModals.css'
 import SortModal from './SortModal'
 import PriceRangeModal from './PriceRangeModal'
 import extractOffsets, {mobilePosition} from '../utils/extractOffsets'
-import useWindowSize from '../../../../customHooks/useWindowSize'
+import useWindowSize from '../../../../../hooks/useWindowSize'
 
 const SortOptionsModal = ({sortModal, setSortModal, styleOptions, filterState, btnParent}) => {
   const {width} = useWindowSize()

@@ -7,7 +7,7 @@ import { getSessionUserId } from '../../../store/session';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRestaurants } from '../../../store/restaurant';
-import useWindowSize from '../../customHooks/useWindowSize';
+import useWindowSize from '../../../hooks/useWindowSize';
 import ViewBrowser from './ViewBrowser';
 import ViewMobile from './ViewMobile';
 

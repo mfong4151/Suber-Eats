@@ -8,14 +8,13 @@ import { fetchCartItems } from '../../store/cartItems'
 import MenuListings from './MenuListings';
 import Reviews from './Reviews';
 import './RestaurantListingPage.css';
-import BundleModals from '../universalModals/BundleModals';
+import BundleModals from '../Modals/BundleModals';
 import { fetchCart, getCartsRestIdKeys } from '../../store/cart';
 import { createCart } from '../../store/cart';
 import RestaurantInfo from './RestaurantInfo';
-import { useLocation } from 'react-router-dom';
-import GeneralMap from '../generalDesignComponents/GeneralMap';
+import GeneralMap from '../GeneralMap';
 import Footer from '../Footer';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useLocation } from 'react-router-dom';
 
 const RestaurantListing = () => {
 

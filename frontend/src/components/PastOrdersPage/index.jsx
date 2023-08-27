@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import BundleModals from '../universalModals/BundleModals'
+import BundleModals from '../Modals/BundleModals'
 import UXHeader from '../UXHeader'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchTransactions, getTransactions } from '../../store/transaction'
