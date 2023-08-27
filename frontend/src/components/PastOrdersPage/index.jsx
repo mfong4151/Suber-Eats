@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchTransactions, getTransactions } from '../../store/transaction'
 import Transaction from './Transaction'
 import './PastOrders.css'
-import Footer from '../generalDesignComponents/Footer'
+import Footer from '../Footer'
 import { Redirect } from 'react-router'
 
 const PastOrders = () => {

@@ -6,7 +6,7 @@ import SplashCities from './SplashCities.jsx';
 import SplashCountries from './SplashCountries.jsx'
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import Footer from '../generalDesignComponents/Footer';
+import Footer from '../Footer/index.jsx';
 import UserMenuModal from '../universalModals/UserMenuModal';
 import { useState } from 'react';
 

@@ -9,8 +9,7 @@ import { fetchCart, getCart } from '../../store/cart'
 import { useParams } from 'react-router-dom'
 import { fetchCartItems } from '../../store/cartItems'
 import { Redirect } from 'react-router-dom'
-import Footer from '../generalDesignComponents/Footer'
-
+import Footer from '../Footer'
 
 const CheckoutPage = () => {
   

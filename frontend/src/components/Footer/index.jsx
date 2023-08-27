@@ -1,5 +1,5 @@
 import React from 'react'
-import univPhotos from '../../assets/photoExport'
+import univPhotos from '../assets/photoExport'
 import './Footer.css'
 
 const Footer = () => {

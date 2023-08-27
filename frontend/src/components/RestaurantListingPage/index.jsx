@@ -14,7 +14,7 @@ import { createCart } from '../../store/cart';
 import RestaurantInfo from './RestaurantInfo';
 import { useLocation } from 'react-router-dom';
 import GeneralMap from '../generalDesignComponents/GeneralMap';
-import Footer from '../generalDesignComponents/Footer';
+import Footer from '../Footer';
 import { Redirect } from 'react-router-dom';
 
 const RestaurantListing = () => {

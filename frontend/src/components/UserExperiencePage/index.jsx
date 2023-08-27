@@ -7,7 +7,7 @@ import { fetchLocations } from '../../store/location';
 import BundleModals from '../universalModals/BundleModals.jsx';
 import UXHeader from '../UXHeader';
 import UXView from './UXView';
-import Footer from '../generalDesignComponents/Footer/index.jsx';
+import Footer from '../Footer/index.jsx';
 
 
 const UserExperiencePage = () => {
