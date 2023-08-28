@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import splashRamen from './assets/splash-ramen.png'
-import '../SplashPage.css'
+import './SplashPage.css'
 
 const SplashBodySearch = () => {
 
