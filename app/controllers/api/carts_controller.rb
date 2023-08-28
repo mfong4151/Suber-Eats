@@ -15,6 +15,7 @@ class Api::CartsController < ApplicationController
 
         @new_cart = Cart.new(restaurant_id: params[:restaurant_id], user_id: params[:user_id ]) if !old_cart
         @cart = User.find_by(id: params[:user_id]).carts.includes(:restaurant)
+
         if old_cart  || @new_cart.save
             render :show
             return
@@ -43,8 +44,8 @@ class Api::CartsController < ApplicationController
             return
         else
             render json: @cart.errors.full_messages, status: 422
-
         end
+
         return
 
         

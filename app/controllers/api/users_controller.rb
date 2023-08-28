@@ -6,17 +6,19 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login!(@user)
-
       render :show 
       return 
+
     end 
     render json: { errors: @user.errors.full_messages }, status: :unauthorized
+
   end
 
 
   def index
     @users = User.all
     render :index
+
   end
 
 

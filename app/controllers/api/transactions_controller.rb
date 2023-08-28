@@ -8,7 +8,6 @@ class Api::TransactionsController < ApplicationController
         end
     end
 
-
     def show
         @transaction = User.find_by(id: params[:id]).transactions.includes(:selling_restaurant)
 
@@ -17,7 +16,6 @@ class Api::TransactionsController < ApplicationController
             return
         end
     end
-
 
     def update
       
