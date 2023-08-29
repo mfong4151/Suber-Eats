@@ -1,5 +1,5 @@
 import React from 'react';
-import {GoogleMap, useLoadScript, } from "@react-google-maps/api";
+import {GoogleMap, useLoadScript} from "@react-google-maps/api";
 import "./GoogleMap.css"
 import RestaurantMarker from './RestaurantMarker';
 import { updateLocation, checkUserLoc} from '../../../../store/location';
@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSessionUserId } from '../../../../store/session';
 import { fetchRestaurants } from '../../../../store/restaurant';
 
-// https://react-google-maps-api-docs.netlify.app/#googlemap
 
 const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
   
