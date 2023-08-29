@@ -9,12 +9,15 @@ Suber Eats is a Uber Eats clone. Seed data is generated from restaurants in the 
 
 ### Table of Contents
 
-[Features](https://github.com/mfong4151/Suber-Eats#features)
-* [Radial Search](https://github.com/mfong4151/Suber-Eats#radial-search-find-restaurants-near-you)
+[Features](#features)
+* [Radial Search](#radial-search---find-restaurants-near-you)
+* [Restaurants Show](#restaurants-show)
+* [Dynamic Carting](#cart-and-checkout)
 
-## Features
 
-### Radial Search - Find Restaurants Near You
+# Features
+
+## Radial Search - Find Restaurants Near You
 
 Users can query all the restaurants within a 1.5 - 2 mile proximity by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
 
@@ -136,7 +139,7 @@ Wouldn't it provide a more intuitive UI to ask for permission to get the user's 
 
 
 
-### Restaurants Show
+## Restaurants Show
 
 On click users will be redirected to a page for the restaurant. Each of these menus contains native restaurant data.
 ![Screen Shot 2023-01-13 at 8 45 55 AM](https://user-images.githubusercontent.com/24309253/212373797-95e7ab2a-8246-4d33-8885-bbfa37707938.png)
@@ -186,12 +189,12 @@ const MenuListings = ({sessionUserId}) => {
 }
 ```
 
-### Cart and Checkout
+## Cart and Checkout
 
 Users can add menu items to their carts, and then checkout through the cart modal.
 
 
-### Technologies
+## Technologies
 
 Frontend: React and Redux
 
@@ -216,7 +219,6 @@ Suber Eats is hosted on Render.
 ## Future Plans
 
 Fine tweeking of UI, transitions, CSS.
-Implement heap to manage availible restaurants on the show page, allow for search and sort.
 Implement trie prefix to allow for searching restaurants in an area.
 
 
