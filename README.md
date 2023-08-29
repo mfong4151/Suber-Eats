@@ -10,7 +10,7 @@ Suber Eats is a Uber Eats clone. Seed data is generated from restaurants in the 
 ### Table of Contents
 
 [Features](https://github.com/mfong4151/Suber-Eats#features)
-[Radial Search](https://github.com/mfong4151/Suber-Eats#radial-search-find-restaurants-near-you)
+* [Radial Search](https://github.com/mfong4151/Suber-Eats#radial-search-find-restaurants-near-you)
 
 ## Features
 
