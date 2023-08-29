@@ -1,13 +1,9 @@
 import React from 'react';
 import {GoogleMap, useLoadScript, } from "@react-google-maps/api";
 import RestaurantMarker from './RestaurantMarker';
-import { useState } from 'react';
 import './GeneralMap.css'
 
-// https://react-google-maps-api-docs.netlify.app/#googlemap
-
 const GeneralMap = ({coords, mapStyle}) => {
-  // const { isLoaded} = useLoadScript({googleMapsApiKey: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
   const { isLoaded} = useLoadScript({googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY ? process.env.REACT_APP_MAPS_API_KEY: 'AIzaSyAQpOVKpg-kmhVGvDi5uAGL4dzWsaHDoY0'})
 
   if(!isLoaded) return(<h1>loading...</h1>)

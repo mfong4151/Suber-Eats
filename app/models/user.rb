@@ -20,7 +20,7 @@ class User < ApplicationRecord
   validates :name , presence:true
   validates :phone_number, presence:true, uniqueness: true
   before_validation :ensure_session_token 
-  after_commit :create_loc_from_signup
+  after_commit :create_loc_on_signup
 
   has_many :reviews,
   foreign_key: :user_id,
@@ -64,14 +64,13 @@ class User < ApplicationRecord
   end
 
   
-  def create_loc_from_signup
- 
+  def create_loc_on_signup
+    sf_lat, sf_long = 37.789739,  -122.408607
     Location.create(
         user_id: self.id,
-        latitude:  37.789739, 
-        longitude:-122.408607
+        latitude:  sf_lat, 
+        longitude: sf_long
     ) if !Location.find_by(user_id: self.id)
-        
   end
 
   def self.find_by_credentials(credential, password)

@@ -19,7 +19,6 @@ const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
 
   if(!isLoaded) return(<h1>loading...</h1>)
 
-
   const options = {
         mapId: '73cef3161f877bcd',
         disableDefaultUI:true,
@@ -57,13 +56,13 @@ const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
       mapContainerClassName="map-container"
       options={options}
       onClick={handleOnClick}
-      >
-            {Object.values(restaurants).map((restaurant, idx) =>(
+    >
+            {Object.values(restaurants).map((restaurant ,idx) =>
               <RestaurantMarker restaurant={restaurant} key={idx}/>
-            )
             )}
 
-      </GoogleMap>)
+    </GoogleMap>
+  )
 }
 
 export default Map;
