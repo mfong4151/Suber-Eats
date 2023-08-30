@@ -21,6 +21,10 @@ class Api::UsersController < ApplicationController
 
   end
 
+  def update
+
+    @user = User.find_by
+
 
   private 
   def user_params

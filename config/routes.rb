@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
     resources :transactions, only:[:show, :create, :update, :index]
     resources :reviews, only:[:show, :update, :destroy, :create]
-    resources :users, only: [:create, :index, :show] do
+    resources :users, only: [:create, :index, :show, :update] do
     end
     resource :session, only: [:create, :show, :destroy]
     resources :restaurants, only: [:index, :show] do
