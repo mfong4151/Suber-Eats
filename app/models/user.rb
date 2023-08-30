@@ -19,10 +19,10 @@ class User < ApplicationRecord
   validates :password, length: { in: 6..225}, allow_nil: true 
   validates :name , presence:true
   validates :phone_number, presence:true, uniqueness: true
+  before_validation :set_default_coordinates, on: :create
   validates :latitude, presence:true
   validates :longitude, presence:true
   before_validation :ensure_session_token 
-  before_validation :set_default_coordinates, on: :create
 
   has_many :reviews,
   foreign_key: :user_id,
@@ -51,6 +51,9 @@ class User < ApplicationRecord
   through: :transactions,
   source: :selling_restaurant
 
+  has_one :location,
+  foreign_key: :user_id,
+  class_name: :Location
 
   def current_cart
       Cart
@@ -63,6 +66,7 @@ class User < ApplicationRecord
   end
 
   
+
   def self.find_by_credentials(credential, password)
       
       user = nil
@@ -87,22 +91,22 @@ class User < ApplicationRecord
 
   private 
 
-    def set_default_coordinates
-      sf_lat, sf_long = 37.789739,  -122.408607
-      self.latitude ||= sf_lat
-      self.longitude ||= sf_long
-    end
+  def set_default_coordinates
+    sf_lat, sf_long = 37.789739,  -122.408607
+    self.latitude ||= sf_lat
+    self.longitude ||= sf_long
+  end
 
-    def ensure_session_token 
-      self.session_token ||= generate_unique_session_token
-    end 
+  def ensure_session_token 
+    self.session_token ||= generate_unique_session_token
+  end 
 
-    def generate_unique_session_token
-      
-      while true 
-        token = SecureRandom::urlsafe_base64 
-        return token unless User.exists?(session_token: token)
-      end 
-      
+  def generate_unique_session_token
+     
+    while true 
+      token = SecureRandom::urlsafe_base64 
+      return token unless User.exists?(session_token: token)
     end 
+    
+  end 
 end
