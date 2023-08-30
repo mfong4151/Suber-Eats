@@ -61,11 +61,10 @@
     }
 }
 
-
-#no-carts-content{
-    height:100px;
-    flex-direction: column;
+.no-cart-content{
+    min-height: 100px;
 }
+
 
 #no-cart-title{
     font-size: 26px;

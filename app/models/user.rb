@@ -51,9 +51,6 @@ class User < ApplicationRecord
   through: :transactions,
   source: :selling_restaurant
 
-  has_one :location,
-  foreign_key: :user_id,
-  class_name: :Location
 
   def current_cart
       Cart
@@ -64,8 +61,6 @@ class User < ApplicationRecord
       .where('users.id = ?', self.id.to_s)
       
   end
-
-  
 
   def self.find_by_credentials(credential, password)
       
@@ -92,6 +87,7 @@ class User < ApplicationRecord
   private 
 
   def set_default_coordinates
+    #Defaults to San Francisco's Financial District
     sf_lat, sf_long = 37.789739,  -122.408607
     self.latitude ||= sf_lat
     self.longitude ||= sf_long

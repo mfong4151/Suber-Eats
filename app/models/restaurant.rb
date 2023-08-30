@@ -33,7 +33,6 @@ class Restaurant < ApplicationRecord
         .where("SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= #{radius_miles.to_s}", 
         *[user.latitude, user.longitude] )
         .limit(30)
-
     end
     
     has_one :menu,

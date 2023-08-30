@@ -44,7 +44,7 @@ const CartModal = ({modalStates, activeCartState}) => {
 
               </div>}
               {userCarts.length === 0 &&
-                <div className="cart-modal-content udc" id='no-carts-content'>
+                <div id="cart-modal-content" className='udc fdc no-cart-content'>
                     <h1 id='no-cart-title'>
                         You currently have no cart!
                     </h1>

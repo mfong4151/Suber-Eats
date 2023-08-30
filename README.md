@@ -29,10 +29,10 @@ class Restaurant < ApplicationRecord
 
     def self.restaurants_in_proximity(user_id)
         radius_miles = 0.026 #1.5 miles expressed in longitude/latitude
-        user_loc = User.find_by_id(user_id).location
+        user = User.find_by_id(user_id)
         Restaurant.select("*")
         .where("SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= #{radius_miles.to_s}", 
-        *[user_loc.latitude, user_loc.longitude] )
+        *[user.latitude, user.longitude] )
         .limit(30)
     end
     
@@ -78,7 +78,6 @@ const Map = ({restaurants}) => {
           {location:{
             latitude: lat,
             longitude: lng,
-            userId: sessionUserId
            }}, userLocObj.id
           ))
       .then(()=> dispatch(fetchRestaurants()))
@@ -117,18 +116,17 @@ This created a third necessity, or rather an error that needed remediation. For 
 
 class User < ApplicationRecord
     # User auth callbacks 
-    after_commit :create_loc_on_signup  
+    before_validation :set_default_coordinates, on: :create
 
     # has-many relations
-    
-    def create_loc_on_signup
-        sf_lat, sf_long = 37.789739, -122.408607 # Defaults to San Francisco Financial District
-        Location.create(
-            user_id: self.id,
-            latitude:  sf_lat, 
-            longitude: sf_long
-        ) if !Location.find_by(user_id: self.id)
+      
+    def set_default_coordinates
+      #Defaults to San Francisco's Financial District
+      sf_lat, sf_long = 37.789739,  -122.408607
+      self.latitude ||= sf_lat
+      self.longitude ||= sf_long
     end
+
     
     #User auth implementation 
 end
@@ -158,7 +156,6 @@ const MenuListings = ({sessionUserId}) => {
   
     return (
     <div className='listings-main'>
-        
         
         <div className='table-of-contents'>
             {Object.keys(menuItems).map((header, idx)=>(
