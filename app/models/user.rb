@@ -51,9 +51,6 @@ class User < ApplicationRecord
   through: :transactions,
   source: :selling_restaurant
 
-  has_one :location,
-  foreign_key: :user_id,
-  class_name: :Location
 
   def current_cart
       Cart

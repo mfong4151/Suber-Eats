@@ -21,17 +21,6 @@ class Api::UsersController < ApplicationController
 
   end
 
-  def update
-
-    @user = User.find_by(id: current_user.id)
-
-    if @user
-      @user.update(latitude: params[:latitude], params[:longitude])
-      render :show
-      return
-    end
-
-    render json:{errors: @user.errors.full_messages}, status: :unauthorized
   private 
   def user_params
     params.require(:user).permit(:email, :password, :name, :phone_number)

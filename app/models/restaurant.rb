@@ -28,11 +28,12 @@ class Restaurant < ApplicationRecord
 
     def self.restaurants_in_proximity(user_id)
         radius_miles = 0.026 #1.5 miles expressed in longitude/latitude
-        user_loc = User.find_by_id(user_id).location
+        user = User.find_by_id(user_id)
         Restaurant.select("*")
         .where("SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= #{radius_miles.to_s}", 
-        *[user_loc.latitude, user_loc.longitude] )
+        *[user.latitude, user.longitude] )
         .limit(30)
+
     end
     
     has_one :menu,

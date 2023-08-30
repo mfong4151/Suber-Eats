@@ -1,7 +1,7 @@
 import csrfFetch from './csrf';
 
 const RECEIVE_USERS = 'user/receiveUsers';
-
+const RECEIVE_USER_LOC = 'user/recieveUserLoc'
 
 const receiveUsers = users =>{
 
@@ -10,6 +10,7 @@ const receiveUsers = users =>{
         payload: users
     }
 }
+
 
 
 export const getUsers = state => {

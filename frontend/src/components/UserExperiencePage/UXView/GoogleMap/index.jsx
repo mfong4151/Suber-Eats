@@ -35,8 +35,7 @@ const Map = ({restaurants, mapState, toggleMap, setToggleMap=null }) => {
           {location:{
             latitude: lat,
             longitude: lng,
-            userId: sessionUserId
-           }}, userLocObj.id
+           }}, sessionUserId
           ))
       .then(()=> dispatch(fetchRestaurants()))
     }

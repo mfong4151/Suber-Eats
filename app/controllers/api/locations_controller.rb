@@ -1,17 +1,18 @@
 class Api::LocationsController < ApplicationController
 
     def index
-        @locations = Location.all
+        @users = User.all
+        print(@users)
         render :index
     end
 
     def show
-        @location = Location.find_by(user_id: current_user.id)
-        if @location
+        @user = User.find_by(user_id: current_user.id)
+        if @user
             render :show
             return
         else
-            render json: { errors: @location.errors.full_messages }, status: :unauthorized
+            render json: { errors: @user.errors.full_messages }, status: :unauthorized
             return
         end
     end
@@ -19,12 +20,12 @@ class Api::LocationsController < ApplicationController
     
 
     def update
-        @location = Location.find_by(user_id: current_user.id)
+        @user = User.find_by(id: params[:id])
 
-        if @location.update(location_params)
+        if @user.update(location_params)
             render :show
         else
-            render json: { errors: @location.errors.full_messages }, status: :unauthorized
+            render json: { errors: @user.errors.full_messages }, status: :unauthorized
             return
         end
     end
@@ -34,6 +35,6 @@ class Api::LocationsController < ApplicationController
     private 
 
     def location_params
-        params.require(:location).permit(:user_id, :longitude, :latitude)
+        params.require(:location).permit(:id, :longitude, :latitude)
     end
 end

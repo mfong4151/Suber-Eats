@@ -1,7 +1,7 @@
 json.locations do
-    @locations.each do |location|
-        json.set! location.user_id do
-            json.extract! location, :id, :user_id, :longitude, :latitude
+    @users.each do |user|
+        json.set! user.id do
+            json.extract! user, :id, :longitude, :latitude
         end
     end 
 end

@@ -32,25 +32,10 @@ export const fetchLocations = () => async dispatch =>{
     }
 }
 
-export const createLocation = location => async dispatch => {
-    const res = await csrfFetch(`/api/locations/`,{
-        method: "POST",
-        body: JSON.stringify(location),
-        headers:{ 
-            "Content-Type": 'application/json',
-            "Accept": 'application/json'
-        }
-    })
-    if (res.ok){
-        const location = await res.json();
-        dispatch(receiveLocation(location))
-    }
-}
 
 
-
-export const updateLocation = (location, locationId) => async dispatch =>{
-    const res = await csrfFetch(`/api/locations/${locationId}`,{
+export const updateLocation = (location, userId) => async dispatch =>{
+    const res = await csrfFetch(`/api/locations/${userId}`,{
         method: "PATCH",
         body: JSON.stringify(location),
         headers:{ 
