@@ -28,7 +28,7 @@ class Restaurant < ApplicationRecord
     ### Other Restaurant methods
 
     def self.restaurants_in_proximity(user_id)
-        radius_miles = 0.026 #1.5 miles expressed in longitude/latitude
+        radius_miles = 0.0216 #1.5 miles expressed in longitude/latitude
         user = User.find_by_id(user_id)
         Restaurant.select("*")
         .where("SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= #{radius_miles.to_s}", 
