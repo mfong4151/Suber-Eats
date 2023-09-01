@@ -19,9 +19,9 @@ Suber Eats is a Uber Eats clone. Seed data is generated from restaurants in the 
 
 ## Radial Search - Find Restaurants Near You
 
-Users can query all the restaurants within a 1.5 - 2 mile proximity by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
+Users can query all the restaurants within a 1.5-le radius by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
 
-I accomplished this by using a custom SQL query to gather all of the restaurants within a 1.5 mile radius (expressed in longitude latitude). 
+The first step was to create a custom Rails ORM query to gather all of the restaurants within a 1.5-mile radius (expressed in latitude). This query uses the Pythagorean theorem, isolating for C, to get restaurants that have latitude and longitude coordinates within the 1.5-mile range. 
 
 ```ruby
 class Restaurant < ApplicationRecord
@@ -30,10 +30,11 @@ class Restaurant < ApplicationRecord
     def self.restaurants_in_proximity(user_id)
         radius_miles = 0.0216 #1.5 miles expressed in longitude/latitude
         user = User.find_by_id(user_id)
-        Restaurant.select("*")
-        .where("SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= #{radius_miles.to_s}", 
-        *[user.latitude, user.longitude] )
-        .limit(30)
+        Restaurant
+          .select("*")
+          .where("SQRT(POW((restaurants.latitude - ?),2) + POW((restaurants.longitude - ?),2)) <= #{radius_miles.to_s}", 
+          *[user.latitude, user.longitude] )
+          .limit(30)
     end
     
 ```
@@ -52,10 +53,9 @@ LIMIT 30;
 
 This query uses the distance formula to get relative distance from the user’s location, placing the user at the radius of the circumscribed area. To enable this query, several other sub-features needed to be added.
 
-First, during the seeding process, I ran my restaurants' .CSV file through Google Map's API to gather the longitude and latitude for all restaurants. I originally collected these restaurants by leveraging a web scraper written in Python. The advantage to storing the data is to create consistency in the user experience, rather than wait on a return from the API provider, implement fetch call error handling, etc. Latitude and longitude float values live natively on the restaurant table. To seed the restaurants, I wrote a library with Marcos Henrich, Easy Seeds that has since taken a life of its own as a nascent open-source project. In short, this library allows users to import seeds from a .CSV file, hence explaining the 100k rows of data.
+While collecting data for restaurants, I leveraged Google Maps’ API to gather longitude and latitude data for 1500 restaurants in the Bay Area, New York, Houston, and Chicago.  Latitude and longitude float values live natively on the restaurant table, creating consistency for the user experience that at-the-moment fetch calls could not provide; I have much less control over a third party API’s fault tolerance than I do my own. I wrote a library with Marcos Henrich, Easy Seeds that has since taken a life of its own as a nascent open-source project. In short, this library allows users to import seeds from a .CSV file, allowing me to seed 100k rows of data.
 
-Second, I created a separate table to store user's longitude and latitude, namely the locations table. The reason for creating an extra table is to mainly avoid rewriting the user entry through a PATCH request, which is how user auth is implemented in my project. Because the password received in the session request is hashed every time during the request-response cycle, rewriting an unknown password is effectively tantamount to locking the user out of their account. Creating an extra table with a unique foreign key constraint provided the path of least resistance; users have exactly one location at any time. As mentioned before, this information was given by the frontend to send a PATCH request every time the user clicks on the map, a UI feature that many have found visually satisfying.
-
+Every time the user clicks on the map, a request is sent to the backend to fetch every restaurant within a 1.5-mile radius of this click. 
 
 ```jsx
 //Excerpted version of the production version for followability.
@@ -74,20 +74,18 @@ const Map = ({restaurants}) => {
     const lng = e.latLng.lng();
 
     if(userLocObj){
-      dispatch(updateLocation(
+       dispatch(updateLocation(
           {location:{
             latitude: lat,
             longitude: lng,
-           }}, userLocObj.id
+           }}, sessionUserId
           ))
       .then(()=> dispatch(fetchRestaurants()))
     }
 
-    setMapCenter({lat, lng})
+    setMapCenter({lat, lng}) //Change rendering of map center for visability
   }
   
-
-
   return (
     <GoogleMap 
       zoom={13} 
@@ -106,12 +104,13 @@ const Map = ({restaurants}) => {
 
 export default Map;
 
-
 ```
+User latitude and longitude are generated from the onClick event, e in Google Maps React’s API, and respectively accessed as e.latLng.lat() and e.latLng.lng(). These values are sent in a PATCH request to the backend via Redux dispatch to edit columns that live on the Users table, a pain point that I describe below. This is largely the extent of the work done by the frontend.
 
-This created a third necessity, or rather an error that needed remediation. For new users, a POST request creates a new account, but there initially was no location attached to the user. The backend server had no knowledge of any creation of a "location" object, because no POST request for a location entry had ever been posted. Because the call to retrieve restaurants in the backend requires a user's longitude and latitude coordinates to create the query, it introduces an issue when there is no location to speak of. Originally, this would cause crashes on the frontend due to how Redux dispatch fires during initial renders. The solution was to introduce an Application Record callback namely after_commit. Callbacks in Ruby on Rails are methods that are inherited from the Application Record class in every class instance of Ruby on Rails model. Callbacks allow backend operations to attach certain methods to specific lifecycle events of an object or a model. In particular, after_commit takes place after a POST operation, in this case the creation of a new user, and can be differentiated from after_save due to fact that it only takes place after successful commission to a database. Similar effects can be achieved with Middleware in Express and Rocket, and Interceptors in Spring Boot. 
+In the real Uber Eats it makes sense to get location from the frontend, and render restaurants based on that information. However, users can access this proof-of-concept app from areas where no restaurant data exists. Therefore, it makes more sense to place the user where restaurants are guaranteed to be, and guide user behavior from there. At first, it seemed that the only way to accomplish this was to send longitude and latitude values over from the client during account creation. But in production environments, this can quickly result in a bad-practice slippery slope; data that doesn’t need to be sent over the request-response cycle simply shouldn’t be. Without this data, the frontend would white screen and crash due to how Redux fires on first render.
  
- 
+The solution was to introduce an Application Record callback into the data lifecycle namely before_validation. 
+
 ```ruby
 
 class User < ApplicationRecord
@@ -133,9 +132,9 @@ end
 
 ```
 
-Wouldn't it provide a more intuitive UI to ask for permission to get the user's location through the window, and initialize the location that way? Unlike Uber Eats, my project does not feature a portal for creating a new restaurant, and a potential edge case arises when a user visits a location that does not contain restaurants. This does show the extent of a proof-of-concept project, but as a proof-of-concept project I am largely looking to fast track delivery of features such as these.
+Callbacks in Ruby on Rails are methods that are inherited from the Application Record class in every instance of a Ruby on Rails model, and allow backend operations to inject methods into a specific object’s lifecycle event. As the name suggests, before_validation takes place before the object of a POST request is validated, which is the first step of entering an object into a database. Similar effects can be achieved with Middleware in Express and Rocket, and interceptors in Spring Boot. The function attached to before_validation sets coordinates for San Francisco’s financial district to the created object, but could also default to any other locale in my database. 
 
-
+The result is a smooth, satisfying user interface built on top of Google Maps.
 
 ## Restaurants Show
 
