@@ -199,13 +199,18 @@ The result is a smooth, satisfying user interface built on top of Google Maps.
 ## Restaurants Show
 
 On click users will be redirected to a page for the restaurant. Each of these menus contains native restaurant data.
-![Screen Shot 2023-01-13 at 8 45 55 AM](https://user-images.githubusercontent.com/24309253/212373797-95e7ab2a-8246-4d33-8885-bbfa37707938.png)
+
 
 I added a couple of fun features to this. The first is the table of contents sticks. I had to use a little bit of react, and a lot of position fixed for that.
 
+![Position Fixed](https://github.com/mfong4151/Suber-Eats/blob/main/gifs/pos-fix.gif)
 
 
 The second is that the table of contents will actually scroll into view the section that is clicked. 
+
+![Scroll Into View](https://github.com/mfong4151/Suber-Eats/blob/main/gifs/scroll-into-view.gif)
+
+Together these really put together the main UI of Suber Eats
 
 ```javascript
 const MenuListings = ({ reviewSection }) => {
