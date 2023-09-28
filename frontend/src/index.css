@@ -233,12 +233,10 @@
 .grey-button{
     background-color: var(--color-grey);
     color: var(--color-black);
-    box-shadow: 0 4px 0 var(--color-grey-boxshadow);    
 }
 
 .grey-button:active{
     box-shadow:none;
-    transform: translateY(4px);
 }
 
 .grey-button:hover{
@@ -263,12 +261,10 @@
 .black-button{
     color: var(--color-white);
     background-color: var(--color-black);
-    box-shadow: 0 4px 0 var(--color-black-boxshadow);
 }
 
 .black-button:active{
     box-shadow: none;
-    transform: translateY(4px);
 }
 
 .black-button:hover{
