@@ -16,10 +16,7 @@ const RestaurantInfo = ({restaurant, reviewRef}) => {
           <span className='listing-text-spacing'>•</span>
           <span className='listing-text-spacing'>{restaurant?.cuisineType.toUpperCase().slice(0,1).concat(restaurant?.cuisineType.slice(1))}</span>
           <span className='listing-text-spacing'>•</span>
-          {/* <img src={univPhotos.uberOne} className="uber-one-logo"/> */}
           <span className='listing-text-spacing line-text-hoverable' onClick={()=>{reviewRef.current.scrollIntoView({behavior:'smooth'})}}>Read the reviews</span>
-          {/* <span className='listing-text-spacing' >More Info</span> */}
-
       </div>
       <div className="menu-row-1 menu-row-2">
         Open at some point

@@ -2,24 +2,82 @@
 
 Live Link: https://suber-eats.onrender.com
 
-Suber Eats is a Uber Eats clone. Seed data is generated from restaurants in the Bay Area, with location data scraped from Google Maps API, and menu data scraped from Yelp. The live version contains 1,500 restaurants with a total of 87,000 menu items, , but a CSV is attached for insert all the restaurants into the backend.
+Suber Eats is a Uber Eats clone. Seed data is generated from restaurants in the Bay Area, with location data scraped from Google Maps API, and menu data scraped from Yelp. The live version contains 1,500 restaurants with a total of 87,000 menu items. This clone simulates full CRUD ordering a viewing order history.
 
 ![Screen Shot 2023-01-13 at 8 44 48 AM](https://user-images.githubusercontent.com/24309253/212373582-a27e6fc5-a431-4e69-b95d-ab17c642e630.png)
 
 
 # Table of Contents
 
-[Features](#features)
+[Features](#feature-highlights)
+* [Seeding](#seeding---easy-seeds)
 * [Radial Search](#radial-search---find-restaurants-near-you)
 * [Restaurants Show](#restaurants-show)
 * [Dynamic Carting](#cart-and-checkout)
 
+# Feature Highlights
 
-# Features
+## Seeding - Easy Seeds
+
+A natural question is, how did you seed so many restaurants during a two week project? Well I didn't do it by hand, instead I leveraged a web scraper to collect all the seed data. Once I had that set up, there was the issue of actually creating the seed file.
+
+Error handling in Ruby...can use some improvement. If you missed a comma during one of your seed files, then it would break and tell you the "general ballpark" where the errors happened. So instead, I wrote a library to abstract away the seeding on a class-by-class, table-by-table basis. Bellow I've listed the main method that does the meat of the work:
+
+```ruby
+
+require_relative './csv_methods'
+
+module EasySeeds
+  class Seeder
+
+    #Creates a single instance of seed data
+    def self.single_seeder(table, class_name, table_string)            
+      ApplicationRecord.connection.reset_pk_sequence!(table_string)                       # Makes primary keys start at 0
+      puts "Creating #{table_string} seed data..."                             
+
+      table.each_with_index do |row, i|
+        puts "Finished Seeding the #{i.to_s}th #{table_string} item" if i % 100 == 0
+        class_name&.create!(**row)                                                        # Creates a single row of data from a .csv item
+      end
+
+      puts "DONE WITH #{table_string.upcase}, #{table_string.upcase} SEEDING SUCCESSFUL"
+    end
+
+    #Creates easy seed data for all classes that are passed in
+    def self.create_easy_seed_data(class_names)
+      puts 'Creating easy seeds data'
+      tables, table_strings = EasySeeds::CSVLoader.tables_from_csvs
+
+      (0...tables.length).each do |i|
+        EasySeeds::Seeder.single_seeder(tables[i], class_names[i], table_strings[i])      # Does it multiple times
+      end
+    end
+  end
+end
+```
+So grab a drink, make some instant noodles while you let all those 100k seeds populate. And you thought build times in Rust were bad. The upside is that it allowed me to simplify and clean up how my seed file looked: 
+
+```ruby
+require 'easy_seeds/easy_seeds'
+
+class_names = [User, Restaurant, Menu, MenuItem, Review, Cart, CartItem, Transaction]
+table_strings = ['users', 'restaurants', 'menus', 'menu_items', 'reviews', 'carts', 'cart_items', 'transactions']
+
+EasySeeds::Destroy.destroy_tables(class_names, table_strings)
+EasySeeds::Seeder.create_easy_seed_data(class_names)
+
+class_image_names = [Restaurant]
+EasySeeds::Images.attach_images(class_image_names)
+```
+
+(Easy seeds is now its own stand alone open source project)[https://github.com/mfong4151/easy-seeds]. Big shout out to (Marcos Henrich)[https://github.com/Marcoshenrich] who was a huge contributor to the project. Now, back to the main program. 
+
+## 
+
 
 ## Radial Search - Find Restaurants Near You
 
-Users can query all the restaurants within a 1.5-le radius by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
+Users can query all the restaurants within a 1.5-mile radius by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
 
 The first step was to create a custom Rails ORM query to gather all of the restaurants within a 1.5-mile radius (expressed in latitude). This query uses the Pythagorean theorem, isolating for C, to get restaurants that have latitude and longitude coordinates within the 1.5-mile range. 
 
@@ -141,53 +199,78 @@ The result is a smooth, satisfying user interface built on top of Google Maps.
 On click users will be redirected to a page for the restaurant. Each of these menus contains native restaurant data.
 ![Screen Shot 2023-01-13 at 8 45 55 AM](https://user-images.githubusercontent.com/24309253/212373797-95e7ab2a-8246-4d33-8885-bbfa37707938.png)
 
+I added a couple of fun features to this. The first is the table of contents sticks. I had to use a little bit of react, and a lot of position fixed for that.
+
+[gif here]
+
+The second is that the table of contents will actually scroll into view the section that is clicked. 
+
 ```javascript
-const MenuListings = ({sessionUserId}) => {
-    const usersCart = useSelector(getCart)
-    const [menuItemModal, setMenuItemModal] = useState(false);  
-    const [menuItem, setMenuItem] = useState('')
-    const preSortedItems = useSelector(getMenuItems);
-    const menuItems = sortMenus(preSortedItems)
-    const toggleItemModal = () =>{
-      setMenuItemModal(!menuItemModal)
-      }
+const MenuListings = ({ reviewSection }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [menuItemModal, setMenuItemModal] = useState(false);
+  const [seeYourCart, setSeeYourCart] = useState(-1)
+  const menuItems = useSelector(getMenuItemsSorted);
+  const tocRef = useRef(null)
+  const innerTocRef = useRef(null)
+  const tocTop = tocRef?.current?.offsetTop;
+  const innerTocHeight = innerTocRef?.current?.offsetHeight
+  const reviewSectionHeight = reviewSection?.current?.offsetTop
+  const toggleItemModal = () => {
+    setMenuItemModal(!menuItemModal)
+  }
 
-  
-    return (
-    <div className='listings-main'>
-        
-        <div className='table-of-contents'>
-            {Object.keys(menuItems).map((header, idx)=>(
-                    <div className='toc-index'>
-                        <span className='' key={idx}>{header}</span>
-                    </div>
+  const handleIndexClick = (e, idx) =>{
+    e.preventDefault();
+    document.getElementById(`block-${idx}`).scrollIntoView({behavior:'smooth'})
+}
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+  return (
+    <div className='listings-main fdc-mobile se'>
+      <section className='toc-holder' ref={tocRef}>
+        <div className={`table-of-contents ${scrollPosition > tocTop && scrollPosition + innerTocHeight + TOC_POS < reviewSectionHeight && 'toc-pos'}`} ref={innerTocRef}>
+          <div className='toc-inner'>
+            {Object.keys(menuItems).map((header, idx) => (
+              <div id={`toc-label-${idx}`} className='toc-index' onClick={e => handleIndexClick(e, idx)}>
+                <span key={idx}>{header}</span>
+              </div>
             ))}
+          </div>
         </div>
+      </section>
 
-        <div className='univ-padding'>
-            {Object.keys(menuItems).map((header, idx)=>(
-                <ListingsBlock 
-                    header={header} 
-                    listings={menuItems[header]} 
-                    key={idx}
-                    setMenuItem = {setMenuItem}
-                    menuItemModal={menuItemModal} 
-                    toggleItemModal={toggleItemModal}
-                    usersCart={usersCart}
-                    sessionUserId={sessionUserId}
-                    /> 
-            ))}
-            {menuItemModal && <MenuItemModal menuItem={menuItem} setMenuItem={setMenuItem} menuItemModal={menuItemModal} toggleItemModal={toggleItemModal}/>}
-
-        </div>
-  </div>  
+      <section id='menu-main' className='univ-padding univ-padding-mobile'>
+        {Object.keys(menuItems).map((header, idx) => (
+          <ListingsBlock
+            header={header}
+            menuItems={menuItems[header]}
+            id={idx}
+            menuItemModal={menuItemModal}
+            toggleItemModal={toggleItemModal}
+            seeYourCart={seeYourCart}
+            setSeeYourCart={setSeeYourCart}
+          />
+        ))}
+      </section>
+    </div>
   )
 }
 ```
 
-## Cart and Checkout
-
-Users can add menu items to their carts, and then checkout through the cart modal.
 
 
 ## Technologies
@@ -202,7 +285,7 @@ Backend: Ruby on Rails with PostgreSQL database
 
 Supports back-end server access, database management, and user authentication.
 
-Other: Google Maps React Library, Google Maps Javascript API, Amazon AWS S3
+Other: Google Maps React Library, Google Maps Javascript API, Amazon AWS S3, Python BS4
 
 Google Maps React library was implemented to handle 
 Amazon AWS S3 handles the image hosting to allow for a more lightweight implementation of the app.
@@ -211,11 +294,6 @@ Hosting:
 
 Suber Eats is hosted on Render.
 
-
-## Future Plans
-
-Fine tweeking of UI, transitions, CSS.
-Implement trie prefix to allow for searching restaurants in an area.
 
 
 ## Credits

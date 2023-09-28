@@ -5,9 +5,7 @@ import './RestaurantListingPage.css'
 const ListingsBlock = ({header, menuItems, toggleItemModal, seeYourCart, setSeeYourCart, id}) => {
     return (
         <div className='listings-block' id={'block-' + id}>
-            <div className='header-holder'>
-                <h2 className='listing-header'>{header}</h2>
-            </div>
+            <h2 className='listing-header'>{header}</h2>
             
             <ul className='menu-options'>
                 {menuItems.map((menuItem, idx)=>

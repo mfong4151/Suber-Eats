@@ -3,5 +3,4 @@ const handleIndexClick = (e, idx) =>{
     document.getElementById(`block-${idx}`).scrollIntoView({behavior:'smooth'})
 }
 
-
 export default handleIndexClick;

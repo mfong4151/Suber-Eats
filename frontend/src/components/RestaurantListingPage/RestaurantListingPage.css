@@ -63,18 +63,17 @@
 @media screen and (min-width: 601px){
 
     .toc-holder{
-        min-width:360px;
+        width:30%;
         position:relative;
+        padding-inline: 3rem;
     }
-
+    
     .table-of-contents{
         display: flex;
         justify-content: start;
         align-items: left;
         flex-direction: column;
-        min-width:360px ;
-        padding-right: 10rem;
-        padding-left: 3rem;
+        min-width:30%;
     }
     
     .toc-pos{
@@ -82,12 +81,17 @@
         top:20px;
         overflow-x: auto;
         z-index: 1;
-
+        padding-right:3rem;
+        width:30%;
     }
 
     .toc-inner{
         min-width: 300px; /* set a fixed width for the inner div */
         overflow-x: auto; /* apply overflow-x: auto to the inner div */
+    }
+
+    #menu-main{
+        width:70%;
     }
 }
 

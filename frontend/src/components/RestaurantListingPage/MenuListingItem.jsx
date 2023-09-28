@@ -31,7 +31,6 @@ const MenuListingItem = ({ menuItem, toggleItemModal, seeYourCart, setSeeYourCar
 
     const menuModalMethods = e => {
         e.preventDefault();
-        // setMenuItem(menuItem);
         toggleItemModal();
     }
     
