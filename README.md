@@ -77,7 +77,7 @@ EasySeeds::Images.attach_images(class_image_names)
 
 ## Radial Search - Find Restaurants Near You
 
-[Radial Click](https://github.com/mfong4151/Suber-Eats/blob/main/gifs/map-click.gif)
+![Radial Click](https://github.com/mfong4151/Suber-Eats/blob/main/gifs/map-click.gif)
 
 Users can query all the restaurants within a 1.5-mile radius by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
 
