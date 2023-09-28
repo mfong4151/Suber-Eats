@@ -17,10 +17,11 @@
 }
 
 #footer-bottom{
+    padding:2rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height:150px;
+    height:auto;
 }
 
 
