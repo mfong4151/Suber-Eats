@@ -77,6 +77,8 @@ EasySeeds::Images.attach_images(class_image_names)
 
 ## Radial Search - Find Restaurants Near You
 
+[Radial Click](https://github.com/mfong4151/Suber-Eats/blob/main/gifs/map-click.gif)
+
 Users can query all the restaurants within a 1.5-mile radius by using the location modal at the top of the navbar. Users location will be updated in the backend, and so will restaurants data.
 
 The first step was to create a custom Rails ORM query to gather all of the restaurants within a 1.5-mile radius (expressed in latitude). This query uses the Pythagorean theorem, isolating for C, to get restaurants that have latitude and longitude coordinates within the 1.5-mile range. 
@@ -201,7 +203,7 @@ On click users will be redirected to a page for the restaurant. Each of these me
 
 I added a couple of fun features to this. The first is the table of contents sticks. I had to use a little bit of react, and a lot of position fixed for that.
 
-[gif here]
+
 
 The second is that the table of contents will actually scroll into view the section that is clicked. 
 
