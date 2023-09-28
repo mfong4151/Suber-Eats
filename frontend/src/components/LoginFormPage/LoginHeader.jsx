@@ -7,7 +7,7 @@ const LoginHeader = () => {
 
   return (
     <header id="login-suber-eats">
-        <div className="logo login-logo" onClick={()=> history.push('/')}>
+        <div className="logo login-logo cursor-events" onClick={()=> history.push('/')}>
             <h1 className='suber header-text'>Suber <span className="eats eats-green">Eats</span></h1>
         </div>
 
