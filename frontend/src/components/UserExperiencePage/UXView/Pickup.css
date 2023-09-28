@@ -14,9 +14,9 @@
 }
 
 .options-body{
-    padding-top:1rem;
+    padding-top:.3rem;
     padding-inline: .01rem;
-    min-width:80%
+    width:100%
 }
 
 
@@ -107,10 +107,11 @@
     }
     
     .restaurant-name{
+        width:auto;
         font-family:var(--font-family-UMM), var(--font-family);
         font-weight:100;
         padding-bottom: .4rem;
-        font-size: 30px;
+        font-size: 3rem;
     }
     
     
@@ -123,7 +124,7 @@
 
     #map-cont-holder{
 
-        width:'100vw';
+        width:100vw;
         height:800px;
     }
     
@@ -134,7 +135,7 @@
     }
     #options-array{
         display:grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2px;
     }
     
@@ -191,6 +192,10 @@
     }
     
     .restaurant-name{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width:auto;
         font-family:var(--font-family-UMM), var(--font-family);
         font-weight:100;
         padding-bottom: .4rem;

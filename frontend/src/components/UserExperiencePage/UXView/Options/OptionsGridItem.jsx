@@ -4,7 +4,6 @@ import "../Pickup.css"
 const OptionsGridItem = ({ restaurant }) => {
 
   return (
-    <>
       <NavLink to={`/restaurantListing/${restaurant.id}`}>
         <div className='options-body udc fdc'>
           {/* //comment out the below line and comment in the one below itfor temporarily disabling pictures */}
@@ -20,7 +19,6 @@ const OptionsGridItem = ({ restaurant }) => {
           </div>
         </div>
       </NavLink>
-    </>
   )
 }
 
