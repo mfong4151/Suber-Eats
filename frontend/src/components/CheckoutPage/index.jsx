@@ -11,42 +11,42 @@ import { Redirect, useParams } from 'react-router-dom'
 import Footer from '../Footer'
 
 const CheckoutPage = () => {
-  
-        const [menuModal, setMenuModal ] = useState(false);
-        const modalStates = {menuModal, setMenuModal}
-        const {cartId} = useParams()
-        const sessionUser = useSelector(state => state.session.user)
-        const checkoutCart = useSelector(getCart(cartId))
-        const dispatch = useDispatch();
-        
-        useEffect(()=>{
-          dispatch(fetchCart(sessionUser.id))
-          dispatch(fetchCartItems(cartId))          
-        },[])
 
-        if(!checkoutCart || !sessionUser ) return <Redirect to={'/'}/>
+  const [menuModal, setMenuModal] = useState(false);
+  const modalStates = { menuModal, setMenuModal }
+  const { cartId } = useParams()
+  const sessionUser = useSelector(state => state.session.user)
+  const checkoutCart = useSelector(getCart(cartId))
+  const dispatch = useDispatch();
 
-        return (
-          <div className='checkout-page' >
-            <CheckoutHeader modalStates={modalStates}/>
+  useEffect(() => {
+    dispatch(fetchCart(sessionUser.id))
+    dispatch(fetchCartItems(cartId))
+  }, [])
+
+  if (!checkoutCart || !sessionUser) return <Redirect to={'/'} />
+
+  return (
+    <div className='checkout-page' >
+      <CheckoutHeader modalStates={modalStates} />
 
 
 
-            <div id='checkout-divide'>
-              <div id='left'>
-            <CheckoutLeft checkoutCart={checkoutCart}/>
-              </div>
-         <div id='right'>
-            <CheckoutRight checkoutCart={checkoutCart}/>
+      <div id='checkout-divide'>
+        <div id='left'>
+          <CheckoutLeft checkoutCart={checkoutCart} />
         </div>
-</div>
-          
+        <div id='right'>
+          <CheckoutRight checkoutCart={checkoutCart} />
+        </div>
+      </div>
 
-           
-            {menuModal && <UserMenuModal modalStates={modalStates}/>}
-            <Footer/>
-          </div>
-      )
+
+
+      {menuModal && <UserMenuModal modalStates={modalStates} />}
+      <Footer />
+    </div>
+  )
 }
 
 export default CheckoutPage;
